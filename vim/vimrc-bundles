@@ -1,0 +1,38 @@
+" Enable vim-bundles
+call pathogen#runtime_append_all_bundles()
+
+" Helper command to update bundles
+function! s:UpdateBundles()
+  exec '!ruby ~/.vim/bin/vim-update-bundles.rb'
+endfunction
+command! -nargs=? UpdateBundles call s:UpdateBundles()
+
+" Bundles
+" --- BUNDLE: git://github.com/wgibbs/vim-irblack.git
+" --- BUNDLE: git://github.com/altercation/vim-colors-solarized.git
+" --- BUNDLE: http://github.com/scrooloose/syntastic.git
+" --- BUNDLE: http://github.com/scrooloose/nerdcommenter.git
+" --- BUNDLE: git://github.com/tpope/vim-markdown.git
+" --- BUNDLE: git://github.com/tpope/vim-rails.git
+" --- BUNDLE: git://github.com/majutsushi/tagbar
+" --- BUNDLE: git://github.com/tpope/vim-cucumber.git
+" --- BUNDLE: git://github.com/godlygeek/tabular.git
+" --- BUNDLE: git://github.com/msanders/snipmate.vim.git
+" --- BUNDLE: git://github.com/theunraveler/Drupal-Snippets-for-Vim.git
+" --- BUNDLE: git://github.com/mattn/gist-vim.git
+" --- BUNDLE: git://github.com/tpope/vim-fugitive.git
+
+colorscheme ir_black
+
+" Syntastic
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_loc_list=1
+let g:syntastic_quiet_warnings=1
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+" Tagbar
+let g:tagbar_autoclose = 1
+let g:tagbar_autofocus = 1
+let g:tagbar_ctags_bin = '/usr/local/bin/ctags'

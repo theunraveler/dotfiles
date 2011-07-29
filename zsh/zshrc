@@ -1,0 +1,15 @@
+# Path to your oh-my-zsh configuration.
+export ZSH=$HOME/.zsh
+
+# Set to the name theme to load.
+# Look in ~/.oh-my-zsh/themes/
+ZSH_THEME="theunraveler"
+
+# Comment this out to disable weekly auto-update checks
+export DISABLE_AUTO_UPDATE="true"
+
+# Which plugins would you like to load? (plugins can be found in ~/.zsh/plugins/*)
+# Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=(brew drush extract gem git git-flow taskwarrior)
+
+source $ZSH/oh-my-zsh.sh

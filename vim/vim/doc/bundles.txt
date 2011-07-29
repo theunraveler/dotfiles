@@ -1,0 +1,20 @@
+*bundles.txt*                    Bundles                      Version 0.1
+
+These are the bundles installed on your system, along with their
+versions and release dates.  Downloaded on 2011-07-29 09:52:51 -0500.
+
+A version number of 'n/a' means upstream hasn't tagged any releases.
+  - |irblack|                      n/a                    2010-01-21
+  - |colors-solarized|             n/a                    2011-04-16
+  - |syntastic|                    1.2.0-8-g7e183dd       2010-12-26
+  - |nerdcommenter|                2.2.2-20-g760df35      2010-11-11
+  - |markdown|                     n/a                    2010-10-24
+  - |rails|                        v4.3-8-g0a55cda        2011-01-04
+  - |tagbar|                       v2.1-15-g3b389ae       2011-07-16
+  - |cucumber|                     n/a                    2010-11-21
+  - |tabular|                      n/a                    2011-01-23
+  - |snipmate|                     n/a                    2010-04-08
+  - |Drupal-Snippets-for-Vim|      n/a                    2011-03-09
+  - |gist-vim|                     3.0-102-g2c98fbe       2011-04-19
+  - |fugitive|                     v1.2-12-g4453370       2011-06-13
+

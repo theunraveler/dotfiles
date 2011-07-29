@@ -1,0 +1,118 @@
+" Fix vim defaults
+set nocompatible
+set lazyredraw
+set ttyfast
+set backspace=indent,eol,start   " backspace works as expected
+set nostartofline             " Make j/k respect the columns (after all, this is not a freaking typewriter)
+set modeline               " Respect modeline of the file (the famous "vi:noai:sw=3 ts=6" on the beginning of the files)
+set hidden                   " Avoid asking to save before hiding
+set enc=utf-8
+
+filetype on
+filetype plugin on
+filetype indent on
+syntax on
+
+" Basic UI
+set visualbell
+set shm=atIWswxrnmlf
+set ruler
+set title
+set titlestring=%f%(\ [%M]%)   " Show file name at the title
+set numberwidth=1
+set number
+set report=2
+set laststatus=2
+set showcmd
+set showmode
+
+" Statusline
+set statusline=%t\      "tail of the filename
+set statusline+=%h      "help file flag
+set statusline+=%m      "modified flag
+set statusline+=%r      "read only flag
+set statusline+=%y      "filetype
+set statusline+=%=      "left/right separator
+set statusline+=%c,     "cursor column
+set statusline+=%l/%L   "cursor line/total lines
+set statusline+=\ %P    "percent through file
+
+" Command-mode completion
+set wildmenu
+set wildignore=*.o,*.obj,*.pyc,*.swc,*.DS_STORE,*.bkp
+set wildmode=list:longest
+
+" Insert-mode completion
+set complete=.,w,b,u,U,t,i,d
+
+" Scrolling
+set scroll=5
+set scrolloff=5
+set sidescrolloff=5
+set sidescroll=1
+
+" Matching
+set showmatch
+set matchpairs=(:),{:},[:],<:>,':',":"
+
+" Search and replace
+set gdefault     " Make regexp matches everything, instead of just the first one
+set incsearch     " Search all instances
+set hlsearch     " Highlight matched regexp
+set ignorecase
+set smartcase     " Intelligent case-smart searching
+
+" Indentation
+set autoindent
+set smartindent
+set smarttab
+set expandtab
+set shiftround
+set nojoinspaces
+set nofoldenable
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+
+" Autocomplete
+set infercase
+set completeopt=longest,menuone
+set ofu=syntaxcomplete#Complete
+
+" Soft/Hard Wrapping
+set wrap
+set textwidth=79
+set formatoptions=qrn1
+
+" History and backup
+set viminfo='10,:20,\"100,%,n~/.viminfo
+set history=1000
+set nobackup
+set nowritebackup
+set noswapfile
+
+" Grep
+set grepprg=ack
+set grepformat=%f:%l:%m
+
+" Format
+set formatprg=par
+
+if has("gui_running")
+  set cursorline
+  set gfn:Menlo:h12
+
+  " Don't show toolbar and scrollbars
+  set go-=T to
+  set guioptions-=L
+  set guioptions-=r
+endif
+
+" Bundles
+source ~/Code/dotfiles/vim/vimrc-bundles
+
+" Keymaps
+source ~/Code/dotfiles/vim/vimrc-keymaps
+
+" Filetypes
+source ~/Code/dotfiles/vim/vimrc-filetypes

@@ -1,0 +1,9 @@
+// $Id: CHANGELOG.txt,v 1.1 2010/06/25 07:37:06 chrischarlton Exp $
+
+Drush Cleanup x.x-x.x, xxxx-xx-xx
+------------------------------
+
+
+Drush Cleanup 6.x-1.0, 2010-06-24
+------------------------------
+Initial release of drush_cleanup project.

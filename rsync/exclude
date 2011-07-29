@@ -1,0 +1,9 @@
+tmp
+.DS_Store
+.svn
+.git
+Thumbs.db
+.gitignore
+*.swp
+sites/*/files
+*~

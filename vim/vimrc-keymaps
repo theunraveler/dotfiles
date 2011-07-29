@@ -1,0 +1,54 @@
+let mapleader = ","
+
+" Fixing some vim defaults baddy
+nnoremap j gj
+nnoremap k gk
+inoremap <C-space> <esc>
+
+" Making Y behave like C and D
+nnoremap Y y$
+
+" Indent (while in visual mode)
+vnoremap < <gv
+vnoremap > >gv
+
+" New line when in insert mode
+inoremap <C-cr> <esc>A<cr>
+
+" Search only in the selected block (visual mode)
+vnoremap / <esc>/\%V
+
+" Buffer stuff
+nmap <leader>n :bn<cr>
+nmap <leader>p :bp<cr>
+nmap <leader>c :bd<cr>
+nmap <leader>o :Explore<cr>
+nmap <leader>j :ls<cr>
+
+" Easier buffer nav
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+" Sudo save
+cmap w!! w !sudo tee % >/dev/null
+
+" Tagbar
+map <leader>l :TagbarToggle<cr>
+
+" Commenting
+map <leader>/ :call NERDComment(0,"toggle")<cr>
+
+" Tabular aligning
+if exists(":Tabularize")
+  nmap <Leader>a= :Tabularize /=<cr>
+  vmap <Leader>a= :Tabularize /=<cr>
+  nmap <Leader>a: :Tabularize /:\zs<cr>
+  vmap <Leader>a: :Tabularize /:\zs<cr>
+  nmap <leader>a> :Tabularize /=><cr>
+  vmap <leader>a> :Tabularize /=><cr>
+endif
+
+" Drupal stuff
+nnoremap <Leader>da :execute "!open http://api.drupal.org/".shellescape(expand("<cword>"), 1)<CR>
