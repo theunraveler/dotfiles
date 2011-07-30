@@ -48,7 +48,7 @@ end
 
 def read_vimrc
   bundles = []
-  File.open("#{ENV['HOME']}/Dropbox/cli/vim/vimrc-bundles") do |file|
+  File.open("#{ENV['HOME']}/Code/dotfiles/vim/vimrc-bundles") do |file|
     file.each_line do |line|
       bundles.push $1 if line =~ /^\s*"\s*-*\s*BUNDLE:\s*(.*)$/
     end
