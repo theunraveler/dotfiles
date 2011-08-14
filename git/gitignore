@@ -2,5 +2,4 @@
 .localized
 .project
 .svn
-*.lock
 *.bak
