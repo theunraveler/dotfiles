@@ -18,6 +18,9 @@ inoremap <C-cr> <esc>A<cr>
 " Search only in the selected block (visual mode)
 vnoremap / <esc>/\%V
 
+" Space will toggle folds!
+nnoremap <space> za
+
 " Buffer stuff
 nmap <leader>n :bn<cr>
 nmap <leader>p :bp<cr>
