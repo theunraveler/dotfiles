@@ -24,6 +24,12 @@ regex=true
 # Reports overrides
 report.list.columns=id,project,due,tags,description
 report.list.labels=ID,Project,Due,Tags,Description
+report.list.filter=status:pending -someday
 report.list.sort=due+,project+,description+
 
 # Custom reports
+report.someday.columns=id,project,age,tags,description                                                      
+report.someday.description=Lists tasks to be completed someday.
+report.someday.filter=status:pending +someday
+report.someday.labels=ID,Project,Age,Tags,Description                                                      
+report.someday.sort=age-,project+,description+

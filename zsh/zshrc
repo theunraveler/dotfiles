@@ -13,3 +13,6 @@ export DISABLE_AUTO_UPDATE="true"
 plugins=(brew drush extract gem git git-flow taskwarrior)
 
 source $ZSH/oh-my-zsh.sh
+
+# Run taskwarrior
+task
