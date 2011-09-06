@@ -79,6 +79,9 @@ set infercase
 set completeopt=longest,menuone
 set ofu=syntaxcomplete#Complete
 
+" Clipboard
+set clipboard=unnamed
+
 " Soft/Hard Wrapping
 set wrap
 set textwidth=79
