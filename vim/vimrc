@@ -106,10 +106,13 @@ if has("gui_running")
   set gfn:Menlo:h12
 
   " Don't show toolbar and scrollbars
-  set go-=T to
+  set guioptions-=T to
   set guioptions-=L
   set guioptions-=r
 endif
+
+" Netrw Stuff
+let g:netrw_list_hide='^\.\./$'
 
 " Bundles
 source ~/Code/dotfiles/vim/vimrc-bundles
