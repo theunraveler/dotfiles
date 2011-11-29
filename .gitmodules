@@ -40,3 +40,6 @@
 [submodule "drush/drush/drushplus"]
 	path = drush/drush/drushplus
 	url = git://github.com/eojthebrave/drushplus.git
+[submodule "drush/drush/registry_rebuild"]
+	path = drush/drush/registry_rebuild
+	url = http://git.drupal.org/project/registry_rebuild.git
