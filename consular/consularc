@@ -4,6 +4,6 @@ require 'consular/osx'
 # You can set specific Consular configurations
 # here.
 Consular.configure do |c|
-  c.global_path    = '~/.consular'
+  c.global_path    = '/Users/Jake/.consular'
   c.default_editor = 'mvim'
 end

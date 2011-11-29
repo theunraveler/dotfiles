@@ -1,4 +1,3 @@
-// $Id: README.txt,v 1.1 2010/06/25 07:37:06 chrischarlton Exp $
 
 -- SUMMARY --
 
