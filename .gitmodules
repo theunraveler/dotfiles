@@ -4,9 +4,6 @@
 [submodule "vim/vim/bundle/irblack"]
 	path = vim/vim/bundle/irblack
 	url = git://github.com/wgibbs/vim-irblack.git
-[submodule "vim/vim/bundle/syntastic"]
-	path = vim/vim/bundle/syntastic
-	url = http://github.com/scrooloose/syntastic.git
 [submodule "vim/vim/bundle/nerdcommenter"]
 	path = vim/vim/bundle/nerdcommenter
 	url = http://github.com/scrooloose/nerdcommenter.git
