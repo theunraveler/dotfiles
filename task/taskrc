@@ -34,3 +34,7 @@ report.someday.description=Lists tasks to be completed someday.
 report.someday.filter=status:pending +someday
 report.someday.labels=ID,Project,Age,Tags,Description                                                      
 report.someday.sort=age-,project+,description+
+
+# Task-web settings
+task-web.user=jake
+task-web.password=jake
