@@ -54,4 +54,5 @@ if exists(":Tabularize")
 endif
 
 " Drupal stuff
-nnoremap <Leader>da :execute "!open http://api.drupal.org/".shellescape(expand("<cword>"), 1)<CR>
+nnoremap <Leader>d6 :execute "!open http://api.drupal.org/api/search/6/".shellescape(expand("<cword>"), 1)<CR>
+nnoremap <Leader>d7 :execute "!open http://api.drupal.org/api/search/7/".shellescape(expand("<cword>"), 1)<CR>

@@ -6,7 +6,8 @@ $return = 0;
 exec('git rev-parse --verify HEAD 2> /dev/null', $output, $return);
 $against = $return == 0 ? 'HEAD' : '4b825dc642cb6eb9a060e54bf8d69288fbee4904';
 
-exec("git diff-index --cached --name-only {$against}", $output);
+exec("git diff-index --diff-filter=ACMRTUXB --cached --name-only {$against}", $output);
+
 
 // Match *.php, *.module, *.inc
 $filename_pattern = '/\.(php|module|inc)$/';

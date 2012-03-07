@@ -11,6 +11,7 @@ ln -s $DIR/git/template .gittemplate;
 ln -s $DIR/htop/htoprc .htoprc;
 ln -s $DIR/general/hushlogin .hushlogin;
 ln -s $DIR/mysql/my.cnf .my.cnf;
+ln -s $DIR/node/npmrc .npmrc;
 ln -s $DIR/rsync .rsync;
 ln -s $DIR/rvm/rvmrc .rvmrc;
 ln -s $DIR/task/taskrc .taskrc;
