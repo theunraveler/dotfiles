@@ -15,6 +15,7 @@ ln -s $DIR/node/npmrc .npmrc;
 ln -s $DIR/rsync .rsync;
 ln -s $DIR/rvm/rvmrc .rvmrc;
 ln -s $DIR/task/taskrc .taskrc;
+ln -s $DIR/tmux/tmux.conf .tmux.conf;
 ln -s $DIR/vim/vim .vim;
 ln -s $DIR/vim/vimrc .vimrc;
 ln -s $DIR/zsh/zsh .zsh;
