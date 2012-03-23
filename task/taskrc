@@ -22,6 +22,7 @@ due=3
 search.case.sensitive=no
 regex=true
 echo.command=no
+default.command=list
 
 # Reports overrides
 report.list.columns=id,project,due,tags,description
