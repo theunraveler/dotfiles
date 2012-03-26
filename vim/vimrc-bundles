@@ -7,3 +7,6 @@ colorscheme ir_black
 let g:tagbar_autoclose = 1
 let g:tagbar_autofocus = 1
 let g:tagbar_ctags_bin = '/usr/local/bin/ctags'
+
+" Slime
+let g:slime_target = "tmux"
