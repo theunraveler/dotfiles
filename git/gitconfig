@@ -1,0 +1,91 @@
+##########
+# INCLUDES
+##########
+
+[include]
+  path = ~/.gitconfig-user
+
+##########
+# SETTINGS
+##########
+
+[core]
+  editor = mvim -f
+  whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+  excludesfile = ~/.gitignore
+
+[init]
+	templatedir = ~/.gittemplate
+
+[help]
+  autocorrect = 10
+
+########
+# COLORS
+########
+
+[color]
+  ui = always
+
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+
+[color "diff"]
+  whitespace = red reverse
+
+##############
+# URL SHORTIES
+##############
+
+[url "https://github.com/"]
+  insteadOf = "gh:"
+
+[url "http://git.drupal.org/project/"]
+  insteadOf = "drupal:"
+
+[url "ssh://git@git.drupal.org/sandbox/"]
+  insteadOf = "drupalsand:"
+
+#########
+# ALIASES
+#########
+
+[alias]
+  p = pull origin master
+  au = add -u
+  st = status -sb
+  ci = commit
+  cl = clone
+  br = branch
+  co = checkout
+  df = diff
+  fp = format-patch
+  l  = log --oneline --decorate
+  lg = log -p
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  pl = pull --ff-only
+  tree = log --graph --decorate --pretty=oneline --abbrev-commit
+  w = whatchanged
+  pom = push origin master
+  phm = push heroku master
+  uncommit = reset --soft HEAD^
+  branch-name = !git for-each-ref --format='%(refname:short)' "$(git symbolic-ref HEAD)"
+  cd-root = rev-parse --show-cdup
+  branch-diff = !git format-patch --stdout $1 > "$(git cd-root)patches/$(git branch-name).patch"
+  track = checkout -t
+  fresh = !git fetch --all && git reset --hard origin/master -
+  ctags = !$(git cd-root).git/hooks/ctags

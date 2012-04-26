@@ -6,6 +6,7 @@ DIR="$( cd "$( dirname "$0" )" && pwd )"
 cd ~;
 ln -s $DIR/cap/caprc .caprc;
 ln -s $DIR/drush/drush .drush;
+ln -s $DIR/git/gitconfig .gitconfig;
 ln -s $DIR/git/gitignore .gitignore;
 ln -s $DIR/git/template .gittemplate;
 ln -s $DIR/htop/htoprc .htoprc;
