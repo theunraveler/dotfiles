@@ -49,3 +49,6 @@
 [submodule "vim/vim/bundle/vim-slime"]
 	path = vim/vim/bundle/vim-slime
 	url = git://github.com/jpalardy/vim-slime.git
+[submodule "vim/vim/bundle/jinja.vim"]
+	path = vim/vim/bundle/jinja.vim
+	url = git://github.com/atourino/jinja.vim.git
