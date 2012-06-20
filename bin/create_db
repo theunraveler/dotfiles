@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+
+# Database root user and password
+DB_ROOT_USER="root"
+
+# Database user. This user will be granted access to the new database.
+DB_USER="user"
+
+# Check for correct arguments.
+if [ $# -lt 1 ]; then
+  echo
+  echo Usage: create_db [database-name]
+  echo
+  exit 127
+fi
+
+mysql -u $DB_ROOT_USER -p -e "CREATE DATABASE $1; GRANT ALL PRIVILEGES ON $1.* TO '$DB_USER'@'localhost';"

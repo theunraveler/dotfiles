@@ -4,6 +4,7 @@ WD="$(pwd)"
 DIR="$( cd "$( dirname "$0" )" && pwd )"
 
 cd ~;
+ln -s $DIR/bin .bin;
 ln -s $DIR/cap/caprc .caprc;
 ln -s $DIR/drush/drush .drush;
 ln -s $DIR/git/gitconfig .gitconfig;
