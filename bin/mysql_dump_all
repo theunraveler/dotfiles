@@ -1,0 +1,7 @@
+#!/bin/sh
+DATABASES="$(mysql --user=root --password=root -Bse 'show databases')"
+
+for db in ${DATABASES[@]}; do
+  echo ${db}-$(date +%m-%d-%y).sql.bz2 is being saved in /backup/mysql
+  mysqldump --user=root --password=root $db --single-transaction -R > ${db}-$(date +%m-%d-%y).sql
+done

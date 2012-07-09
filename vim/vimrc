@@ -21,6 +21,7 @@ set title
 set titlestring=%f%(\ [%M]%)   " Show file name at the title
 set numberwidth=1
 set number
+set relativenumber
 set report=2
 set laststatus=2
 set showcmd
