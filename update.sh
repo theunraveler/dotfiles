@@ -15,9 +15,13 @@ git submodule foreach git pull
 
 # Finally, commit the results.
 git status --porcelain | grep '^ M' | awk '{print $2}' | xargs git add
-if [ -n "$(git status --porcelain | grep '^M')" ]; then
+if [ -n "$(git status --porcelain | grep '^M')" ]
+then
   git ci -m "Updating submodules."
   git push origin master
+else
+  echo "No updates needed."
 fi
 
 cd $DIR
+exit 0
