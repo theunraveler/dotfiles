@@ -17,6 +17,7 @@ git submodule foreach git pull
 git status --porcelain | grep '^ M' | awk '{print $2}' | xargs git add
 if [ -n "$(git status --porcelain | grep '^M')" ]; then
   git ci -m "Updating submodules."
+  git push origin master
 fi
 
 cd $DIR
