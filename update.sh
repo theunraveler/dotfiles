@@ -4,6 +4,8 @@
 DIR=$(pwd)
 cd $(dirname "$0")
 
+git pull origin master
+
 # First, update zsh.
 cd zsh/zsh
 git pull upstream master
