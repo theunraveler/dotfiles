@@ -20,7 +20,7 @@ then
   git ci -m "Updating submodules."
   git push origin master
 else
-  echo "No updates needed."
+  echo "Nothing updated, no push needed."
 fi
 
 cd $DIR
