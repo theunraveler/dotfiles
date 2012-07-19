@@ -7,7 +7,7 @@ cd $(dirname "$0")
 git pull origin master
 
 # First, update zsh.
-cd zsh/zsh
+cd zsh/zsh.symlink
 git pull upstream master
 git push origin master
 
