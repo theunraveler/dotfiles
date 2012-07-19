@@ -49,3 +49,6 @@
 [submodule "vim/vim.symlink/bundle/vim-slime"]
 	path = vim/vim.symlink/bundle/vim-slime
 	url = git://github.com/jpalardy/vim-slime.git
+[submodule "drush/drush.symlink/drush_cleanup"]
+	path = drush/drush.symlink/drush_cleanup
+	url = http://git.drupal.org/project/drush_cleanup.git
