@@ -6,27 +6,27 @@ DIR="$( cd "$( dirname "$0" )" && pwd )"
 # First, initialize git submodules.
 git submodule init; git submodule update;
 
-# Then, symlink all dotfiles into the home directory.
 cd ~;
-echo "Linking items from $DIR to home directory"
+echo -n "Linking items from $DIR to home directory using "
 
-<<<<<<< HEAD
+# If we are using GNU ln (from coreutils) the options are different.
+ln --version > /dev/null
+if [ $? -eq 0 ]; then
+  echo "GNU Coreutils ln"
+  ln_command="ln -ns"
+else
+  echo "built-in ln command"
+  ln_command="ln -hs"
+fi
+
+# Then, symlink all dotfiles into the home directory.
 for filepath in `find "$DIR" ! -path "*.git*" -name "*.symlink"`; do
   filename=$(basename "${filepath%.*}")
   echo -n "Linking $filename..."
-  ln -s "$filepath" "./.$filename"
+
+  $ln_command "$filepath" ".$filename"
 
   if [ $? -eq 0 ]; then
-=======
-for filepath in `find "$DIR" -name "*.symlink"`; do
-  filename=$(basename "${filepath%.*}")
-  echo -n "Linking $filename..."
-  err=$(ln -s $filepath .$filename 2>&1)
-
-  if [ $? -ne 0 ]; then
-    echo "$err"
-  else
->>>>>>> 1134fbc8e323927d0f6dfbb8d3842d41993fe745
     echo "done"
   fi
 done
