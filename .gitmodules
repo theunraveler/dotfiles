@@ -1,51 +1,51 @@
-[submodule "zsh/zsh"]
-	path = zsh/zsh
+[submodule "zsh/zsh.symlink"]
+	path = zsh/zsh.symlink
 	url = git@github.com:theunraveler/oh-my-zsh.git
-[submodule "vim/vim/bundle/irblack"]
-	path = vim/vim/bundle/irblack
+[submodule "vim/vim.symlink/bundle/irblack"]
+	path = vim/vim.symlink/bundle/irblack
 	url = git://github.com/wgibbs/vim-irblack.git
-[submodule "vim/vim/bundle/nerdcommenter"]
-	path = vim/vim/bundle/nerdcommenter
+[submodule "vim/vim.symlink/bundle/nerdcommenter"]
+	path = vim/vim.symlink/bundle/nerdcommenter
 	url = http://github.com/scrooloose/nerdcommenter.git
-[submodule "vim/vim/bundle/markdown"]
-	path = vim/vim/bundle/markdown
+[submodule "vim/vim.symlink/bundle/markdown"]
+	path = vim/vim.symlink/bundle/markdown
 	url = git://github.com/tpope/vim-markdown.git
-[submodule "vim/vim/bundle/rails"]
-	path = vim/vim/bundle/rails
+[submodule "vim/vim.symlink/bundle/rails"]
+	path = vim/vim.symlink/bundle/rails
 	url = git://github.com/tpope/vim-rails.git
-[submodule "vim/vim/bundle/tagbar"]
-	path = vim/vim/bundle/tagbar
+[submodule "vim/vim.symlink/bundle/tagbar"]
+	path = vim/vim.symlink/bundle/tagbar
 	url = git://github.com/majutsushi/tagbar
-[submodule "vim/vim/bundle/cucumber"]
-	path = vim/vim/bundle/cucumber
+[submodule "vim/vim.symlink/bundle/cucumber"]
+	path = vim/vim.symlink/bundle/cucumber
 	url = git://github.com/tpope/vim-cucumber.git
-[submodule "vim/vim/bundle/tabular"]
-	path = vim/vim/bundle/tabular
+[submodule "vim/vim.symlink/bundle/tabular"]
+	path = vim/vim.symlink/bundle/tabular
 	url = git://github.com/godlygeek/tabular.git
-[submodule "vim/vim/bundle/snipmate"]
-	path = vim/vim/bundle/snipmate
+[submodule "vim/vim.symlink/bundle/snipmate"]
+	path = vim/vim.symlink/bundle/snipmate
 	url = git://github.com/msanders/snipmate.vim.git
-[submodule "vim/vim/bundle/Drupal-Snippets-for-Vim"]
-	path = vim/vim/bundle/Drupal-Snippets-for-Vim
+[submodule "vim/vim.symlink/bundle/Drupal-Snippets-for-Vim"]
+	path = vim/vim.symlink/bundle/Drupal-Snippets-for-Vim
 	url = git://github.com/theunraveler/Drupal-Snippets-for-Vim.git
-[submodule "vim/vim/bundle/gist-vim"]
-	path = vim/vim/bundle/gist-vim
+[submodule "vim/vim.symlink/bundle/gist-vim"]
+	path = vim/vim.symlink/bundle/gist-vim
 	url = git://github.com/mattn/gist-vim.git
-[submodule "vim/vim/bundle/fugitive"]
-	path = vim/vim/bundle/fugitive
+[submodule "vim/vim.symlink/bundle/fugitive"]
+	path = vim/vim.symlink/bundle/fugitive
 	url = git://github.com/tpope/vim-fugitive.git
-[submodule "vim/vim/bundle/syntastic"]
-	path = vim/vim/bundle/syntastic
+[submodule "vim/vim.symlink/bundle/syntastic"]
+	path = vim/vim.symlink/bundle/syntastic
 	url = git://github.com/scrooloose/syntastic.git
-[submodule "drush/drush/drushplus"]
-	path = drush/drush/drushplus
+[submodule "drush/drush.symlink/drushplus"]
+	path = drush/drush.symlink/drushplus
 	url = git://github.com/eojthebrave/drushplus.git
-[submodule "drush/drush/registry_rebuild"]
-	path = drush/drush/registry_rebuild
+[submodule "drush/drush.symlink/registry_rebuild"]
+	path = drush/drush.symlink/registry_rebuild
 	url = http://git.drupal.org/project/registry_rebuild.git
-[submodule "drush/drush/module_builder"]
-	path = drush/drush/module_builder
+[submodule "drush/drush.symlink/module_builder"]
+	path = drush/drush.symlink/module_builder
 	url = http://git.drupal.org/project/module_builder.git
-[submodule "vim/vim/bundle/vim-slime"]
-	path = vim/vim/bundle/vim-slime
+[submodule "vim/vim.symlink/bundle/vim-slime"]
+	path = vim/vim.symlink/bundle/vim-slime
 	url = git://github.com/jpalardy/vim-slime.git

@@ -116,10 +116,10 @@ endif
 let g:netrw_list_hide='^\.\./$'
 
 " Bundles
-source ~/Code/dotfiles/vim/vimrc-bundles
+source ~/.vimrc-bundles
 
 " Keymaps
-source ~/Code/dotfiles/vim/vimrc-keymaps
+source ~/.vimrc-keymaps
 
 " Filetypes
-source ~/Code/dotfiles/vim/vimrc-filetypes
+source ~/.vimrc-filetypes
