@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+
+user="jake"
+
+drush -l $1.eca.dev sql-sync --eca-remote-user=$user --sanitize --create-db --db-su=root --db-su-pw=root --no-cache @eca.$1 $1.eca.dev -y --source-dump=/tmp/$user-$1
