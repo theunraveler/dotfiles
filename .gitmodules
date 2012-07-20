@@ -52,3 +52,6 @@
 [submodule "drush/drush.symlink/drush_cleanup"]
 	path = drush/drush.symlink/drush_cleanup
 	url = http://git.drupal.org/project/drush_cleanup.git
+[submodule "vim/vim.symlink/bundle/pathogen"]
+	path = vim/vim.symlink/bundle/pathogen
+	url = git://github.com/tpope/vim-pathogen.git
