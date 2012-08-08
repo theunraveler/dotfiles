@@ -55,3 +55,6 @@
 [submodule "vim/vim.symlink/bundle/pathogen"]
 	path = vim/vim.symlink/bundle/pathogen
 	url = git://github.com/tpope/vim-pathogen.git
+[submodule "vim/vim.symlink/bundle/webapi-vim"]
+	path = vim/vim.symlink/bundle/webapi-vim
+	url = git://github.com/mattn/webapi-vim.git
