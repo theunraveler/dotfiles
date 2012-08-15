@@ -118,6 +118,11 @@ endif
 " Netrw Stuff
 let g:netrw_list_hide='^\.\./$'
 
+" Load an extra file for local customizations if one exists.
+if filereadable($HOME . "/.vimrc-local")
+  source ~/.vimrc-local
+endif
+
 " Bundles
 source ~/.vimrc-bundles
 
@@ -126,3 +131,4 @@ source ~/.vimrc-keymaps
 
 " Filetypes
 source ~/.vimrc-filetypes
+
