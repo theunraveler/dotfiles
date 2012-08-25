@@ -17,6 +17,9 @@
 [init]
 	templatedir = ~/.gittemplate
 
+[branch]
+	autosetuprebase = always
+
 [help]
   autocorrect = 10
 
@@ -89,5 +92,3 @@
   track = checkout -t
   fresh = !git fetch --all && git reset --hard origin/master -
   ctags = !$(git cd-root).git/hooks/ctags
-[branch]
-	autosetuprebase = always
