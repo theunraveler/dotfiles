@@ -61,3 +61,6 @@
 [submodule "phpenv.symlink"]
 	path = phpenv.symlink
 	url = git://github.com/humanshell/phpenv.git
+[submodule "vim/vim.symlink/bundle/ShowMarks"]
+	path = vim/vim.symlink/bundle/ShowMarks
+	url = git://github.com/harleypig/ShowMarks.git
