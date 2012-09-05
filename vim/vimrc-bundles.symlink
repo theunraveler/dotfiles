@@ -1,7 +1,7 @@
 " Enable vim-bundles
 call pathogen#runtime_append_all_bundles()
 
-colorscheme ir_black
+colorscheme Tomorrow-Night-Bright
 
 " Tagbar
 let g:tagbar_autoclose = 1

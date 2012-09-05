@@ -1,9 +1,6 @@
 [submodule "zsh/zsh.symlink"]
 	path = zsh/zsh.symlink
 	url = git@github.com:theunraveler/oh-my-zsh.git
-[submodule "vim/vim.symlink/bundle/irblack"]
-	path = vim/vim.symlink/bundle/irblack
-	url = git://github.com/wgibbs/vim-irblack.git
 [submodule "vim/vim.symlink/bundle/nerdcommenter"]
 	path = vim/vim.symlink/bundle/nerdcommenter
 	url = http://github.com/scrooloose/nerdcommenter.git
@@ -64,3 +61,6 @@
 [submodule "vim/vim.symlink/bundle/ShowMarks"]
 	path = vim/vim.symlink/bundle/ShowMarks
 	url = git://github.com/harleypig/ShowMarks.git
+[submodule "vim/vim.symlink/bundle/tomorrow"]
+	path = vim/vim.symlink/bundle/tomorrow
+	url = git://github.com/13k/vim-tomorrow.git
