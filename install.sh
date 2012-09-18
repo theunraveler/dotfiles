@@ -7,15 +7,13 @@ DIR="$( cd "$( dirname "$0" )" && pwd )"
 git submodule init; git submodule update;
 
 cd ~;
-echo -n "Linking items from $DIR to home directory using "
+echo "Linking items from $DIR to home directory using $(which ln)"
 
 # If we are using GNU ln (from coreutils) the options are different.
 ln --version > /dev/null
 if [ $? -eq 0 ]; then
-  echo "GNU Coreutils ln"
   ln_command="ln -ns"
 else
-  echo "built-in ln command"
   ln_command="ln -hs"
 fi
 
