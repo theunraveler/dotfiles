@@ -2,7 +2,7 @@
 
 # Store the current directory and switch to the project root.
 DIR=$(pwd)
-cd $(dirname "$0")
+cd "$(dirname "$0")/.."
 
 git pull origin master
 
