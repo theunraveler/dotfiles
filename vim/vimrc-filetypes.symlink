@@ -6,8 +6,6 @@ if has("autocmd")
   autocmd BufRead,BufNewFile {Rakefile,Capfile,Gemfile,Guardfile} set filetype=ruby
   autocmd BufRead,BufNewFile *.twig                               set syntax=htmljinja
 
-  autocmd FileType {html,css}                                     setlocal expandtab
-  autocmd FileType {javascript,json,drupal}                       setlocal noexpandtab
   autocmd FileType markdown                                       setlocal spell lbr
 
 endif
