@@ -58,9 +58,9 @@
 [submodule "vim/vim.symlink/bundle/tomorrow"]
 	path = vim/vim.symlink/bundle/tomorrow
 	url = git://github.com/13k/vim-tomorrow.git
-[submodule "vim/vim.symlink/bundle/jinja.vim"]
-	path = vim/vim.symlink/bundle/jinja.vim
-	url = git://github.com/atourino/jinja.vim.git
 [submodule "vim/vim.symlink/bundle/html5"]
 	path = vim/vim.symlink/bundle/html5
 	url = git://github.com/othree/html5.vim.git
+[submodule "vim/vim.symlink/bundle/vim-twig"]
+	path = vim/vim.symlink/bundle/vim-twig
+	url = git://github.com/beyondwords/vim-twig.git
