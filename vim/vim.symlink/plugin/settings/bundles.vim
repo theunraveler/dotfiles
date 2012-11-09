@@ -1,6 +1,3 @@
-" Enable vim-bundles
-call pathogen#runtime_append_all_bundles()
-
 colorscheme Tomorrow-Night-Bright
 
 " Tagbar
@@ -13,3 +10,6 @@ let g:syntastic_phpcs_conf=" --standard=Drupal --extensions=php,module,inc,insta
 
 " Slime
 let g:slime_target = "tmux"
+
+" NERDCommenter
+let g:NERDCreateDefaultMappings = 0

@@ -35,24 +35,15 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 " Sudo save
-cmap w!! w !sudo tee % >/dev/null
+cnoremap w!! w !sudo tee % >/dev/null
 
 " Tagbar
-map <leader>l :TagbarToggle<cr>
+nnoremap <leader>l :TagbarToggle<cr>
 
 " Commenting
-map <leader>/ :call NERDComment(0,"toggle")<cr>
-
-" Tabular aligning
-if exists(":Tabularize")
-  nmap <Leader>a= :Tabularize /=<cr>
-  vmap <Leader>a= :Tabularize /=<cr>
-  nmap <Leader>a: :Tabularize /:\zs<cr>
-  vmap <Leader>a: :Tabularize /:\zs<cr>
-  nmap <leader>a> :Tabularize /=><cr>
-  vmap <leader>a> :Tabularize /=><cr>
-endif
+nnoremap <leader>/ :call NERDComment("n", "Toggle")<cr>
+vnoremap <leader>/ :call NERDComment("n", "Toggle")<cr>
 
 " Drupal stuff
-nnoremap <Leader>d6 :execute "!open http://api.drupal.org/api/search/6/".shellescape(expand("<cword>"), 1)<CR>
-nnoremap <Leader>d7 :execute "!open http://api.drupal.org/api/search/7/".shellescape(expand("<cword>"), 1)<CR>
+nnoremap <Leader>d6 :execute "!open http://api.drupal.org/api/search/6/".shellescape(expand("<cword>"), 1)<cr>
+nnoremap <Leader>d7 :execute "!open http://api.drupal.org/api/search/7/".shellescape(expand("<cword>"), 1)<cr>
