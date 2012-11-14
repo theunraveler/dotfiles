@@ -4,3 +4,7 @@ prompt="mysql(\\d)>\\_"
 [mysqld]
 max_allowed_packet = 200M
 innodb_file_per_table
+
+[client]
+user = root
+password = root
