@@ -58,3 +58,6 @@
 [submodule "vim/vim.symlink/bundle/vim-twig"]
 	path = vim/vim.symlink/bundle/vim-twig
 	url = git://github.com/beyondwords/vim-twig.git
+[submodule "zsh/zsh.symlink"]
+	path = zsh/zsh.symlink
+	url = git@github.com:theunraveler/oh-my-zsh.git
