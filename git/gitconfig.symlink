@@ -95,3 +95,4 @@
   track = checkout -t
   fresh = !git fetch --all && git reset --hard origin/master -
   ctags = !$(git cd-root).git/hooks/ctags
+  latest = for-each-ref --sort=-committerdate refs/heads/

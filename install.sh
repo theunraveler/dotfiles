@@ -24,9 +24,7 @@ for filepath in `find "$DIR" ! -path "*.git*" -name "*.symlink"`; do
 
   $ln_command "$filepath" ".$filename"
 
-  if [ $? -eq 0 ]; then
-    echo "done"
-  fi
+  if [ $? -eq 0 ]; then echo "done"; fi
 done
 
 # Finally, go back to where the user started.
