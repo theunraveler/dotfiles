@@ -7,7 +7,6 @@ cd "$(dirname "$(readlink -f "$0")")/.."
 git pull origin master
 
 # Next, update all git submodules.
-cd ../..
 git submodule foreach git pull
 
 # Finally, commit the results.
