@@ -6,11 +6,6 @@ cd "$(dirname "$(readlink -f "$0")")/.."
 
 git pull origin master
 
-# First, update zsh.
-cd zsh/zsh.symlink
-git pull upstream master
-git push
-
 # Next, update all git submodules.
 cd ../..
 git submodule foreach git pull
