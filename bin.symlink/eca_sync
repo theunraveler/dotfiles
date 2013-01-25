@@ -1,9 +1,0 @@
-#!/usr/bin/env sh
-
-user="jake"
-
-for ARG in "$@"; do
-  echo "Syncing $ARG...\c"
-  drush -l $ARG.eca.dev sql-sync --eca-remote-user=$user --sanitize --create-db --db-su=root --db-su-pw=root --no-cache @eca.$ARG $ARG.eca.dev -y --source-dump=/tmp/$user-$ARG > /dev/null
-  echo "done."
-done
