@@ -1,7 +1,17 @@
+# OSX files
 .DS_Store
 .localized
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+# Ctags files
+tags
+
+# Misc
 .project
 .svn
 *.bak
-nbproject
-tags
