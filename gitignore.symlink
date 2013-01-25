@@ -11,6 +11,13 @@ Icon
 # Ctags files
 tags
 
+# Vim
+.*.s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+
 # Misc
 .project
 .svn
