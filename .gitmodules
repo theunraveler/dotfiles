@@ -45,7 +45,7 @@
 	url = git://github.com/tpope/vim-pathogen.git
 [submodule "phpenv.symlink"]
 	path = phpenv.symlink
-	url = git://github.com/humanshell/phpenv.git
+	url = git://github.com/phpenv/phpenv.git
 [submodule "vim/vim.symlink/bundle/ShowMarks"]
 	path = vim/vim.symlink/bundle/ShowMarks
 	url = git://github.com/harleypig/ShowMarks.git
