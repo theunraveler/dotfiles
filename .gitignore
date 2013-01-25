@@ -1,4 +1,3 @@
-drush/drush.symlink/cache
-vim/vim.symlink/.netrwhist
-vim/vim.symlink/plugin/settings/local.vim
-vim/vim.symlink/spell
+drush.symlink/cache
+vim.symlink/plugin/settings/local.vim
+vim.symlink/spell
