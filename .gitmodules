@@ -1,63 +1,63 @@
-[submodule "vim/vim.symlink/bundle/nerdcommenter"]
-	path = vim/vim.symlink/bundle/nerdcommenter
+[submodule "vim.symlink/bundle/nerdcommenter"]
+	path = vim.symlink/bundle/nerdcommenter
 	url = http://github.com/scrooloose/nerdcommenter.git
-[submodule "vim/vim.symlink/bundle/markdown"]
-	path = vim/vim.symlink/bundle/markdown
+[submodule "vim.symlink/bundle/markdown"]
+	path = vim.symlink/bundle/markdown
 	url = git://github.com/tpope/vim-markdown.git
-[submodule "vim/vim.symlink/bundle/rails"]
-	path = vim/vim.symlink/bundle/rails
+[submodule "vim.symlink/bundle/rails"]
+	path = vim.symlink/bundle/rails
 	url = git://github.com/tpope/vim-rails.git
-[submodule "vim/vim.symlink/bundle/tagbar"]
-	path = vim/vim.symlink/bundle/tagbar
+[submodule "vim.symlink/bundle/tagbar"]
+	path = vim.symlink/bundle/tagbar
 	url = git://github.com/majutsushi/tagbar
-[submodule "vim/vim.symlink/bundle/cucumber"]
-	path = vim/vim.symlink/bundle/cucumber
+[submodule "vim.symlink/bundle/cucumber"]
+	path = vim.symlink/bundle/cucumber
 	url = git://github.com/tpope/vim-cucumber.git
-[submodule "vim/vim.symlink/bundle/snipmate"]
-	path = vim/vim.symlink/bundle/snipmate
+[submodule "vim.symlink/bundle/snipmate"]
+	path = vim.symlink/bundle/snipmate
 	url = git://github.com/msanders/snipmate.vim.git
-[submodule "vim/vim.symlink/bundle/Drupal-Snippets-for-Vim"]
-	path = vim/vim.symlink/bundle/Drupal-Snippets-for-Vim
+[submodule "vim.symlink/bundle/Drupal-Snippets-for-Vim"]
+	path = vim.symlink/bundle/Drupal-Snippets-for-Vim
 	url = git://github.com/theunraveler/Drupal-Snippets-for-Vim.git
-[submodule "vim/vim.symlink/bundle/fugitive"]
-	path = vim/vim.symlink/bundle/fugitive
+[submodule "vim.symlink/bundle/fugitive"]
+	path = vim.symlink/bundle/fugitive
 	url = git://github.com/tpope/vim-fugitive.git
-[submodule "vim/vim.symlink/bundle/syntastic"]
-	path = vim/vim.symlink/bundle/syntastic
+[submodule "vim.symlink/bundle/syntastic"]
+	path = vim.symlink/bundle/syntastic
 	url = git://github.com/scrooloose/syntastic.git
-[submodule "drush/drush.symlink/drushplus"]
-	path = drush/drush.symlink/drushplus
+[submodule "drush.symlink/drushplus"]
+	path = drush.symlink/drushplus
 	url = git://github.com/eojthebrave/drushplus.git
-[submodule "drush/drush.symlink/registry_rebuild"]
-	path = drush/drush.symlink/registry_rebuild
+[submodule "drush.symlink/registry_rebuild"]
+	path = drush.symlink/registry_rebuild
 	url = http://git.drupal.org/project/registry_rebuild.git
-[submodule "drush/drush.symlink/module_builder"]
-	path = drush/drush.symlink/module_builder
+[submodule "drush.symlink/module_builder"]
+	path = drush.symlink/module_builder
 	url = http://git.drupal.org/project/module_builder.git
-[submodule "vim/vim.symlink/bundle/vim-slime"]
-	path = vim/vim.symlink/bundle/vim-slime
+[submodule "vim.symlink/bundle/vim-slime"]
+	path = vim.symlink/bundle/vim-slime
 	url = git://github.com/jpalardy/vim-slime.git
-[submodule "drush/drush.symlink/drush_cleanup"]
-	path = drush/drush.symlink/drush_cleanup
+[submodule "drush.symlink/drush_cleanup"]
+	path = drush.symlink/drush_cleanup
 	url = http://git.drupal.org/project/drush_cleanup.git
-[submodule "vim/vim.symlink/bundle/pathogen"]
-	path = vim/vim.symlink/bundle/pathogen
+[submodule "vim.symlink/bundle/pathogen"]
+	path = vim.symlink/bundle/pathogen
 	url = git://github.com/tpope/vim-pathogen.git
 [submodule "phpenv.symlink"]
 	path = phpenv.symlink
 	url = git://github.com/phpenv/phpenv.git
-[submodule "vim/vim.symlink/bundle/ShowMarks"]
-	path = vim/vim.symlink/bundle/ShowMarks
+[submodule "vim.symlink/bundle/ShowMarks"]
+	path = vim.symlink/bundle/ShowMarks
 	url = git://github.com/harleypig/ShowMarks.git
-[submodule "vim/vim.symlink/bundle/tomorrow"]
-	path = vim/vim.symlink/bundle/tomorrow
+[submodule "vim.symlink/bundle/tomorrow"]
+	path = vim.symlink/bundle/tomorrow
 	url = git://github.com/13k/vim-tomorrow.git
-[submodule "vim/vim.symlink/bundle/html5"]
-	path = vim/vim.symlink/bundle/html5
+[submodule "vim.symlink/bundle/html5"]
+	path = vim.symlink/bundle/html5
 	url = git://github.com/othree/html5.vim.git
-[submodule "vim/vim.symlink/bundle/vim-twig"]
-	path = vim/vim.symlink/bundle/vim-twig
+[submodule "vim.symlink/bundle/vim-twig"]
+	path = vim.symlink/bundle/vim-twig
 	url = git://github.com/beyondwords/vim-twig.git
-[submodule "zsh/zsh.symlink"]
-	path = zsh/zsh.symlink
+[submodule "zsh.symlink"]
+	path = zsh.symlink
 	url = git@github.com:theunraveler/oh-my-zsh.git
