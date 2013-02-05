@@ -61,3 +61,6 @@
 [submodule "zsh.symlink"]
 	path = zsh.symlink
 	url = git@github.com:theunraveler/oh-my-zsh.git
+[submodule "vim.symlink/bundle/command-t"]
+	path = vim.symlink/bundle/command-t
+	url = git://git.wincent.com/command-t.git
