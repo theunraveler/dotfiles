@@ -85,9 +85,9 @@
   lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
   pl = pull --ff-only
   tree = log --graph --decorate --pretty=oneline --abbrev-commit
+  undo = reset --soft HEAD^
   w = whatchanged
   pom = push origin master
-  phm = push heroku master
   uncommit = reset --soft HEAD^
   branch-name = !git for-each-ref --format='%(refname:short)' "$(git symbolic-ref HEAD)"
   cd-root = rev-parse --show-cdup
