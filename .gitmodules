@@ -4,21 +4,12 @@
 [submodule "vim.symlink/bundle/markdown"]
 	path = vim.symlink/bundle/markdown
 	url = git://github.com/tpope/vim-markdown.git
-[submodule "vim.symlink/bundle/rails"]
-	path = vim.symlink/bundle/rails
-	url = git://github.com/tpope/vim-rails.git
 [submodule "vim.symlink/bundle/tagbar"]
 	path = vim.symlink/bundle/tagbar
 	url = git://github.com/majutsushi/tagbar
-[submodule "vim.symlink/bundle/cucumber"]
-	path = vim.symlink/bundle/cucumber
-	url = git://github.com/tpope/vim-cucumber.git
 [submodule "vim.symlink/bundle/snipmate"]
 	path = vim.symlink/bundle/snipmate
 	url = git://github.com/msanders/snipmate.vim.git
-[submodule "vim.symlink/bundle/Drupal-Snippets-for-Vim"]
-	path = vim.symlink/bundle/Drupal-Snippets-for-Vim
-	url = git://github.com/theunraveler/Drupal-Snippets-for-Vim.git
 [submodule "vim.symlink/bundle/fugitive"]
 	path = vim.symlink/bundle/fugitive
 	url = git://github.com/tpope/vim-fugitive.git
