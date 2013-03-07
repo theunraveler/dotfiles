@@ -22,3 +22,7 @@ Session.vim
 .project
 .svn
 *.bak
+.sass-cache
+
+# rbenv
+.ruby-version

@@ -15,3 +15,6 @@ plugins=(brew bundler composer extract gem git heroku osx symfony2 terminalapp)
 source $ZSH/oh-my-zsh.sh
 
 setopt -o extended_glob
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
