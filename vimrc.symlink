@@ -118,3 +118,4 @@ endif
 
 " Netrw Stuff
 let g:netrw_list_hide='^\.\./$'
+let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'

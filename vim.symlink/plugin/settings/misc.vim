@@ -4,4 +4,8 @@ if has("autocmd")
     silent! %s/\s\+$//
   endfunction
   autocmd FileWritePre,BufWritePre * call CleanupTrailingWhiteSpace()
+
+  " Set relative line numbers only in certain situations.
+  autocmd BufNewFile,BufRead,FocusGained,InsertLeave * :set relativenumber
+  autocmd FocusLost,InsertEnter * :set number
 endif
