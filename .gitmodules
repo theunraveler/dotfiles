@@ -10,9 +10,6 @@
 [submodule "vim.symlink/bundle/snipmate"]
 	path = vim.symlink/bundle/snipmate
 	url = git://github.com/msanders/snipmate.vim.git
-[submodule "vim.symlink/bundle/fugitive"]
-	path = vim.symlink/bundle/fugitive
-	url = git://github.com/tpope/vim-fugitive.git
 [submodule "vim.symlink/bundle/syntastic"]
 	path = vim.symlink/bundle/syntastic
 	url = git://github.com/scrooloose/syntastic.git
