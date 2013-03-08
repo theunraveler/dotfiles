@@ -46,3 +46,6 @@
 [submodule "vim.symlink/bundle/command-t"]
 	path = vim.symlink/bundle/command-t
 	url = git://git.wincent.com/command-t.git
+[submodule "vim.symlink/bundle/vim-numbertoggle"]
+	path = vim.symlink/bundle/vim-numbertoggle
+	url = git://github.com/jeffkreeftmeijer/vim-numbertoggle.git
