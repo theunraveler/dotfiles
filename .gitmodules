@@ -49,3 +49,6 @@
 [submodule "vim.symlink/bundle/vim-numbertoggle"]
 	path = vim.symlink/bundle/vim-numbertoggle
 	url = git://github.com/jeffkreeftmeijer/vim-numbertoggle.git
+[submodule "vim.symlink/bundle/vim-eunuch"]
+	path = vim.symlink/bundle/vim-eunuch
+	url = git://github.com/tpope/vim-eunuch.git
