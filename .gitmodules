@@ -52,3 +52,6 @@
 [submodule "vim.symlink/bundle/vim-eunuch"]
 	path = vim.symlink/bundle/vim-eunuch
 	url = git://github.com/tpope/vim-eunuch.git
+[submodule "drush.symlink/make_sync"]
+	path = drush.symlink/make_sync
+	url = http://git.drupal.org/sandbox/grndlvl/1930260.git
