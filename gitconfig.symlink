@@ -71,28 +71,36 @@
 
 [alias]
   p = pull origin master
+  pom = push origin master
   au = add -u
   st = status -sb
   ci = commit
   cl = clone
   br = branch
   co = checkout
-  df = diff
   fp = format-patch
+
+  # Logging
   l  = log --oneline --decorate
   lg = log -p
-  lol = log --graph --decorate --pretty=oneline --abbrev-commit
-  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
-  pl = pull --ff-only
   tree = log --graph --decorate --pretty=oneline --abbrev-commit
+  latest = for-each-ref --sort=-committerdate refs/heads/
+
+  pl = pull --ff-only
   undo = reset --soft HEAD^
   w = whatchanged
-  pom = push origin master
-  uncommit = reset --soft HEAD^
+
+  # Creating patches for branches
   branch-name = !git for-each-ref --format='%(refname:short)' "$(git symbolic-ref HEAD)"
   cd-root = rev-parse --show-cdup
   branch-diff = !git format-patch --stdout $1 > "$(git cd-root)patches/$(git branch-name).patch"
-  track = checkout -t
+
   fresh = !git fetch --all && git reset --hard origin/master -
+
+  # Get the path to the ctags file for the current repo
   ctags = !$(git cd-root).git/hooks/ctags
-  latest = for-each-ref --sort=-committerdate refs/heads/
+
+  # Ignore certain file with changes
+  assume   = update-index --assume-unchanged
+  unassume = update-index --no-assume-unchanged
+  assumed  = "!git ls-files -v | grep ^h | cut -c 3-"
