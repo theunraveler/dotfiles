@@ -106,6 +106,10 @@ set grepformat=%f:%l:%m
 " Format
 set formatprg=par
 
+" Splits
+set splitbelow
+set splitright
+
 if has("gui_running")
   set cursorline
   set gfn:Menlo:h12
