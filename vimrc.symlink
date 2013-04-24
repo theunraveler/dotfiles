@@ -10,7 +10,7 @@ set backspace=indent,eol,start   " backspace works as expected
 set nostartofline             " Make j/k respect the columns (after all, this is not a freaking typewriter)
 set modeline               " Respect modeline of the file (the famous "vi:noai:sw=3 ts=6" on the beginning of the files)
 set hidden                   " Avoid asking to save before hiding
-set enc=utf-8
+set encoding=utf-8
 
 filetype on
 filetype plugin on
@@ -19,7 +19,7 @@ syntax on
 
 " Basic UI
 set visualbell
-set shm=atIWswxrnmlf
+set shortmess=atIWswxrnmlf
 set ruler
 set title
 set titlestring=%f%(\ [%M]%)   " Show file name at the title
@@ -58,7 +58,7 @@ set sidescroll=1
 
 " Matching
 set showmatch
-set matchpairs=(:),{:},[:],<:>,':',":"
+set matchpairs=(:),{:},[:],<:>,':',":",/:/
 
 " Search and replace
 set gdefault     " Make regexp matches everything, instead of just the first one
@@ -82,7 +82,7 @@ set shiftwidth=2
 " Autocomplete
 set infercase
 set completeopt=longest,menuone
-set ofu=syntaxcomplete#Complete
+set omnifunc=syntaxcomplete#Complete
 
 " Clipboard
 set clipboard=unnamed
