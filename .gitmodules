@@ -59,3 +59,6 @@
 	path = drush.symlink/drush_iq
 	url = http://git.drupal.org/project/drush_iq.git
 	branch = 7.x-1.x
+[submodule "vim.symlink/bundle/vim-trailing-whitespace"]
+	path = vim.symlink/bundle/vim-trailing-whitespace
+	url = git://github.com/bronson/vim-trailing-whitespace.git
