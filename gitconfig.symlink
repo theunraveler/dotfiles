@@ -60,10 +60,10 @@
   insteadOf = "gh:"
 
 [url "http://git.drupal.org/project/"]
-  insteadOf = "drupal:"
+  insteadOf = "d:"
 
 [url "ssh://git@git.drupal.org/sandbox/"]
-  insteadOf = "drupalsand:"
+  insteadOf = "dsand:"
 
 #########
 # ALIASES
