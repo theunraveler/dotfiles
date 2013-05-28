@@ -62,3 +62,6 @@
 [submodule "vim.symlink/bundle/vim-trailing-whitespace"]
 	path = vim.symlink/bundle/vim-trailing-whitespace
 	url = git://github.com/bronson/vim-trailing-whitespace.git
+[submodule "drush.symlink/vimrc"]
+	path = drush.symlink/vimrc
+	url = http://git.drupal.org/project/vimrc.git

@@ -43,7 +43,3 @@ nnoremap <leader>l :TagbarToggle<cr>
 " Commenting
 nnoremap <leader>/ :call NERDComment("n", "Toggle")<cr>
 vnoremap <leader>/ :call NERDComment("n", "Toggle")<cr>
-
-" Drupal stuff
-nnoremap <Leader>d6 :execute "!open http://api.drupal.org/api/search/6/".shellescape(expand("<cword>"), 1)<cr>
-nnoremap <Leader>d7 :execute "!open http://api.drupal.org/api/search/7/".shellescape(expand("<cword>"), 1)<cr>
