@@ -15,6 +15,7 @@ data.location=~/Dropbox/taskwarrior
 
 # Misc
 default.command=list
+due=3
 
 # Colors
 color.due=green
@@ -23,5 +24,9 @@ color.tagged=
 
 # Reports
 report.list.columns=id,project,priority,due,description,tags
-report.list.filter=status:pending -someday
 report.list.labels=ID,Proj,Pri,Due,Description,Tags
+
+# "urgent" determinations
+urgency.annotations.coefficient=0
+urgency.project.coefficient=0
+urgency.tags.coefficient=0
