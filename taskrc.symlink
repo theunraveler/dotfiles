@@ -30,3 +30,6 @@ report.list.labels=ID,Proj,Pri,Due,Description,Tags
 urgency.annotations.coefficient=0
 urgency.project.coefficient=0
 urgency.tags.coefficient=0
+
+# task-web
+task-web.filter.badge=+DUE
