@@ -32,4 +32,4 @@ urgency.project.coefficient=0
 urgency.tags.coefficient=0
 
 # task-web
-task-web.filter.badge=(+DUE or +OVERDUE or +TODAY) status:pending
+task-web.filter.badge=((+DUE or +OVERDUE or +TODAY) or +today) status:pending
