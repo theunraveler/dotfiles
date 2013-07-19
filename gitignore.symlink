@@ -24,5 +24,6 @@ Session.vim
 *.bak
 .sass-cache
 
-# rbenv
+# phpenv/rbenv
 .ruby-version
+.phpenv-version
