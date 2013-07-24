@@ -18,6 +18,8 @@ default.command=list
 due=3
 
 # Colors
+color.blocked=grey
+color.blocking=
 color.due=green
 color.due.today=yellow
 color.tagged=
