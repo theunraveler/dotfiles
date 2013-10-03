@@ -7,3 +7,6 @@ let g:tagbar_ctags_bin = '/usr/local/bin/ctags'
 
 " NERDCommenter
 let g:NERDCreateDefaultMappings = 0
+
+" Syntastic
+let g:syntastic_php_checkers=['php']
