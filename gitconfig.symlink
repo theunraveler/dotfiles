@@ -3,7 +3,7 @@
 ##########
 
 [include]
-  path = /Users/Jake/.gitconfig-user
+  path = ~/.gitconfig-user
 
 ##########
 # SETTINGS
