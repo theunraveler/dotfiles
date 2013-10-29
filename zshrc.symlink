@@ -19,4 +19,4 @@ setopt -o extended_glob
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-archey 2>/dev/null
+archey --color 2>/dev/null
