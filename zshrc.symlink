@@ -10,7 +10,7 @@ export DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(brew bundler extract gem git heroku osx symfony2 terminalapp)
+plugins=(brew extract git git-flow osx symfony2 terminalapp)
 
 source $ZSH/oh-my-zsh.sh
 
