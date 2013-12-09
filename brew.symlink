@@ -6,6 +6,7 @@ axel
 bison
 cloc
 colordiff
+composer
 contacts
 coreutils
 ctags
@@ -39,7 +40,6 @@ imagemagick
 intltool
 jq
 jsawk
-jscoverage
 jshon
 jsl
 lame
