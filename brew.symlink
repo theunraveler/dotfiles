@@ -48,6 +48,7 @@ libmemcached
 libusb-compat
 libvorbis
 libxml2
+libyaml
 llvm
 lrzsz
 lynx
@@ -87,7 +88,6 @@ rbenv-gem-rehash
 rdiff-backup
 rename
 resty
-rsync
 ruby-build
 siege
 ssh-copy-id
@@ -102,5 +102,4 @@ tree
 wget
 yasm
 youtube-dl
-zlib
 zsh
