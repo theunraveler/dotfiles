@@ -2,6 +2,7 @@
 
 WD="$(pwd)"
 DIR="$( cd "$(dirname "$0")/.." && pwd )"
+BREW_CMD="/usr/local/bin/brew"
 
 # First, initialize git submodules.
 git submodule init; git submodule update;
@@ -26,6 +27,22 @@ for filepath in `find "$DIR" ! -path "*.git*" -name "*.symlink"`; do
 
   if [ $? -eq 0 ]; then echo "done"; fi
 done
+
+# Install homebrew if we need to.
+if [ ! -f $BREW_CMD ]; then
+  echo -n "Installing homebrew..."
+  ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+fi
+
+echo "Checking homebrew packages..."
+for brew in `cat ~/.brew`; do
+  $BREW_CMD list $brew &> /dev/null
+  if [ $? -ne 0 ]; then
+    echo "Installing $brew..."
+    $BREW_CMD install $brew
+  fi
+done
+echo "done."
 
 # Finally, go back to where the user started.
 cd $WD
