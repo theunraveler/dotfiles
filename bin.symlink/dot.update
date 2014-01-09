@@ -11,7 +11,7 @@ git submodule foreach git pull
 
 # Update vundle
 cd vim.symlink/bundle/vundle && git pull && cd -;
-vim +BundleInstall +qall
+vim +BundleInstall! +qall
 
 # Finally, commit the results.
 git status --porcelain | grep '^ M' | awk '{print $2}' | xargs git add
