@@ -13,8 +13,28 @@ set hidden                   " Avoid asking to save before hiding
 set encoding=utf-8
 
 filetype on
-filetype plugin on
-filetype indent on
+filetype off
+
+" Bundles (for vundle)
+"
+" NOTE: These need to go before the "filetype plugin indent on" line, or
+" plugins will not load!
+Bundle 'gmarik/vundle'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'tpope/vim-markdown'
+Bundle 'majutsushi/tagbar'
+Bundle 'msanders/snipmate.vim'
+Bundle 'scrooloose/syntastic'
+Bundle 'harleypig/ShowMarks'
+Bundle '13k/vim-tomorrow'
+Bundle 'othree/html5.vim'
+Bundle 'beyondwords/vim-twig'
+Bundle 'jeffkreeftmeijer/vim-numbertoggle'
+Bundle 'tpope/vim-eunuch'
+Bundle 'bronson/vim-trailing-whitespace'
+Bundle 'kien/ctrlp.vim'
+
+filetype plugin indent on
 syntax on
 
 " Basic UI
@@ -123,5 +143,3 @@ endif
 " Netrw Stuff
 let g:netrw_list_hide='^\.\./$'
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
-
-filetype plugin indent on
