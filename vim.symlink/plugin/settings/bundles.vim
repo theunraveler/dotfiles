@@ -11,3 +11,6 @@ let g:NERDCreateDefaultMappings = 0
 " Syntastic
 let g:syntastic_php_checkers=['php']
 let g:syntastic_quiet_messages = {'level': 'warnings'}
+
+" PIV
+let g:DisableAutoPHPFolding = 1

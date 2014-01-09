@@ -33,6 +33,8 @@ Bundle 'jeffkreeftmeijer/vim-numbertoggle'
 Bundle 'tpope/vim-eunuch'
 Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'kien/ctrlp.vim'
+Bundle 'spf13/PIV'
+Bundle 'arnaud-lb/vim-php-namespace'
 
 filetype plugin indent on
 syntax on

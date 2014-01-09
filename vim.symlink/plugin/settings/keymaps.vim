@@ -43,3 +43,7 @@ nnoremap <leader>l :TagbarToggle<cr>
 " Commenting
 nnoremap <leader>/ :call NERDComment("n", "Toggle")<cr>
 vnoremap <leader>/ :call NERDComment("n", "Toggle")<cr>
+
+" vim-php-namespace
+inoremap <Leader>u <C-O>:call PhpInsertUse()<CR>
+noremap <Leader>u :call PhpInsertUse()<CR>
