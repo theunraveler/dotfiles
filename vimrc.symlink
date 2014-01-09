@@ -1,7 +1,6 @@
-" Load pathogen
-runtime bundle/pathogen/autoload/pathogen.vim
-call pathogen#surround('~/.drush/vimrc/bundle/{}')
-call pathogen#incubate()
+" Load vundle
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 
 " Fix vim defaults
 set nocompatible
@@ -125,4 +124,4 @@ endif
 let g:netrw_list_hide='^\.\./$'
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 
-let g:syntastic_quiet_warnings=1
+filetype plugin indent on

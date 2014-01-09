@@ -7,7 +7,12 @@ BREW_CMD="/usr/local/bin/brew"
 # First, initialize git submodules.
 git submodule init; git submodule update;
 
-cd ~;
+mkdir vim.symlink/bundle
+cd vim.symlink/bundle
+git clone https://github.com/gmarik/vundle.git vundle
+cd -
+
+cd ~
 echo "Linking items from $DIR to home directory using $(which ln)"
 
 # If we are using GNU ln (from coreutils) the options are different.
@@ -27,6 +32,9 @@ for filepath in `find "$DIR" ! -path "*.git*" -name "*.symlink"`; do
 
   if [ $? -eq 0 ]; then echo "done"; fi
 done
+
+# Install vim bundles
+vim +BundleInstall +qall
 
 # Install homebrew if we need to.
 if [ ! -f $BREW_CMD ]; then

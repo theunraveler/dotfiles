@@ -9,6 +9,10 @@ git pull origin master
 # Next, update all git submodules.
 git submodule foreach git pull
 
+# Update vundle
+cd vim.symlink/bundle/vundle && git pull && cd -;
+vim +BundleInstall +qall
+
 # Finally, commit the results.
 git status --porcelain | grep '^ M' | awk '{print $2}' | xargs git add
 if [ -n "$(git status --porcelain | grep '^M')" ]
