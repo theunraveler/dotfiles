@@ -55,7 +55,6 @@ lynx
 macvim
 makeicns
 maven
-mcrypt
 mercurial
 mobile-shell
 moreutils
@@ -63,6 +62,7 @@ mysql
 optipng
 p7zip
 php53-intl
+php53-mcrypt
 php53-memcache
 php53-uploadprogress
 php53-xdebug
