@@ -10,9 +10,6 @@
 [submodule "phpenv.symlink"]
 	path = phpenv.symlink
 	url = git://github.com/phpenv/phpenv.git
-[submodule "vim.symlink/bundle/html5"]
-	path = vim.symlink/bundle/html5
-	url = git://github.com/othree/html5.vim.git
 [submodule "zsh.symlink"]
 	path = zsh.symlink
 	url = git@github.com:theunraveler/oh-my-zsh.git
