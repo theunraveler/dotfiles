@@ -2,6 +2,7 @@ ack
 apple-gcc42
 appledoc
 archey
+boot2docker
 cloc
 colordiff
 composer
@@ -11,7 +12,6 @@ ctags
 dirmngr
 discount
 dnsmasq
-docker
 drush
 dsh
 erlang
@@ -57,6 +57,7 @@ php53-mcrypt
 php53-memcache
 php53-uploadprogress
 php53-xdebug
+php53-xhprof
 php54-intl
 php54-memcache
 php54-uploadprogress
