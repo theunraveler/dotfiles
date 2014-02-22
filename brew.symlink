@@ -3,6 +3,7 @@ apple-gcc42
 appledoc
 archey
 boot2docker
+boris
 cloc
 colordiff
 composer
@@ -46,6 +47,7 @@ lynx
 macvim
 makeicns
 maven
+mdr
 mercurial
 mobile-shell
 moreutils
