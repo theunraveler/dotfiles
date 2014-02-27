@@ -26,6 +26,9 @@
 [push]
   default = matching
 
+[merge]
+  ff = false
+
 ########
 # COLORS
 ########
