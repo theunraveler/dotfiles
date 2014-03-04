@@ -4,6 +4,10 @@
 DIR=$(pwd)
 cd "$(dirname "$(readlink -f "$0")")/.."
 
+# If there are changes, stash them.
+STASH_COUNT=`git stash list | wc -l`
+git stash --quiet
+
 git pull origin master
 
 # Next, update all git submodules.
@@ -15,12 +19,16 @@ vim +BundleInstall! +qall
 
 # Finally, commit the results.
 git status --porcelain | grep '^ M' | awk '{print $2}' | xargs git add
-if [ -n "$(git status --porcelain | grep '^M')" ]
-then
+if [ -n "$(git status --porcelain | grep '^M')" ]; then
   git ci -m "Updating submodules, vim plugins, and/or brew list."
   git push origin master
 else
   echo "Nothing updated, no push needed."
+fi
+
+# Unstash if necessary.
+if [ $STASH_COUNT != `git stash list | wc -l` ]; then
+  git stash pop --quiet
 fi
 
 cd $DIR
