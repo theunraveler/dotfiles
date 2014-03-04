@@ -30,6 +30,7 @@ gnu-units
 gnu-which
 graphviz
 grep
+hr
 html2text
 htmldoc
 htop-osx
@@ -40,6 +41,7 @@ hub
 intltool
 jq
 jsawk
+jscoverage
 jshon
 jsl
 libmemcached
