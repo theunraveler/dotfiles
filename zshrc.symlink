@@ -17,6 +17,6 @@ source $ZSH/oh-my-zsh.sh
 setopt -o extended_glob
 
 # Put an hr between each command.
-precmd() { hr '-' }
+precmd() { tput setaf 7 && hr '-' && tput sgr0 }
 
 archey --color 2>/dev/null
