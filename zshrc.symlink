@@ -19,6 +19,4 @@ setopt -o extended_glob
 # Put an hr between each command.
 precmd() { hr '-' }
 
-# A list of commands to run at login. One will be chosen at random each time.
-STARTUP=("archey --color 2>/dev/null" "fortune | cowsay")
-eval $STARTUP[`jot -r 1 1 ${#STARTUP[@]}`]
+archey --color 2>/dev/null
