@@ -13,6 +13,7 @@ ctags
 dirmngr
 discount
 dnsmasq
+doxygen
 drush
 dsh
 erlang
@@ -51,6 +52,7 @@ maven
 mdr
 mercurial
 mobile-shell
+mongodb
 moreutils
 mysql
 node
@@ -59,6 +61,7 @@ php53-imagick
 php53-intl
 php53-mcrypt
 php53-memcache
+php53-mongo
 php53-uploadprogress
 php53-xdebug
 php53-xhprof
@@ -89,6 +92,7 @@ ssh-copy-id
 subversion
 tag
 task
+tig
 timedog
 tmux
 tofrodos
