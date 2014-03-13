@@ -56,6 +56,9 @@
 # URL SHORTIES
 ##############
 
+[url "ssh://git@git.advomatic.com/"]
+  insteadOf = "advo:"
+
 [url "https://github.com/"]
   insteadOf = "gh:"
 
@@ -79,6 +82,7 @@
   br = branch
   co = checkout
   fp = format-patch
+  w = whatchanged
 
   # Logging
   l  = log --oneline --decorate
@@ -86,16 +90,17 @@
   tree = log --graph --decorate --pretty=oneline --abbrev-commit
   latest = for-each-ref --sort=-committerdate refs/heads/
 
-  pl = pull --ff-only
+  # A better git pull. See http://stackoverflow.com/a/15316602.
+  up = "!git remote update -p; git merge --ff-only @{u}"
+
+  # Resetting
   undo = reset --soft HEAD^
-  w = whatchanged
+  fresh = !git fetch --all && git reset --hard origin/master -
 
   # Creating patches for branches
   branch-name = !git for-each-ref --format='%(refname:short)' "$(git symbolic-ref HEAD)"
   cd-root = rev-parse --show-cdup
   branch-diff = !git format-patch --stdout $1 > "$(git cd-root)patches/$(git branch-name).patch"
-
-  fresh = !git fetch --all && git reset --hard origin/master -
 
   # Get the path to the ctags file for the current repo
   ctags = !$(git cd-root).git/hooks/ctags
