@@ -14,13 +14,16 @@ git pull origin master
 git submodule foreach git pull
 
 # Update vundle
-cd vim.symlink/bundle/vundle && git pull && cd -;
+cd vim.symlink/bundle/vundle && git pull && cd - > /dev/null;
 vim +BundleInstall! +qall
+
+# Update composer projects
+which composer > /dev/null && cd composer.symlink && composer --dev update && cd - > /dev/null;
 
 # Finally, commit the results.
 git status --porcelain | grep '^ M' | awk '{print $2}' | xargs git add
 if [ -n "$(git status --porcelain | grep '^M')" ]; then
-  git ci -m "Updating submodules, vim plugins, and/or brew list."
+  git ci -m "Updating submodules, vim plugins, composer packages, and/or brew list."
   git push origin master
 else
   echo "Nothing updated, no push needed."

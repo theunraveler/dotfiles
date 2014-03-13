@@ -1,3 +1,7 @@
+composer.symlink/.htaccess
+composer.symlink/bin/*
+composer.symlink/cache
+composer.symlink/vendor
 drush.symlink/cache
 vim.symlink/bundle
 vim.symlink/plugin/settings/local.vim

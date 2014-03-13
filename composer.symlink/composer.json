@@ -1,0 +1,8 @@
+{
+    "require": {
+        "psy/psysh": "*"
+    },
+    "config": {
+        "bin-dir": "bin"
+    }
+}

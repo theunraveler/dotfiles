@@ -52,6 +52,9 @@ for brew in `cat ~/.brew`; do
 done
 echo "done."
 
+# Install composer packages.
+which composer && cd .composer && composer --dev install && cd -;
+
 # Finally, go back to where the user started.
 cd $WD
 exit 0
