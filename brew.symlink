@@ -65,7 +65,9 @@ php53-uploadprogress
 php53-xdebug
 php53-xhprof
 php54-intl
+php54-mcrypt
 php54-memcache
+php54-mongo
 php54-uploadprogress
 php54-xdebug
 php55-intl
