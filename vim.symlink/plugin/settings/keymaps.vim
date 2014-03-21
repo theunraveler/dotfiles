@@ -24,7 +24,7 @@ nnoremap <space> za
 " Buffer stuff
 nmap <leader>n :bn<cr>
 nmap <leader>p :bp<cr>
-nmap <leader>c :bd<cr>
+nmap <leader>c :Bclose<cr>
 nmap <leader>o :Explore<cr>
 nmap <leader>j :ls<cr>
 
