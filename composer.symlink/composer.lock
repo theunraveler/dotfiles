@@ -51,16 +51,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.1.7",
+            "version": "v0.1.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "636ea9b98ae228fadc3b500cb858eef0c6b63194"
+                "reference": "33db0d52546a2b543739eee0ec62235fa7813d35"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/636ea9b98ae228fadc3b500cb858eef0c6b63194",
-                "reference": "636ea9b98ae228fadc3b500cb858eef0c6b63194",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/33db0d52546a2b543739eee0ec62235fa7813d35",
+                "reference": "33db0d52546a2b543739eee0ec62235fa7813d35",
                 "shasum": ""
             },
             "require": {
@@ -69,7 +69,7 @@
                 "symfony/console": "~2.3, >=2.3.10"
             },
             "require-dev": {
-                "phpunit/phpunit": "~3.7",
+                "phpunit/phpunit": ">=3.7, <4.1",
                 "symfony/finder": "~2.1"
             },
             "suggest": {
@@ -108,7 +108,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2014-03-18 17:26:21"
+            "time": "2014-04-13 01:58:29"
         },
         {
             "name": "symfony/console",
