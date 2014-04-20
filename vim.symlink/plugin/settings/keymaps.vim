@@ -1,4 +1,4 @@
-let mapleader = ","
+let mapleader = "\<Space>"
 
 " Fixing some vim defaults baddy
 nnoremap j gj
@@ -17,9 +17,6 @@ inoremap <C-cr> <esc>A<cr>
 
 " Search only in the selected block (visual mode)
 vnoremap / <esc>/\%V
-
-" Space will toggle folds!
-nnoremap <space> za
 
 " Buffer stuff
 nmap <leader>n :bn<cr>
