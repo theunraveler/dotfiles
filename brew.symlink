@@ -39,7 +39,6 @@ hub
 intltool
 jq
 jsawk
-jscoverage
 jshon
 jsl
 libdvdcss
@@ -65,6 +64,7 @@ php53-mongo
 php53-uploadprogress
 php53-xdebug
 php53-xhprof
+php54-imagick
 php54-intl
 php54-mcrypt
 php54-memcache
@@ -83,6 +83,7 @@ proctools
 putty
 pv
 python
+qt
 rabbitmq
 rbenv-gem-rehash
 rdiff-backup
@@ -100,6 +101,5 @@ tmux
 tofrodos
 tree
 wget
-wkhtmltopdf
 youtube-dl
 zsh
