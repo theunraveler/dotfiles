@@ -1,5 +1,4 @@
 ack
-apple-gcc42
 appledoc
 archey
 boot2docker
@@ -37,6 +36,7 @@ httping
 httrack
 hub
 intltool
+jpegoptim
 jq
 jsawk
 jshon
