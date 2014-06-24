@@ -51,16 +51,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.1.9",
+            "version": "v0.1.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "c290226c6cf155c31a2b9866561a45ba61b99f95"
+                "reference": "4c61cc135eda07a37d582a389b453cd4a6843834"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/c290226c6cf155c31a2b9866561a45ba61b99f95",
-                "reference": "c290226c6cf155c31a2b9866561a45ba61b99f95",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/4c61cc135eda07a37d582a389b453cd4a6843834",
+                "reference": "4c61cc135eda07a37d582a389b453cd4a6843834",
                 "shasum": ""
             },
             "require": {
@@ -108,7 +108,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2014-06-08 15:58:25"
+            "time": "2014-06-21 03:00:51"
         },
         {
             "name": "symfony/console",
