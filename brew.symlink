@@ -1,5 +1,4 @@
 ack
-appledoc
 archey
 boot2docker
 cloc
@@ -40,7 +39,6 @@ jpegoptim
 jq
 jsawk
 jshon
-jsl
 libdvdcss
 libmemcached
 llvm
