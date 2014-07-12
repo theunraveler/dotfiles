@@ -8,6 +8,9 @@ ZSH_THEME="theunraveler"
 # Comment this out to disable weekly auto-update checks
 export DISABLE_AUTO_UPDATE="true"
 
+# Prevent the window title from being set
+export DISABLE_AUTO_TITLE="true"
+
 # Which plugins would you like to load? (plugins can be found in ~/.zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(brew extract git git-flow gitignore osx singlechar symfony2 terminalapp)
