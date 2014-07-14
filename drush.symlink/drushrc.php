@@ -150,6 +150,13 @@
 // --no-label option
 # $options['no-label'] = TRUE;
 
+/**
+ * Include custom config and command files.
+ */
+if (($path = getenv('HOME') . '/.vim/bundle/vimrc') && is_dir($path)) {
+  $options['include'][] = $path;
+}
+
 /*
  * Customize this associative array with your own tables. This is the list of
  * tables whose *data* is skipped by the 'sql-dump' and 'sql-sync' commands when
