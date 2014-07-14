@@ -10,6 +10,11 @@ git stash --quiet
 
 git pull origin master
 
+# Update homebrew.
+if [ `which brew` ]; then
+  brew up && brew upgrade && brew cleanup
+fi
+
 # Next, update all git submodules.
 git submodule foreach git pull
 
