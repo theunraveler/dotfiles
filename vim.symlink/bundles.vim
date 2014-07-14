@@ -17,3 +17,4 @@ Bundle 'amirh/HTML-AutoCloseTag'
 Bundle 'puppetlabs/puppet-syntax-vim'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'rbgrouleff/bclose.vim'
+Bundle 'git://drupalcode.org/project/vimrc.git', {'rtp': 'bundle/vim-plugin-for-drupal/'}

@@ -20,6 +20,3 @@
 	path = drush.symlink/drush_iq
 	url = http://git.drupal.org/project/drush_iq.git
 	branch = 7.x-1.x
-[submodule "drush.symlink/vimrc"]
-	path = drush.symlink/vimrc
-	url = http://git.drupal.org/project/vimrc.git
