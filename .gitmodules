@@ -7,9 +7,6 @@
 [submodule "drush.symlink/drush_cleanup"]
 	path = drush.symlink/drush_cleanup
 	url = http://git.drupal.org/project/drush_cleanup.git
-[submodule "phpenv.symlink"]
-	path = phpenv.symlink
-	url = git://github.com/phpenv/phpenv.git
 [submodule "zsh.symlink"]
 	path = zsh.symlink
 	url = git@github.com:theunraveler/oh-my-zsh.git
