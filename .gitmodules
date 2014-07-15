@@ -17,3 +17,7 @@
 	path = drush.symlink/drush_iq
 	url = http://git.drupal.org/project/drush_iq.git
 	branch = 7.x-1.x
+[submodule "drush.symlink/drush_sql_sync_pipe"]
+	path = drush.symlink/drush_sql_sync_pipe
+	url = http://git.drupal.org/project/drush_sql_sync_pipe.git
+	branch = 7.x-1.x
