@@ -93,6 +93,9 @@
   # A better git pull. See http://stackoverflow.com/a/15316602.
   up = "!git remote update -p; git merge --ff-only @{u}"
 
+  # Stash, pull, pop.
+  spp = !git stash && git pull && git stash pop
+
   # Resetting
   undo = reset --soft HEAD^
   fresh = !git fetch --all && git reset --hard origin/master -
