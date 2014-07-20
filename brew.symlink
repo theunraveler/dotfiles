@@ -1,6 +1,7 @@
 ack
 archey
 boot2docker
+brew-cask
 cloc
 colordiff
 composer
@@ -14,6 +15,7 @@ doxygen
 drush
 dsh
 erlang
+fig
 gd
 ghostscript
 gist
