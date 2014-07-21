@@ -43,13 +43,7 @@ if [ ! -f $BREW_CMD ]; then
 fi
 
 echo "Checking homebrew packages..."
-for brew in `cat ~/.brew`; do
-  $BREW_CMD list $brew &> /dev/null
-  if [ $? -ne 0 ]; then
-    echo "Installing $brew..."
-    $BREW_CMD install $brew
-  fi
-done
+brew bundle ~/.Brewfile
 echo "done."
 
 # Install composer packages.

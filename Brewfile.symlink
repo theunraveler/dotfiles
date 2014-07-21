@@ -1,0 +1,122 @@
+install ack
+install archey
+install boot2docker
+install brew-cask
+install cloc
+install colordiff
+install composer
+install contacts
+install coreutils
+install ctags
+install dirmngr
+install discount
+install dnsmasq
+install doxygen
+install drush
+install dsh
+install erlang
+install fig
+install gd
+install ghostscript
+install gist
+install git
+install git-extras
+install git-flow
+install gnu-sed
+install gnu-tar
+install gnu-units
+install gnu-which
+install graphviz
+install grep
+install hr
+install html2text
+install htmldoc
+install htop-osx
+install httperf
+install httping
+install httrack
+install hub
+install intltool
+install jpegoptim
+install jq
+install jsawk
+install jshon
+install libdvdcss
+install libmemcached
+install llvm
+install lynx
+install macvim
+install makeicns
+install maven
+install mdr
+install mercurial
+install mobile-shell
+install mongodb
+install moreutils
+install mysql
+install node
+install optipng
+install php53-imagick
+install php53-intl
+install php53-mcrypt
+install php53-memcache
+install php53-mongo
+install php53-uploadprogress
+install php53-xdebug
+install php53-xhprof
+install php54-imagick
+install php54-intl
+install php54-mcrypt
+install php54-memcache
+install php54-mongo
+install php54-uploadprogress
+install php54-xdebug
+install php55-intl
+install php55-memcache
+install php55-uploadprogress
+install php55-xdebug
+install phpdocumentor
+install pngcrush
+install postgresql
+install ppss
+install proctools
+install putty
+install pv
+install python
+install qt
+install rabbitmq
+install rbenv-gem-rehash
+install rdiff-backup
+install rename
+install resty
+install ruby-build
+install siege
+install ssh-copy-id
+install subversion
+install tag
+install task
+install tig
+install timedog
+install tmux
+install tofrodos
+install tree
+install wget
+install youtube-dl
+install zsh
+cask install appzapper
+cask install balsamiq-mockups
+cask install chromium
+cask install clipmenu
+cask install firefox
+cask install fluid
+cask install libreoffice
+cask install mongohub
+cask install onepassword
+cask install rdio
+cask install sequel-pro
+cask install skype
+cask install spectacle
+cask install thyme
+cask install transmission
+cask install transmit
+cask install vlc
