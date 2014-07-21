@@ -1,9 +1,6 @@
 [submodule "drush.symlink/registry_rebuild"]
 	path = drush.symlink/registry_rebuild
 	url = http://git.drupal.org/project/registry_rebuild.git
-[submodule "drush.symlink/module_builder"]
-	path = drush.symlink/module_builder
-	url = http://git.drupal.org/project/module_builder.git
 [submodule "drush.symlink/drush_cleanup"]
 	path = drush.symlink/drush_cleanup
 	url = http://git.drupal.org/project/drush_cleanup.git
@@ -13,10 +10,6 @@
 [submodule "drush.symlink/make_sync"]
 	path = drush.symlink/make_sync
 	url = http://git.drupal.org/sandbox/grndlvl/1930260.git
-[submodule "drush.symlink/drush_iq"]
-	path = drush.symlink/drush_iq
-	url = http://git.drupal.org/project/drush_iq.git
-	branch = 7.x-1.x
 [submodule "drush.symlink/drush_sql_sync_pipe"]
 	path = drush.symlink/drush_sql_sync_pipe
 	url = http://git.drupal.org/project/drush_sql_sync_pipe.git
