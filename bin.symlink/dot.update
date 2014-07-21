@@ -12,7 +12,7 @@ git pull origin master
 
 # Update homebrew.
 if [ `which brew` ]; then
-  brew update && brew upgrade && brew cleanup && brew cask cleanup
+  brew update && brew upgrade && brew cleanup
 fi
 
 # Next, update all git submodules.

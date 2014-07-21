@@ -1,7 +1,9 @@
+tap homebrew/dupes
+tap homebrew/php
+tap homebrew/versions
 install ack
 install archey
 install boot2docker
-install brew-cask
 install cloc
 install colordiff
 install composer
@@ -103,20 +105,4 @@ install tree
 install wget
 install youtube-dl
 install zsh
-cask install appzapper
-cask install balsamiq-mockups
-cask install chromium
-cask install clipmenu
-cask install firefox
-cask install fluid
-cask install libreoffice
-cask install mongohub
-cask install onepassword
-cask install rdio
-cask install sequel-pro
-cask install skype
-cask install spectacle
-cask install thyme
-cask install transmission
-cask install transmit
-cask install vlc
+install zsh-completions

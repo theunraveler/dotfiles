@@ -19,6 +19,8 @@ source $ZSH/oh-my-zsh.sh
 
 setopt -o extended_glob
 
+fpath=(/usr/local/share/zsh-completions $fpath)
+
 # Put an hr between each command.
 precmd() { tput setaf 7 && hr '-' && tput sgr0 }
 
