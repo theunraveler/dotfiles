@@ -18,7 +18,6 @@ install dnsmasq
 install doxygen
 install drush
 install dsh
-install erlang
 install fig
 install gd
 install ghostscript
@@ -51,14 +50,11 @@ install llvm
 install lynx
 install macvim
 install makeicns
-install maven
 install mdr
-install mercurial
 install mobile-shell
 install mongodb
 install moreutils
 install mysql
-install node
 install optipng
 install php53-imagick
 install php53-intl
@@ -81,13 +77,11 @@ install php55-uploadprogress
 install php55-xdebug
 install phpdocumentor
 install pngcrush
-install postgresql
 install ppss
 install proctools
 install putty
 install pv
 install python
-install qt
 install rabbitmq
 install rbenv-gem-rehash
 install rdiff-backup
