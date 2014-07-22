@@ -101,4 +101,3 @@ install tree
 install wget
 install youtube-dl
 install zsh
-install zsh-completions
