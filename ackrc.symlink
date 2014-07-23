@@ -1,0 +1,2 @@
+--type-add=php:ext:inc,install,module,profile
+--type-add=ini:ext:info,ini
