@@ -1,21 +1,26 @@
-# Path to your oh-my-zsh configuration.
-export ZSH=$HOME/.zsh
+# Antigen config.
+source $HOME/.zsh/antigen/antigen.zsh
+antigen use oh-my-zsh
+antigen bundles <<EOBUNDLES
+  brew
+  composer
+  extract
+  git
+  git-flow
+  gitignore
+  osx
+  rbenv
+  singlechar
+  symfony2
+  terminalapp
+  zsh_reload
+EOBUNDLES
+antigen theme theunraveler
+antigen apply
 
-# Set to the name theme to load.
-# Look in ~/.oh-my-zsh/themes/
-ZSH_THEME="theunraveler"
-
-# Comment this out to disable weekly auto-update checks
-export DISABLE_AUTO_UPDATE="true"
-
-# Prevent the window title from being set
-export DISABLE_AUTO_TITLE="true"
-
-# Which plugins would you like to load? (plugins can be found in ~/.zsh/plugins/*)
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(brew composer extract git git-flow gitignore osx rbenv singlechar symfony2 terminalapp zsh_reload)
-
-source $ZSH/oh-my-zsh.sh
+# Source our custom files.
+source $HOME/.zsh/config.zsh
+source $HOME/.zsh/aliases.zsh
 
 setopt -o extended_glob
 

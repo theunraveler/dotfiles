@@ -4,9 +4,6 @@
 [submodule "drush.symlink/drush_cleanup"]
 	path = drush.symlink/drush_cleanup
 	url = http://git.drupal.org/project/drush_cleanup.git
-[submodule "zsh.symlink"]
-	path = zsh.symlink
-	url = git@github.com:theunraveler/oh-my-zsh.git
 [submodule "drush.symlink/make_sync"]
 	path = drush.symlink/make_sync
 	url = http://git.drupal.org/sandbox/grndlvl/1930260.git
@@ -18,3 +15,6 @@
 	path = drush.symlink/drush_extras
 	url = http://git.drupal.org/project/drush_extras.git
 	branch = 7.x-3.x
+[submodule "zsh.symlink/antigen"]
+	path = zsh.symlink/antigen
+	url = https://github.com/zsh-users/antigen.git
