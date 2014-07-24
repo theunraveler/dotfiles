@@ -1,6 +1,7 @@
 composer.symlink/.htaccess
 composer.symlink/bin/*
 composer.symlink/cache
+composer.symlink/composer.lock
 composer.symlink/vendor
 drush.symlink/cache
 vim.symlink/bundle
