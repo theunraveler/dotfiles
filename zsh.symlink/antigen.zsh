@@ -7,12 +7,8 @@ antigen bundles <<EOBUNDLES
   git
   git-flow
   gitignore
-  osx
   rbenv
-  singlechar
-  symfony2
   terminalapp
-  zsh_reload
 EOBUNDLES
 antigen theme theunraveler
 antigen apply
