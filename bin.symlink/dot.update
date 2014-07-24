@@ -19,7 +19,7 @@ fi
 git submodule foreach git pull
 
 # Update antigen projects.
-antigen update
+zsh -c "source \"$HOME/.zsh/antigen.zsh\" && antigen update"
 
 # Update vundle
 cd vim.symlink/bundle/vundle && git pull && cd - > /dev/null;
