@@ -1,8 +1,7 @@
 {
     "require": {
-        "psy/psysh": "*"
-    },
-    "config": {
-        "bin-dir": "bin"
+        "phpmd/phpmd" : "2.0.*",
+        "psy/psysh": "*",
+        "squizlabs/php_codesniffer": "1.*"
     }
 }
