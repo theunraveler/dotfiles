@@ -35,6 +35,7 @@ install jq
 install jsawk
 install jshon
 install libmemcached
+install linklint
 install llvm
 install macvim
 install makeicns
@@ -43,6 +44,7 @@ install mongodb
 install moreutils
 install mysql
 install optipng
+install pandoc
 install php53-imagick
 install php53-intl
 install php53-mcrypt
