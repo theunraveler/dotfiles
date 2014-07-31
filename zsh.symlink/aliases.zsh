@@ -15,10 +15,6 @@ alias d="drush"
 alias k="kill -15"
 alias l="ls -lAh"
 
-# Server macros
-alias server.start="apache.start && mysql.start"
-alias server.stop="apache.stop && mysql.stop"
-
 # Apache
 alias apache.reload="sudo apachectl graceful"
 alias apache.start="sudo apachectl start"
