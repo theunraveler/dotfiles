@@ -54,8 +54,8 @@ install rbenv-gem-rehash
 install rename
 install ruby-build
 install siege
+install sqlite
 install ssh-copy-id
-install subversion
 install timedog
 install tofrodos
 install tree
