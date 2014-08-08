@@ -32,7 +32,6 @@ install httping
 install httrack
 install icu4c
 install jq
-install jshon
 install libmemcached
 install linklint
 install llvm
