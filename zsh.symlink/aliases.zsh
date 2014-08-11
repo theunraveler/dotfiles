@@ -56,6 +56,11 @@ alias svn.reset="svn st -q | awk '{print $2}' | xargs svn revert"
 alias svn.dryup="svn merge --dry-run -r BASE:HEAD ."
 alias svn.authors="svn log -q | awk -F '|' '/^r/ {print \$2}' | sed 's/^ *//g' | sed 's/ *$//g' | sort -u"
 
+# Vim
+alias v="mvim"
+alias vi="mvim"
+alias vim="mvim"
+
 # Misc
 alias rmtrailingwhitespace="find . -type f -exec sed -i 's/[[:space:]]*$//' {} \;"
 alias mail.vacuum="sqlite3 ~/Library/Mail/V2/MailData/Envelope\ Index vacuum"
