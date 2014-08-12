@@ -1,14 +1,13 @@
 # Initialize run path
 typeset -U path
-path=($HOME/.bin /usr/local/bin /usr/local/sbin /usr/X11/bin /usr/bin /bin /usr/sbin /sbin $path)
+path=($HOME/.bin /usr/local/bin /usr/local/sbin /usr/X11/bin $path)
 
-# Adding coreutils execs and man pages.
-COREUTILS="$(brew --prefix coreutils)"
-path=($COREUTILS/libexec/gnubin $path)
-export MANPATH="$COREUTILS/libexec/gnuman:$MANPATH"
-
-# Misc GNU utils execs.
-path=($(brew --prefix gnu-tar)/libexec/gnubin $path)
+# Adding misc GNU utils execs and man pages.
+for UTIL in "coreutils" "gnu-sed" "gnu-tar"; do
+  PREFIX="$(brew --prefix $UTIL)"
+  path=($PREFIX/libexec/gnubin $path)
+  export MANPATH="$PREFIX/libexec/gnuman:$MANPATH"
+done
 
 # Default programs
 export BROWSER="open"
