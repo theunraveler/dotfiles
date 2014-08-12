@@ -22,7 +22,6 @@ install git-extras
 install git-flow
 install gnu-sed
 install gnu-tar
-install gnu-which
 install grep
 install hr
 install htmldoc
