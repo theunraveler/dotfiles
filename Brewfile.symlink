@@ -30,6 +30,7 @@ install htop-osx
 install httperf
 install httping
 install httrack
+install imagemagick
 install jq
 install libmemcached
 install linklint

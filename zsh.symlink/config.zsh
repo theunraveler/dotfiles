@@ -7,6 +7,9 @@ COREUTILS="$(brew --prefix coreutils)"
 path=($COREUTILS/libexec/gnubin $path)
 export MANPATH="$COREUTILS/libexec/gnuman:$MANPATH"
 
+# Misc GNU utils execs.
+path=($(brew --prefix gnu-tar)/libexec/gnubin $path)
+
 # Default programs
 export BROWSER="open"
 export EDITOR="mvim -f"
