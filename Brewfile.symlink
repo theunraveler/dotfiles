@@ -40,6 +40,7 @@ install markdown
 install mongodb
 install moreutils
 install mysql
+install node
 install pandoc
 install php55-memcache
 install php55-mongo
