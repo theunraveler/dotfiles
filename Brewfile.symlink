@@ -45,6 +45,7 @@ install node
 install pandoc
 install php55-memcache
 install php55-mongo
+install php55-twig
 install php55-uploadprogress
 install php55-xdebug
 install phpdocumentor
