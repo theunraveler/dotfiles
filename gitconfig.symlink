@@ -83,6 +83,7 @@
   p = pull origin master
   pom = push origin master
   au = add -u
+  s = show
   st = status -sb
   ci = commit
   cl = clone
