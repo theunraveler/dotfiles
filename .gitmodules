@@ -5,10 +5,6 @@
 	path = drush.symlink/drush_sql_sync_pipe
 	url = http://git.drupal.org/project/drush_sql_sync_pipe.git
 	branch = 7.x-1.x
-[submodule "drush.symlink/drush_extras"]
-	path = drush.symlink/drush_extras
-	url = http://git.drupal.org/project/drush_extras.git
-	branch = 7.x-3.x
 [submodule "zsh.symlink/antigen"]
 	path = zsh.symlink/antigen
 	url = https://github.com/zsh-users/antigen.git
