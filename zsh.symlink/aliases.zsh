@@ -28,7 +28,6 @@ alias ip="curl icanhazip.com"
 # Databases
 alias mysql.start="mysql.server start"
 alias mysql.stop="mysql.server stop"
-alias mongodb.start="mongod --config /usr/local/etc/mongod.conf --syslog --fork"
 
 # Wrap the `brew` command to make it update our list of brews.
 function brew() {
