@@ -40,12 +40,6 @@ function brew() {
   return $RET
 }
 
-# Rails
-alias rails.start.webrick="bundle exec rails server -d"
-alias rails.start="bundle exec rails server thin -d"
-alias rails.stop="ps -ax | grep 'ruby script/rails' | grep -v grep | awk '{print $1}' | xargs kill -15"
-alias rails.restart="rails.stop && rails.start"
-
 # SSH
 alias ssh="ssh -A"
 
