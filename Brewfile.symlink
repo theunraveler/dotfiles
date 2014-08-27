@@ -1,11 +1,9 @@
 tap homebrew/dupes
 tap homebrew/php
 tap homebrew/versions
-tap telemachus/desc
 install ack
 install archey
 install boot2docker
-install brew-desc
 install cloc
 install composer
 install coreutils
