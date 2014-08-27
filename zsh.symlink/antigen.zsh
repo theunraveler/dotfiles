@@ -7,7 +7,6 @@ antigen bundles <<EOBUNDLES
   git
   git-flow
   gitignore
-  rbenv
   terminalapp
 EOBUNDLES
 antigen theme theunraveler

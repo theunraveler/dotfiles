@@ -51,9 +51,8 @@ install php55-xdebug
 install phpdocumentor
 install proctools
 install rabbitmq
-install rbenv-gem-rehash
 install rename
-install ruby-build
+install ruby
 install siege
 install sqlite
 install ssh-copy-id
