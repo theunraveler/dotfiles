@@ -50,5 +50,5 @@ echo "done."
 which composer && cd .composer && composer --dev install && cd -;
 
 # Finally, go back to where the user started.
-cd $WD
+cd "$WD"
 exit 0

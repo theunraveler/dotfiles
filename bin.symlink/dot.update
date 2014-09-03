@@ -42,5 +42,5 @@ if [ $STASH_COUNT != `git stash list | wc -l` ]; then
   git stash pop --quiet
 fi
 
-cd $DIR
+cd "$DIR"
 exit 0
