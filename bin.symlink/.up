@@ -1,5 +1,46 @@
 #!/usr/bin/env sh
 
+# Colors (http://kedar.nitty-witty.com/blog/how-to-echo-colored-text-in-shell-script)
+txtgrn=$(tput setaf 2)  # Green
+txtrst=$(tput sgr0)     # Text reset
+
+function success() {
+  echo "${txtgrn}$1${txtrst}"
+}
+
+# Update homebrew.
+function update_brew() {
+  if [ `which brew` ]; then
+    brew update > /dev/null 2>&1 && brew upgrade > /dev/null 2>&1 && brew cleanup > /dev/null 2>&1
+    success "  - Done updating homebrew."
+  fi
+}
+
+# Update all git submodules.
+function update_submodules() {
+  git submodule foreach git pull > /dev/null 2>&1
+  success "  - Done updating git submodules."
+}
+
+# Update antigen projects.
+function update_antigen() {
+  zsh -c "source \"$HOME/.zsh/antigen.zsh\" && antigen update" > /dev/null 2>&1
+  success "  - Done updating antigen."
+}
+
+# Update vundle
+function update_vundle() {
+  cd vim.symlink/bundle/vundle && git pull > /dev/null 2>&1 && cd - > /dev/null 2>&1
+  vim +BundleInstall! +qall > /dev/null 2>&1
+  success "  - Done updating vim plugins."
+}
+
+# Update composer projects
+function update_composer() {
+  which composer > /dev/null 2>&1 && cd composer.symlink && composer --dev --quiet update > /dev/null 2>&1 && cd - > /dev/null 2>&1
+  success "  - Done updating composer libraries."
+}
+
 # Store the current directory and switch to the project root.
 DIR=$(pwd)
 cd "$(dirname "$(readlink -f "$0")")/.."
@@ -8,25 +49,18 @@ cd "$(dirname "$(readlink -f "$0")")/.."
 STASH_COUNT=`git stash list | wc -l`
 git stash --quiet
 
-git pull origin master
+/bin/echo -n "Git pulling..."
+git pull origin master > /dev/null 2>&1
+echo "done."
 
-# Update homebrew.
-if [ `which brew` ]; then
-  brew update && brew upgrade && brew cleanup
-fi
-
-# Next, update all git submodules.
-git submodule foreach git pull
-
-# Update antigen projects.
-zsh -c "source \"$HOME/.zsh/antigen.zsh\" && antigen update"
-
-# Update vundle
-cd vim.symlink/bundle/vundle && git pull && cd - > /dev/null;
-vim +BundleInstall! +qall
-
-# Update composer projects
-which composer > /dev/null && cd composer.symlink && composer --dev update && cd - > /dev/null;
+echo "Kicking off update processes..."
+update_composer &
+update_brew &
+update_submodules &
+update_antigen &
+update_vundle &
+wait
+echo "All subprocesses complete."
 
 # Finally, commit the results.
 git status --porcelain | grep '^ M' | awk '{print $2}' | xargs git add
