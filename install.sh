@@ -34,7 +34,7 @@ for filepath in `find "$DIR" ! -path "*.git*" -name "*.symlink"`; do
 done
 
 # Install vim bundles
-vim +BundleInstall +qall
+vim +PluginInstall +qall
 
 # Install homebrew if we need to.
 if [ ! -f $BREW_CMD ]; then
