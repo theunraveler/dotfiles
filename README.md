@@ -10,4 +10,4 @@ Installation
 Update
 ------
 
-* Run `bin/dot.update`. This will update all submodules and commit/push.
+* Run `bin/.up`. This will update all submodules and commit/push.
