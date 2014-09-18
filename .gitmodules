@@ -1,6 +1,3 @@
-[submodule "drush.symlink/registry_rebuild"]
-	path = drush.symlink/registry_rebuild
-	url = http://git.drupal.org/project/registry_rebuild.git
 [submodule "zsh.symlink/antigen"]
 	path = zsh.symlink/antigen
 	url = https://github.com/zsh-users/antigen.git
