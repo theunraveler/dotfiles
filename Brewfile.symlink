@@ -39,7 +39,6 @@ install node
 install pandoc
 install php55-mcrypt
 install php55-xdebug
-install postgresql
 install proctools
 install rename
 install ruby

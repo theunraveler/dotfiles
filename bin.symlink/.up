@@ -8,15 +8,6 @@ cd "$(dirname "$(readlink -f "$0")")/.."
 STASH_COUNT=`git stash list | wc -l`
 git stash --quiet
 
-function finish() {
-  # Unstash if necessary.
-  if [ $STASH_COUNT != `git stash list | wc -l` ]; then
-    git stash pop --quiet
-  fi
-  cd "$DIR"
-}
-trap finish INT
-
 git pull origin master
 
 # Update homebrew.
@@ -46,5 +37,10 @@ else
   echo "Nothing updated, no push needed."
 fi
 
-finish
+# Unstash if necessary.
+if [ $STASH_COUNT != `git stash list | wc -l` ]; then
+  git stash pop --quiet
+fi
+
+cd "$DIR"
 exit 0
