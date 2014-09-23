@@ -1,10 +1,10 @@
+" Plugins
 Plugin 'gmarik/vundle'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-markdown'
 Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/syntastic'
 Plugin 'kshenoy/vim-signature'
-Plugin '13k/vim-tomorrow'
 Plugin 'othree/html5.vim'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'tpope/vim-eunuch'
@@ -15,3 +15,7 @@ Plugin 'amirh/HTML-AutoCloseTag'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'rbgrouleff/bclose.vim'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'Yggdroot/indentLine'
+
+" Color schemes
+Plugin '13k/vim-tomorrow'
