@@ -16,6 +16,7 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'rbgrouleff/bclose.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'Yggdroot/indentLine'
+Plugin 'kylef/apiblueprint.vim'
 
 " Color schemes
 Plugin '13k/vim-tomorrow'
