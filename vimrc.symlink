@@ -65,7 +65,7 @@ set sidescroll=1
 
 " Matching
 set showmatch
-set matchpairs=(:),{:},[:],<:>,':',":",/:/
+set matchpairs=(:),{:},[:],<:>,':',":",/:/,|:|
 
 " Search and replace
 set gdefault     " Make regexp matches everything, instead of just the first one
