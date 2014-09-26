@@ -37,8 +37,7 @@ install mysql
 install nmap
 install node
 install pandoc
-install php55-mcrypt
-install php55-xdebug
+install php56-xdebug
 install proctools
 install rename
 install ruby
