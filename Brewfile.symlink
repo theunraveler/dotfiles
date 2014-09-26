@@ -38,6 +38,7 @@ install nmap
 install node
 install pandoc
 install php56-xdebug
+install postgresql
 install proctools
 install rename
 install ruby
