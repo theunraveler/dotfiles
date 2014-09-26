@@ -1,7 +1,4 @@
 {
     "require": {
-        "phpmd/phpmd" : "2.0.*",
-        "psy/psysh": "*",
-        "squizlabs/php_codesniffer": "1.*"
     }
 }
