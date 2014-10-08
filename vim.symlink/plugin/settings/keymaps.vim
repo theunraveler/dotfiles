@@ -37,6 +37,9 @@ cnoremap w!! w !sudo tee % >/dev/null
 " Tagbar
 nnoremap <leader>l :TagbarToggle<cr>
 
+" Dash
+nmap <silent> <leader>d <Plug>DashSearch
+
 " Commenting
 nnoremap <leader>/ :call NERDComment("n", "Toggle")<cr>
 vnoremap <leader>/ :call NERDComment("n", "Toggle")<cr>
