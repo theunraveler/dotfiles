@@ -24,23 +24,14 @@ Temporary Items
 # Ctags files
 tags
 
-# Vim
-.*.s[a-w][a-z]
-*.un~
-Session.vim
-.netrwhist
-*~
-
 # Misc
 .project
 .svn
 *.bak
 .sass-cache
 
-# phpenv/rbenv
+# rbenv
 .ruby-version
-.phpenv-version
-# Created by http://www.gitignore.io
 
 ### vim ###
 [._]*.s[a-w][a-z]
