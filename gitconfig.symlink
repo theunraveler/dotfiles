@@ -91,6 +91,7 @@
   co = checkout
   fp = format-patch
   w = whatchanged
+  sync = fetch -p
 
   # Logging
   l  = log --oneline --decorate
