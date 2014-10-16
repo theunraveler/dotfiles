@@ -43,10 +43,8 @@ install proctools
 install rename
 install ruby
 install siege
-install snowcrash
 install sqlite
 install ssh-copy-id
-install timedog
 install tofrodos
 install tree
 install wget
