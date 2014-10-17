@@ -26,7 +26,11 @@ cd vim.symlink/bundle/vundle && git pull && cd - > /dev/null;
 vim +BundleInstall! +qall
 
 # Update composer projects
-which composer > /dev/null && cd composer.symlink && composer --dev update && cd - > /dev/null;
+if [ `which composer` ] && [ -f ~/.composer/composer.json ] && [ `jshon -e require -l < ~/.composer/composer.json` -gt 0 ]; then
+  cd composer.symlink && composer --dev update && cd - > /dev/null;
+else
+  echo "Composer: no packages defined, skipping."
+fi
 
 # Finally, commit the results.
 git status --porcelain | grep '^ M' | awk '{print $2}' | xargs git add
