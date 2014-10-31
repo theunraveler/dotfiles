@@ -3,6 +3,7 @@ tap homebrew/php
 tap homebrew/versions
 install ack
 install archey
+install boot2docker
 install cloc
 install composer
 install coreutils
@@ -10,6 +11,7 @@ install ctags
 install dnsmasq
 install drush
 install dsh
+install fig
 install gd
 install ghostscript
 install git
@@ -40,11 +42,13 @@ install pandoc
 install php56-xdebug
 install postgresql
 install proctools
+install rabbitmq
 install rename
 install ruby
 install siege
 install sqlite
 install ssh-copy-id
+install terminal-notifier
 install tofrodos
 install tree
 install wget
