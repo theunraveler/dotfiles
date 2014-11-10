@@ -4,6 +4,7 @@ tap homebrew/versions
 install ack
 install archey
 install boot2docker
+install chruby
 install cloc
 install composer
 install coreutils
@@ -26,8 +27,10 @@ install htop-osx
 install httperf
 install httping
 install httrack
+install hub
 install imagemagick
 install jshon
+install libffi
 install libmemcached
 install linklint
 install llvm
@@ -39,12 +42,13 @@ install mysql
 install nmap
 install node
 install pandoc
+install php56-mcrypt
 install php56-xdebug
 install postgresql
 install proctools
 install rabbitmq
 install rename
-install ruby
+install ruby-install
 install siege
 install sqlite
 install ssh-copy-id

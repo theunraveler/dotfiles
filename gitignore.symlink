@@ -30,8 +30,9 @@ tags
 *.bak
 .sass-cache
 
-# rbenv
+# Ruby
 .ruby-version
+.rake-tasks
 
 ### vim ###
 [._]*.s[a-w][a-z]
