@@ -32,7 +32,7 @@ tags
 
 # Ruby
 .ruby-version
-.rake-tasks
+.rake_tasks
 
 ### vim ###
 [._]*.s[a-w][a-z]
