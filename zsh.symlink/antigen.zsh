@@ -11,9 +11,11 @@ antigen bundles <<EOBUNDLES
   git-flow
   github
   gitignore
+  osx
   postgres
   rake
   rake-fast
+  sudo
   terminalapp
   zsh_reload
   zsh-users/zsh-syntax-highlighting
