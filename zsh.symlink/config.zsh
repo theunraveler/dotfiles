@@ -31,3 +31,8 @@ for dir in $(brew --prefix)/var/ruby-build/*; do
     RUBIES+=$dir
   fi
 done
+
+# Source out to local config file
+if [[ -f $HOME/.zshrc.local.zsh ]]; then
+  source $HOME/.zshrc.local.zsh
+fi
