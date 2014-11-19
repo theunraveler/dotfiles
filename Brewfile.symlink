@@ -48,7 +48,7 @@ install postgresql
 install proctools
 install rabbitmq
 install rename
-install ruby-install
+install ruby-build
 install siege
 install sqlite
 install ssh-copy-id

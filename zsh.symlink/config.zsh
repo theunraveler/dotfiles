@@ -24,3 +24,10 @@ setopt HIST_VERIFY
 # Directory colors
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
+
+# Rubies from ruby-build
+for dir in $(brew --prefix)/var/ruby-build/*; do
+  if [[ -d $dir ]]; then
+    RUBIES+=$dir
+  fi
+done
