@@ -12,6 +12,7 @@ antigen bundles <<EOBUNDLES
   github
   gitignore
   osx
+  pj
   postgres
   rake
   rake-fast
