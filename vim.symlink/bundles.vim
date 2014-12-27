@@ -21,6 +21,7 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-vinegar'
 Plugin 'yaymukund/vim-rabl'
 Plugin 'Yggdroot/indentLine'
+Plugin 'godlygeek/tabular'
 
 " Color schemes
 Plugin '13k/vim-tomorrow'
