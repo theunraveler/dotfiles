@@ -41,6 +41,7 @@ install moreutils
 install mysql
 install nmap
 install node
+install ossp-uuid
 install pandoc
 install php56-mcrypt
 install php56-xdebug
@@ -55,6 +56,7 @@ install ssh-copy-id
 install terminal-notifier
 install tofrodos
 install tree
+install v8
 install wget
 install youtube-dl
 install zsh
