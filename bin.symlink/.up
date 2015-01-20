@@ -4,6 +4,13 @@
 DIR=$(pwd)
 cd "$(dirname "$(readlink -f "$0")")/.."
 
+trap ctrl_c SIGINT SIGTERM
+function ctrl_c() {
+  echo "*** Returning you to $DIR"
+  cd "$DIR"
+  exit 0
+}
+
 # If there are changes, stash them.
 STASH_COUNT=`git stash list | wc -l`
 git stash --quiet
