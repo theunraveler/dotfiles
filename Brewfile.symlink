@@ -29,6 +29,7 @@ install httping
 install httrack
 install hub
 install imagemagick
+install ipmitool
 install jshon
 install libffi
 install libmemcached
@@ -58,5 +59,6 @@ install tofrodos
 install tree
 install v8
 install wget
+install whatmask
 install youtube-dl
 install zsh
