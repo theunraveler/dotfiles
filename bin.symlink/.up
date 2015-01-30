@@ -4,15 +4,23 @@
 DIR=$(pwd)
 cd "$(dirname "$(readlink -f "$0")")/.."
 
+STASH_COUNT=`git stash list | wc -l`
+
+function unstash() {
+  if [ $STASH_COUNT != `git stash list | wc -l` ]; then
+    git stash pop --quiet
+  fi
+}
+
 trap ctrl_c SIGINT SIGTERM
 function ctrl_c() {
+  unstash
   echo "*** Returning you to $DIR"
   cd "$DIR"
   exit 0
 }
 
 # If there are changes, stash them.
-STASH_COUNT=`git stash list | wc -l`
 git stash --quiet
 
 git pull origin master
@@ -49,9 +57,7 @@ else
 fi
 
 # Unstash if necessary.
-if [ $STASH_COUNT != `git stash list | wc -l` ]; then
-  git stash pop --quiet
-fi
+unstash
 
 cd "$DIR"
 exit 0
