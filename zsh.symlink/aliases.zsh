@@ -15,21 +15,12 @@ alias d="drush"
 alias k="kill -15"
 alias l="ls -lAh"
 
-# Apache
-alias apache.reload="sudo apachectl graceful"
-alias apache.start="sudo apachectl start"
-alias apache.stop="sudo apachectl graceful-stop"
-alias apache.test="sudo apachectl configtest"
-
 # DNS/Network
 alias dns.clear="dscacheutil -flushcache"
 alias ip="curl icanhazip.com"
 
-# Databases
-alias mysql.start="mysql.server start"
-alias mysql.stop="mysql.server stop"
-
-# Wrap the `brew` command to make it update our list of brews.
+# Homebrew
+alias service="brew services"
 function brew() {
   /usr/local/bin/brew "$@"
   RET=$?
