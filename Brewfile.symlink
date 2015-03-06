@@ -32,7 +32,7 @@ install httrack
 install hub
 install imagemagick
 install ipmitool
-install jshon
+install jq
 install libffi
 install libmemcached
 install linklint
