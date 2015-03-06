@@ -4,7 +4,6 @@ tap homebrew/php
 tap homebrew/versions
 install ack
 install archey
-install boot2docker
 install chruby
 install cloc
 install composer
