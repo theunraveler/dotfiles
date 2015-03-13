@@ -32,6 +32,9 @@ for dir in $(brew --prefix)/var/ruby-build/*; do
   fi
 done
 
+# ChefDK.
+path=(/opt/chefdk/bin $path)
+
 # Source out to local config file
 if [[ -f $HOME/.zshrc.local.zsh ]]; then
   source $HOME/.zshrc.local.zsh
