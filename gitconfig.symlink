@@ -63,9 +63,6 @@
 # URL SHORTIES
 ##############
 
-[url "ssh://git@git.advomatic.com/"]
-  insteadOf = "advo:"
-
 [url "https://github.com/"]
   insteadOf = "gh:"
 
