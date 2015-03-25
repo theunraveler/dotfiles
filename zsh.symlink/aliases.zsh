@@ -58,3 +58,8 @@ function md2pdf() {
   htmldoc --cont --bodyfont helvetica --textfont helvetica --headfootsize 8.0 --fontsize 10.0 --format pdf14 $1.html > $1.pdf &&
   rm $1.html
 }
+
+# Convert a QuickTime .mov file to a GIF
+function mov2gif() {
+  ffmpeg -i $1 -pix_fmt rgb24 -r 10 -f gif -
+}

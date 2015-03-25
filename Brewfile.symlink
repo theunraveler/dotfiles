@@ -12,6 +12,7 @@ install ctags
 install dnsmasq
 install drush
 install dsh
+install ffmpeg
 install fig
 install freeradius-server
 install gd
