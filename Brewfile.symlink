@@ -13,6 +13,7 @@ install dnsmasq
 install drush
 install dsh
 install fig
+install freeradius-server
 install gd
 install ghostscript
 install git
@@ -32,6 +33,7 @@ install hub
 install imagemagick
 install ipmitool
 install jq
+install jrnl
 install libffi
 install libmemcached
 install linklint
@@ -47,6 +49,7 @@ install ossp-uuid
 install pandoc
 install php56-mcrypt
 install php56-xdebug
+install phpunit
 install postgresql
 install proctools
 install rabbitmq
@@ -61,5 +64,4 @@ install tree
 install v8
 install wget
 install whatmask
-install youtube-dl
 install zsh
