@@ -35,6 +35,10 @@ done
 # ChefDK.
 path=(/opt/chefdk/bin $path)
 
+# Go config.
+export GOPATH="$(brew --prefix)/Cellar/go/"
+path=($path $GOPATH/bin)
+
 # Source out to local config file
 if [[ -f $HOME/.zshrc.local.zsh ]]; then
   source $HOME/.zshrc.local.zsh
