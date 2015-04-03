@@ -6,11 +6,9 @@ call vundle#rc()
 set nocompatible
 set lazyredraw
 set ttyfast
-set backspace=indent,eol,start   " backspace works as expected
 set nostartofline             " Make j/k respect the columns (after all, this is not a freaking typewriter)
 set modeline               " Respect modeline of the file (the famous "vi:noai:sw=3 ts=6" on the beginning of the files)
 set hidden                   " Avoid asking to save before hiding
-set encoding=utf-8
 
 filetype on
 filetype off
@@ -21,21 +19,15 @@ filetype off
 " plugins will not load!
 source ~/.vim/bundles.vim
 
-filetype plugin indent on
-syntax on
-
 " Basic UI
 set visualbell
 set shortmess=atIWswxrnmlf
-set ruler
 set title
 set titlestring=%f%(\ [%M]%)   " Show file name at the title
 set numberwidth=1
 set number
 set relativenumber
 set report=2
-set laststatus=2
-set showcmd
 set showmode
 
 " Statusline
@@ -50,18 +42,8 @@ set statusline+=%l/%L   "cursor line/total lines
 set statusline+=\ %P    "percent through file
 
 " Command-mode completion
-set wildmenu
 set wildignore=*.o,*.obj,*.pyc,*.swc,*.DS_STORE,*.bkp
 set wildmode=list:longest
-
-" Insert-mode completion
-set complete=.,w,b,u,U,t,i,d
-
-" Scrolling
-set scroll=5
-set scrolloff=5
-set sidescrolloff=5
-set sidescroll=1
 
 " Matching
 set showmatch
@@ -69,15 +51,12 @@ set matchpairs=(:),{:},[:],<:>,':',":",/:/,|:|
 
 " Search and replace
 set gdefault     " Make regexp matches everything, instead of just the first one
-set incsearch     " Search all instances
 set hlsearch     " Highlight matched regexp
 set ignorecase
 set smartcase     " Intelligent case-smart searching
 
 " Indentation
-set autoindent
 set smartindent
-set smarttab
 set expandtab
 set shiftround
 set nojoinspaces
@@ -101,7 +80,6 @@ set formatoptions=qrn1
 
 " History and backup
 set viminfo='10,:20,\"100,%,n~/.viminfo
-set history=1000
 set nobackup
 set nowritebackup
 set noswapfile
