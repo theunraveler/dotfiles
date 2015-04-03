@@ -126,7 +126,3 @@ if has("gui_running")
   set guioptions-=L
   set guioptions-=r
 endif
-
-" Netrw Stuff
-let g:netrw_list_hide='^\.\./$'
-let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
