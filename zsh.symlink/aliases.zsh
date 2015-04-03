@@ -23,6 +23,7 @@ alias ip="curl icanhazip.com"
 alias service="brew services"
 alias start="brew services start"
 alias stop="brew services stop"
+alias restart="brew services restart"
 function brew() {
   /usr/local/bin/brew "$@"
   RET=$?
