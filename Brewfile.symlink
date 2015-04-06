@@ -39,6 +39,7 @@ install libffi
 install libmemcached
 install linklint
 install llvm
+install lnav
 install macvim
 install makeicns
 install markdown
