@@ -53,6 +53,10 @@ alias rmtrailingwhitespace="find . -type f -exec sed -i 's/[[:space:]]*$//' {} \
 alias mail.vacuum="sqlite3 ~/Library/Mail/V2/MailData/Envelope\ Index vacuum"
 alias launchservices.rebuild="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user"
 
+# lulz
+alias fucking="sudo"
+function whothefuckisusingport() { lsof -i tcp:$*; }
+
 # Convert markdown to PDF
 function md2pdf() {
   markdown $1 > $1.html &&
