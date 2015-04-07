@@ -2,6 +2,7 @@ tap gapple/services
 tap homebrew/dupes
 tap homebrew/php
 tap homebrew/versions
+tap theunraveler/tap
 install ack
 install archey
 install chruby
@@ -58,6 +59,7 @@ install rabbitmq
 install rename
 install ruby-build
 install siege
+install smcipmitool
 install sqlite
 install ssh-copy-id
 install terminal-notifier
