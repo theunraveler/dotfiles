@@ -17,6 +17,7 @@ install ffmpeg
 install fig
 install freeradius-server
 install gd
+install ghi
 install ghostscript
 install git
 install git-extras
