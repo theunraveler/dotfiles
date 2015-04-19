@@ -6,6 +6,7 @@ antigen bundles <<EOBUNDLES
   chruby
   colored-man
   composer
+  djui/alias-tips
   extract
   git
   git-flow
