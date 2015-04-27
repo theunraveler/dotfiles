@@ -47,6 +47,7 @@ install makeicns
 install markdown
 install moreutils
 install mysql
+install net-snmp
 install nmap
 install node
 install ossp-uuid
