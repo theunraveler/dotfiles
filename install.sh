@@ -4,14 +4,6 @@ WD="$(pwd)"
 DIR="$( cd "$(dirname "$0")/.." && pwd )"
 BREW_CMD="/usr/local/bin/brew"
 
-# First, initialize git submodules.
-git submodule init; git submodule update;
-
-mkdir vim.symlink/bundle
-cd vim.symlink/bundle
-git clone https://github.com/gmarik/vundle.git vundle
-cd -
-
 cd ~
 echo "Linking items from $DIR to home directory using $(which ln)"
 
@@ -45,6 +37,17 @@ fi
 echo "Checking homebrew packages..."
 brew bundle ~/.Brewfile
 echo "done."
+
+# Install vundle.
+mkdir ~/.vim/bundle
+cd ~/.vim/bundle
+git clone https://github.com/gmarik/vundle.git vundle
+cd -
+
+# Install zgen.
+cd ~/.zsh
+git clone https://github.com/tarjoilija/zgen.git zgen
+cd -
 
 # Install composer packages.
 which composer && cd .composer && composer --dev install && cd -;

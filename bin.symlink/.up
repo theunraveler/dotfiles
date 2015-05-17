@@ -33,8 +33,8 @@ fi
 # Next, update all git submodules.
 git submodule foreach git pull
 
-# Update antigen projects.
-zsh -c "source \"$HOME/.zsh/antigen.zsh\" && antigen update"
+# Update zgen projects.
+zsh -c "source \"$HOME/.zsh/zgen.zsh\" && zgen selfupdate && zgen update"
 
 # Update vundle
 cd vim.symlink/bundle/vundle && git pull && cd - > /dev/null;

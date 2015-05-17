@@ -1,5 +1,5 @@
 # Source our custom files.
-source $HOME/.zsh/antigen.zsh
+source $HOME/.zsh/zgen.zsh
 source $HOME/.zsh/config.zsh
 source $HOME/.zsh/aliases.zsh
 

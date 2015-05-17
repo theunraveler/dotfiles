@@ -8,3 +8,4 @@ drush.symlink/cache
 vim.symlink/bundle
 vim.symlink/plugin/settings/local.vim
 vim.symlink/spell
+zsh.symlink/zgen
