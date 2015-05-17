@@ -45,4 +45,4 @@ nnoremap <leader>/ :call NERDComment("n", "Toggle")<cr>
 vnoremap <leader>/ :call NERDComment("n", "Toggle")<cr>
 
 " Inserts a UUID at the current position
-imap <C-u> <C-r>=substitute(substitute(system("uuidgen"), '.$', '', 'g'), '[A-Z]', '\L&', 'g')<CR>
+inoremap <C-b> <C-r>=substitute(substitute(system("uuidgen"), '.$', '', 'g'), '[A-Z]', '\L&', 'g')<CR>
