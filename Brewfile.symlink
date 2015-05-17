@@ -15,6 +15,7 @@ install drush
 install dsh
 install ffmpeg
 install fig
+install fpp
 install freeradius-server
 install gd
 install ghi
