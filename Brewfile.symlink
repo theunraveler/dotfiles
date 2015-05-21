@@ -5,7 +5,6 @@ tap homebrew/versions
 tap theunraveler/tap
 install ack
 install archey
-install chruby
 install cloc
 install composer
 install coreutils
@@ -59,6 +58,7 @@ install phpunit
 install postgresql
 install proctools
 install rabbitmq
+install rbenv-gem-rehash
 install rename
 install ruby-build
 install siege

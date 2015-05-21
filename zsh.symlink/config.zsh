@@ -25,12 +25,10 @@ setopt HIST_VERIFY
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
-# Rubies from ruby-build
-for dir in $(brew --prefix)/var/ruby-build/*; do
-  if [[ -d $dir ]]; then
-    RUBIES+=$dir
-  fi
-done
+# rbenv.
+export RBENV_ROOT=/usr/local/var/rbenv
+path=($RBENV_ROOT/bin $path)
+eval "$(rbenv init - zsh)"
 
 # ChefDK.
 path=(/opt/chefdk/bin $path)

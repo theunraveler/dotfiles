@@ -6,7 +6,6 @@ if ! zgen saved; then
 
   zgen oh-my-zsh plugins/brew
   zgen oh-my-zsh plugins/bundler
-  zgen oh-my-zsh plugins/chruby
   zgen oh-my-zsh plugins/colored-man
   zgen oh-my-zsh plugins/extract
   zgen oh-my-zsh plugins/git
