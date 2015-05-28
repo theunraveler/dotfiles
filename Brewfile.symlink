@@ -8,7 +8,6 @@ install archey
 install cloc
 install composer
 install coreutils
-install ctags
 install dnsmasq
 install drush
 install dsh
@@ -58,9 +57,10 @@ install phpunit
 install postgresql
 install proctools
 install rabbitmq
+install rbenv-ctags
+install rbenv-default-gems
 install rbenv-gem-rehash
 install rename
-install ruby-build
 install siege
 install smcipmitool
 install sqlite
