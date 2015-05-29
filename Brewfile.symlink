@@ -6,10 +6,10 @@ tap theunraveler/tap
 install ack
 install archey
 install cloc
-install composer
+install homebrew/php/composer
 install coreutils
 install dnsmasq
-install drush
+install homebrew/php/drush
 install dsh
 install ffmpeg
 install fig
@@ -24,7 +24,7 @@ install git-flow
 install gnu-sed
 install gnu-tar
 install graphviz
-install grep
+install homebrew/dupes/grep
 install hr
 install htmldoc
 install htop-osx
@@ -51,9 +51,9 @@ install nmap
 install node
 install ossp-uuid
 install pandoc
-install php56-mcrypt
-install php56-xdebug
-install phpunit
+install homebrew/php/php56-mcrypt
+install homebrew/php/php56-xdebug
+install homebrew/php/phpunit
 install postgresql
 install proctools
 install rabbitmq
@@ -62,7 +62,7 @@ install rbenv-default-gems
 install rbenv-gem-rehash
 install rename
 install siege
-install smcipmitool
+install theunraveler/tap/smcipmitool
 install sqlite
 install ssh-copy-id
 install terminal-notifier
