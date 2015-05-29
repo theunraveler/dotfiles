@@ -30,6 +30,11 @@ export RBENV_ROOT=/usr/local/var/rbenv
 path=($RBENV_ROOT/bin $path)
 eval "$(rbenv init - zsh)"
 
+# hub.
+if [ `which hub` ]; then
+  eval "$(hub alias -s)"
+fi
+
 # ChefDK.
 path=(/opt/chefdk/bin $path)
 

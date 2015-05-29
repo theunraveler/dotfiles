@@ -72,6 +72,13 @@
 [url "ssh://git@git.drupal.org/sandbox/"]
   insteadOf = "dsand:"
 
+######
+# HUB
+######
+
+[hub]
+  protocol = https
+
 #########
 # ALIASES
 #########
