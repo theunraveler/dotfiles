@@ -16,6 +16,7 @@ if ! zgen saved; then
   zgen oh-my-zsh plugins/zsh_reload
 
   zgen load djui/alias-tips
+  zgen load theunraveler/zsh-fancy_ctrl_z
   zgen load zsh-users/zsh-syntax-highlighting
 
   zgen load zsh-users/zsh-completions src
