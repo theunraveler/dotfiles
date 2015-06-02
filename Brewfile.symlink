@@ -21,6 +21,7 @@ install ghostscript
 install git
 install git-extras
 install git-flow
+install git-open
 install gnu-sed
 install gnu-tar
 install graphviz
