@@ -5,9 +5,11 @@ tap homebrew/versions
 tap theunraveler/tap
 install ack
 install archey
+install chruby
 install cloc
 install homebrew/php/composer
 install coreutils
+install ctags
 install dnsmasq
 install homebrew/php/drush
 install dsh
@@ -59,10 +61,8 @@ install homebrew/php/phpunit
 install postgresql
 install proctools
 install rabbitmq
-install rbenv-ctags
-install rbenv-default-gems
-install rbenv-gem-rehash
 install rename
+install ruby-build
 install siege
 install theunraveler/tap/smcipmitool
 install sqlite
