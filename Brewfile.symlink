@@ -67,6 +67,7 @@ install theunraveler/tap/smcipmitool
 install sqlite
 install ssh-copy-id
 install terminal-notifier
+install the_silver_searcher
 install tofrodos
 install tree
 install v8
