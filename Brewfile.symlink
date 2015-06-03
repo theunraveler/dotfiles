@@ -45,6 +45,7 @@ install lnav
 install macvim
 install makeicns
 install markdown
+install maven
 install moreutils
 install mysql
 install net-snmp
