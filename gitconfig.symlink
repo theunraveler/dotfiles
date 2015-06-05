@@ -29,6 +29,9 @@
 [push]
   default = matching
 
+[log]
+	date = local
+
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
