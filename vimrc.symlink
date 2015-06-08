@@ -1,7 +1,3 @@
-" Load vundle
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
 " Fix vim defaults
 set nocompatible
 set lazyredraw
@@ -13,11 +9,8 @@ set hidden                   " Avoid asking to save before hiding
 filetype on
 filetype off
 
-" Bundles (for vundle)
-"
-" NOTE: This needs to go before the "filetype plugin indent on" line, or
-" plugins will not load!
-source ~/.vim/bundles.vim
+" Plugins
+source ~/.vim/plugins.vim
 
 " Basic UI
 set visualbell

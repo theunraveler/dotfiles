@@ -5,7 +5,7 @@ composer.symlink/composer.lock
 composer.symlink/config.json
 composer.symlink/vendor
 drush.symlink/cache
-vim.symlink/bundle
+vim.symlink/plugged
 vim.symlink/plugin/settings/local.vim
 vim.symlink/spell
 zsh.symlink/zgen

@@ -36,9 +36,8 @@ git submodule foreach git pull
 # Update zgen projects.
 zsh -c "source \"$HOME/.zsh/zgen.zsh\" && zgen selfupdate && zgen update"
 
-# Update vundle
-cd vim.symlink/bundle/vundle && git pull && cd - > /dev/null;
-vim +BundleInstall! +qall
+# Update vim plugins
+vim +PlugUpgrade +PlugUpdate +qall
 
 # Update composer projects
 if [ `which composer` ] && [ -f ~/.composer/composer.json ] && [ `jq '.require|length' < ~/.composer/composer.json` -gt 0 ]; then

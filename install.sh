@@ -25,9 +25,6 @@ for filepath in `find "$DIR" ! -path "*.git*" -name "*.symlink"`; do
   if [ $? -eq 0 ]; then echo "done"; fi
 done
 
-# Install vim bundles
-vim +PluginInstall +qall
-
 # Install homebrew if we need to.
 if [ ! -f $BREW_CMD ]; then
   echo -n "Installing homebrew..."
@@ -38,16 +35,14 @@ echo "Checking homebrew packages..."
 brew bundle ~/.Brewfile
 echo "done."
 
-# Install vundle.
-mkdir ~/.vim/bundle
-cd ~/.vim/bundle
-git clone https://github.com/gmarik/vundle.git vundle
-cd -
-
 # Install zgen.
 cd ~/.zsh
 git clone https://github.com/tarjoilija/zgen.git zgen
 cd -
+
+# Install vim plugins
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+vim +PlugInstall +qall
 
 # Install composer packages.
 which composer && cd .composer && composer --dev install && cd -;
