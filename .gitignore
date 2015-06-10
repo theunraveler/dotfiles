@@ -5,6 +5,8 @@ composer.symlink/composer.lock
 composer.symlink/config.json
 composer.symlink/vendor
 drush.symlink/cache
+vim.symlink/autoload/plug.vim
+vim.symlink/autoload/plug.vim.old
 vim.symlink/plugged
 vim.symlink/plugin/settings/local.vim
 vim.symlink/spell
