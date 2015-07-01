@@ -65,6 +65,7 @@ install rename
 install ruby-build
 install siege
 install theunraveler/tap/smcipmitool
+install socat
 install sqlite
 install ssh-copy-id
 install terminal-notifier
