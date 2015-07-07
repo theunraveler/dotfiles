@@ -57,6 +57,7 @@ alias issues="ghi"
 # lulz
 alias fucking="sudo"
 function whothefuckisusingport() { lsof -i tcp:$*; }
+function whatthefuckisusingthefile() { lsof | grep $1 }
 
 # Convert markdown to PDF
 function md2pdf() {
