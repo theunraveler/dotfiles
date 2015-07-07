@@ -7,7 +7,6 @@ install ack
 install archey
 install chruby
 install cloc
-install homebrew/php/composer
 install coreutils
 install ctags
 install dnsmasq
