@@ -1,1 +1,6 @@
+*.html diff=html
+*.php diff=php
+*.erb diff=ruby
+*.rabl diff=ruby
+*.rake diff=ruby
 *.rb diff=ruby
