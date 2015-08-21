@@ -106,6 +106,7 @@
   lg = log -p
   tree = log --graph --decorate --pretty=oneline --abbrev-commit
   latest = for-each-ref --sort=-committerdate refs/heads/
+  lm = "!sh -c \"if [[ $# -ne 2 ]]; then echo \\\"Usage: git lm <method> <file>\\\"; exit 1; fi; git log -L :$1:$2\""
 
   # A better git pull. See http://stackoverflow.com/a/15316602.
   up = "!git remote update -p; git merge --ff-only @{u}"
