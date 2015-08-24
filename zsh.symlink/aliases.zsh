@@ -61,7 +61,7 @@ function whatthefuckisusingthefile() { lsof | grep $1 }
 
 # Convert markdown to PDF
 function md2pdf() {
-  markdown $1 > $1.html &&
+  cmark $1 > $1.html &&
   htmldoc --cont --bodyfont helvetica --textfont helvetica --headfootsize 8.0 --fontsize 10.0 --format pdf14 $1.html > $1.pdf &&
   rm $1.html
 }
