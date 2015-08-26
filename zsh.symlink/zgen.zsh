@@ -22,7 +22,5 @@ if ! zgen saved; then
 
   zgen load zsh-users/zsh-completions src
 
-  zgen oh-my-zsh themes/theunraveler
-
   zgen save
 fi

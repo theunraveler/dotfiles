@@ -1,6 +1,7 @@
 # Source our custom files.
 source $HOME/.zsh/zgen.zsh
 source $HOME/.zsh/config.zsh
+source $HOME/.zsh/theunraveler-mod.zsh-theme
 source $HOME/.zsh/aliases.zsh
 
 setopt -o extended_glob

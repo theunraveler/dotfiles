@@ -2,13 +2,13 @@ tap gapple/services
 tap homebrew/dupes
 tap homebrew/php
 tap homebrew/versions
+tap michaeldfallen/formula
 tap theunraveler/tap
 install ack
 install archey
 install chruby
 install cloc
 install commonmark
-install coreutils
 install ctags
 install dnsmasq
 install homebrew/php/drush
@@ -24,6 +24,7 @@ install git
 install git-extras
 install git-flow
 install git-open
+install michaeldfallen/formula/git-radar
 install gnu-sed
 install gnu-tar
 install graphviz
