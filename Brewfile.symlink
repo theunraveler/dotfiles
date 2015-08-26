@@ -27,6 +27,7 @@ install git-open
 install michaeldfallen/formula/git-radar
 install gnu-sed
 install gnu-tar
+install gnu-units
 install graphviz
 install homebrew/dupes/grep
 install hr
