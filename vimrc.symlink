@@ -90,7 +90,7 @@ set splitright
 
 if has("gui_running")
   set cursorline
-  set gfn:Menlo:h12
+  set gfn:Hack:h12
 
   " Don't show toolbar and scrollbars
   set guioptions-=T to
