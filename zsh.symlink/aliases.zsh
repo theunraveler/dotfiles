@@ -66,6 +66,13 @@ function md2pdf() {
   rm $1.html
 }
 
+# View a markdown file in a browser.
+function mdview() {
+  filename="$TMPDIR$(basename "$1").html"
+  cmark $1 > $filename
+  open $filename
+}
+
 # Convert a QuickTime .mov file to a GIF
 function mov2gif() {
   ffmpeg -i $1 -pix_fmt rgb24 -r 10 -f gif -
