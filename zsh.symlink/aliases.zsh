@@ -61,7 +61,7 @@ function whatthefuckisusingthefile() { lsof | grep $1 }
 
 # Convert markdown to PDF
 function md2pdf() {
-  cmark $1 > $1.html &&
+  $MARKDOWN $1 > $1.html &&
   htmldoc --cont --bodyfont helvetica --textfont helvetica --headfootsize 8.0 --fontsize 10.0 --format pdf14 $1.html > $1.pdf &&
   rm $1.html
 }
@@ -69,8 +69,8 @@ function md2pdf() {
 # View a markdown file in a browser.
 function mdview() {
   filename="$TMPDIR$(basename "$1").html"
-  cmark $1 > $filename
-  open $filename
+  $MARKDOWN $1 > $filename
+  $BROWSER $filename
 }
 
 # Convert a QuickTime .mov file to a GIF

@@ -12,6 +12,7 @@ done
 # Default programs
 export BROWSER="open"
 export EDITOR="mvim -f"
+export MARKDOWN="cmark"
 
 # Setting commands to ignore
 export HISTIGNORE="&:ls:l:ll:[bf]g:exit:reset:clear:cd:cd ..:cd.."
