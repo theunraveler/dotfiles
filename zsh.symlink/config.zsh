@@ -42,7 +42,7 @@ fi
 path=(/opt/chefdk/bin $path)
 
 # Go config.
-export GOPATH="$(brew --prefix)/Cellar/go/"
+export GOPATH="$(brew --prefix)/share/go/"
 path=($path $GOPATH/bin)
 
 # Source out to local config file
