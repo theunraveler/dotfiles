@@ -77,3 +77,16 @@ function mdview() {
 function mov2gif() {
   ffmpeg -i $1 -pix_fmt rgb24 -r 10 -f gif -
 }
+
+# Convenience function to execute some action on the argument (read: second
+# column) part of STDIN.
+#
+# For example:
+#
+#     git status --porcelain | grep '??' | with_args rm
+#
+# You can reliably substitute this function anywhere you could do
+# `awk '{print $2}' | xargs`.
+function with_args() {
+  awk '{print $2}' | xargs "$@"
+}
