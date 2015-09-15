@@ -32,7 +32,8 @@ if [ ! -f $BREW_CMD ]; then
 fi
 
 echo "Checking homebrew packages..."
-brew bundle ~/.Brewfile
+brew tap homebrew/bundle
+brew bundle --global
 echo "done."
 
 # Install zgen.
