@@ -27,9 +27,19 @@ alias restart="brew services restart"
 function brew() {
   /usr/local/bin/brew "$@"
   RET=$?
-  cat /dev/null > ~/.Brewfile &&
-    /usr/local/bin/brew tap | xargs -I '{}' echo "tap {}" >> ~/.Brewfile &&
-    /usr/local/bin/brew leaves | xargs -I '{}' echo "install {}" >> ~/.Brewfile
+
+  if \
+    [ $RET -eq 0 ] &&
+    { { [ $1 = 'tap' ] || [ $1 = 'untap' ] } && [ -n "$2" ] } || \
+    [ $1 = 'install' ] || \
+    { [ $1 = 'remove' ] || [ $1 = 'rm' ] } || \
+    [ $1 = 'upgrade' ] \
+  ; then
+    echo -n 'Dumping Brewfile...'
+    /usr/local/bin/brew bundle --global --force dump
+    echo 'done.'
+  fi
+
   return $RET
 }
 
