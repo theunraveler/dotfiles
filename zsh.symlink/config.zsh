@@ -42,6 +42,7 @@ fi
 path=(/opt/chefdk/bin $path)
 
 # Go config.
+export GO15VENDOREXPERIMENT=1
 export GOPATH="$(brew --prefix)/share/go/"
 path=($path $GOPATH/bin)
 
