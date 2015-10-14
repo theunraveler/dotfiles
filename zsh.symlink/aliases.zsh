@@ -43,9 +43,6 @@ function brew() {
   return $RET
 }
 
-# SSH
-alias ssh="ssh -A"
-
 # SVN
 alias svn.addall="svn status | grep '^\?' | awk '{print $2}' | xargs svn add"
 alias svn.rmall="svn status | grep '^!' | awk '{print $2}' | xargs svn delete"
