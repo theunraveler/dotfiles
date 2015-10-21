@@ -1,10 +1,12 @@
+export BREWPATH="/usr/local"
+
 # Initialize run path
 typeset -U path
-path=($HOME/.bin /usr/local/bin /usr/local/sbin /usr/X11/bin $path)
+path=($HOME/.bin $BREWPATH/bin $BREWPATH/sbin /usr/X11/bin $path)
 
 # Adding misc GNU utils execs and man pages.
 for UTIL in "coreutils" "gnu-sed" "gnu-tar"; do
-  PREFIX="$(brew --prefix $UTIL)"
+  PREFIX="$BREWPATH/opt/$UTIL"
   path=($PREFIX/libexec/gnubin $path)
   export MANPATH="$PREFIX/libexec/gnuman:$MANPATH"
 done
@@ -27,7 +29,7 @@ export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
 # Rubies from ruby-build
-for dir in $(brew --prefix)/var/ruby-build/*; do
+for dir in $BREWPATH/var/ruby-build/*; do
   if [[ -d $dir ]]; then
     RUBIES+=$dir
   fi
@@ -43,7 +45,7 @@ path=(/opt/chefdk/bin $path)
 
 # Go config.
 export GO15VENDOREXPERIMENT=1
-export GOPATH="$(brew --prefix)/share/go/"
+export GOPATH="$BREWPATH/share/go/"
 path=($path $GOPATH/bin)
 
 # Source out to local config file

@@ -25,7 +25,7 @@ alias start="brew services start"
 alias stop="brew services stop"
 alias restart="brew services restart"
 function brew() {
-  /usr/local/bin/brew "$@"
+  $BREWPATH/bin/brew "$@"
   RET=$?
 
   if \
@@ -36,7 +36,7 @@ function brew() {
     [ $1 = 'upgrade' ] \
   ; then
     echo -n 'Dumping Brewfile...'
-    /usr/local/bin/brew bundle --global --force dump
+    $BREWPATH/bin/brew bundle --global --force dump
     echo 'done.'
   fi
 
