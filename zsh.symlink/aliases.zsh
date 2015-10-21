@@ -43,13 +43,6 @@ function brew() {
   return $RET
 }
 
-# SVN
-alias svn.addall="svn status | grep '^\?' | awk '{print $2}' | xargs svn add"
-alias svn.rmall="svn status | grep '^!' | awk '{print $2}' | xargs svn delete"
-alias svn.reset="svn st -q | awk '{print $2}' | xargs svn revert"
-alias svn.dryup="svn merge --dry-run -r BASE:HEAD ."
-alias svn.authors="svn log -q | awk -F '|' '/^r/ {print \$2}' | sed 's/^ *//g' | sed 's/ *$//g' | sort -u"
-
 # Vim
 alias v="mvim"
 alias vi="mvim"
