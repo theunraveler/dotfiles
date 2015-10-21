@@ -2,7 +2,7 @@
 
 # Store the current directory and switch to the project root.
 DIR=$(pwd)
-cd "$(dirname "$(readlink -f "$0")")/.."
+cd "$(dirname "$(greadlink -f "$0")")/.."
 
 STASH_COUNT=`git stash list | wc -l`
 
