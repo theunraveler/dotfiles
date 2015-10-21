@@ -34,7 +34,7 @@ fi
 git submodule foreach git pull
 
 # Update zgen projects.
-zsh -c "source \"$HOME/.zsh/zgen.zsh\" && zgen selfupdate && zgen update"
+zsh -c "source \"$HOME/.zsh/config.zsh\" && zgen selfupdate && zgen update"
 
 # Update vim plugins
 vim +PlugUpgrade +PlugUpdate +qall
