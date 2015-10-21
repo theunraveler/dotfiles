@@ -10,6 +10,7 @@ alias top="htop"
 alias b="brew"
 alias d="drush"
 alias k="kill -15"
+alias be="bundle exec"
 
 # DNS/Network
 alias dns.clear="dscacheutil -flushcache"
