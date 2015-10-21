@@ -1,8 +1,5 @@
 # Shell
 alias cp="cp -rv"
-alias grep="grep --color"
-alias ls="ls --color=auto"
-alias ll="ls -lh"
 alias mkdir="mkdir -vp"
 alias mv="mv -v"
 alias rsync="rsync -arxvz --rsh=ssh --progress --exclude-from=$HOME/.rsync/exclude"
@@ -13,7 +10,6 @@ alias top="htop"
 alias b="brew"
 alias d="drush"
 alias k="kill -15"
-alias l="ls -lAh"
 
 # DNS/Network
 alias dns.clear="dscacheutil -flushcache"

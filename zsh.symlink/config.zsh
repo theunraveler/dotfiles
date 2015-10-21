@@ -1,32 +1,29 @@
 export BREWPATH="/usr/local"
+export CLICOLOR=1
+
+# For some reason, we need to add this manually before adding the prezto
+# `utility` module so that dircolors get set properly when we're using GNU ls.
+alias dircolors="$BREWPATH/bin/gdircolors"
 
 # Initialize run path
 typeset -U path
 path=($HOME/.bin $BREWPATH/bin $BREWPATH/sbin /usr/X11/bin $path)
+fpath=($HOME/.zsh/functions $fpath)
 
-# Adding misc GNU utils execs and man pages.
-for UTIL in "coreutils" "gnu-sed" "gnu-tar"; do
-  PREFIX="$BREWPATH/opt/$UTIL"
-  path=($PREFIX/libexec/gnubin $path)
-  export MANPATH="$PREFIX/libexec/gnuman:$MANPATH"
-done
+# Set up our zgen plugins.
+#
+# It's important that this go after the $fpath setting above.
+source $HOME/.zsh/zgen.zsh
 
 # Default programs
 export BROWSER="open"
 export EDITOR="mvim -f"
 export MARKDOWN="cmark"
 
-# Setting commands to ignore
+# History.
 export HISTIGNORE="&:ls:l:ll:[bf]g:exit:reset:clear:cd:cd ..:cd.."
-setopt INC_APPEND_HISTORY
-setopt HIST_IGNORE_ALL_DUPS
-setopt HIST_IGNORE_SPACE
+export HISTFILE="${ZDOTDIR:-$HOME}/.zsh_history"
 setopt HIST_REDUCE_BLANKS
-setopt HIST_VERIFY
-
-# Directory colors
-export CLICOLOR=1
-export LSCOLORS=ExFxCxDxBxegedabagacad
 
 # Rubies from ruby-build
 for dir in $BREWPATH/var/ruby-build/*; do
@@ -43,12 +40,17 @@ fi
 # ChefDK.
 path=(/opt/chefdk/bin $path)
 
-# Go config.
+# Go.
 export GO15VENDOREXPERIMENT=1
 export GOPATH="$BREWPATH/share/go/"
 path=($path $GOPATH/bin)
 
-# Source out to local config file
+# Adding misc GNU utils man pages.
+for UTIL in "coreutils" "gnu-sed" "gnu-tar"; do
+  export MANPATH="$BREWPATH/opt/$UTIL/libexec/gnuman:$MANPATH"
+done
+
+# Source out to local config file.
 if [[ -f $HOME/.zshrc.local.zsh ]]; then
   source $HOME/.zshrc.local.zsh
 fi
