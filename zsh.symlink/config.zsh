@@ -13,7 +13,7 @@ fpath=($HOME/.zsh/functions $fpath)
 # Set up our zgen plugins.
 #
 # It's important that this go after the $fpath setting above.
-source $HOME/.zsh/zgen.zsh
+[[ -r "$HOME/.zsh/zgen.zsh" ]] && source $HOME/.zsh/zgen.zsh
 
 # Default programs
 export BROWSER="open"
@@ -49,6 +49,8 @@ path=($path $GOPATH/bin)
 for UTIL in "coreutils" "gnu-sed" "gnu-tar"; do
   export MANPATH="$BREWPATH/opt/$UTIL/libexec/gnuman:$MANPATH"
 done
+
+[[ -r "$HOME/.zsh/rb-binstubs.zsh" ]] && source $HOME/.zsh/rb-binstubs.zsh
 
 # Source out to local config file.
 if [[ -f $HOME/.zshrc.local.zsh ]]; then

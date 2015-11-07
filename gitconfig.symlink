@@ -130,3 +130,7 @@
   assume   = update-index --assume-unchanged
   unassume = update-index --no-assume-unchanged
   assumed  = "!git ls-files -v | grep ^h | cut -c 3-"
+
+  # Mark a repo as trusted
+  trust = "!mkdir -p .git/safe"
+  untrust = "!rm -f .git/safe"
