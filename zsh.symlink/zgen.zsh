@@ -5,7 +5,7 @@ if ! zgen saved; then
 
   # Prezto options.
   zgen prezto '*:*' color 'yes'
-  zgen prezto ruby 'chruby:auto-switch' 'yes'
+  zgen prezto 'ruby:chruby' auto-switch 'yes'
   zgen prezto history-substring-search color 'no'
   zgen prezto history-substring-search globbing-flags ''
   zgen prezto prompt theme 'theunraveler'
