@@ -1,3 +1,10 @@
-\set COMP_KEYWORD_CASE upper
-\x auto
+\set QUIET 1
+
 \pset null NULL
+\set COMP_KEYWORD_CASE upper
+\set HISTCONTROL ignoredups
+\set VERBOSITY verbose
+\timing
+\x auto
+
+\unset QUIET
