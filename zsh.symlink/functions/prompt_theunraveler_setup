@@ -12,7 +12,7 @@ function prompt_theunraveler_setup {
 
   # Define prompts.
   PROMPT='%F{5}[%c] %f%'
-  RPROMPT='$(git-radar --zsh --fetch)'
+  RPROMPT='$(git-radar --zsh)'
 }
 
 prompt_theunraveler_setup "$@"
