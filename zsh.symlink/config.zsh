@@ -45,6 +45,9 @@ export GO15VENDOREXPERIMENT=1
 export GOPATH="$BREWPATH/share/go/"
 path=($path $GOPATH/bin)
 
+# Python.
+export PIP_REQUIRE_VIRTUALENV=true
+
 # Adding misc GNU utils man pages.
 for UTIL in "coreutils" "gnu-sed" "gnu-tar"; do
   export MANPATH="$BREWPATH/opt/$UTIL/libexec/gnuman:$MANPATH"

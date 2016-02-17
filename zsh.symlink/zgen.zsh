@@ -16,6 +16,7 @@ if ! zgen saved; then
   zgen prezto git
   zgen prezto history
   zgen prezto ruby
+  zgen prezto python
   zgen prezto gnu-utility
   zgen prezto utility
 
