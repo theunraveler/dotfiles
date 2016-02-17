@@ -42,6 +42,7 @@ vim +PlugUpgrade +PlugUpdate +qall
 # Update atom packages.
 if [ `which apm` ]; then
   apm upgrade --no-confirm --compatible
+  apm clean
 fi
 
 # Update composer projects
