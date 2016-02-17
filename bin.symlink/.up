@@ -39,6 +39,11 @@ zsh -c "source \"$HOME/.zsh/config.zsh\" && zgen selfupdate && zgen update"
 # Update vim plugins
 vim +PlugUpgrade +PlugUpdate +qall
 
+# Update atom packages.
+if [ `which apm` ]; then
+  apm upgrade --no-confirm --compatible
+fi
+
 # Update composer projects
 if [ `which composer` ] && [ -f ~/.composer/composer.json ] && [ `jq '.require|length' < ~/.composer/composer.json` -gt 0 ]; then
   cd composer.symlink && composer --dev update && cd - > /dev/null;
