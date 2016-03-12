@@ -42,7 +42,7 @@ path=(/opt/chefdk/bin $path)
 
 # Go.
 export GO15VENDOREXPERIMENT=1
-export GOPATH="$BREWPATH/share/go/"
+export GOPATH="$BREWPATH/share/go"
 path=($path $GOPATH/bin)
 
 # Python.
