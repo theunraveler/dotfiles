@@ -14,15 +14,15 @@ if ! zgen saved; then
   zgen prezto archive
   zgen prezto completion
   zgen prezto git
-  zgen prezto history
-  zgen prezto ruby
-  zgen prezto python
   zgen prezto gnu-utility
+  zgen prezto history
+  zgen prezto python
+  zgen prezto ruby
+  zgen prezto syntax-highlighting
   zgen prezto utility
 
   zgen load djui/alias-tips
   zgen load theunraveler/zsh-fancy_ctrl_z
-  zgen load zsh-users/zsh-syntax-highlighting
   zgen prezto history-substring-search
   zgen load zsh-users/zsh-completions src
 
