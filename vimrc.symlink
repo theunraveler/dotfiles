@@ -2,9 +2,9 @@
 set nocompatible
 set lazyredraw
 set ttyfast
-set nostartofline             " Make j/k respect the columns (after all, this is not a freaking typewriter)
-set modeline               " Respect modeline of the file (the famous "vi:noai:sw=3 ts=6" on the beginning of the files)
-set hidden                   " Avoid asking to save before hiding
+set nostartofline           " Make j/k respect the columns (after all, this is not a freaking typewriter)
+set modeline                " Respect modeline of the file (the famous "vi:noai:sw=3 ts=6" on the beginning of the files)
+set hidden                  " Avoid asking to save before hiding
 
 filetype on
 filetype off
@@ -24,15 +24,15 @@ set report=2
 set showmode
 
 " Statusline
-set statusline=%t\      "tail of the filename
-set statusline+=%h      "help file flag
-set statusline+=%m      "modified flag
-set statusline+=%r      "read only flag
-set statusline+=%y      "filetype
-set statusline+=%=      "left/right separator
-set statusline+=%c,     "cursor column
-set statusline+=%l/%L   "cursor line/total lines
-set statusline+=\ %P    "percent through file
+set statusline=%t\      " tail of the filename
+set statusline+=%h      " help file flag
+set statusline+=%m      " modified flag
+set statusline+=%r      " read only flag
+set statusline+=%y      " filetype
+set statusline+=%=      " left/right separator
+set statusline+=%c,     " cursor column
+set statusline+=%l/%L   " cursor line/total lines
+set statusline+=\ %P    " percent through file
 
 " Command-mode completion
 set wildignore=*.o,*.obj,*.pyc,*.swc,*.DS_STORE,*.bkp
@@ -43,8 +43,8 @@ set showmatch
 set matchpairs=(:),{:},[:],<:>,':',":",/:/,|:|
 
 " Search and replace
-set gdefault     " Make regexp matches everything, instead of just the first one
-set hlsearch     " Highlight matched regexp
+set gdefault      " Make regexp matches everything, instead of just the first one
+set hlsearch      " Highlight matched regexp
 set ignorecase
 set smartcase     " Intelligent case-smart searching
 
