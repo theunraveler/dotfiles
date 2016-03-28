@@ -1,6 +1,5 @@
 tap 'beeftornado/rmtree'
 tap 'bernardorufino/pick'
-tap 'caius/jo'
 tap 'homebrew/binary'
 tap 'homebrew/bundle'
 tap 'homebrew/dupes'
