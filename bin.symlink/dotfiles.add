@@ -6,12 +6,12 @@ if [ $# -eq 0 ]; then
 fi
 
 dotfiles_dir="$(grealpath "$(dirname "$(greadlink -f "$0")")/..")"
-dotfile_base="$(echo $1 | gsed -nr 's/^[\.+]?(.*?)$/\1/p' | gsed 's/\.symlink$//')"
+dotfile_base="$(echo "$1" | gsed -nr 's/^[\.+]?(.*?)$/\1/p' | gsed 's/\.symlink$//')"
 dotfile="$dotfiles_dir/$dotfile_base.symlink"
 
-touch $dotfile
-ln -s $dotfile "$HOME/.$dotfile_base"
-$EDITOR $dotfile
+touch "$dotfile"
+ln -s "$dotfile" "$HOME/.$dotfile_base"
+$EDITOR "$dotfile"
 
 echo "Created $dotfile."
 exit 0
