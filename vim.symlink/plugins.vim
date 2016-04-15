@@ -33,7 +33,6 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rbenv'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-vinegar'
-Plug 'yaymukund/vim-rabl'
 Plug 'Yggdroot/indentLine'
 
 " Color schemes
