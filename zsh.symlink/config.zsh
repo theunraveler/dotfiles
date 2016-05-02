@@ -53,7 +53,8 @@ for UTIL in "coreutils" "gnu-sed" "gnu-tar"; do
   export MANPATH="$BREWPATH/opt/$UTIL/libexec/gnuman:$MANPATH"
 done
 
-[[ -r "$HOME/.zsh/rb-binstubs.zsh" ]] && source $HOME/.zsh/rb-binstubs.zsh
+# Autoenv.
+[[ -r "$BREWPATH/opt/autoenv/activate.sh" ]] && source $BREWPATH/opt/autoenv/activate.sh
 
 # Source out to local config file.
 if [[ -f $HOME/.zshrc.local.zsh ]]; then
