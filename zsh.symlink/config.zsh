@@ -25,12 +25,13 @@ export HISTIGNORE="&:ls:l:ll:[bf]g:exit:reset:clear:cd:cd ..:cd.."
 export HISTFILE="${ZDOTDIR:-$HOME}/.zsh_history"
 setopt HIST_REDUCE_BLANKS
 
-# Rubies from ruby-build
+# Ruby.
 for dir in $BREWPATH/var/ruby-build/*; do
   if [[ -d $dir ]]; then
     RUBIES+=$dir
   fi
 done
+[[ -r "$HOME/.zsh/rb-binstubs.zsh" ]] && source $HOME/.zsh/rb-binstubs.zsh
 
 # hub.
 if [ `which hub` ]; then
