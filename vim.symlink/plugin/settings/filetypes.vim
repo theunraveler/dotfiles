@@ -16,4 +16,7 @@ if has("autocmd")
 
   " PHP
   autocmd BufRead,BufNewFile *.php set tabstop=4 softtabstop=4 shiftwidth=4
+
+  " Python
+  autocmd BufRead,BufWritePre *.py :call Autopep8()<CR>
 endif
