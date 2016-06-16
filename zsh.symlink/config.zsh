@@ -57,6 +57,13 @@ done
 # Autoenv.
 [[ -r "$BREWPATH/opt/autoenv/activate.sh" ]] && source $BREWPATH/opt/autoenv/activate.sh
 
+# ag tagging.
+# https://github.com/aykamko/tag#installation
+if (( $+commands[tag] )); then
+  tag() { command tag "$@"; source ${TAG_ALIAS_FILE:-/tmp/tag_aliases} 2>/dev/null }
+  alias ag=tag
+fi
+
 # Source out to local config file.
 if [[ -f $HOME/.zshrc.local.zsh ]]; then
   source $HOME/.zshrc.local.zsh
