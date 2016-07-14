@@ -1,6 +1,6 @@
 if has("autocmd")
   " Ruby
-  autocmd BufRead,BufNewFile {Rakefile,Capfile,Gemfile,Guardfile} set filetype=ruby
+  autocmd BufRead,BufNewFile {Rakefile,Capfile,Gemfile,Guardfile,*.rabl} set filetype=ruby
   autocmd BufEnter *.rb syn match error contained "\<binding.pry\>"
   autocmd BufEnter *.rb syn match error contained "\<debugger\>"
 
