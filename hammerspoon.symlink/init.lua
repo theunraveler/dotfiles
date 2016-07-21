@@ -1,5 +1,6 @@
 require "_config"
 utils = require "utils"
+require "lastfm"
 require "window"
 
 -- Reload hammerspoon config whenever one of its config files changes.
