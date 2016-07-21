@@ -1,5 +1,5 @@
 require "_config"
-require "_utils"
+utils = require "utils"
 require "window"
 
 -- Reload hammerspoon config whenever one of its config files changes.
@@ -12,6 +12,6 @@ hs.pathwatcher.new(os.getenv("HOME") .. "/.hammerspoon/", function(files)
   end
   if doReload then
     hs.reload()
-    notify("Config reloaded")
+    utils.notify("Config reloaded")
   end
 end):start()
