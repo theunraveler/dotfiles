@@ -1,5 +1,6 @@
 require "_config"
 utils = require "utils"
+require "bluetooth"
 require "lastfm"
 require "window"
 
