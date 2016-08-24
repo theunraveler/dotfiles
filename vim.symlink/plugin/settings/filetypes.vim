@@ -11,9 +11,6 @@ if has("autocmd")
   autocmd BufRead,BufNewFile *.{md,mkd,markdown} set filetype=markdown
   autocmd Filetype markdown setlocal spell lbr
 
-  " Go
-  autocmd Filetype go set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
-
   " PHP
   autocmd BufRead,BufNewFile *.php set tabstop=4 softtabstop=4 shiftwidth=4
 endif

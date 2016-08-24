@@ -23,17 +23,6 @@ set relativenumber
 set report=2
 set showmode
 
-" Statusline
-set statusline=%t\      " tail of the filename
-set statusline+=%h      " help file flag
-set statusline+=%m      " modified flag
-set statusline+=%r      " read only flag
-set statusline+=%y      " filetype
-set statusline+=%=      " left/right separator
-set statusline+=%c,     " cursor column
-set statusline+=%l/%L   " cursor line/total lines
-set statusline+=\ %P    " percent through file
-
 " Command-mode completion
 set wildignore=*.o,*.obj,*.pyc,*.swc,*.DS_STORE,*.bkp
 set wildmode=list:longest
@@ -97,6 +86,3 @@ if has("gui_running")
   set guioptions-=L
   set guioptions-=r
 endif
-
-" Netrw Stuff
-let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'

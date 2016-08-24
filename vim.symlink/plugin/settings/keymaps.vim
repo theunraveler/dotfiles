@@ -1,3 +1,9 @@
+" Keymaps
+"
+" This is where we set all key mappings, regardless of if they come from vim
+" core or a plugin (keymappings are easier to read and debug if they're all in
+" the same place).
+
 let mapleader = "\<Space>"
 
 " Fixing some vim defaults baddy
@@ -34,6 +40,9 @@ map <C-l> <C-w>l
 " Sudo save
 cnoremap w!! w !sudo tee % >/dev/null
 
+" Save the file with <Leader>w
+nnoremap <Leader>w :w<CR>
+
 " Tagbar
 nnoremap <leader>l :TagbarToggle<cr>
 
@@ -46,6 +55,3 @@ vnoremap <leader>/ :call NERDComment("n", "Toggle")<cr>
 
 " Inserts a UUID at the current position
 inoremap <C-b> <C-r>=substitute(substitute(system("uuidgen"), '.$', '', 'g'), '[A-Z]', '\L&', 'g')<CR>
-
-" Misc
-nnoremap <Leader>w :w<CR>
