@@ -65,6 +65,9 @@ if (( $+commands[tag] )); then
   alias ag=tag
 fi
 
+# Command not found.
+if brew command command-not-found-init > /dev/null; then eval "$(brew command-not-found-init)"; fi
+
 # Source out to local config file.
 if [[ -f $HOME/.zshrc.local.zsh ]]; then
   source $HOME/.zshrc.local.zsh
