@@ -2,6 +2,7 @@ require "_config"
 utils = require "utils"
 require "bluetooth"
 require "lastfm"
+require "spotifree"
 require "window"
 
 -- Reload hammerspoon config whenever one of its config files changes.
