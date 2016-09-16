@@ -1,5 +1,5 @@
 --
--- LAST.FM
+-- iTunes config
 --
 
 -- Start the Last.fm app when iTunes opens, quit when it closes.

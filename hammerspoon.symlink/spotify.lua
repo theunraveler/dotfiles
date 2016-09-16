@@ -1,5 +1,5 @@
 --
--- SPOTIFREE
+-- Spotify config
 --
 
 -- Start the Spotifree app when Spotify opens, quit when it closes.
