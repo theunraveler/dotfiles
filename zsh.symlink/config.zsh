@@ -49,6 +49,7 @@ path=($path $GOPATH/bin)
 # Python.
 export PIP_REQUIRE_VIRTUALENV=true
 export PYTHONDONTWRITEBYTECODE=1
+export VIRTUAL_ENV_PATH="$BREWPATH/var/python/envs"
 
 # Adding misc GNU utils man pages.
 for UTIL in "coreutils" "gnu-sed" "gnu-tar"; do
