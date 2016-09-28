@@ -29,7 +29,7 @@ function brew() {
     [ $RET -eq 0 ] &&
     { { [ $1 = 'tap' ] || [ $1 = 'untap' ] } && [ -n "$2" ] } || \
     [ $1 = 'install' ] || \
-    { [ $1 = 'remove' ] || [ $1 = 'rm' ] } || \
+    { [ $1 = 'remove' ] || [ $1 = 'rm' ] || [ $1 = 'rmtree' ] } || \
     [ $1 = 'upgrade' ] \
   ; then
     echo -n 'Dumping Brewfile...'
