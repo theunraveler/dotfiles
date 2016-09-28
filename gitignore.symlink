@@ -29,7 +29,8 @@ tags
 .svn
 *.bak
 .sass-cache
-.env
+.env_up
+.env_down
 
 # Ruby
 .ruby-version
