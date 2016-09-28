@@ -56,8 +56,11 @@ for UTIL in "coreutils" "gnu-sed" "gnu-tar"; do
   export MANPATH="$BREWPATH/opt/$UTIL/libexec/gnuman:$MANPATH"
 done
 
-# Autoenv.
-[[ -r "$BREWPATH/opt/autoenv/activate.sh" ]] && source $BREWPATH/opt/autoenv/activate.sh
+# zsh-autoenv
+AUTOENV_AUTH_FILE="$HOME/.autoenv_auth"
+AUTOENV_FILE_ENTER=".env_up"
+AUTOENV_FILE_LEAVE=".env_down"
+AUTOENV_LOOK_UPWARDS=0
 
 # ag tagging.
 # https://github.com/aykamko/tag#installation

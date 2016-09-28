@@ -22,6 +22,7 @@ if ! zgen saved; then
   zgen prezto utility
 
   zgen load djui/alias-tips
+  zgen load Tarrasch/zsh-autoenv
   zgen load theunraveler/zsh-fancy_ctrl_z
   zgen prezto history-substring-search
   zgen load zsh-users/zsh-completions src
