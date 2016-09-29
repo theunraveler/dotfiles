@@ -8,9 +8,10 @@ alias top="htop"
 
 # Shorties
 alias b="brew"
+alias be="bundle exec"
 alias d="drush"
 alias k="kill -15"
-alias be="bundle exec"
+alias py="python"
 
 # DNS/Network
 alias dns.clear="dscacheutil -flushcache"

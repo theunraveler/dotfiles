@@ -49,7 +49,11 @@ path=($path $GOPATH/bin)
 # Python.
 export PIP_REQUIRE_VIRTUALENV=true
 export PYTHONDONTWRITEBYTECODE=1
-export VIRTUAL_ENV_PATH="$BREWPATH/var/python/envs"
+export PYENV_ROOT="$BREWPATH/var/python"
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+export PYTHON_CONFIGURE_OPTS="--enable-framework"
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
 # Adding misc GNU utils man pages.
 for UTIL in "coreutils" "gnu-sed" "gnu-tar"; do
