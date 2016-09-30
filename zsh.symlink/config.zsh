@@ -34,9 +34,7 @@ done
 [[ -r "$HOME/.zsh/rb-binstubs.zsh" ]] && source $HOME/.zsh/rb-binstubs.zsh
 
 # hub.
-if [ `which hub` ]; then
-  eval "$(hub alias -s)"
-fi
+if which hub > /dev/null; then eval "$(hub alias -s)"; fi
 
 # ChefDK.
 path=(/opt/chefdk/bin $path)
@@ -71,6 +69,14 @@ AUTOENV_LOOK_UPWARDS=0
 if (( $+commands[tag] )); then
   tag() { command tag "$@"; source ${TAG_ALIAS_FILE:-/tmp/tag_aliases} 2>/dev/null }
   alias ag=tag
+fi
+
+# In MacOS Sierra (and above?), we need to load our ssh identities and keys
+# into the ssh agent whenever the terminal starts.
+#
+# See http://apple.stackexchange.com/q/254468 for more information.
+if [[ `which sw_vers` > /dev/null ]] && [[ `sw_vers -productVersion` =~ ^10\.1[2-9]$ ]]; then
+  ssh-add -A >& /dev/null
 fi
 
 # Command not found.
