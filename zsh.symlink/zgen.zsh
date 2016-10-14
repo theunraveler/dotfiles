@@ -1,3 +1,13 @@
+export ZGEN_RESET_ON_CHANGE=(
+  ${HOME}/.zshrc
+  ${HOME}/.zshrc.local.zsh
+  ${HOME}/.zsh/config.zsh
+  ${HOME}/.zsh/aliases.zsh
+  ${HOME}/.zsh/rb-binstubs.zsh
+  ${HOME}/.zsh/zgen.zsh
+  ${HOME}/.zsh/functions/*
+)
+
 source $HOME/.zsh/zgen/zgen.zsh
 
 if ! zgen saved; then
