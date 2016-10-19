@@ -1,3 +1,0 @@
-#!/bin/sh
-rm -f .git/tags
-ctags -Rf.git/tags --tag-relative --langmap=php:.engine.inc.module.theme.install.php --php-kinds=cdfi --exclude=.git --languages=-javascript,sql

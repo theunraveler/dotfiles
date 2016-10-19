@@ -15,9 +15,6 @@
   excludesfile = ~/.gitignore
   attributesfile = ~/.gitattributes
 
-[init]
-  templatedir = ~/.gittemplate
-
 [branch]
   autosetuprebase = always
 
