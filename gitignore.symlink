@@ -36,11 +36,13 @@ tags
 .ruby-version
 .rake_tasks
 
-### vim ###
+# Python
+.ropeproject
+
+# vim
 [._]*.s[a-w][a-z]
 [._]s[a-w][a-z]
 *.un~
 Session.vim
 .netrwhist
 *~
-
