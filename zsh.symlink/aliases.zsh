@@ -67,6 +67,11 @@ function md2pdf() {
 # View a markdown file in a browser.
 function mdview() {
   filename="$TMPDIR$(basename "$1").html"
+
+  if [ -f "$filename" ]; then
+    rm "$filename"
+  fi
+
   $MARKDOWN $1 > $filename
   $BROWSER $filename
 }
