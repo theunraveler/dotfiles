@@ -27,31 +27,6 @@ set showmode
 set wildignore=*.o,*.obj,*.pyc,*.swc,*.DS_STORE,*.bkp
 set wildmode=list:longest
 
-" Matching
-set showmatch
-set matchpairs=(:),{:},[:],<:>,':',":",/:/,|:|
-
-" Search and replace
-set gdefault      " Make regexp matches everything, instead of just the first one
-set hlsearch      " Highlight matched regexp
-set ignorecase
-set smartcase     " Intelligent case-smart searching
-
-" Indentation
-set smartindent
-set expandtab
-set shiftround
-set nojoinspaces
-set nofoldenable
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
-
-" Autocomplete
-set infercase
-set completeopt=longest,menuone
-set omnifunc=syntaxcomplete#Complete
-
 " Clipboard
 set clipboard=unnamed
 
@@ -66,23 +41,5 @@ set nobackup
 set nowritebackup
 set noswapfile
 
-" Grep
-set grepprg=ack
-set grepformat=%f:%l:%m
-
 " Format
 set formatprg=par
-
-" Splits
-set splitbelow
-set splitright
-
-if has("gui_running")
-  set cursorline
-  set gfn:Hack:h12
-
-  " Don't show toolbar and scrollbars
-  set guioptions-=T to
-  set guioptions-=L
-  set guioptions-=r
-endif
