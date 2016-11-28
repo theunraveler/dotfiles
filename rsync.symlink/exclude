@@ -3,7 +3,6 @@ tmp
 .svn
 .git
 Thumbs.db
-.gitignore
 *.swp
 sites/*/files
 *~

@@ -42,6 +42,7 @@ tags
 # vim
 [._]*.s[a-w][a-z]
 [._]s[a-w][a-z]
+!_src
 *.un~
 Session.vim
 .netrwhist
