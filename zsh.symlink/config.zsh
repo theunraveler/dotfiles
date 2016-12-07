@@ -74,7 +74,7 @@ fi
 # into the ssh agent whenever the terminal starts.
 #
 # See http://apple.stackexchange.com/q/254468 for more information.
-if [[ `which sw_vers` > /dev/null ]] && [[ `sw_vers -productVersion` =~ ^10\.1[2-9]$ ]]; then
+if [[ `which sw_vers` > /dev/null ]] && [[ `sw_vers -productVersion` =~ ^10\.1[2-9]\.?\d*$ ]]; then
   ssh-add -A >& /dev/null
 fi
 
