@@ -46,6 +46,7 @@ path=($path $GOPATH/bin)
 
 # Python.
 export PIP_REQUIRE_VIRTUALENV=true
+export PIP_CONFIG_FILE="$HOME/.pip.conf"
 export PYTHONDONTWRITEBYTECODE=1
 export PYENV_ROOT="$BREWPATH/var/python"
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
