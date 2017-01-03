@@ -2,7 +2,7 @@ call plug#begin('~/.vim/plugged')
 
 " Plugins
 Plug 'airblade/vim-gitgutter'
-Plug 'amirh/HTML-AutoCloseTag'
+Plug 'alvan/vim-closetag'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'eiginn/netrw'
