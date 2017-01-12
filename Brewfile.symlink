@@ -89,6 +89,7 @@ brew 'lua'
 brew 'luajit'
 brew 'makedepend'
 brew 'makeicns'
+brew 'mas'
 brew 'mhash'
 brew 'mcrypt'
 brew 'moreutils'
@@ -168,3 +169,13 @@ cask 'transmit'
 cask 'virtualbox'
 cask 'vlc'
 cask 'windscribe'
+mas 'Pixelmator', id: 407963104
+mas 'Amphetamine', id: 937984704
+mas 'LimeChat', id: 414030210
+mas 'ReadKit', id: 588726889
+mas 'Xcode', id: 497799835
+mas 'Slack', id: 803453959
+mas 'Irvue', id: 1039633667
+mas 'The Unarchiver', id: 425424353
+mas 'Wunderlist', id: 410628904
+mas '1Password', id: 443987910
