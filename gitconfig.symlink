@@ -134,3 +134,5 @@
   # Mark a repo as trusted
   trust = "!mkdir -p .git/safe"
   untrust = "!rm -f .git/safe"
+
+  issues = "!ghi"
