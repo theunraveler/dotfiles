@@ -36,7 +36,7 @@ function brew() {
     [ "$1" = 'install' ] || \
     { [ "$1" = 'remove' ] || [ "$1" = 'rm' ] || [ "$1" = 'rmtree' ] } || \
     [ "$1" = 'upgrade' ] || \
-    { [ "$1" = 'cask' ] && { [ "$2" = 'install' ] || [ "$2" = 'uninstall' ] } } \
+    { [ "$1" = 'cask' ] && { [ "$2" = 'install' ] || [ "$2" = 'uninstall' ]  || [ "$2" = 'rm' ] } } \
   ; then
     echo -n 'Dumping Brewfile...'
     $BREWPATH/bin/brew bundle --global --force dump
