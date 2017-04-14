@@ -23,7 +23,6 @@ if ! zgen saved; then
   zgen prezto
   zgen prezto archive
   zgen prezto completion
-  zgen prezto git
   zgen prezto gnu-utility
   zgen prezto history
   zgen prezto ruby

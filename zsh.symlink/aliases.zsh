@@ -10,6 +10,7 @@ alias top="htop"
 alias b="brew"
 alias be="bundle exec"
 alias d="drush"
+alias g="git"
 alias k="kill -15"
 alias py="python"
 
