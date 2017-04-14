@@ -1,10 +1,12 @@
-# Shell
+# Overrides
 alias cp="cp -rv"
 alias mkdir="mkdir -vp"
 alias mv="mv -v"
 alias rsync="rsync -arxvz --rsh=ssh --progress --exclude-from=$HOME/.rsync/exclude"
 alias rm="rm -rv"
 alias top="htop"
+alias vi="mvim"
+alias vim="mvim"
 
 # Shorties
 alias b="brew"
@@ -13,6 +15,7 @@ alias d="drush"
 alias g="git"
 alias k="kill -15"
 alias py="python"
+alias v="mvim"
 
 # DNS/Network
 alias dns.clear="dscacheutil -flushcache"
@@ -42,11 +45,6 @@ function brew() {
 
   return $RET
 }
-
-# Vim
-alias v="mvim"
-alias vi="mvim"
-alias vim="mvim"
 
 # Misc
 alias rmtrailingwhitespace="find . -type f -exec sed -i 's/[[:space:]]*$//' {} \;"
