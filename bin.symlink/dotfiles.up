@@ -25,9 +25,10 @@ git stash --quiet
 
 git pull origin master
 
-# Update homebrew.
+# Update homebrew and casks.
 if [ `which brew` ]; then
   brew update && brew upgrade && brew cleanup && brew cask cleanup
+  brew cask outdated | awk '{print $1}' | xargs brew cask reinstall
 fi
 
 # Next, update all git submodules.
