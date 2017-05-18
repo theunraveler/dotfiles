@@ -27,8 +27,10 @@ git pull origin master
 
 # Update homebrew and casks.
 if [ `which brew` ]; then
-  brew update && brew upgrade && brew cleanup && brew cask cleanup
+  brew update
+  brew upgrade
   brew cask outdated | awk '{print $1}' | xargs brew cask reinstall
+  brew cleanup && brew cask cleanup
 fi
 
 # Next, update all git submodules.
