@@ -1,8 +1,8 @@
 #!/usr/bin/env sh
 
-DATABASES=$(mysql --user=root --password=root -Bse 'show databases')
+date="$(date +%m-%d-%y)"
 
-for db in ${DATABASES[@]}; do
-  echo "${db}-$(date +%m-%d-%y).sql.bz2 is being saved in the current directory"
-  mysqldump --user=root --password=root "$db" --single-transaction -R > "${db}-$(date +%m-%d-%y).sql"
+mysql --user=root --password=root -Bse 'show databases' | while read -r db; do
+  echo "${db}-${date}.sql is being saved in the current directory"
+  mysqldump --user=root --password=root --single-transaction --routines --result-file="${db}-${date}.sql" "$db"
 done

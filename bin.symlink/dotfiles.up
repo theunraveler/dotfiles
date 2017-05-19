@@ -2,21 +2,21 @@
 
 # Store the current directory and switch to the project root.
 DIR=$(pwd)
-cd "$(dirname "$(greadlink -f "$0")")/.."
+cd "$(dirname "$(greadlink -f "$0")")/.." || exit 1
 
-STASH_COUNT=`git stash list | wc -l`
+STASH_COUNT=$(git stash list | wc -l)
 
-function unstash() {
-  if [ $STASH_COUNT != `git stash list | wc -l` ]; then
+unstash() {
+  if [ "$STASH_COUNT" != "$(git stash list | wc -l)" ]; then
     git stash pop --quiet
   fi
 }
 
-trap ctrl_c SIGINT SIGTERM
-function ctrl_c() {
+trap ctrl_c INT TERM
+ctrl_c() {
   unstash
   echo "*** Returning you to $DIR"
-  cd "$DIR"
+  cd "$DIR" || exit 1
   exit 0
 }
 
@@ -25,33 +25,40 @@ git stash --quiet
 
 git pull origin master
 
-# Update homebrew and casks.
-if [ `which brew` ]; then
+# homebrew and casks.
+if which brew > /dev/null; then
   brew update
   brew upgrade
   brew cask outdated | awk '{print $1}' | xargs brew cask reinstall
   brew cleanup && brew cask cleanup
 fi
 
-# Next, update all git submodules.
+# Apps from the App Store.
+if which mas > /dev/null; then
+  mas upgrade
+fi
+
+# git submodules.
 git submodule foreach git pull
 
-# Update zgen projects.
+# zgen projects.
 zsh -c "source \"$HOME/.zsh/config.zsh\" && zgen selfupdate && zgen update"
 
-# Update vim plugins
+# vim plugins
 vim +PlugUpgrade +PlugUpdate +qall
 
-# Update composer projects
-if [ `which composer` ] && [ -f ~/.composer/composer.json ] && [ `jq '.require|length' < ~/.composer/composer.json` -gt 0 ]; then
-  cd composer.symlink && composer --dev update && cd - > /dev/null;
+# composer projects
+if which composer > /dev/null && [ -f ~/.composer/composer.json ] && [ "$(jq '.require|length' < ~/.composer/composer.json)" -gt 0 ]; then
+  cd composer.symlink || exit 1
+  composer --dev update
+  cd - > /dev/null || exit 1;
 else
   echo "Composer: no packages defined, skipping."
 fi
 
 # Finally, commit the results.
 git status --porcelain | grep '^ M' | awk '{print $2}' | xargs git add
-if [ -n "$(git status --porcelain | grep '^M')" ]; then
+if git status --porcelain | grep --silent '^M'; then
   git ci -m "Updating submodules, vim plugins, composer packages, and/or brew list."
   git push origin master
 else
@@ -61,5 +68,5 @@ fi
 # Unstash if necessary.
 unstash
 
-cd "$DIR"
+cd "$DIR" || exit 1
 exit 0

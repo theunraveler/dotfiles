@@ -9,7 +9,7 @@ DB_USER="user"
 # Check for correct arguments.
 if [ $# -lt 1 ]; then
   echo
-  echo Usage: create_db [database-name]
+  echo "Usage: create_db [database-name]"
   echo
   exit 127
 fi
