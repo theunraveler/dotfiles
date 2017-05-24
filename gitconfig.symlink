@@ -63,19 +63,6 @@
 [color "diff"]
   whitespace = red reverse
 
-##############
-# URL SHORTIES
-##############
-
-[url "https://github.com/"]
-  insteadOf = "gh:"
-
-[url "http://git.drupal.org/project/"]
-  insteadOf = "d:"
-
-[url "ssh://git@git.drupal.org/sandbox/"]
-  insteadOf = "dsand:"
-
 ######
 # HUB
 ######
@@ -88,18 +75,20 @@
 #########
 
 [alias]
-  p = pull origin master
-  pom = push origin master
-  au = add -u
-  s = show
-  st = status -sb
+  br = branch
+  cd-root = rev-parse --show-cdup
   ci = commit
   cl = clone
-  br = branch
   co = checkout
+  ctags = !$(git cd-root).git/hooks/ctags
   fp = format-patch
-  w = whatchanged
+  issues = "!ghi"
+  p = pull origin master
+  s = show
+  spp = !git stash && git pull && git stash pop
+  st = status -sb
   sync = fetch -p
+  w = whatchanged
 
   # Logging
   l  = log --oneline --decorate
@@ -111,28 +100,6 @@
   # A better git pull. See http://stackoverflow.com/a/15316602.
   up = "!git remote update -p; git merge --ff-only @{u}"
 
-  # Stash, pull, pop.
-  spp = !git stash && git pull && git stash pop
-
   # Resetting
   undo = reset --soft HEAD^
   fresh = !git fetch --all && git reset --hard origin/master -
-
-  # Creating patches for branches
-  branch-name = !git for-each-ref --format='%(refname:short)' "$(git symbolic-ref HEAD)"
-  cd-root = rev-parse --show-cdup
-  branch-diff = !git format-patch --stdout $1 > "$(git cd-root)patches/$(git branch-name).patch"
-
-  # Get the path to the ctags file for the current repo
-  ctags = !$(git cd-root).git/hooks/ctags
-
-  # Ignore certain file with changes
-  assume   = update-index --assume-unchanged
-  unassume = update-index --no-assume-unchanged
-  assumed  = "!git ls-files -v | grep ^h | cut -c 3-"
-
-  # Mark a repo as trusted
-  trust = "!mkdir -p .git/safe"
-  untrust = "!rm -f .git/safe"
-
-  issues = "!ghi"
