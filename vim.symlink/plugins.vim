@@ -28,7 +28,6 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rbenv'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-vinegar'
-Plug 'vim-scripts/TaskList.vim'
 Plug 'Yggdroot/indentLine'
 
 " Color schemes
