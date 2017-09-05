@@ -31,7 +31,6 @@ for dir in $BREWPATH/var/ruby-build/*; do
     RUBIES+=$dir
   fi
 done
-[[ -r "$HOME/.zsh/rb-binstubs.zsh" ]] && source $HOME/.zsh/rb-binstubs.zsh
 
 # hub.
 if which hub > /dev/null; then eval "$(hub alias -s)"; fi
