@@ -1,3 +1,5 @@
+.DS_Store
+
 composer/.composer/.htaccess
 composer/.composer/bin/*
 composer/.composer/cache
