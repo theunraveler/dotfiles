@@ -1,6 +1,8 @@
 Dotfiles
 ========
 
+Uses [GNU `stow`](https://www.gnu.org/software/stow/) to manage dotfiles.
+
 Installation
 ------------
 
@@ -10,4 +12,4 @@ Installation
 Update
 ------
 
-* Run `bin/.up`. This will update all submodules and commit/push.
+* Run `dotfiles.up`. This will update brews, zsh, etc.

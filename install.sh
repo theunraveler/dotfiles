@@ -1,26 +1,8 @@
 #!/usr/bin/env bash
 
 WD="$(pwd)"
-DIR="$( cd "$(dirname "$0")/.." && pwd )"
+DIR="$( cd "$(dirname "$0")" > /dev/null && pwd )"
 BREW_CMD="/usr/local/bin/brew"
-
-cd ~ || exit 1
-echo "Linking items from $DIR to home directory using $(which ln)"
-
-# If we are using GNU ln (from coreutils) the options are different.
-if ln --version > /dev/null; then
-  ln_command="ln -ns"
-else
-  ln_command="ln -hs"
-fi
-
-# Then, symlink all dotfiles into the home directory.
-while IFS= read -r -d '' filepath; do
-  filename=$(basename "${filepath%.*}")
-  echo -n "Linking $filename..."
-
-  if $ln_command "$filepath" ".$filename"; then echo "done"; fi
-done <   <(find "$DIR" ! -path '*.git*' -name '*.symlink' -print0)
 
 # Install homebrew if we need to.
 if [ ! -f $BREW_CMD ]; then
@@ -28,27 +10,42 @@ if [ ! -f $BREW_CMD ]; then
   ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 fi
 
-echo "Checking homebrew packages..."
+# Install GNU stow if we need to.
+if ! [ -x "$(command -v stow)" ]; then
+  echo -n "Installing stow..."
+  $BREW_CMD install stow
+fi
+
+# Symlink everything.
+printf "Linking items from $DIR to home directory..."
+find "$DIR" -type d \( ! -regex '.*/\..*' \) -depth 1 | sed 's!.*/!!' | xargs stow --dir="$DIR" --target="$HOME" --restow
+echo "done."
+
+printf "Checking homebrew packages..."
 brew tap homebrew/bundle
-brew bundle --global
+brew bundle --global > /dev/null
 echo "done."
 
 # Install zgen.
-cd ~/.zsh || exit 1
-git clone https://github.com/tarjoilija/zgen.git zgen
-cd - || exit 1
+cd ~/.zsh > /dev/null || exit 1
+if [ ! -d zgen ]; then
+  git clone https://github.com/tarjoilija/zgen.git zgen
+fi
+cd - > /dev/null || exit 1
 
 # Install vim plugins
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+if [ ! -f ~/.vim/autoload/plug.vim ]; then
+  curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+fi
 vim +PlugInstall +qall
 
 # Install composer packages.
 if which composer > /dev/null; then
-  cd .composer || exit 1
-  composer --dev install
-  cd - || exit 1
+  cd ~/.composer > /dev/null || exit 1
+  composer install
+  cd - > /dev/null || exit 1
 fi
 
 # Finally, go back to where the user started.
-cd "$WD" || exit 1
+cd "$WD" > /dev/null || exit 1
 exit 0
