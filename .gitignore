@@ -5,6 +5,7 @@ composer/.composer/composer.lock
 composer/.composer/config.json
 composer/.composer/vendor
 drush/.drush/cache
+vim/.vim/.netrwhist
 vim/.vim/autoload/plug.vim
 vim/.vim/autoload/plug.vim.old
 vim/.vim/plugged
