@@ -70,6 +70,10 @@ if (( $+commands[tag] )); then
   alias ag=tag
 fi
 
+# Add SSH keys from keychain.
+# http://apple.stackexchange.com/questions/254468/macos-sierra-doesn-t-seem-to-remember-ssh-keys-between-reboots
+ssh-add -A &> /dev/null
+
 # Source out to local config file.
 if [[ -f $HOME/.zshrc.local.zsh ]]; then
   source $HOME/.zshrc.local.zsh
