@@ -1,16 +1,17 @@
 tap "aykamko/tag-ag"
-tap "beeftornado/rmtree"
-tap "caskroom/cask"
-tap "caskroom/fonts"
+tap "michaeldfallen/formula"
+tap "homebrew/dupes"
+tap "homebrew/core"
+tap "homebrew/php"
+tap "homebrew/versions"
 tap "homebrew/binary"
 tap "homebrew/boneyard"
 tap "homebrew/bundle"
-tap "homebrew/core"
-tap "homebrew/dupes"
-tap "homebrew/php"
 tap "homebrew/services"
-tap "homebrew/versions"
-tap "michaeldfallen/formula"
+tap "caskroom/fonts"
+tap "caskroom/versions"
+tap "caskroom/cask"
+tap "beeftornado/rmtree"
 cask "java"
 brew "ack"
 brew "archey"
@@ -139,12 +140,12 @@ brew "michaeldfallen/formula/git-radar"
 cask "appzapper"
 cask "arduino"
 cask "basecamp"
+cask "cityofzion-neon"
 cask "clipmenu"
 cask "cyberduck"
 cask "dash"
 cask "docker"
 cask "firefox"
-cask "font-hack"
 cask "free-ruler"
 cask "google-chrome"
 cask "gotomeeting"
@@ -166,6 +167,7 @@ cask "torbrowser"
 cask "transmission"
 cask "virtualbox"
 cask "vlc"
+cask "caskroom/fonts/font-hack"
 mas "1Password", id: 443987910
 mas "Amphetamine", id: 937984704
 mas "LimeChat", id: 414030210
@@ -173,5 +175,5 @@ mas "Pixelmator", id: 407963104
 mas "ReadKit", id: 588726889
 mas "Slack", id: 803453959
 mas "The Unarchiver", id: 425424353
-mas "Wunderlist", id: 410628904
+mas "Todoist", id: 585829637
 mas "Xcode", id: 497799835
