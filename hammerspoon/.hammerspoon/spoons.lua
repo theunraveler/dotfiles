@@ -95,10 +95,3 @@ install:andUse("WindowHalfsAndThirds", {
     max = {{"cmd", "alt"}, "F"},
   }
 })
-
--- http://www.hammerspoon.org/Spoons/TextClipboardHistory.html
-install:andUse("TextClipboardHistory", {
-  config = {paste_on_select = true, show_in_menubar = false},
-  hotkeys = {toggle_clipboard = {{"cmd", "shift"}, "v"}},
-  start = true,
-})
