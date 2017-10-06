@@ -92,6 +92,6 @@ install:andUse("WindowHalfsAndThirds", {
     bottom_left = {{"cmd", "alt", "ctrl"}, "Left"},
     top_right = {{"cmd", "alt", "ctrl"}, "Right"},
     bottom_right = {{"cmd", "alt", "ctrl"}, "Down"},
-    max = {{"cmd", "alt"}, "F"},
+    max = {{"cmd", "alt"}, "f"},
   }
 })
