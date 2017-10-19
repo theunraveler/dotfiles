@@ -7,18 +7,18 @@ export ZGEN_RESET_ON_CHANGE=(
 source $HOME/.zsh/zgen/zgen.zsh
 
 if ! zgen saved; then
-  echo "Creating a zgen save"
-
   # Prezto options.
   zgen prezto '*:*' color 'yes'
-  zgen prezto 'ruby:chruby' auto-switch 'yes'
+  zgen prezto 'git:alias' skip 'yes'
   zgen prezto history-substring-search color 'no'
   zgen prezto history-substring-search globbing-flags ''
   zgen prezto prompt theme 'theunraveler'
+  zgen prezto 'ruby:chruby' auto-switch 'yes'
 
   zgen prezto
   zgen prezto archive
   zgen prezto completion
+  zgen prezto git
   zgen prezto gnu-utility
   zgen prezto history
   zgen prezto ruby

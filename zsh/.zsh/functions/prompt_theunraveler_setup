@@ -2,17 +2,101 @@
 # My custom zsh theme.
 #
 
+# Load dependencies.
+pmodload 'helper'
+
+function prompt_theunraveler_git_info {
+  # We can safely split on ':' because it isn't allowed in ref names.
+  IFS=':' read _git_target _git_post_target <<<"$3"
+
+  # The target actually contains 3 space separated possibilities, so we need to
+  # make sure we grab the first one.
+  _git_target=$(coalesce ${(@)${(z)_git_target}})
+
+  if [[ -z "$_git_target" ]]; then
+    # No git target detected, flush the git fragment and redisplay the prompt.
+    if [[ -n "$_prompt_theunraveler_git" ]]; then
+      _prompt_theunraveler_git=''
+      zle && zle reset-prompt
+    fi
+  else
+    # Git target detected, update the git fragment and redisplay the prompt.
+    _prompt_theunraveler_git="${_git_target}${_git_post_target}"
+    zle && zle reset-prompt
+  fi
+}
+
+function prompt_theunraveler_async_git {
+  cd -q "$1"
+  if (( $+functions[git-info] )); then
+    git-info
+    print ${git_info[status]}
+  fi
+}
+
+function prompt_theunraveler_precmd {
+  setopt LOCAL_OPTIONS
+  unsetopt XTRACE KSH_ARRAYS
+
+  # Kill the old process of slow commands if it is still running.
+  async_flush_jobs async_theunraveler_git
+
+  # Handle updating git data. We also clear the git prompt data if we're in a
+  # different git root now.
+  if (( $+functions[git-dir] )); then
+    local new_git_root="$(git-dir 2> /dev/null)"
+    if [[ $new_git_root != $_theunraveler_cur_git_root ]]; then
+      _prompt_theunraveler_git=''
+      _theunraveler_cur_git_root=$new_git_root
+    fi
+  fi
+
+  # Compute slow commands in the background.
+  async_job async_theunraveler_git prompt_theunraveler_async_git "$PWD"
+}
+
 function prompt_theunraveler_setup {
   setopt LOCAL_OPTIONS
   unsetopt XTRACE KSH_ARRAYS
-  prompt_opts=(cr percent subst)
+  prompt_opts=(cr percent sp subst)
+  _prompt_theunraveler_precmd_async_pid=0
+  _prompt_theunraveler_precmd_async_data=$(mktemp "${TMPDIR:-/tmp}/theunraveler-prompt-async-XXXXXXXXXX")
 
   # Load required functions.
   autoload -Uz add-zsh-hook
+  autoload -Uz async && async
+
+  # Add hook for calling git-info before each command.
+  add-zsh-hook precmd prompt_theunraveler_precmd
+
+  # Set git-info parameters.
+  zstyle ':prezto:module:git:info' verbose 'yes'
+  zstyle ':prezto:module:git:info:action' format '%F{7}:%f%%B%F{9}%s%f%%b'
+  zstyle ':prezto:module:git:info:added' format ' %%B%F{2}✚%f%%b'
+  zstyle ':prezto:module:git:info:ahead' format ' %%B%F{13}⬆%f%%b'
+  zstyle ':prezto:module:git:info:behind' format ' %%B%F{13}⬇%f%%b'
+  zstyle ':prezto:module:git:info:branch' format ' %%B%F{2}%b%f%%b'
+  zstyle ':prezto:module:git:info:commit' format ' %%B%F{3}%.7c%f%%b'
+  zstyle ':prezto:module:git:info:deleted' format ' %%B%F{1}✖%f%%b'
+  zstyle ':prezto:module:git:info:modified' format ' %%B%F{4}✱%f%%b'
+  zstyle ':prezto:module:git:info:position' format ' %%B%F{13}%p%f%%b'
+  zstyle ':prezto:module:git:info:renamed' format ' %%B%F{5}➜%f%%b'
+  zstyle ':prezto:module:git:info:stashed' format ' %%B%F{6}✭%f%%b'
+  zstyle ':prezto:module:git:info:unmerged' format ' %%B%F{3}═%f%%b'
+  zstyle ':prezto:module:git:info:untracked' format ' %%B%F{7}◼%f%%b'
+  zstyle ':prezto:module:git:info:keys' format \
+    'status' '%b %p %c:%s%A%B%S%a%d%m%r%U%u'
+
+  # Get the async worker set up
+  async_start_worker async_theunraveler_git -n
+  async_register_callback async_theunraveler_git prompt_theunraveler_git_info
+  _theunraveler_cur_git_root=''
+
+  _prompt_theunraveler_git=''
 
   # Define prompts.
-  PROMPT='%F{5}[%c] %f%'
-  RPROMPT='$(git-radar --zsh)'
+  PROMPT='%F{magenta}[%c] %f%'
+  RPROMPT='${_prompt_theunraveler_git}'
 }
 
 prompt_theunraveler_setup "$@"
