@@ -2,6 +2,7 @@ require "_config"
 utils = require "utils"
 require "itunes"
 require "spotify"
+require "window"
 
 --- Reload hammerspoon config whenever one of its config files changes.
 hs.pathwatcher.new(os.getenv("HOME") .. "/.hammerspoon/", function(files)
