@@ -41,8 +41,8 @@ fi
 # git submodules.
 git submodule foreach git pull
 
-# zgen projects.
-zsh -c "source \"$HOME/.zsh/config.zsh\" && zgen selfupdate && zgen update"
+# zsh plugins.
+zplug update
 
 # vim plugins
 vim +PlugUpgrade +PlugUpdate +qall

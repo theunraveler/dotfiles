@@ -1,19 +1,19 @@
 export BREWPATH="/usr/local"
 export CLICOLOR=1
 
-# For some reason, we need to add this manually before adding the prezto
-# `utility` module so that dircolors get set properly when we're using GNU ls.
-alias dircolors="$BREWPATH/bin/gdircolors"
-
 # Initialize run path
 typeset -U path
 path=($HOME/.bin $BREWPATH/bin $BREWPATH/sbin /usr/X11/bin $path)
 fpath=($HOME/.zsh/functions $fpath)
 
-# Set up our zgen plugins.
+# We need to add this manually before adding the prezto `utility` module so
+# that dircolors get set properly when we're using GNU ls.
+alias dircolors="$BREWPATH/bin/gdircolors"
+
+# Set up our zplug plugins.
 #
-# It's important that this go after the $fpath setting above.
-[[ -r "$HOME/.zsh/zgen.zsh" ]] && source $HOME/.zsh/zgen.zsh
+# It's important that this go after the path stuff above.
+[[ -r "$HOME/.zsh/zplug.zsh" ]] && source $HOME/.zsh/zplug.zsh
 
 # Default programs
 export BROWSER="open"
@@ -61,10 +61,10 @@ for UTIL in "coreutils" "gnu-sed" "gnu-tar"; do
 done
 
 # zsh-autoenv
-AUTOENV_AUTH_FILE="$HOME/.autoenv_auth"
-AUTOENV_FILE_ENTER=".env_up"
-AUTOENV_FILE_LEAVE=".env_down"
-AUTOENV_LOOK_UPWARDS=0
+export AUTOENV_AUTH_FILE="$HOME/.autoenv_auth"
+export AUTOENV_FILE_ENTER=".env_up"
+export AUTOENV_FILE_LEAVE=".env_down"
+export AUTOENV_LOOK_UPWARDS=0
 
 # ag tagging.
 # https://github.com/aykamko/tag#installation

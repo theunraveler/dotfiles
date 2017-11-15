@@ -26,13 +26,6 @@ brew tap homebrew/bundle
 brew bundle --global > /dev/null
 echo "done."
 
-# Install zgen.
-cd ~/.zsh > /dev/null || exit 1
-if [ ! -d zgen ]; then
-  git clone https://github.com/tarjoilija/zgen.git zgen
-fi
-cd - > /dev/null || exit 1
-
 # Install vim plugins
 if [ ! -f ~/.vim/autoload/plug.vim ]; then
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
