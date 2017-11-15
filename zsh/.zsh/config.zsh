@@ -52,6 +52,9 @@ export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
+# Fastlane.
+path=($HOME/.fastlane/bin $path)
+
 # Adding misc GNU utils man pages.
 for UTIL in "coreutils" "gnu-sed" "gnu-tar"; do
   export MANPATH="$BREWPATH/opt/$UTIL/libexec/gnuman:$MANPATH"
