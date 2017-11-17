@@ -68,6 +68,16 @@ export AUTOENV_FILE_ENTER=".env_up"
 export AUTOENV_FILE_LEAVE=".env_down"
 export AUTOENV_LOOK_UPWARDS=0
 
+# zsh-history-substring-search
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+bindkey -M emacs '^P' history-substring-search-up
+bindkey -M emacs '^N' history-substring-search-down
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
+HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND=''
+HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND=''
+
 # ag tagging.
 # https://github.com/aykamko/tag#installation
 if (( $+commands[tag] )); then

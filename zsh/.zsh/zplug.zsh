@@ -5,17 +5,15 @@ zplug "djui/alias-tips"
 zplug "Tarrasch/zsh-autoenv"
 zplug "theunraveler/zsh-fancy_ctrl_z"
 zplug "modules/gnu-utility", from:prezto
-zplug "modules/history-substring-search", from:prezto
 zplug "modules/utility", from:prezto
 zplug "zimframework/archive"
 zplug "zimframework/history"
 zplug "zimframework/prompt"
 zplug "zsh-users/zsh-completions", use:src
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
+zplug "zsh-users/zsh-history-substring-search", defer:3
 
 zstyle ':prezto:module:*:*' color 'yes'
-zstyle ':prezto:module:history-substring-search' color 'no'
-zstyle ':prezto:module:history-substring-search' globbing-flags ''
 
 zprompt_theme='theunraveler'
 
