@@ -26,6 +26,8 @@ export HISTFILE="${ZDOTDIR:-$HOME}/.zsh_history"
 setopt HIST_REDUCE_BLANKS
 
 # Ruby.
+source "$BREWPATH/share/chruby/chruby.sh"
+source "$BREWPATH/share/chruby/auto.sh"
 for dir in $BREWPATH/var/ruby-build/*; do
   if [[ -d $dir ]]; then
     RUBIES+=$dir

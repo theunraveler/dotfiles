@@ -15,6 +15,7 @@ alias d="drush"
 alias g="git"
 alias k="kill -15"
 alias py="python"
+alias rb="ruby"
 alias v="mvim"
 
 # DNS/Network
