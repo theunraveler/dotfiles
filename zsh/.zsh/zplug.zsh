@@ -9,6 +9,7 @@ zplug "modules/utility", from:prezto
 zplug "zimframework/archive"
 zplug "zimframework/history"
 zplug "zimframework/prompt"
+zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions", use:src
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-history-substring-search", defer:3
