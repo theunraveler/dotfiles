@@ -42,7 +42,7 @@ fi
 git submodule foreach git pull
 
 # zsh plugins.
-zsh -c "source \"$ZPLUG_HOME/init.zsh\" && zplug update"
+zsh -c "source \"$ZPLUG_HOME/init.zsh\" && source \"$HOME/.zsh/zplug.zsh\" && zplug update"
 
 # vim plugins
 vim +PlugUpgrade +PlugUpdate +qall
