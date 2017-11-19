@@ -14,4 +14,3 @@ vim/.vim/autoload/plug.vim.old
 vim/.vim/plugged
 vim/.vim/plugin/settings/local.vim
 vim/.vim/spell
-zsh/.zsh/zgen
