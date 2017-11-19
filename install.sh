@@ -17,7 +17,7 @@ if ! [ -x "$(command -v stow)" ]; then
 fi
 
 # Symlink everything.
-printf "Linking items from $DIR to home directory..."
+printf 'Linking items from %s to home directory...' "$DIR"
 find "$DIR" -type d \( ! -regex '.*/\..*' \) -depth 1 | sed 's!.*/!!' | xargs stow --dir="$DIR" --target="$HOME" --restow
 echo "done."
 
