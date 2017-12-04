@@ -6,17 +6,15 @@ zplug "Tarrasch/zsh-autoenv"
 zplug "theunraveler/zsh-fancy_ctrl_z"
 zplug "modules/gnu-utility", from:prezto
 zplug "modules/utility", from:prezto
-zplug "zimframework/archive"
-zplug "zimframework/history"
-zplug "zimframework/prompt"
+zplug "modules/history", from:prezto
+zplug "modules/prompt", from:prezto
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions", use:src
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-history-substring-search", defer:3
 
 zstyle ':prezto:module:*:*' color 'yes'
-
-zprompt_theme='theunraveler'
+zstyle ':prezto:module:prompt' theme 'theunraveler'
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
