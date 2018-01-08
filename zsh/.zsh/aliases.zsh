@@ -4,7 +4,6 @@ alias mkdir="mkdir -vp"
 alias mv="mv -v"
 alias rsync="rsync -arxvz --rsh=ssh --progress --exclude-from=$HOME/.rsync/exclude"
 alias rm="rm -rv"
-alias top="htop"
 alias vi="mvim"
 alias vim="mvim"
 
