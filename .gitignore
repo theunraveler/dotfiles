@@ -8,6 +8,7 @@ composer/.composer/config.json
 composer/.composer/vendor
 drush/.drush/cache
 hammerspoon/.hammerspoon/Spoons/
+hammerspoon/.hammerspoon/_local.lua
 vim/.vim/.netrwhist
 vim/.vim/autoload/plug.vim
 vim/.vim/autoload/plug.vim.old
