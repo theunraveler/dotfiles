@@ -8,13 +8,11 @@
 -- AppleScript comes from https://stackoverflow.com/a/32984473/197375
 --
 
-local status, localConfig = pcall(require, "_local")
-if not status then return end
-
 local utils = require "utils"
 local logger = hs.logger.new("vpn")
 
-local current_timer = nil
+localConfig = utils.prequire("_local")
+if not localConfig then return end
 
 function enableVPN()
   success, _, err = hs.osascript.applescript(string.format([[
@@ -46,20 +44,19 @@ function disableVPN()
   if not success then logger.e(err) end
 end
 
-local watcher = hs.wifi.watcher.new(function(_, _, interface)
+hs.wifi.watcher.new(function(_, _, interface)
   local details = hs.wifi.interfaceDetails(interface)
 
   if not details["active"] then return end
 
-  if current_timer then
-    current_timer:stop()
-    current_timer = nil
-  end
-
   if details["security"] == "None" then
-    current_timer = hs.timer.doAfter(5, enableVPN)
+    hs.network.reachability.internet():setCallback(function(self, flags)
+      if (flags & hs.network.reachability.flags.reachable) > 0 then
+        enableVPN()
+        self:stop()
+      end
+    end):start()
   elseif details["security"] ~= "Unknown" then
     disableVPN()
   end
-end)
-watcher:start()
+end):start()

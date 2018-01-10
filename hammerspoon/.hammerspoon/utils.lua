@@ -23,4 +23,14 @@ function module.dump(o)
   end
 end
 
+-- Require a module, but return `nil` if it fails to load.
+function module.prequire(name)
+  local status, mod = pcall(require, name)
+  if status then
+    return mod
+  else
+    return nil
+  end
+end
+
 return module
