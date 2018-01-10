@@ -2,7 +2,6 @@ export ZPLUG_HOME=$BREWPATH/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
 zplug "djui/alias-tips"
-zplug "Tarrasch/zsh-autoenv"
 zplug "theunraveler/zsh-fancy_ctrl_z"
 zplug "modules/gnu-utility", from:prezto
 zplug "modules/utility", from:prezto

@@ -62,12 +62,6 @@ for UTIL in "coreutils" "gnu-sed" "gnu-tar"; do
   export MANPATH="$BREWPATH/opt/$UTIL/libexec/gnuman:$MANPATH"
 done
 
-# zsh-autoenv
-export AUTOENV_AUTH_FILE="$HOME/.autoenv_auth"
-export AUTOENV_FILE_ENTER=".env_up"
-export AUTOENV_FILE_LEAVE=".env_down"
-export AUTOENV_LOOK_UPWARDS=0
-
 # zsh-history-substring-search
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
