@@ -47,6 +47,12 @@ zsh -c "source \"$ZPLUG_HOME/init.zsh\" && source \"$HOME/.zsh/zplug.zsh\" && zp
 # vim plugins
 vim +PlugUpgrade +PlugUpdate +qall
 
+# pipsi packages
+for pkg in $(pipsi list --versions | tail -n +2 | awk -F\" '{ print $2 }'); do
+  echo "Updating pipsi package $pkg"
+  pipsi upgrade "$pkg" > /dev/null
+done
+
 # composer projects
 if which composer > /dev/null && [ -f ~/.composer/composer.json ] && [ "$(jq '.require|length' < ~/.composer/composer.json)" -gt 0 ]; then
   cd composer.symlink || exit 1

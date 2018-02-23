@@ -32,6 +32,12 @@ if [ ! -f ~/.vim/autoload/plug.vim ]; then
 fi
 vim +PlugInstall +qall
 
+# Install pipsi and packages
+curl https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py | python - --src 'git+https://github.com/mitsuhiko/pipsi.git#egg=pipsi'
+while read -r pkg; do
+  pipsi install "$pkg"
+done < ~/.pipsirc
+
 # Install composer packages.
 if which composer > /dev/null; then
   cd ~/.composer > /dev/null || exit 1
