@@ -49,6 +49,7 @@ path=($path $GOPATH/bin)
 export PIP_REQUIRE_VIRTUALENV=true
 export PIP_CONFIG_FILE="$HOME/.pip.conf"
 export PYTHONDONTWRITEBYTECODE=1
+export PIPENV_IGNORE_VIRTUALENVS=1
 export PYENV_ROOT="$BREWPATH/var/python"
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 export PIPSI_BIN_DIR="$HOME/.local/pipsi/bin"
