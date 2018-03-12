@@ -33,7 +33,7 @@ function brew() {
   if \
     [ $RET -eq 0 ] &&
     { { [ "$1" = 'tap' ] || [ "$1" = 'untap' ] } && [ -n "$2" ] } || \
-    [ "$1" = 'install' ] || \
+    [ "$1" = 'install' ] || [ "$1" = 'reinstall' ] || \
     { [ "$1" = 'remove' ] || [ "$1" = 'rm' ] || [ "$1" = 'rmtree' ] } || \
     [ "$1" = 'upgrade' ] || \
     { [ "$1" = 'cask' ] && { [ "$2" = 'install' ] || [ "$2" = 'uninstall' ]  || [ "$2" = 'rm' ] } } \
@@ -51,7 +51,9 @@ function pipsi() {
   $PIPSI_BIN_DIR/pipsi "$@"
   RET=$?
 
-  if [ $RET -eq 0 ] && [ "$1" = 'install' ]; then
+  if [ $RET -eq 0 ] &&
+    [ "$1" = 'install' ] || [ "$1" = 'uninstall' ] \
+  ; then
     echo -n 'Dumping pipsi packages...'
     pipsi list --versions | tail -n +2 | awk -F\" '{ print $2 }' > ~/.pipsirc
     echo 'done.'
