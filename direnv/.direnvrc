@@ -1,0 +1,13 @@
+#
+# Activates a pyenv virtualenv.
+#
+# Usage: `layout pyenv_virtualenv {python version} {venv name}`
+#
+layout_pyenv_virtualenv() {
+  local pyversion=$1
+  local pvenv=$2
+  if [ ! -e ${PYENV_ROOT}/versions/${pvenv} ]; then
+    pyenv virtualenv --force --quiet ${pyversion} ${pyversion}/envs/${pvenv}
+  fi
+  export PYENV_VERSION=${pvenv}
+}

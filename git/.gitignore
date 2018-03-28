@@ -30,8 +30,7 @@ tags
 *.bak
 .sass-cache
 .env
-.env_up
-.env_down
+.envrc
 
 # Ruby
 .ruby-version

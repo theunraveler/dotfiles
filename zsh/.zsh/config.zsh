@@ -27,7 +27,6 @@ setopt HIST_REDUCE_BLANKS
 
 # Ruby.
 source "$BREWPATH/share/chruby/chruby.sh"
-source "$BREWPATH/share/chruby/auto.sh"
 for dir in $BREWPATH/var/ruby-build/*; do
   if [[ -d $dir ]]; then
     RUBIES+=$dir
@@ -86,6 +85,9 @@ fi
 # Add SSH keys from keychain.
 # http://apple.stackexchange.com/questions/254468/macos-sierra-doesn-t-seem-to-remember-ssh-keys-between-reboots
 ssh-add -A &> /dev/null
+
+# direnv
+eval "$(direnv hook zsh)"
 
 # Source out to local config file.
 if [[ -f $HOME/.zshrc.local.zsh ]]; then

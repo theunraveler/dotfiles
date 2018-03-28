@@ -2,11 +2,11 @@ export ZPLUG_HOME=$BREWPATH/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
 zplug "djui/alias-tips"
-zplug "theunraveler/zsh-fancy_ctrl_z"
 zplug "modules/gnu-utility", from:prezto
 zplug "modules/utility", from:prezto
 zplug "modules/history", from:prezto
 zplug "modules/prompt", from:prezto
+zplug "theunraveler/zsh-fancy_ctrl_z"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions", use:src
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
