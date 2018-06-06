@@ -37,6 +37,9 @@ tags
 .rake_tasks
 
 # Python
+.mypy_cache
+.pyre
+.pyre_configuration
 .ropeproject
 
 # vim
