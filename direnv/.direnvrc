@@ -1,8 +1,6 @@
+# Usage: layout pyenv_virtualenv {python version} {venv name}
 #
 # Activates a pyenv virtualenv.
-#
-# Usage: `layout pyenv_virtualenv {python version} {venv name}`
-#
 layout_pyenv_virtualenv() {
   local pyversion=$1
   local pvenv=$2
