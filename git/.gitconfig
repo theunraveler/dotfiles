@@ -31,11 +31,11 @@
   default = matching
 
 [log]
-	date = local
+  date = local
 
 [filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
+  clean = git-media-clean %f
+  smudge = git-media-smudge %f
 
 [diff]
   compactionHeuristic = true
