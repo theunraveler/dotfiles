@@ -27,7 +27,6 @@ Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rbenv'
 Plug 'tpope/vim-sensible'
-Plug 'tpope/vim-vinegar', { 'commit': 'b06c3df86bf581e12dab39ac94ddd5ad976b16ca' }
 Plug 'w0rp/ale'
 Plug 'Yggdroot/indentLine'
 
