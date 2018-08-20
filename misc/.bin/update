@@ -30,7 +30,7 @@ if which brew > /dev/null; then
   brew update
   brew upgrade
   brew cask outdated | awk '{print $1}' | xargs brew cask reinstall
-  brew cleanup && brew cask cleanup
+  brew cleanup
 fi
 
 # Apps from the App Store.
