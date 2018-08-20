@@ -27,6 +27,7 @@ Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rbenv'
 Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-vinegar'
 Plug 'w0rp/ale'
 Plug 'Yggdroot/indentLine'
 
