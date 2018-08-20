@@ -1,7 +1,9 @@
-#!/usr/bin/env sh
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
 
 # Store the current directory and switch to the project root.
-DIR=$(pwd)
+dir=$(pwd)
 cd "$(dirname "$(greadlink -f "$0")")/.." || exit 1
 
 STASH_COUNT=$(git stash list | wc -l)
@@ -15,8 +17,8 @@ unstash() {
 trap ctrl_c INT TERM
 ctrl_c() {
   unstash
-  echo "*** Returning you to $DIR"
-  cd "$DIR" || exit 1
+  echo "*** Returning you to $dir"
+  cd "$dir" || exit 1
   exit 0
 }
 
@@ -26,7 +28,7 @@ git stash --quiet
 git pull origin master
 
 # homebrew and casks.
-if which brew > /dev/null; then
+if command -v brew > /dev/null; then
   brew update
   brew upgrade
   brew cask outdated | awk '{print $1}' | xargs brew cask reinstall
@@ -34,7 +36,7 @@ if which brew > /dev/null; then
 fi
 
 # Apps from the App Store.
-if which mas > /dev/null; then
+if command -v mas > /dev/null; then
   mas upgrade
 fi
 
@@ -54,7 +56,7 @@ for pkg in $(pipsi list --versions | tail -n +2 | awk -F\" '{ print $2 }'); do
 done
 
 # composer projects
-if which composer > /dev/null && [ -f ~/.composer/composer.json ] && [ "$(jq '.require|length' < ~/.composer/composer.json)" -gt 0 ]; then
+if command -v composer > /dev/null && [ -f ~/.composer/composer.json ] && [ "$(jq '.require|length' < ~/.composer/composer.json)" -gt 0 ]; then
   cd composer.symlink || exit 1
   composer --dev update
   cd - > /dev/null || exit 1;
