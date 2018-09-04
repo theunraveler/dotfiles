@@ -103,3 +103,13 @@ hs.hotkey.bind({"cmd", "alt"}, "F", function()
   f.h = max.h
   win:setFrame(f)
 end)
+
+-- Center.
+hs.hotkey.bind({"cmd", "alt"}, "C", function()
+  windowResize(
+    function(m) return m.w / 4 end,
+    function(m) return m.h / 4 end,
+    function(m) return m.w / 2 end,
+    function(m) return m.h / 2 end
+  )
+end)
