@@ -31,6 +31,7 @@ tags
 .sass-cache
 .env
 .envrc
+.direnv
 
 # Ruby
 .ruby-version
