@@ -95,6 +95,7 @@ brew "node"
 brew "node@8"
 brew "nss"
 brew "optipng"
+brew "p7zip"
 brew "pandoc"
 brew "phantomjs"
 brew "php"
@@ -134,6 +135,7 @@ brew "zplug"
 brew "zsh"
 brew "heroku/brew/heroku"
 brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
+cask "1password-cli"
 cask "appzapper"
 cask "arduino"
 cask "clipy"
@@ -163,12 +165,13 @@ cask "spotifree"
 cask "spotify"
 cask "torbrowser"
 cask "transmission"
+cask "virtualbox"
 cask "vlc"
 mas "1Password 7", id: 1333542190
 mas "LimeChat", id: 414030210
 mas "Pixelmator", id: 407963104
-mas "ReadKit", id: 588726889
+mas "Reeder", id: 880001334
 mas "Slack", id: 803453959
-mas "SWJKJA", id: 576392143
 mas "The Unarchiver", id: 425424353
 mas "Todoist", id: 585829637
+mas "Xcode", id: 497799835
