@@ -49,25 +49,10 @@ zsh -c "source \"$ZPLUG_HOME/init.zsh\" && source \"$HOME/.zsh/zplug.zsh\" && zp
 # vim plugins
 vim +PlugUpgrade +PlugUpdate +qall
 
-# pipsi packages
-for pkg in $(pipsi list --versions | tail -n +2 | awk -F\" '{ print $2 }'); do
-  echo "Updating pipsi package $pkg"
-  pipsi upgrade "$pkg" > /dev/null
-done
-
-# composer projects
-if command -v composer > /dev/null && [ -f ~/.composer/composer.json ] && [ "$(jq '.require|length' < ~/.composer/composer.json)" -gt 0 ]; then
-  cd composer.symlink || exit 1
-  composer --dev update
-  cd - > /dev/null || exit 1;
-else
-  echo "Composer: no packages defined, skipping."
-fi
-
 # Finally, commit the results.
 git status --porcelain | grep '^ M' | awk '{print $2}' | xargs git add
 if git status --porcelain | grep --silent '^M'; then
-  git ci -m "Updating submodules, vim plugins, composer packages, and/or brew list."
+  git ci -m "Updating submodules, vim plugins, and/or brew list."
   git push origin master
 else
   echo "Nothing updated, no push needed."

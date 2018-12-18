@@ -38,13 +38,6 @@ while read -r pkg; do
   pipsi install "$pkg"
 done < ~/.pipsirc
 
-# Install composer packages.
-if which composer > /dev/null; then
-  cd ~/.composer > /dev/null || exit 1
-  composer install
-  cd - > /dev/null || exit 1
-fi
-
 # Finally, go back to where the user started.
 cd "$WD" > /dev/null || exit 1
 exit 0
