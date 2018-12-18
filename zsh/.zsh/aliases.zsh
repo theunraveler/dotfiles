@@ -46,22 +46,6 @@ function brew() {
   return $RET
 }
 
-# Wrap pipsi to keep a list of installed packages.
-function pipsi() {
-  $PIPSI_BIN_DIR/pipsi "$@"
-  RET=$?
-
-  if [ $RET -eq 0 ] &&
-    [ "$1" = 'install' ] || [ "$1" = 'uninstall' ] \
-  ; then
-    echo -n 'Dumping pipsi packages...'
-    pipsi list --versions | tail -n +2 | awk -F\" '{ print $2 }' > ~/.pipsirc
-    echo 'done.'
-  fi
-
-  return $RET
-}
-
 # Misc
 alias rmtrailingwhitespace="find . -type f -exec sed -i 's/[[:space:]]*$//' {} \;"
 alias mail.vacuum="sqlite3 ~/Library/Mail/V2/MailData/Envelope\ Index vacuum"

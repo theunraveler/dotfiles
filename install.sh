@@ -32,12 +32,6 @@ if [ ! -f ~/.vim/autoload/plug.vim ]; then
 fi
 vim +PlugInstall +qall
 
-# Install pipsi and packages
-curl https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py | python - --src 'git+https://github.com/mitsuhiko/pipsi.git#egg=pipsi'
-while read -r pkg; do
-  pipsi install "$pkg"
-done < ~/.pipsirc
-
 # Finally, go back to where the user started.
 cd "$WD" > /dev/null || exit 1
 exit 0
