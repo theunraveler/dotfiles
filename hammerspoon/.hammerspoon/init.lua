@@ -1,7 +1,6 @@
 require "_config"
 utils = require "utils"
 require "itunes"
-require "spotify"
 require "vpn"
 require "window"
 
