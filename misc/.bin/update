@@ -49,6 +49,9 @@ zsh -c "source \"$ZPLUG_HOME/init.zsh\" && source \"$HOME/.zsh/zplug.zsh\" && zp
 # vim plugins
 vim +PlugUpgrade +PlugUpdate +qall
 
+# asdf plugins
+asdf plugin-update --all
+
 # Finally, commit the results.
 git status --porcelain | grep '^ M' | awk '{print $2}' | xargs git add
 if git status --porcelain | grep --silent '^M'; then
