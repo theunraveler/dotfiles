@@ -25,14 +25,6 @@ export HISTIGNORE="&:ls:l:ll:[bf]g:exit:reset:clear:cd:cd ..:cd.."
 export HISTFILE="${ZDOTDIR:-$HOME}/.zsh_history"
 setopt HIST_REDUCE_BLANKS
 
-# Ruby.
-source "$BREWPATH/share/chruby/chruby.sh"
-for dir in $BREWPATH/var/ruby-build/*; do
-  if [[ -d $dir ]]; then
-    RUBIES+=$dir
-  fi
-done
-
 # hub.
 if which hub > /dev/null; then eval "$(hub alias -s)"; fi
 
@@ -48,11 +40,6 @@ path=($path $GOPATH/bin)
 export PIP_REQUIRE_VIRTUALENV=true
 export PIP_CONFIG_FILE="$HOME/.pip.conf"
 export PYTHONDONTWRITEBYTECODE=1
-export PIPENV_IGNORE_VIRTUALENVS=1
-export PYENV_ROOT="$BREWPATH/var/python"
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
-if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
 # Fastlane.
 path=($HOME/.fastlane/bin $path)
@@ -85,6 +72,9 @@ ssh-add -A &> /dev/null
 
 # direnv
 eval "$(direnv hook zsh)"
+
+# asdf
+. $BREWPATH/opt/asdf/asdf.sh
 
 # Source out to local config file.
 if [[ -f $HOME/.zshrc.local.zsh ]]; then

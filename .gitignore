@@ -1,5 +1,6 @@
 .DS_Store
 
+!asdf/.tool-versions
 composer/.composer/.htaccess
 composer/.composer/bin/*
 composer/.composer/cache
