@@ -43,6 +43,7 @@ tags
 .pyre
 .pyre_configuration
 .ropeproject
+.venv
 
 # vim
 [._]*.s[a-w][a-z]
