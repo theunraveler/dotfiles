@@ -30,6 +30,7 @@ Plug 'tpope/vim-rbenv'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-vinegar'
 Plug 'w0rp/ale'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'Yggdroot/indentLine'
 
 " Color schemes
