@@ -29,7 +29,7 @@ nmap <leader>n :bn<cr>
 nmap <leader>p :bp<cr>
 nmap <leader>b :buffers<cr>:buffer<space>
 nmap <leader>c :Bclose<cr>
-nmap <leader>o :Explore<cr>
+nmap <leader>o :NERDTreeToggle<cr>
 nmap <leader>j :ls<cr>
 
 " Easier buffer nav
