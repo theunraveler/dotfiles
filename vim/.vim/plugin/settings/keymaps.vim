@@ -29,8 +29,7 @@ nmap <leader>n :bn<cr>
 nmap <leader>p :bp<cr>
 nmap <leader>b :buffers<cr>:buffer<space>
 nmap <leader>c :Bclose<cr>
-nmap <leader>o :NERDTreeToggle<cr>
-nmap <leader>j :ls<cr>
+nmap <leader>l :ls<cr>
 
 " Easier buffer nav
 map <C-h> <C-w>h
@@ -45,11 +44,15 @@ cnoremap w!! w !sudo tee % >/dev/null
 nnoremap <Leader>w :w<CR>
 
 " Tagbar
-nnoremap <leader>l :TagbarToggle<cr>
+nnoremap <leader>t :TagbarToggle<cr>
 
 " Commenting
 nnoremap <leader>/ :call NERDComment("n", "Toggle")<cr>
 vnoremap <leader>/ :call NERDComment("n", "Toggle")<cr>
+
+" NERDTree
+nmap <leader>o :NERDTreeToggle<cr>
+nmap - :NERDTreeFocus<cr>
 
 " Inserts a UUID at the current position
 inoremap <C-b> <C-r>=substitute(substitute(system("uuidgen"), '.$', '', 'g'), '[A-Z]', '\L&', 'g')<CR>
