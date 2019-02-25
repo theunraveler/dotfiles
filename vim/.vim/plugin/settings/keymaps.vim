@@ -53,6 +53,3 @@ vnoremap <leader>/ :call NERDComment("n", "Toggle")<cr>
 " NERDTree
 nmap <leader>o :NERDTreeToggle<cr>
 nmap - :NERDTreeFocus<cr>
-
-" Inserts a UUID at the current position
-inoremap <C-b> <C-r>=substitute(substitute(system("uuidgen"), '.$', '', 'g'), '[A-Z]', '\L&', 'g')<CR>
