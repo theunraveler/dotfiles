@@ -1,6 +1,5 @@
 python 3.7.2
-ruby 2.5.3
+ruby 2.6.2
 nodejs 11.8.0
-elixir 1.8.0
-erlang 21.2.4
-haskell 8.6.3
+elixir 1.8.1
+erlang 21.3
