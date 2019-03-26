@@ -88,7 +88,7 @@ brew "optipng"
 brew "p7zip"
 brew "pandoc"
 brew "pipenv"
-brew "postgresql", restart_service: true
+brew "postgresql"
 brew "proctools"
 brew "proselint"
 brew "q"
@@ -153,13 +153,13 @@ cask "transmission"
 cask "virtualbox"
 cask "vlc"
 cask "wkhtmltopdf"
-mas "1Password 7", id: 1333542190
-mas "Agenda", id: 1287445660
-mas "Harvest", id: 506189836
-mas "LimeChat", id: 414030210
-mas "Pixelmator", id: 407963104
-mas "Reeder", id: 880001334
-mas "Slack", id: 803453959
-mas "The Unarchiver", id: 425424353
-mas "Todoist", id: 585829637
-mas "Xcode", id: 497799835
+mas "", id: 1287445660
+mas "", id: 414030210
+mas "", id: 880001334
+mas "", id: 497799835
+mas "", id: 1333542190
+mas "", id: 585829637
+mas "", id: 803453959
+mas "", id: 425424353
+mas "", id: 506189836
+mas "", id: 407963104
