@@ -4,22 +4,30 @@ IFS=$'\n\t'
 
 # Store the current directory and switch to the project root.
 dir=$(pwd)
-cd "$(dirname "$(greadlink -f "$0")")/.." || exit 1
+cd "$(dirname "$(greadlink -f "$0")")/../.." || exit 1
 
 STASH_COUNT=$(git stash list | wc -l)
 
-unstash() {
+trap cleanup INT TERM EXIT
+cleanup() {
   if [ "$STASH_COUNT" != "$(git stash list | wc -l)" ]; then
     git stash pop --quiet
   fi
+  if [ "$(pwd)" != "$dir" ]; then
+    echo "*** Returning you to $dir"
+    cd "$dir" || exit 1
+  fi
+  exit 0
 }
 
-trap ctrl_c INT TERM
-ctrl_c() {
-  unstash
-  echo "*** Returning you to $dir"
-  cd "$dir" || exit 1
-  exit 0
+commit_if_changed() {
+  msg=${1:-"Updating submodules, vim plugins, and/or brew list."}
+  set +e
+  git status --porcelain | grep '^ M' | awk '{print $2}' | xargs git add
+  if git status --porcelain | grep --silent '^M'; then
+    git ci -m "$msg"
+  fi
+  set -e
 }
 
 # If there are changes, stash them.
@@ -27,42 +35,40 @@ git stash --quiet
 
 git pull origin master
 
+# Apps from the App Store.
+if command -v mas > /dev/null; then
+  mas upgrade
+fi
+
 # homebrew and casks.
 if command -v brew > /dev/null; then
   brew update
   brew upgrade
   brew cask outdated | awk '{print $1}' | xargs brew cask reinstall
   brew cleanup
-fi
-
-# Apps from the App Store.
-if command -v mas > /dev/null; then
-  mas upgrade
+  brew bundle --global --force dump
+  commit_if_changed "Updating brews"
 fi
 
 # git submodules.
 git submodule foreach git pull
+commit_if_changed "Updating git submodules"
 
 # zsh plugins.
 zsh -c "source \"$ZPLUG_HOME/init.zsh\" && source \"$HOME/.zsh/zplug.zsh\" && zplug update"
+commit_if_changed "Updating zsh plugins"
 
 # vim plugins
 vim +PlugUpgrade +PlugUpdate +qall
+commit_if_changed "Updating vim plugins"
 
 # asdf plugins
 asdf plugin-update --all
+commit_if_changed "Updating asdf plugins"
 
-# Finally, commit the results.
-git status --porcelain | grep '^ M' | awk '{print $2}' | xargs git add
-if git status --porcelain | grep --silent '^M'; then
-  git ci -m "Updating submodules, vim plugins, and/or brew list."
+# Finally, push to remote if we need to.
+if [ "$(git rev-parse '@{u}')" != "$(git rev-parse @)" ]; then
   git push origin master
 else
   echo "Nothing updated, no push needed."
 fi
-
-# Unstash if necessary.
-unstash
-
-cd "$DIR" || exit 1
-exit 0
