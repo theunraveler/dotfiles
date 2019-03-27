@@ -154,6 +154,7 @@ cask "virtualbox"
 cask "vlc"
 cask "wkhtmltopdf"
 mas "", id: 1287445660
+mas "", id: 407963104
 mas "", id: 414030210
 mas "", id: 880001334
 mas "", id: 497799835
@@ -162,4 +163,4 @@ mas "", id: 585829637
 mas "", id: 803453959
 mas "", id: 425424353
 mas "", id: 506189836
-mas "", id: 407963104
+mas "", id: 1451400394
