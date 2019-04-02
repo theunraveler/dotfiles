@@ -110,6 +110,7 @@ brew "the_silver_searcher"
 brew "tofrodos"
 brew "tree"
 brew "v8"
+brew "watchman"
 brew "wget"
 brew "wifi-password"
 brew "wp-cli"
@@ -152,14 +153,14 @@ cask "transmission"
 cask "virtualbox"
 cask "vlc"
 cask "wkhtmltopdf"
-mas "", id: 1287445660
-mas "", id: 407963104
-mas "", id: 414030210
-mas "", id: 880001334
-mas "", id: 497799835
-mas "", id: 1333542190
-mas "", id: 585829637
-mas "", id: 803453959
-mas "", id: 425424353
-mas "", id: 506189836
-mas "", id: 1451400394
+mas "com.agilebits.onepassword7", id: 1333542190
+mas "com.apple.dt.Xcode", id: 497799835
+mas "com.getharvest.harvestxapp", id: 506189836
+mas "com.momenta.agenda.macos", id: 1287445660
+mas "com.pixelmatorteam.pixelmator", id: 407963104
+mas "com.reederapp.rkit2.mac", id: 880001334
+mas "com.tinyspeck.slackmacgap", id: 803453959
+mas "com.todoist.mac.Todoist", id: 585829637
+mas "cx.c3.theunarchiver", id: 425424353
+mas "kristofa.pinboard.in-bookmarker", id: 1451400394
+mas "net.limechat.LimeChat-AppStore", id: 414030210
