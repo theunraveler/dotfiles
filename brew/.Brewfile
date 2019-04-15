@@ -54,6 +54,7 @@ brew "gnu-sed"
 brew "gnu-tar"
 brew "graphviz"
 brew "grep"
+brew "handbrake", link: false
 brew "highlight"
 brew "hr"
 brew "htmldoc"
