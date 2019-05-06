@@ -32,6 +32,9 @@ if [ ! -f ~/.vim/autoload/plug.vim ]; then
 fi
 vim +PlugInstall +qall
 
+# Install poetry
+curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python
+
 # Finally, go back to where the user started.
 cd "$WD" > /dev/null || exit 1
 exit 0

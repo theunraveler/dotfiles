@@ -43,6 +43,7 @@ path=($path $GOPATH/bin)
 export PIP_REQUIRE_VIRTUALENV=true
 export PIP_CONFIG_FILE="$HOME/.pip.conf"
 export PYTHONDONTWRITEBYTECODE=1
+path=($HOME/.poetry/bin $path)
 
 # Fastlane.
 path=($HOME/.fastlane/bin $path)
