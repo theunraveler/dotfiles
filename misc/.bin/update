@@ -66,9 +66,6 @@ commit_if_changed "Updating vim plugins"
 asdf plugin-update --all
 commit_if_changed "Updating asdf plugins"
 
-# poetry
-poetry self:update
-
 # Finally, push to remote if we need to.
 if [ "$(git rev-parse '@{u}')" != "$(git rev-parse @)" ]; then
   git push origin master
