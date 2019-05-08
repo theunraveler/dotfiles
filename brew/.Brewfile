@@ -160,7 +160,6 @@ cask "wkhtmltopdf"
 mas "com.agilebits.onepassword7", id: 1333542190
 mas "com.apple.dt.Xcode", id: 497799835
 mas "com.getharvest.harvestxapp", id: 506189836
-mas "com.momenta.agenda.macos", id: 1287445660
 mas "com.pixelmatorteam.pixelmator", id: 407963104
 mas "com.reederapp.rkit2.mac", id: 880001334
 mas "com.tinyspeck.slackmacgap", id: 803453959
