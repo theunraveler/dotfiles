@@ -13,7 +13,7 @@ alias dircolors="$BREWPATH/bin/gdircolors"
 # Set up our zplug plugins.
 #
 # It's important that this go after the path stuff above.
-[[ -r "$HOME/.zsh/zplug.zsh" ]] && source $HOME/.zsh/zplug.zsh
+[ -f "$HOME/.zsh/zplug.zsh" ] && source "$HOME/.zsh/zplug.zsh"
 
 # Default programs
 export BROWSER="open"
@@ -37,16 +37,16 @@ path=(/opt/chefdk/bin $path)
 # Go.
 export GO15VENDOREXPERIMENT=1
 export GOPATH="$BREWPATH/share/go"
-path=($path $GOPATH/bin)
+path=($path "$GOPATH/bin")
 
 # Python.
 export PIP_REQUIRE_VIRTUALENV=true
 export PIP_CONFIG_FILE="$HOME/.pip.conf"
 export PYTHONDONTWRITEBYTECODE=1
-path=($HOME/.poetry/bin $path)
+path=("$HOME/.poetry/bin" $path)
 
 # Fastlane.
-path=($HOME/.fastlane/bin $path)
+path=("$HOME/.fastlane/bin" $path)
 
 # Adding misc GNU utils man pages.
 for UTIL in "coreutils" "gnu-sed" "gnu-tar"; do
@@ -72,6 +72,7 @@ fi
 
 # fzf
 export FZF_DEFAULT_COMMAND='rg --files --follow --hidden'
+[ -f "$HOME/.fzf.zsh" ] && source "$HOME/.fzf.zsh"
 
 # Add SSH keys from keychain.
 # http://apple.stackexchange.com/questions/254468/macos-sierra-doesn-t-seem-to-remember-ssh-keys-between-reboots
@@ -84,6 +85,4 @@ eval "$(direnv hook zsh)"
 . $BREWPATH/opt/asdf/asdf.sh
 
 # Source out to local config file.
-if [[ -f $HOME/.zshrc.local.zsh ]]; then
-  source $HOME/.zshrc.local.zsh
-fi
+[ -f "$HOME/.zshrc.local.zsh" ] && source "$HOME/.zshrc.local.zsh"
