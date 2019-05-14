@@ -157,13 +157,13 @@ cask "transmission"
 cask "virtualbox"
 cask "vlc"
 cask "wkhtmltopdf"
-mas "com.agilebits.onepassword7", id: 1333542190
-mas "com.apple.dt.Xcode", id: 497799835
-mas "com.getharvest.harvestxapp", id: 506189836
-mas "com.pixelmatorteam.pixelmator", id: 407963104
-mas "com.reederapp.rkit2.mac", id: 880001334
-mas "com.tinyspeck.slackmacgap", id: 803453959
-mas "com.todoist.mac.Todoist", id: 585829637
-mas "cx.c3.theunarchiver", id: 425424353
-mas "kristofa.pinboard.in-bookmarker", id: 1451400394
-mas "net.limechat.LimeChat-AppStore", id: 414030210
+mas "1Password 7", id: 1333542190
+mas "bookmarker for pinboard", id: 1451400394
+mas "Harvest", id: 506189836
+mas "LimeChat", id: 414030210
+mas "Pixelmator", id: 407963104
+mas "Reeder", id: 880001334
+mas "Slack", id: 803453959
+mas "The Unarchiver", id: 425424353
+mas "Todoist", id: 585829637
+mas "Xcode", id: 497799835
