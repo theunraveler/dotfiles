@@ -53,3 +53,8 @@ vnoremap <leader>/ :call NERDComment("n", "Toggle")<cr>
 " NERDTree
 nmap <leader>o :NERDTreeToggle<cr>
 nmap - :NERDTreeFocus<cr>
+
+" Ale
+nmap <silent> [c <Plug>(ale_previous_wrap)
+nmap <silent> ]c <Plug>(ale_next_wrap)
+nmap <leader>f <Plug>(ale_fix)
