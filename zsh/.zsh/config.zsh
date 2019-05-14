@@ -70,6 +70,9 @@ if (( $+commands[tag] )); then
   alias ag=tag
 fi
 
+# fzf
+export FZF_DEFAULT_COMMAND='rg --files --follow --hidden'
+
 # Add SSH keys from keychain.
 # http://apple.stackexchange.com/questions/254468/macos-sierra-doesn-t-seem-to-remember-ssh-keys-between-reboots
 ssh-add -A &> /dev/null

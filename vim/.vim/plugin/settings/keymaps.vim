@@ -27,7 +27,6 @@ vnoremap / <esc>/\%V
 " Buffer stuff
 nmap <leader>n :bn<cr>
 nmap <leader>p :bp<cr>
-nmap <leader>b :buffers<cr>:buffer<space>
 nmap <leader>c :Bclose<cr>
 nmap <leader>l :ls<cr>
 
@@ -43,9 +42,6 @@ cnoremap w!! w !sudo tee % >/dev/null
 " Save the file with <Leader>w
 nnoremap <Leader>w :w<CR>
 
-" Tagbar
-nnoremap <leader>t :TagbarToggle<cr>
-
 " Commenting
 nnoremap <leader>/ :call NERDComment("n", "Toggle")<cr>
 vnoremap <leader>/ :call NERDComment("n", "Toggle")<cr>
@@ -58,3 +54,17 @@ nmap - :NERDTreeFocus<cr>
 nmap <silent> [c <Plug>(ale_previous_wrap)
 nmap <silent> ]c <Plug>(ale_next_wrap)
 nmap <leader>f <Plug>(ale_fix)
+
+" fzf
+function! FZFOpen(command_str)
+  if (expand('%') =~# 'NERD_tree' && winnr('$') > 1)
+    exe "normal! \<C-w>\<C-w>"
+    echom 'NEW WINDOW IS ' . expand('%')
+  endif
+  exe 'normal! ' . a:command_str . "\<cr>"
+endfunction
+nnoremap <C-p> :call FZFOpen(':Files')<cr>
+nnoremap <Leader>b :call FZFOpen(':Buffers')<cr>
+nnoremap <Leader>h :call FZFOpen(':History')<cr>
+nnoremap <Leader>t :call FZFOpen(':BTags')<cr>
+nnoremap <Leader>T :call FZFOpen(':Tags')<cr>
