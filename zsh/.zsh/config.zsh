@@ -72,7 +72,6 @@ fi
 
 # fzf
 export FZF_DEFAULT_COMMAND='rg --files --follow --hidden'
-[ -f "$HOME/.fzf.zsh" ] && source "$HOME/.fzf.zsh"
 
 # Add SSH keys from keychain.
 # http://apple.stackexchange.com/questions/254468/macos-sierra-doesn-t-seem-to-remember-ssh-keys-between-reboots
