@@ -45,9 +45,6 @@ export PIP_CONFIG_FILE="$HOME/.pip.conf"
 export PYTHONDONTWRITEBYTECODE=1
 path=("$HOME/.poetry/bin" $path)
 
-# Fastlane.
-path=("$HOME/.fastlane/bin" $path)
-
 # Adding misc GNU utils man pages.
 for UTIL in "coreutils" "gnu-sed" "gnu-tar"; do
   export MANPATH="$BREWPATH/opt/$UTIL/libexec/gnuman:$MANPATH"
