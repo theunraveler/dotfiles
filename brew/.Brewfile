@@ -58,7 +58,7 @@ brew "highlight"
 brew "hr"
 brew "htmldoc"
 brew "httperf"
-brew "httping"
+brew "httping", link: false
 brew "httrack"
 brew "hub"
 brew "igbinary"
