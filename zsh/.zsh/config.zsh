@@ -45,6 +45,9 @@ export PIP_CONFIG_FILE="$HOME/.pip.conf"
 export PYTHONDONTWRITEBYTECODE=1
 path=("$HOME/.poetry/bin" $path)
 
+# grep
+alias grep="${aliases[grep]:-grep} --exclude-dir=.git --exclude-dir=node_modules --exclude=tags"
+
 # Adding misc GNU utils man pages.
 for UTIL in "coreutils" "gnu-sed" "gnu-tar"; do
   export MANPATH="$BREWPATH/opt/$UTIL/libexec/gnuman:$MANPATH"
