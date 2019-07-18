@@ -125,6 +125,7 @@ brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
 cask "appzapper"
 cask "arduino"
 cask "brave-browser"
+cask "chromium"
 cask "clipy"
 cask "firefox"
 cask "font-hack"
