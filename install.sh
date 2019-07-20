@@ -27,10 +27,10 @@ brew bundle --global > /dev/null
 echo "done."
 
 # Install vim plugins
-if [ ! -d ~/.vim/pack/minpac/opt/minpac ]; then
-  git clone https://github.com/k-takata/minpac.git ~/.vim/pack/minpac/opt/minpac
+if [ ! -f ~/.vim/autoload/plug.vim ]; then
+  curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
-vim +PackUpdate +qall
+vim +PlugInstall +qall
 
 # Install poetry
 curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python

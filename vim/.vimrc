@@ -10,7 +10,7 @@ filetype on
 filetype off
 
 " Plugins
-source ~/.vim/minpac.vim
+source ~/.vim/plugins.vim
 
 " Basic UI
 set visualbell

@@ -59,11 +59,8 @@ zsh -c "source \"$ZPLUG_HOME/init.zsh\" && source \"$HOME/.zsh/zplug.zsh\" && zp
 commit_if_changed "Updating zsh plugins"
 
 # vim plugins
-vim +PackUpdate +qall
+vim +PlugUpgrade +PlugUpdate +qall
 commit_if_changed "Updating vim plugins"
-cd ~/.vim/pack/minpac/opt/minpac
-git pull
-cd -
 
 # asdf plugins
 asdf plugin-update --all
