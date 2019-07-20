@@ -124,6 +124,7 @@ brew "heroku/brew/heroku"
 brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
 cask "appzapper"
 cask "arduino"
+cask "basecamp"
 cask "brave-browser"
 cask "chromium"
 cask "clipy"
