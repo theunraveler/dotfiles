@@ -11,8 +11,6 @@ drush/.drush/cache
 hammerspoon/.hammerspoon/Spoons/
 hammerspoon/.hammerspoon/_local.lua
 vim/.vim/.netrwhist
-vim/.vim/autoload/plug.vim
-vim/.vim/autoload/plug.vim.old
-vim/.vim/plugged
+vim/.vim/pack
 vim/.vim/plugin/settings/local.vim
 vim/.vim/spell
