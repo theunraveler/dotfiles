@@ -91,3 +91,7 @@ function mov2gif() {
 function with_args() {
   awk '{print $2}' | xargs "$@"
 }
+
+# Wrap sbcl in rlwrap to fix cursor issues
+# https://www.marktrapp.com/blog/2014/01/20/lisp-with-os-x-sublime-text/
+alias sbcl="rlwrap sbcl"
