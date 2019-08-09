@@ -27,13 +27,13 @@ brew bundle --global > /dev/null
 echo "done."
 
 # fzf
-/usr/local/opt/fzf install --no-bash --no-fish --all
+/usr/local/opt/fzf/install --no-bash --no-fish --all
 
 # Install vim plugins
-if [ ! -f ~/.vim/autoload/plug.vim ]; then
-  curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+if [ ! -d ~/.vim/pack/minpac/opt/minpac ]; then
+  git clone https://github.com/k-takata/minpac.git ~/.vim/pack/minpac/opt/minpac
 fi
-vim +PlugInstall +qall
+vim +PackUpdate +qall
 
 # Install poetry
 curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python
