@@ -9,6 +9,11 @@ set hidden                  " Avoid asking to save before hiding
 filetype on
 filetype off
 
+" Load fzf from homebrew
+" This needs to happen before we load plugins so that the `fzf.vim` plugin can
+" find it.
+let &rtp .= ',' . $BREWPATH . '/opt/fzf'
+
 " Plugins
 source ~/.vim/plugins.vim
 

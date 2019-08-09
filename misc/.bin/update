@@ -47,6 +47,7 @@ if command -v brew > /dev/null; then
   brew cask outdated | awk '{print $1}' | xargs brew cask reinstall
   brew cleanup
   brew bundle --global --force --no-restart dump
+  "$BREWPATH/opt/fzf" install --no-bash --no-fish --all
   commit_if_changed "Updating brews"
 fi
 

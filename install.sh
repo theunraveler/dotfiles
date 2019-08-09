@@ -26,6 +26,9 @@ brew tap homebrew/bundle
 brew bundle --global > /dev/null
 echo "done."
 
+# fzf
+/usr/local/opt/fzf install --no-bash --no-fish --all
+
 # Install vim plugins
 if [ ! -f ~/.vim/autoload/plug.vim ]; then
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
