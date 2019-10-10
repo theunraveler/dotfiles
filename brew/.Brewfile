@@ -1,5 +1,4 @@
 tap "beeftornado/rmtree"
-tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
@@ -121,7 +120,6 @@ brew "wp-cli"
 brew "yasm"
 brew "zplug"
 brew "zsh"
-brew "heroku/brew/heroku"
 brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
 cask "appzapper"
 cask "arduino"
