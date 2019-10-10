@@ -157,7 +157,6 @@ mas "Harvest", id: 506189836
 mas "Ka-Block!", id: 1335413823
 mas "LimeChat", id: 414030210
 mas "Pixelmator", id: 407963104
-mas "Reeder", id: 880001334
 mas "Slack", id: 803453959
 mas "The Unarchiver", id: 425424353
 mas "Todoist", id: 585829637
