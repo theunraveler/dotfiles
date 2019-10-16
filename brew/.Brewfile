@@ -147,7 +147,6 @@ cask "sketchup"
 cask "spotify"
 cask "tor-browser"
 cask "transmission"
-cask "vimr"
 cask "vlc"
 cask "wkhtmltopdf"
 mas "1Password 7", id: 1333542190
