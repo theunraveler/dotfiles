@@ -6,7 +6,7 @@ local module = {}
 
 -- Send an OSX notification from hammerspoon.
 function module.notify(message)
-  hs.notify.new({title="Hammerspoon", informativeText=message}):send()
+  hs.notify.show("Hammerspoon", "", message)
 end
 
 -- Format any variable as a string for printing to the console.
