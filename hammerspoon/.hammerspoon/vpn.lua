@@ -12,7 +12,10 @@ local utils = require "utils"
 local logger = hs.logger.new("vpn")
 
 localConfig = utils.prequire("_local")
-if not localConfig then return end
+if not localConfig or not localConfig["VPN_NAME"] then
+  logger.i("No VPN defined, skipping watcher")
+  return
+end
 
 function enableVPN()
   success, _, err = hs.osascript.applescript(string.format([[
