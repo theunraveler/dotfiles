@@ -27,25 +27,6 @@ alias service="brew services"
 alias start="brew services start"
 alias stop="brew services stop"
 alias restart="brew services restart"
-function brew() {
-  $BREWPATH/bin/brew "$@"
-  RET=$?
-
-  if \
-    [ $RET -eq 0 ] &&
-    { { [ "$1" = 'tap' ] || [ "$1" = 'untap' ] } && [ -n "$2" ] } || \
-    [ "$1" = 'install' ] || [ "$1" = 'reinstall' ] || \
-    { [ "$1" = 'remove' ] || [ "$1" = 'rm' ] || [ "$1" = 'rmtree' ] } || \
-    [ "$1" = 'upgrade' ] || \
-    { [ "$1" = 'cask' ] && { [ "$2" = 'install' ] || [ "$2" = 'uninstall' ]  || [ "$2" = 'rm' ] } } \
-  ; then
-    echo -n 'Dumping Brewfile...'
-    $BREWPATH/bin/brew bundle --global --force --no-restart dump
-    echo 'done.'
-  fi
-
-  return $RET
-}
 
 # Misc
 alias rmtrailingwhitespace="find . -type f -exec sed -i 's/[[:space:]]*$//' {} \;"
