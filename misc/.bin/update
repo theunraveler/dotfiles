@@ -48,7 +48,7 @@ if command -v brew > /dev/null; then
   brew cleanup
   brew bundle --global --force --no-restart dump
   "$BREWPATH/opt/fzf/install" --no-bash --no-fish --all
-  commit_if_changed "Updating brews"
+  commit_if_changed "brew: Updating brews"
 fi
 
 # git submodules.
@@ -57,15 +57,15 @@ commit_if_changed "Updating git submodules"
 
 # zsh plugins.
 zsh -c "source \"$ZPLUG_HOME/init.zsh\" && source \"$HOME/.zsh/zplug.zsh\" && zplug update"
-commit_if_changed "Updating zsh plugins"
+commit_if_changed "zsh: Updating plugins"
 
 # vim plugins
 vim +PackUpdate +qall
-commit_if_changed "Updating vim plugins"
+commit_if_changed "vim: Updating plugins"
 
 # asdf plugins
 asdf plugin-update --all
-commit_if_changed "Updating asdf plugins"
+commit_if_changed "asdf: Updating plugins"
 
 # Finally, push to remote if we need to.
 if [ "$(git rev-parse '@{u}')" != "$(git rev-parse @)" ]; then
