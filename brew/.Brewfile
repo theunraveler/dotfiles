@@ -145,5 +145,4 @@ mas "Pixelmator", id: 407963104
 mas "Reeder", id: 1449412482
 mas "Slack", id: 803453959
 mas "The Unarchiver", id: 425424353
-mas "Todoist", id: 585829637
 mas "Xcode", id: 497799835
