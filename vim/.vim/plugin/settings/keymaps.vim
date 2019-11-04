@@ -24,7 +24,7 @@ inoremap <C-cr> <esc>A<cr>
 " Search only in the selected block (visual mode)
 vnoremap / <esc>/\%V
 
-" Buffer stuff
+" Buffer management
 nmap <leader>n :bn<cr>
 nmap <leader>p :bp<cr>
 nmap <leader>c :Bclose<cr>
@@ -35,6 +35,16 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+
+" Splits
+nmap <leader>sw<left>  :topleft  vnew<CR>
+nmap <leader>sw<right> :botright vnew<CR>
+nmap <leader>sw<up>    :topleft  new<CR>
+nmap <leader>sw<down>  :botright new<CR>
+nmap <leader>s<left>   :leftabove  vnew<CR>
+nmap <leader>s<right>  :rightbelow vnew<CR>
+nmap <leader>s<up>     :leftabove  new<CR>
+nmap <leader>s<down>   :rightbelow new<CR>
 
 " Sudo save
 cnoremap w!! w !sudo tee % >/dev/null
