@@ -3,7 +3,6 @@ source $ZPLUG_HOME/init.zsh
 
 zplug "djui/alias-tips"
 zplug "modules/gnu-utility", from:prezto
-zplug "modules/utility", from:prezto
 zplug "modules/history", from:prezto
 zplug "modules/prompt", from:prezto
 zplug "theunraveler/zsh-fancy_ctrl_z"

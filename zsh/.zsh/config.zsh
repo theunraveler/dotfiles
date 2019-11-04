@@ -6,10 +6,6 @@ typeset -U path
 path=($HOME/.bin $BREWPATH/bin $BREWPATH/sbin /usr/X11/bin $path)
 fpath=($HOME/.zsh/functions $fpath)
 
-# We need to add this manually before adding the prezto `utility` module so
-# that dircolors get set properly when we're using GNU ls.
-alias dircolors="$BREWPATH/bin/gdircolors"
-
 # Set up our zplug plugins.
 #
 # It's important that this go after the path stuff above.
@@ -46,8 +42,11 @@ export PYTHONDONTWRITEBYTECODE=1
 path=("$HOME/.poetry/bin" $path)
 
 # grep
-alias grep="${aliases[grep]:-grep} --exclude-dir=.git --exclude-dir=node_modules --exclude=tags"
+export GREP_COLOR='37;45'           # BSD.
+export GREP_COLORS="mt=$GREP_COLOR" # GNU.
 
+# man
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 # Adding misc GNU utils man pages.
 for UTIL in "coreutils" "gnu-sed" "gnu-tar"; do
   export MANPATH="$BREWPATH/opt/$UTIL/libexec/gnuman:$MANPATH"
