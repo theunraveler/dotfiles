@@ -5,7 +5,7 @@ alias grep="grep --color=auto --exclude-dir=.git --exclude-dir=node_modules --ex
 alias ls="exa"
 alias mkdir="mkdir -vp"
 alias mv="mv -v"
-alias rsync="rsync -arxvz --rsh=ssh --progress --exclude-from=$HOME/.rsync/exclude"
+alias rsync="noglob rsync -arxvz --rsh=ssh --progress --exclude-from=$HOME/.rsync/exclude"
 alias rm="rm -rv"
 alias vi="mvim"
 alias vim="mvim"
@@ -51,7 +51,6 @@ alias ftp='noglob ftp'
 alias history='noglob history'
 alias locate='noglob locate'
 alias rake='noglob rake'
-alias rsync='noglob rsync'
 alias scp='noglob scp'
 alias sftp='noglob sftp'
 
