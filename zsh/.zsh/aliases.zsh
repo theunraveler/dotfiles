@@ -1,7 +1,6 @@
 # Overrides
 alias cat="bat"
 alias cp="cp -rv"
-alias diff="diff-so-fancy"
 alias grep="grep --color=auto --exclude-dir=.git --exclude-dir=node_modules --exclude=tags"
 alias ls="exa"
 alias mkdir="mkdir -vp"
