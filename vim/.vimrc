@@ -15,7 +15,7 @@ filetype off
 let &rtp .= ',' . $BREWPATH . '/opt/fzf'
 
 " Plugins
-source ~/.vim/plugins.vim
+runtime! plugins.vim
 
 " Basic UI
 set visualbell
