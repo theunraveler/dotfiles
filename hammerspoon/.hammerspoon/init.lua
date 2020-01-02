@@ -1,5 +1,6 @@
 require "_config"
 utils = require "utils"
+require "deadman"
 require "vpn"
 require "window"
 
