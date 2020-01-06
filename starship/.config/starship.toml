@@ -1,0 +1,8 @@
+[character]
+use_symbol_for_status = true
+
+[directory]
+truncate_to_repo = false
+
+[package]
+disabled = true

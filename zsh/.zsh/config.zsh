@@ -84,8 +84,7 @@ eval "$(direnv hook zsh)"
 
 setopt -o extended_glob
 
-# Put an hr between each command.
-precmd() { tput setaf 7 && hr '-' && tput sgr0 }
+eval "$(starship init zsh)"
 
 # Source out to local config file.
 [ -f "$HOME/.zshrc.local.zsh" ] && source "$HOME/.zshrc.local.zsh"
