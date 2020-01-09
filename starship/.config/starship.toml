@@ -1,3 +1,5 @@
+add_newline = false
+
 [character]
 use_symbol_for_status = true
 

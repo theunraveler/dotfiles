@@ -86,5 +86,8 @@ setopt -o extended_glob
 
 eval "$(starship init zsh)"
 
+# Put an hr between each command.
+precmd() { tput setaf 7 && hr '-' && tput sgr0 }
+
 # Source out to local config file.
 [ -f "$HOME/.zshrc.local.zsh" ] && source "$HOME/.zshrc.local.zsh"
