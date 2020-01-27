@@ -7,3 +7,4 @@ nodejs 11.8.0
 python 3.8.1
 ruby 2.6.5
 rust 1.40.0
+sbcl 2.0.1
