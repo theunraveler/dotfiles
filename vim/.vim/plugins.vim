@@ -28,7 +28,7 @@ function! PackInit() abort
   call minpac#add('Yggdroot/indentLine')
 
   " Color schemes
-  call minpac#add('13k/vim-tomorrow')
+  call minpac#add('connorholyday/vim-snazzy')
 endfunction
 
 command! PackUpdate call PackInit() | call minpac#update('', {'do': 'call minpac#status()'})
