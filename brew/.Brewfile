@@ -156,6 +156,5 @@ mas "Ka-Block!", id: 1335413823
 mas "LimeChat", id: 414030210
 mas "Pixelmator", id: 407963104
 mas "Reeder", id: 1449412482
-mas "Slack", id: 803453959
 mas "The Unarchiver", id: 425424353
 mas "Xcode", id: 497799835
