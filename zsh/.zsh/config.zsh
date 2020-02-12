@@ -24,9 +24,6 @@ setopt HIST_REDUCE_BLANKS
 # Homebrew
 HOMEBREW_NO_ANALYTICS=1
 
-# hub.
-if which hub > /dev/null; then eval "$(hub alias -s)"; fi
-
 # ChefDK.
 path=(/opt/chefdk/bin $path)
 
