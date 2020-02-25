@@ -12,7 +12,7 @@ filetype off
 " Load fzf from homebrew
 " This needs to happen before we load plugins so that the `fzf.vim` plugin can
 " find it.
-let &rtp .= ',' . $BREWPATH . '/opt/fzf'
+let &rtp .= ',' . $HOMEBREW_PREFIX . '/opt/fzf'
 
 " Plugins
 runtime! plugins.vim

@@ -1,9 +1,11 @@
-export BREWPATH="/usr/local"
 export CLICOLOR=1
+
+# Initialize homebrew paths
+eval "$(brew shellenv)"
 
 # Initialize run path
 typeset -U path
-path=($HOME/.bin $BREWPATH/bin $BREWPATH/sbin /usr/X11/bin $path)
+path=($HOME/.bin $path)
 fpath=($HOME/.zsh/functions $fpath)
 
 # Set up our zplug plugins.
@@ -29,7 +31,7 @@ path=(/opt/chefdk/bin $path)
 
 # Go.
 export GO15VENDOREXPERIMENT=1
-export GOPATH="$BREWPATH/share/go"
+export GOPATH="$HOMEBREW_PREFIX/share/go"
 path=($path "$GOPATH/bin")
 
 # Python.
@@ -46,7 +48,7 @@ export GREP_COLORS="mt=$GREP_COLOR" # GNU.
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 # Adding misc GNU utils man pages.
 for UTIL in "coreutils" "gnu-sed" "gnu-tar"; do
-  export MANPATH="$BREWPATH/opt/$UTIL/libexec/gnuman:$MANPATH"
+  export MANPATH="$HOMEBREW_PREFIX/opt/$UTIL/libexec/gnuman:$MANPATH"
 done
 
 # zsh-history-substring-search
@@ -77,7 +79,7 @@ ssh-add -A &> /dev/null
 eval "$(direnv hook zsh)"
 
 # asdf
-. $BREWPATH/opt/asdf/asdf.sh
+. $HOMEBREW_PREFIX/opt/asdf/asdf.sh
 
 setopt -o extended_glob
 
