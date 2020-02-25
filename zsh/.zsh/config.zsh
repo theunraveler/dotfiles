@@ -38,7 +38,6 @@ path=($path "$GOPATH/bin")
 export PIP_REQUIRE_VIRTUALENV=true
 export PIP_CONFIG_FILE="$HOME/.pip.conf"
 export PYTHONDONTWRITEBYTECODE=1
-path=("$HOME/.poetry/bin" $path)
 
 # grep
 export GREP_COLOR='37;45'           # BSD.
