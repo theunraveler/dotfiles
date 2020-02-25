@@ -21,7 +21,20 @@ export MARKDOWN="cmark"
 # History.
 export HISTIGNORE="&:ls:l:ll:[bf]g:exit:reset:clear:cd:cd ..:cd.."
 export HISTFILE="${ZDOTDIR:-$HOME}/.zsh_history"
+export HISTSIZE=10000
+export SAVEHIST=$HISTSIZE
+setopt BANG_HIST
+setopt EXTENDED_HISTORY
+setopt SHARE_HISTORY
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_FIND_NO_DUPS
+setopt HIST_IGNORE_SPACE
 setopt HIST_REDUCE_BLANKS
+setopt HIST_SAVE_NO_DUPS
+setopt HIST_VERIFY
+setopt HIST_BEEP
 
 # Homebrew
 HOMEBREW_NO_ANALYTICS=1
@@ -45,9 +58,17 @@ export GREP_COLORS="mt=$GREP_COLOR" # GNU.
 
 # man
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-# Adding misc GNU utils man pages.
-for UTIL in "coreutils" "gnu-sed" "gnu-tar"; do
-  export MANPATH="$HOMEBREW_PREFIX/opt/$UTIL/libexec/gnuman:$MANPATH"
+
+# GNU utils.
+# Creates functions to reference GNU utils instead of built-in ones. Kind of
+# a homebrew version of the one found in prezto and oh-my-zsh.
+for util in $HOMEBREW_PREFIX/opt/*/libexec/gnubin/*; do
+  _cmd=${util##*/}
+  eval "function ${_cmd} { 'g${_cmd}' \"\$@\" }"
+done
+# Add misc GNU utils man pages.
+for util in $HOMEBREW_PREFIX/opt/*/libexec/gnuman; do
+  export MANPATH="$util:$MANPATH"
 done
 
 # zsh-history-substring-search
