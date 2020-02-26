@@ -6,7 +6,6 @@ eval "$(brew shellenv)"
 # Initialize run path
 typeset -U path
 path=($HOME/.bin $path)
-fpath=($HOME/.zsh/functions $fpath)
 
 # Set up our zplug plugins.
 #
