@@ -40,8 +40,8 @@ alias rmtrailingwhitespace="find . -type f -exec sed -i 's/[[:space:]]*$//' {} \
 
 # lulz
 alias fucking="sudo"
-function whothefuckisusingport() { lsof -i tcp:$*; }
-function whatthefuckisusingthefile() { lsof | grep $1 }
+function whothefuckisusingport { lsof -i tcp:$*; }
+function whatthefuckisusingthefile { lsof | grep $1 }
 
 # Disable globbing.
 alias bower='noglob bower'
@@ -55,14 +55,14 @@ alias scp='noglob scp'
 alias sftp='noglob sftp'
 
 # Convert markdown to PDF
-function md2pdf() {
+function md2pdf {
   $MARKDOWN $1 > $1.html &&
   htmldoc --cont --bodyfont helvetica --textfont helvetica --headfootsize 8.0 --fontsize 10.0 --format pdf14 $1.html > $1.pdf &&
   rm $1.html
 }
 
 # View a markdown file in a browser.
-function mdview() {
+function mdview {
   filename="$TMPDIR$(basename "$1").html"
 
   if [ -f "$filename" ]; then
@@ -74,7 +74,7 @@ function mdview() {
 }
 
 # Convert a QuickTime .mov file to a GIF
-function mov2gif() {
+function mov2gif {
   ffmpeg -i $1 -pix_fmt rgb24 -r 10 -f gif -
 }
 
@@ -87,7 +87,7 @@ function mov2gif() {
 #
 # You can reliably substitute this function anywhere you could do
 # `awk '{print $2}' | xargs`.
-function with_args() {
+function with_args {
   awk '{print $2}' | xargs "$@"
 }
 
