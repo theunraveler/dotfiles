@@ -94,3 +94,14 @@ function with_args {
 # Wrap sbcl in rlwrap to fix cursor issues
 # https://www.marktrapp.com/blog/2014/01/20/lisp-with-os-x-sublime-text/
 alias sbcl="rlwrap sbcl"
+
+# Records what I'm working on.
+export DOING="${DOING:-$HOME/.doing}"
+function doing {
+  if [ $# -eq 0 ]; then
+    IFS='|'; _entry=($(tail -n1 "$DOING")); unset IFS;
+    echo "Latest entry on $(date --date="$_entry[1]" +'%D at %H:%M'): $_entry[2]"
+  else;
+    echo "$(date --iso-8601=minutes)|$@" >> $DOING
+  fi
+}
