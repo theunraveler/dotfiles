@@ -147,7 +147,6 @@ cask "qlswift"
 cask "tor-browser"
 cask "transmission"
 cask "vlc"
-cask "whatsapp"
 cask "wkhtmltopdf"
 mas "1Password 7", id: 1333542190
 mas "bookmarker for pinboard", id: 1451400394
