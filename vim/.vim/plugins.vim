@@ -12,7 +12,6 @@ function! PackInit() abort
   call minpac#add('jeffkreeftmeijer/vim-numbertoggle')
   call minpac#add('junegunn/fzf.vim')
   call minpac#add('kshenoy/vim-signature')
-  call minpac#add('ludovicchabant/vim-gutentags')
   call minpac#add('majutsushi/tagbar')
   call minpac#add('python-mode/python-mode')
   call minpac#add('rbgrouleff/bclose.vim')
