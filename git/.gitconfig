@@ -99,13 +99,14 @@
   co = checkout
   ctags = !$(git cd-root).git/hooks/ctags
   fp = format-patch
-  issues = "!ghi"
+  issues = "!hub issue"
   p = pull origin master
   s = show
   spp = !git stash && git pull && git stash pop
   st = status -sb
   sync = fetch -p
   w = whatchanged
+  whoami = config user.email
 
   # Logging
   l  = log --oneline --decorate
@@ -124,7 +125,7 @@
 #########
 # SECRETS
 #########
-#
+
 [secrets]
   providers = git secrets --aws-provider
   patterns = [A-Z0-9]{20}
