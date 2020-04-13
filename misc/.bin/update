@@ -44,7 +44,7 @@ fi
 if command -v brew > /dev/null; then
   brew update
   brew upgrade
-  brew cask outdated | awk '{print $1}' | xargs brew cask reinstall
+  brew cask upgrade
   brew cleanup
   brew bundle --global --force --no-restart dump
   "$HOMEBREW_PREFIX/opt/fzf/install" --no-bash --no-fish --all
