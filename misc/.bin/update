@@ -44,7 +44,7 @@ fi
 if command -v brew > /dev/null; then
   brew update
   brew upgrade
-  brew cask upgrade
+  brew cask upgrade --greedy
   brew cleanup
   brew bundle --global --force --no-restart dump
   "$HOMEBREW_PREFIX/opt/fzf/install" --no-bash --no-fish --all
