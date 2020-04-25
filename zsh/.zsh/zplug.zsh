@@ -2,6 +2,7 @@ export ZPLUG_HOME=$HOMEBREW_PREFIX/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
 zplug "djui/alias-tips"
+zplug "softmoth/zsh-vim-mode"
 zplug "theunraveler/zsh-fancy_ctrl_z"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions", use:src
