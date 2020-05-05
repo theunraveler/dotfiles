@@ -12,5 +12,3 @@ function! s:Ctags()
 endfunction
 
 command! Ctags call s:Ctags()
-
-nmap <Leader>ct :call s:Ctags()<CR>

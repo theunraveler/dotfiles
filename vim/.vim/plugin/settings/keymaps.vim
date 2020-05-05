@@ -77,3 +77,6 @@ nnoremap <Leader>b :call FZFOpen(':Buffers')<cr>
 nnoremap <Leader>h :call FZFOpen(':History')<cr>
 nnoremap <Leader>t :call FZFOpen(':BTags')<cr>
 nnoremap <Leader>T :call FZFOpen(':Tags')<cr>
+
+" ctags
+nmap <leader>ct :call s:Ctags()<cr>
