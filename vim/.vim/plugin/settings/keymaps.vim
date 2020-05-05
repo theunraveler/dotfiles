@@ -24,6 +24,10 @@ inoremap <C-cr> <esc>A<cr>
 " Search only in the selected block (visual mode)
 vnoremap / <esc>/\%V
 
+" Play macro with Q
+nnoremap Q @q
+vnoremap Q :norm @q<cr>
+
 " Buffer management
 nmap <leader>n :bn<cr>
 nmap <leader>p :bp<cr>
