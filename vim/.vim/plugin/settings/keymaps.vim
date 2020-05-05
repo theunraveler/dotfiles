@@ -4,7 +4,7 @@
 " core or a plugin (keymappings are easier to read and debug if they're all in
 " the same place).
 
-let mapleader = "\<Space>"
+let mapleader = "\<space>"
 
 " Fixing some vim defaults baddy
 nnoremap j gj
@@ -37,20 +37,20 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 " Splits
-nmap <leader>sw<left>  :topleft  vnew<CR>
-nmap <leader>sw<right> :botright vnew<CR>
-nmap <leader>sw<up>    :topleft  new<CR>
-nmap <leader>sw<down>  :botright new<CR>
-nmap <leader>s<left>   :leftabove  vnew<CR>
-nmap <leader>s<right>  :rightbelow vnew<CR>
-nmap <leader>s<up>     :leftabove  new<CR>
-nmap <leader>s<down>   :rightbelow new<CR>
+nmap <leader>sw<left>  :topleft  vnew<cr>
+nmap <leader>sw<right> :botright vnew<cr>
+nmap <leader>sw<up>    :topleft  new<cr>
+nmap <leader>sw<down>  :botright new<cr>
+nmap <leader>s<left>   :leftabove  vnew<cr>
+nmap <leader>s<right>  :rightbelow vnew<cr>
+nmap <leader>s<up>     :leftabove  new<cr>
+nmap <leader>s<down>   :rightbelow new<cr>
 
 " Sudo save
 cnoremap w!! w !sudo tee % >/dev/null
 
 " Save the file with <Leader>w
-nnoremap <Leader>w :w<CR>
+nnoremap <Leader>w :w<cr>
 
 " Commenting
 nnoremap <leader>/ :call NERDComment("n", "Toggle")<cr>
@@ -73,10 +73,9 @@ function! FZFOpen(command_str)
   exe 'normal! ' . a:command_str . "\<cr>"
 endfunction
 nnoremap <C-p> :call FZFOpen(':Files')<cr>
-nnoremap <Leader>b :call FZFOpen(':Buffers')<cr>
-nnoremap <Leader>h :call FZFOpen(':History')<cr>
-nnoremap <Leader>t :call FZFOpen(':BTags')<cr>
-nnoremap <Leader>T :call FZFOpen(':Tags')<cr>
+nnoremap <leader>h :call FZFOpen(':History')<cr>
+nnoremap <leader>t :call FZFOpen(':BTags')<cr>
+nnoremap <leader>T :call FZFOpen(':Tags')<cr>
 
 " ctags
 nmap <leader>ct :call s:Ctags()<cr>
