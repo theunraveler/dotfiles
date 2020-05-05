@@ -32,7 +32,7 @@ vnoremap Q :norm @q<cr>
 nmap <leader>n :bn<cr>
 nmap <leader>p :bp<cr>
 nmap <leader>c :Bclose<cr>
-nmap <leader>l :ls<cr>
+nmap <leader>l :ls<cr>:b<space>
 
 " Easier buffer nav
 map <C-h> <C-w>h
