@@ -147,7 +147,6 @@ cask "vlc"
 cask "wkhtmltopdf"
 mas "1Password 7", id: 1333542190
 mas "bookmarker for pinboard", id: 1451400394
-mas "Harvest", id: 506189836
 mas "Ka-Block!", id: 1335413823
 mas "LimeChat", id: 414030210
 mas "Pixelmator", id: 407963104
