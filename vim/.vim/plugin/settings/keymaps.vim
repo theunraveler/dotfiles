@@ -29,36 +29,38 @@ nnoremap Q @q
 vnoremap Q :norm @q<cr>
 
 " Buffer management
-nmap <leader>n :bn<cr>
-nmap <leader>p :bp<cr>
+nmap <leader>n :bnext<cr>
+nmap <leader>p :bprev<cr>
 nmap <leader>c :Bclose<cr>
 nmap <leader>l :ls<cr>:b<space>
+nmap <C-tab> :bnext<cr>
+nmap <C-S-tab> :bprev<cr>
 
 " Easier buffer nav
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
 
 " Splits
-nmap <leader>sw<left>  :topleft  vnew<cr>
+nmap <leader>sw<left>  :topleft vnew<cr>
 nmap <leader>sw<right> :botright vnew<cr>
-nmap <leader>sw<up>    :topleft  new<cr>
+nmap <leader>sw<up>    :topleft new<cr>
 nmap <leader>sw<down>  :botright new<cr>
-nmap <leader>s<left>   :leftabove  vnew<cr>
+nmap <leader>s<left>   :leftabove vnew<cr>
 nmap <leader>s<right>  :rightbelow vnew<cr>
-nmap <leader>s<up>     :leftabove  new<cr>
+nmap <leader>s<up>     :leftabove new<cr>
 nmap <leader>s<down>   :rightbelow new<cr>
 
 " Sudo save
 cnoremap w!! w !sudo tee % >/dev/null
 
 " Save the file with <Leader>w
-nnoremap <Leader>w :w<cr>
+nmap <Leader>w :w<cr>
 
 " Commenting
-nnoremap <leader>/ :call NERDComment("n", "Toggle")<cr>
-vnoremap <leader>/ :call NERDComment("n", "Toggle")<cr>
+nmap <leader>/ :call NERDComment("n", "Toggle")<cr>
+vmap <leader>/ :call NERDComment("n", "Toggle")<cr>
 
 " NERDTree
 nmap <leader>o :NERDTreeToggle<cr>
@@ -76,10 +78,10 @@ function! FZFOpen(command_str)
   endif
   exe 'normal! ' . a:command_str . "\<cr>"
 endfunction
-nnoremap <C-p> :call FZFOpen(':Files')<cr>
-nnoremap <leader>h :call FZFOpen(':History')<cr>
-nnoremap <leader>t :call FZFOpen(':BTags')<cr>
-nnoremap <leader>T :call FZFOpen(':Tags')<cr>
+nmap <C-p> :call FZFOpen(':Files')<cr>
+nmap <leader>h :call FZFOpen(':History')<cr>
+nmap <leader>t :call FZFOpen(':BTags')<cr>
+nmap <leader>T :call FZFOpen(':Tags')<cr>
 
 " ctags
 nmap <leader>ct :call s:Ctags()<cr>
