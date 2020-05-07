@@ -19,7 +19,7 @@ runtime! plugins.vim
 
 " Basic UI
 set visualbell
-set shortmess=atIWswxrnmlf
+set shortmess=atIWs
 set title
 set titlestring=%f%(\ [%M]%)   " Show file name at the title
 set numberwidth=1
