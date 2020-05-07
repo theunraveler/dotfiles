@@ -13,6 +13,7 @@ function! PackInit() abort
   call minpac#add('junegunn/fzf.vim')
   call minpac#add('kshenoy/vim-signature')
   call minpac#add('majutsushi/tagbar')
+  call minpac#add('mg979/vim-visual-multi')
   call minpac#add('python-mode/python-mode')
   call minpac#add('rbgrouleff/bclose.vim')
   call minpac#add('rhysd/devdocs.vim')
