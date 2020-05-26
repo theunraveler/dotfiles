@@ -14,7 +14,6 @@
   whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
   excludesfile = ~/.gitignore
   attributesfile = ~/.gitattributes
-  pager = diff-so-fancy | less --tabs=4 -RFX
 
 [init]
   templatedir = ~/.gittemplate
@@ -43,6 +42,9 @@
 
 [diff]
   compactionHeuristic = true
+
+[pager]
+  diff = diff-so-fancy | less --tabs=4 -RFXS --pattern '^(Date|added|deleted|modified): '
 
 ########
 # COLORS
@@ -98,9 +100,8 @@
   cl = clone
   co = checkout
   ctags = !$(git cd-root).git/hooks/ctags
-  fp = format-patch
   issues = "!hub issue"
-  p = pull origin master
+  patch = !git --no-pager diff --no-color
   s = show
   spp = !git stash && git pull && git stash pop
   st = status -sb
