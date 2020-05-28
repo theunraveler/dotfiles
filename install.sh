@@ -8,35 +8,32 @@ BREW_CMD="/usr/local/bin/brew"
 if [ ! -f $BREW_CMD ]; then
   echo -n "Installing homebrew..."
   ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+else
+  echo -n "Homebrew already installed"
 fi
 
-# Install GNU stow if we need to.
-if ! [ -x "$(command -v stow)" ]; then
-  echo -n "Installing stow..."
-  $BREW_CMD install stow
-fi
+# Install homebrew packages.
+printf "Installing homebrew packages..."
+"$BREW_CMD" tap homebrew/bundle > /dev/null
+"$BREW_CMD" bundle --file="$DIR/brew/.Brewfile" > /dev/null
+echo "done."
 
 # Symlink everything.
 printf 'Linking items from %s to home directory...' "$DIR"
 find "$DIR" -type d \( ! -regex '.*/\..*' \) -depth 1 | sed 's!.*/!!' | xargs stow --dir="$DIR" --target="$HOME" --restow
 echo "done."
 
-printf "Checking homebrew packages..."
-brew tap homebrew/bundle
-brew bundle --global > /dev/null
-echo "done."
-
 # fzf
 /usr/local/opt/fzf/install --no-bash --no-fish --all
+
+# Install zsh plugins
+zsh -c "source \"$ZPLUG_HOME/init.zsh\" && source \"$HOME/.zsh/zplug.zsh\" && zplug update"
 
 # Install vim plugins
 if [ ! -d ~/.vim/pack/minpac/opt/minpac ]; then
   git clone https://github.com/k-takata/minpac.git ~/.vim/pack/minpac/opt/minpac
 fi
 vim +PackUpdate +qall
-
-# Install poetry
-curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python
 
 # Finally, go back to where the user started.
 cd "$WD" > /dev/null || exit 1
