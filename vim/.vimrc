@@ -46,5 +46,15 @@ set nobackup
 set nowritebackup
 set noswapfile
 
+" Undo
+if (v:version > 703)
+  if !isdirectory($HOME . '/.vim/undo')
+    call mkdir($HOME . '/.vim/undo', 'p')
+  endif
+  set undodir=~/.vim/undo
+  set undofile
+  set undoreload=10000
+endif
+
 " Format
 set formatprg=par
