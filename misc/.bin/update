@@ -21,13 +21,10 @@ cleanup() {
 }
 
 commit_if_changed() {
+  if [ "$(git status --porcelain | wc -l)" -eq 0 ]; then return; fi
+  git add .
   msg=${1:-"Updating submodules, vim plugins, and/or brew list."}
-  set +e
-  git status --porcelain | grep '^ M' | awk '{print $2}' | xargs git add
-  if git status --porcelain | grep --silent '^M'; then
-    git ci -m "$msg"
-  fi
-  set -e
+  git ci -m "$msg"
 }
 
 # If there are changes, stash them.
