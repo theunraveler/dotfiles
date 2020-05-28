@@ -43,8 +43,8 @@ fi
 # homebrew and casks.
 if command -v brew > /dev/null; then
   brew update
-  brew upgrade
-  brew cask upgrade --greedy
+  HOMEBREW_NO_AUTO_UPDATE=1 HOMEBREW_NO_INSTALL_CLEANUP=1 brew upgrade
+  HOMEBREW_NO_AUTO_UPDATE=1 HOMEBREW_NO_INSTALL_CLEANUP=1 brew cask upgrade --greedy
   brew cleanup
   brew bundle --global --force --no-restart dump
   "$HOMEBREW_PREFIX/opt/fzf/install" --no-bash --no-fish --all
