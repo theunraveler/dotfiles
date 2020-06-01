@@ -102,7 +102,6 @@ brew "rsync"
 brew "shellcheck"
 brew "siege"
 brew "socat"
-brew "ssh-copy-id", link: true
 brew "starship"
 brew "stow"
 brew "swiftformat"
