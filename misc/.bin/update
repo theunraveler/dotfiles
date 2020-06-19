@@ -14,7 +14,7 @@ cleanup() {
     git stash pop --quiet
   fi
   if [ "$(pwd)" != "$dir" ]; then
-    echo "*** Returning you to $dir"
+    echo "*** Returning you to $dir from $(pwd)"
     cd "$dir" || exit 1
   fi
   exit 0
