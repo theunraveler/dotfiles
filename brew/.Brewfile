@@ -121,7 +121,6 @@ brew "zsh"
 brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
 cask "appzapper"
 cask "arduino"
-cask "brave-browser"
 cask "clipy"
 cask "firefox"
 cask "fliqlo"
