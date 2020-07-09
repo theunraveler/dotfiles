@@ -38,14 +38,6 @@ setopt HIST_BEEP
 # Homebrew
 HOMEBREW_NO_ANALYTICS=1
 
-# ChefDK.
-path=(/opt/chefdk/bin $path)
-
-# Go.
-export GO15VENDOREXPERIMENT=1
-export GOPATH="$HOMEBREW_PREFIX/share/go"
-path=($path "$GOPATH/bin")
-
 # Python.
 export PIP_REQUIRE_VIRTUALENV=true
 export PIP_CONFIG_FILE="$HOME/.pip.conf"

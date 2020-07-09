@@ -73,11 +73,6 @@ function mdview {
   $BROWSER $filename
 }
 
-# Convert a QuickTime .mov file to a GIF
-function mov2gif {
-  ffmpeg -i $1 -pix_fmt rgb24 -r 10 -f gif -
-}
-
 # Convenience function to execute some action on the argument (read: second
 # column) part of STDIN.
 #
@@ -90,7 +85,3 @@ function mov2gif {
 function with_args {
   awk '{print $2}' | xargs "$@"
 }
-
-# Wrap sbcl in rlwrap to fix cursor issues
-# https://www.marktrapp.com/blog/2014/01/20/lisp-with-os-x-sublime-text/
-alias sbcl="rlwrap sbcl"
