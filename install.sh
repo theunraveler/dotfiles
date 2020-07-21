@@ -15,7 +15,7 @@ fi
 # Install homebrew packages.
 printf "Installing homebrew packages..."
 "$BREW_CMD" tap homebrew/bundle > /dev/null
-"$BREW_CMD" bundle --file="$DIR/brew/.Brewfile" > /dev/null
+"$BREW_CMD" bundle --file="$DIR/brew/.Brewfile" --no-lock > /dev/null
 echo "done."
 
 # Symlink everything.
