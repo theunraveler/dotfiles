@@ -6,10 +6,10 @@ BREW_CMD="/usr/local/bin/brew"
 
 # Install homebrew if we need to.
 if [ ! -f $BREW_CMD ]; then
-  echo -n "Installing homebrew..."
+  echo "Installing homebrew..."
   ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 else
-  echo -n "Homebrew already installed"
+  echo "Homebrew already installed"
 fi
 
 # Install homebrew packages.
