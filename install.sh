@@ -33,7 +33,7 @@ zsh -c "source \"$ZPLUG_HOME/init.zsh\" && source \"$HOME/.zsh/zplug.zsh\" && zp
 if [ ! -d ~/.vim/pack/minpac/opt/minpac ]; then
   git clone https://github.com/k-takata/minpac.git ~/.vim/pack/minpac/opt/minpac
 fi
-vim -f -c "set nomore | redir >> /dev/tty | call PackInit() | call minpac#update('', {'do': 'quit'})"
+vim -f -c "set nomore | redir >> /dev/tty | call PackInit() | call minpac#update('', {'do': 'quit'})"; echo
 
 # Finally, go back to where the user started.
 cd "$WD" > /dev/null || exit 1

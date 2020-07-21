@@ -57,7 +57,7 @@ zsh -c "source \"$ZPLUG_HOME/init.zsh\" && source \"$HOME/.zsh/zplug.zsh\" && zp
 commit_if_changed "zsh: Updating plugins"
 
 # vim plugins
-vim -f -c "set nomore | redir >> /dev/tty | call PackInit() | call minpac#update('', {'do': 'quit'})"
+vim -f -c "set nomore | redir >> /dev/tty | call PackInit() | call minpac#update('', {'do': 'quit'})"; echo
 commit_if_changed "vim: Updating plugins"
 
 # asdf plugins
