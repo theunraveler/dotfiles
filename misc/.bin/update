@@ -2,6 +2,35 @@
 set -euo pipefail
 IFS=$'\n\t'
 
+# Process options.
+NO_COMMIT=0
+NO_PUSH=0
+while test $# -gt 0; do
+  case "$1" in
+    -h|--help)
+      echo "update"
+      echo " "
+      echo "options:"
+      echo "-h, --help                show brief help"
+      echo "-c, --no-commit           don't commit changes (implies --no-push)"
+      echo "-p, --no-push             don't push commits"
+      exit 0
+      ;;
+    -c|--no-commit)
+      export NO_COMMIT=1
+      export NO_PUSH=1
+      shift
+      ;;
+    -p|--no-push)
+      export NO_PUSH=1
+      shift
+      ;;
+    *)
+      break
+      ;;
+  esac
+done
+
 # Store the current directory and switch to the project root.
 dir=$(pwd)
 cd "$(dirname "$(greadlink -f "$0")")/../.." || exit 1
@@ -21,6 +50,7 @@ cleanup() {
 }
 
 commit_if_changed() {
+  if [ $NO_COMMIT -eq 1 ]; then return; fi
   if [ "$(git status --porcelain | wc -l)" -eq 0 ]; then return; fi
   git add .
   msg=${1:-"Updating submodules, vim plugins, and/or brew list."}
@@ -65,7 +95,9 @@ asdf plugin-update --all
 commit_if_changed "asdf: Updating plugins"
 
 # Finally, push to remote if we need to.
-if [ "$(git rev-parse '@{u}')" != "$(git rev-parse @)" ]; then
+if [ $NO_PUSH -eq 1 ]; then
+  echo "Skipping git push"
+elif [ "$(git rev-parse '@{u}')" != "$(git rev-parse @)" ]; then
   git push origin master
 else
   echo "Nothing updated, no push needed."
