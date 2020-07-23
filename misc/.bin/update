@@ -1,4 +1,6 @@
-#!/usr/bin/env sh
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
 
 # Store the current directory and switch to the project root.
 dir=$(pwd)
