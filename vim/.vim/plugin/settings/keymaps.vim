@@ -62,9 +62,8 @@ nmap <Leader>w :w<cr>
 nmap <leader>/ :call NERDComment("n", "Toggle")<cr>
 vmap <leader>/ :call NERDComment("n", "Toggle")<cr>
 
-" NERDTree
-nmap <leader>o :NERDTreeToggle<cr>
-nmap - :NERDTreeFocus<cr>
+" fern
+nmap - :execute printf('Fern . %s', g:fern#default_args) <cr>
 
 " Ale
 nmap <silent> [c <Plug>(ale_previous_wrap)
