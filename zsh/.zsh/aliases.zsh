@@ -1,26 +1,26 @@
 # Overrides
 alias cat="bat"
-alias cp="cp -rv"
+alias cp="cp --recursive --verbose"
 alias grep="grep --color=auto --exclude-dir=.git --exclude-dir=node_modules --exclude-dir=.venv --exclude=tags"
 alias ls="exa"
-alias mkdir="mkdir -vp"
-alias mv="mv -v"
+alias mkdir="mkdir --parents --verbose"
+alias mv="mv --verbose"
 alias rsync="noglob rsync -arxvz --rsh=ssh --progress --exclude-from=$HOME/.rsync/exclude"
-alias rm="rm -rv"
+alias rm="rm --recursive --verbose"
 alias vi="mvim"
 alias vim="mvim"
 
 # Shorties
-alias _='sudo'
+alias _="sudo"
 alias b="brew"
 alias be="bundle exec"
 alias d="drush"
 alias el="elixir"
 alias g="git"
 alias k="kill -15"
-alias l='exa -lh'
-alias ll="exa -lahF"
-alias o='open'
+alias l="exa --long --classify"
+alias ll="exa --long --classify --all"
+alias o="open"
 alias py="python"
 alias rb="ruby"
 alias v="mvim"
@@ -44,15 +44,15 @@ function whothefuckisusingport { lsof -i tcp:$*; }
 function whatthefuckisusingthefile { lsof | grep $1 }
 
 # Disable globbing.
-alias bower='noglob bower'
-alias fc='noglob fc'
-alias find='noglob find'
-alias ftp='noglob ftp'
-alias history='noglob history'
-alias locate='noglob locate'
-alias rake='noglob rake'
-alias scp='noglob scp'
-alias sftp='noglob sftp'
+alias bower="noglob bower"
+alias fc="noglob fc"
+alias find="noglob find"
+alias ftp="noglob ftp"
+alias history="noglob history"
+alias locate="noglob locate"
+alias rake="noglob rake"
+alias scp="noglob scp"
+alias sftp="noglob sftp"
 
 # Convert markdown to PDF
 function md2pdf {
