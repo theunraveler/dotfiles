@@ -84,3 +84,6 @@ nmap <leader>T :call FZFOpen(':Tags')<cr>
 
 " ctags
 nmap <leader>ct :call s:Ctags()<cr>
+
+" Open docs in devdocs.io
+nmap K <Plug>(devdocs-under-cursor)
