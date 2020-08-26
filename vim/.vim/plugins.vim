@@ -7,6 +7,7 @@ function! PackInit() abort
   " Plugins
   call minpac#add('airblade/vim-gitgutter')
   call minpac#add('bitc/vim-bad-whitespace')
+  call minpac#add('dbakker/vim-projectroot')
   call minpac#add('editorconfig/editorconfig-vim')
   call minpac#add('ervandew/supertab')
   call minpac#add('jeffkreeftmeijer/vim-numbertoggle')

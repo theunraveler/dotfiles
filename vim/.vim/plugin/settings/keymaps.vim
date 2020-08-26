@@ -63,7 +63,7 @@ nmap <leader>/ :call NERDComment("n", "Toggle")<cr>
 vmap <leader>/ :call NERDComment("n", "Toggle")<cr>
 
 " fern
-nmap - :execute printf('Fern . %s', g:fern#default_args) <cr>
+nmap - :execute printf('Fern . -reveal=%% %s', g:fern#default_args) <cr>
 
 " Ale
 nmap <silent> [c <Plug>(ale_previous_wrap)
