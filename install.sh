@@ -30,10 +30,10 @@ echo "done."
 zsh -c "source \"$ZPLUG_HOME/init.zsh\" && source \"$HOME/.zsh/zplug.zsh\" && zplug update"
 
 # Install vim plugins
-if [ ! -d ~/.vim/pack/minpac/opt/minpac ]; then
-  git clone https://github.com/k-takata/minpac.git ~/.vim/pack/minpac/opt/minpac
+if [ ! -d ~/.vim/pack/packager ]; then
+  git clone https://github.com/kristijanhusak/vim-packager ~/.vim/pack/packager/opt/vim-packager
 fi
-vim -f -c "set nomore | redir >> /dev/tty | call PackInit() | call minpac#update('', {'do': 'quit'})"; echo
+vim -f -c "call PackagerInit() | call packager#install({'on_finish': ':w! >>/dev/tty | quitall'})"
 
 # Finally, go back to where the user started.
 cd "$WD" > /dev/null || exit 1
