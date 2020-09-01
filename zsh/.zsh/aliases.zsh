@@ -54,6 +54,11 @@ alias rake="noglob rake"
 alias scp="noglob scp"
 alias sftp="noglob sftp"
 
+# Create and move to a new directory.
+function mkcd {
+  mkdir -p -- "$1" && cd -P -- "$1"
+}
+
 # Convert markdown to PDF
 function md2pdf {
   $MARKDOWN $1 > $1.html &&
