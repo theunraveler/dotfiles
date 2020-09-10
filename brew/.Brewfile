@@ -53,6 +53,7 @@ brew "ffmpeg"
 brew "fzf"
 brew "gd"
 brew "ghostscript"
+brew "gifsicle"
 brew "git"
 brew "git-extras"
 brew "git-open"
@@ -71,6 +72,7 @@ brew "httping"
 brew "httrack"
 brew "hub"
 brew "imagemagick"
+brew "jpegoptim"
 brew "oniguruma"
 brew "jq"
 brew "leiningen"
@@ -148,6 +150,7 @@ cask "vlc"
 cask "wkhtmltopdf"
 mas "1Password 7", id: 1333542190
 mas "bookmarker for pinboard", id: 1451400394
+mas "Free Ruler", id: 1483172210
 mas "Ka-Block!", id: 1335413823
 mas "LimeChat", id: 414030210
 mas "Pixelmator", id: 407963104
