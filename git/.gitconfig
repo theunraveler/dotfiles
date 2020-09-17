@@ -105,7 +105,7 @@
   s = show
   spp = !git stash && git pull && git stash pop
   st = status -sb
-  sync = fetch -p
+  sync-branches = fetch -p
   w = whatchanged
   whoami = config user.email
 
@@ -120,7 +120,6 @@
   up = "!git remote update -p; git merge --ff-only @{u}"
 
   # Resetting
-  undo = reset --soft HEAD^
   fresh = !git fetch --all && git reset --hard origin/master -
 
 #########
