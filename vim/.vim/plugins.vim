@@ -21,7 +21,9 @@ function! PackagerInit() abort
   call packager#add('sheerun/vim-polyglot')
   call packager#add('tpope/vim-eunuch')
   call packager#add('tpope/vim-rbenv')
+  call packager#add('tpope/vim-repeat')
   call packager#add('tpope/vim-sensible')
+  call packager#add('tpope/vim-surround')
   call packager#add('w0rp/ale')
   call packager#add('Yggdroot/indentLine')
 
