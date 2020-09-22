@@ -138,6 +138,7 @@ cask "handbrake"
 cask "java"
 cask "keys"
 cask "macvim"
+cask "netnewswire"
 cask "private-internet-access"
 cask "qlcolorcode"
 cask "qlimagesize"
@@ -156,5 +157,4 @@ mas "Free Ruler", id: 1483172210
 mas "Ka-Block!", id: 1335413823
 mas "LimeChat", id: 414030210
 mas "Pixelmator", id: 407963104
-mas "Reeder", id: 1449412482
 mas "Xcode", id: 497799835
