@@ -24,10 +24,7 @@ find "$DIR" -type d \( ! -regex '.*/\..*' \) -depth 1 | sed 's!.*/!!' | xargs st
 echo "done."
 
 # fzf
-/usr/local/opt/fzf/install --no-bash --no-fish --all
-
-# Install zsh plugins
-zsh -c "source \"$ZPLUG_HOME/init.zsh\" && source \"$HOME/.zsh/zplug.zsh\" && zplug update"
+/usr/local/opt/fzf/install --no-bash --no-zsh --all
 
 # Install vim plugins
 if [ ! -d ~/.vim/pack/packager ]; then
