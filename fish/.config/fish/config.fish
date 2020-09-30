@@ -64,7 +64,7 @@ alias grep 'grep --color=auto --exclude-dir=.git --exclude-dir=node_modules --ex
 alias ls 'exa'
 alias mkdir 'mkdir --parents --verbose'
 alias mv 'mv --verbose'
-alias rsync "noglob rsync -arxvz --rsh=ssh --progress --exclude-from=$HOME/.rsync/exclude"
+alias rsync "rsync -arxvz --rsh=ssh --progress --exclude-from=$HOME/.rsync/exclude"
 alias rm 'rm --recursive --verbose'
 alias vi 'mvim'
 alias vim 'mvim'
@@ -97,17 +97,6 @@ alias restart 'brew services restart'
 alias fucking 'sudo'
 function whothefuckisusingport; lsof -i tcp:$argv; end
 function whatthefuckisusingthefile; lsof | grep $argv; end
-
-# Disable globbing.
-alias bower 'noglob bower'
-alias fc 'noglob fc'
-alias find 'noglob find'
-alias ftp 'noglob ftp'
-alias history 'noglob history'
-alias locate 'noglob locate'
-alias rake 'noglob rake'
-alias scp 'noglob scp'
-alias sftp 'noglob sftp'
 
 # Create and move to a new directory.
 function mkcd; mkdir -p -- "$argv" && cd -P -- "$argv"; end
