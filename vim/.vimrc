@@ -6,6 +6,9 @@ set nostartofline           " Make j/k respect the columns (after all, this is n
 set modeline                " Respect modeline of the file (the famous "vi:noai:sw=3 ts=6" on the beginning of the files)
 set hidden                  " Avoid asking to save before hiding
 
+" Fixes funny things when we use non-POSIX-compliant shells, like fish.
+set shell=/bin/sh
+
 filetype on
 filetype off
 
