@@ -30,13 +30,12 @@ set --export MANPAGER "sh -c 'col -bx | bat -l man -p'"
 
 # GNU utils.
 # Reference GNU utils instead of built-in ones.
-set --export PATH $HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin $PATH
-set --export PATH $HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnubin $PATH
-set --export PATH $HOMEBREW_PREFIX/opt/gnu-tar/libexec/gnubin $PATH
-set --export PATH $HOMEBREW_PREFIX/opt/grep/libexec/gnubin $PATH
+for d in $HOMEBREW_PREFIX/opt/*/libexec/gnubin
+  set --export PATH $d $PATH
+end
 # Add misc GNU utils man pages.
-for util in $HOMEBREW_PREFIX/opt/*/libexec/gnuman
-  set --export MANPATH $util $MANPATH
+for d in $HOMEBREW_PREFIX/opt/*/libexec/gnuman
+  set --export MANPATH $d $MANPATH
 end
 
 # fzf
