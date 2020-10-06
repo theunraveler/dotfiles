@@ -1,6 +1,23 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR __fish_initialized:3100
+SETUVAR _fish_abbr_b:brew
+SETUVAR _fish_abbr_be:bundle\x20exec
+SETUVAR _fish_abbr_cp:cp\x20\x2d\x2drecursive\x20\x2d\x2dverbose
+SETUVAR _fish_abbr_d:drush
+SETUVAR _fish_abbr_dns_2E_clear:dscacheutil\x20\x2dflushcache
+SETUVAR _fish_abbr_el:elixir
+SETUVAR _fish_abbr_g:git
+SETUVAR _fish_abbr_grep:grep\x20\x2d\x2dcolor\x3dauto\x20\x2d\x2dexclude\x2ddir\x3d\x2egit\x20\x2d\x2dexclude\x2ddir\x3dnode_modules\x20\x2d\x2dexclude\x2ddir\x3d\x2evenv\x20\x2d\x2dexclude\x3dtags
+SETUVAR _fish_abbr_ip:curl\x20icanhazip\x2ecom
+SETUVAR _fish_abbr_k:kill\x20\x2d15
+SETUVAR _fish_abbr_mkdir:mkdir\x20\x2d\x2dparents\x20\x2d\x2dverbose
+SETUVAR _fish_abbr_mv:mv\x20\x2d\x2dverbose
+SETUVAR _fish_abbr_o:open
+SETUVAR _fish_abbr_py:python
+SETUVAR _fish_abbr_rb:ruby
+SETUVAR _fish_abbr_rm:rm\x20\x2d\x2drecursive\x20\x2d\x2dverbose
+SETUVAR _fish_abbr_rsync:rsync\x20\x2darxvz\x20\x2d\x2drsh\x3dssh\x20\x2d\x2dprogress\x20\x2d\x2dexclude\x2dfrom\x3d\x24HOME/\x2ersync/exclude
 SETUVAR fish_color_autosuggestion:969896
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:5af78e
