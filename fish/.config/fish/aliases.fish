@@ -1,7 +1,7 @@
 # Overrides
 alias cat 'bat'
 abbr cp 'cp --recursive --verbose'
-abbr grep 'grep --color=auto --exclude-dir=.git --exclude-dir=node_modules --exclude-dir=.venv --exclude=tags'
+alias grep 'ack'
 alias ls 'exa'
 abbr mkdir 'mkdir --parents --verbose'
 abbr mv 'mv --verbose'

@@ -8,7 +8,6 @@ SETUVAR _fish_abbr_d:drush
 SETUVAR _fish_abbr_dns_2E_clear:dscacheutil\x20\x2dflushcache
 SETUVAR _fish_abbr_el:elixir
 SETUVAR _fish_abbr_g:git
-SETUVAR _fish_abbr_grep:grep\x20\x2d\x2dcolor\x3dauto\x20\x2d\x2dexclude\x2ddir\x3d\x2egit\x20\x2d\x2dexclude\x2ddir\x3dnode_modules\x20\x2d\x2dexclude\x2ddir\x3d\x2evenv\x20\x2d\x2dexclude\x3dtags
 SETUVAR _fish_abbr_ip:curl\x20icanhazip\x2ecom
 SETUVAR _fish_abbr_k:kill\x20\x2d15
 SETUVAR _fish_abbr_mkdir:mkdir\x20\x2d\x2dparents\x20\x2d\x2dverbose
