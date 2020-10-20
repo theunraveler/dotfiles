@@ -90,6 +90,7 @@ brew "pandoc"
 brew "pinentry-mac"
 brew "pipenv"
 brew "postgresql"
+brew "postgresql@12"
 brew "proctools"
 brew "proselint"
 brew "pv"
@@ -152,4 +153,5 @@ mas "Ka-Block!", id: 1335413823
 mas "LimeChat", id: 414030210
 mas "Pixelmator", id: 407963104
 mas "Reeder", id: 1529448980
+mas "Slack", id: 803453959
 mas "Xcode", id: 497799835
