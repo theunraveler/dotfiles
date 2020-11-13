@@ -133,7 +133,6 @@ cask "gpg-suite"
 cask "hammerspoon"
 cask "handbrake"
 cask "java"
-cask "keys"
 cask "macvim"
 cask "private-internet-access"
 cask "qlcolorcode"
@@ -143,11 +142,10 @@ cask "qlprettypatch"
 cask "qlstephen"
 cask "qlswift"
 cask "sketchup"
-cask "tor-browser"
 cask "transmission"
 cask "vlc"
-cask "wkhtmltopdf"
 mas "1Password 7", id: 1333542190
+mas "Developer", id: 640199958
 mas "Free Ruler", id: 1483172210
 mas "Ka-Block!", id: 1335413823
 mas "LimeChat", id: 414030210
