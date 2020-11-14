@@ -30,8 +30,13 @@ set --export MANPAGER "sh -c 'col -bx | bat -l man -p'"
 
 # GNU utils.
 # Reference GNU utils instead of built-in ones.
-for d in $HOMEBREW_PREFIX/opt/*/libexec/gnubin
-  set --export PATH $d $PATH
+set _ignored '[' 'test'
+for d in $HOMEBREW_PREFIX/opt/*/libexec/gnubin/*
+  set p (basename $d)
+  if contains $p $_ignored
+    continue
+  end
+  alias $p g$p
 end
 # Add misc GNU utils man pages.
 for d in $HOMEBREW_PREFIX/opt/*/libexec/gnuman
