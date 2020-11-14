@@ -33,10 +33,7 @@ set --export MANPAGER "sh -c 'col -bx | bat -l man -p'"
 set _ignored '[' 'test'
 for d in $HOMEBREW_PREFIX/opt/*/libexec/gnubin/*
   set p (basename $d)
-  if contains $p $_ignored
-    continue
-  end
-  alias $p g$p
+  contains $p $_ignored || alias $p g$p
 end
 # Add misc GNU utils man pages.
 for d in $HOMEBREW_PREFIX/opt/*/libexec/gnuman
