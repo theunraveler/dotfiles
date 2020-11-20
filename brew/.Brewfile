@@ -152,4 +152,5 @@ mas "LimeChat", id: 414030210
 mas "Pixelmator", id: 407963104
 mas "Raindrop.io for Safari", id: 957810159
 mas "Reeder", id: 1529448980
+mas "Slack", id: 803453959
 mas "Xcode", id: 497799835
