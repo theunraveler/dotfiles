@@ -7,15 +7,14 @@ let g:loaded_netrwFileHandlers = 1
 let g:fern#default_args = '-drawer -width=35'
 let g:fern#disable_default_mappings = 1
 let g:fern#default_hidden = 1
-let g:fern#disable_drawer_auto_quit = 1
+let g:fern#disable_drawer_smart_quit = 1
 
 let g:fern#renderer#default#collapsed_symbol = '▷ '
 let g:fern#renderer#default#expanded_symbol  = '▼ '
 let g:fern#renderer#default#leading          = ' '
 let g:fern#renderer#default#leaf_symbol      = ' '
-let g:fern#renderer#default#marked_symbol    = '●'
+let g:fern#renderer#default#mark_symbol    = '●'
 let g:fern#renderer#default#root_symbol      = '~ '
-let g:fern#renderer#default#unmarked_symbol  = ''
 
 function! s:hijack_directory() abort
   let path = expand('%:p')
