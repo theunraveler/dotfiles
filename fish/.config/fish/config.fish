@@ -47,6 +47,10 @@ set --export FZF_DEFAULT_COMMAND 'rg --files --follow --hidden'
 # http://apple.stackexchange.com/questions/254468/macos-sierra-doesn-t-seem-to-remember-ssh-keys-between-reboots
 ssh-add -A &> /dev/null
 
+# GPG
+set -x GPG_TTY (tty)
+gpgconf --launch gpg-agent
+
 # direnv
 eval (direnv hook fish)
 
