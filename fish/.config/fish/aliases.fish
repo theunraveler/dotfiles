@@ -1,7 +1,7 @@
 # Overrides
 alias cat 'bat'
 abbr cp 'cp --recursive --verbose'
-alias gpg 'gpg --options $HOME/.gnupg/gpg.local.conf --options $HOME/.gnupg/gpg.conf'
+alias gpg 'gpg --options ~/.gnupg/gpg.local.conf --options ~/.gnupg/gpg.conf'
 alias grep 'ack'
 alias ls 'exa'
 abbr mkdir 'mkdir --parents --verbose'
