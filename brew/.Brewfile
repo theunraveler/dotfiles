@@ -124,10 +124,8 @@ cask "clipy"
 cask "firefox"
 cask "font-hack"
 cask "font-hack-nerd-font"
-cask "google-chrome"
 cask "gotomeeting"
 cask "gpg-suite"
-cask "handbrake"
 cask "java"
 cask "macvim"
 cask "private-internet-access"
@@ -141,8 +139,6 @@ cask "rectangle"
 cask "sketchup"
 cask "transmission"
 mas "1Password 7", id: 1333542190
-mas "Developer", id: 640199958
-mas "Free Ruler", id: 1483172210
 mas "Ka-Block!", id: 1335413823
 mas "LimeChat", id: 414030210
 mas "Pixelmator", id: 407963104
