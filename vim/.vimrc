@@ -24,12 +24,17 @@ runtime! plugins.vim
 set visualbell
 set shortmess=atIWs
 set title
-set titlestring=%f%(\ [%M]%)   " Show file name at the title
 set numberwidth=1
 set number
 set relativenumber
 set report=2
 set showmode
+
+if has('title') && (has('gui_running') || &title)
+  set titlestring=
+  set titlestring+=%t " file name
+  set titlestring+=%(\ %h%m%r%w%) " flags
+endif
 
 " Command-mode completion
 set wildignore=*.o,*.obj,*.pyc,*.swc,*.DS_STORE,*.bkp
