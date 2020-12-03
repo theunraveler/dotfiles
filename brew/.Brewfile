@@ -80,6 +80,7 @@ brew "libiconv"
 brew "libmagic"
 brew "memcached"
 brew "libmemcached"
+brew "libxmlsec1"
 brew "linklint"
 brew "mas"
 brew "mdbtools"
@@ -142,7 +143,6 @@ mas "1Password 7", id: 1333542190
 mas "Ka-Block!", id: 1335413823
 mas "LimeChat", id: 414030210
 mas "Pixelmator", id: 407963104
-mas "Raindrop.io for Safari", id: 957810159
 mas "Reeder", id: 1529448980
 mas "Slack", id: 803453959
 mas "Xcode", id: 497799835
