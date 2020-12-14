@@ -121,6 +121,7 @@ brew "v8"
 brew "watchman"
 brew "wget"
 brew "wifi-password"
+brew "yarn"
 brew "zlib"
 brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
 cask "clipy"
