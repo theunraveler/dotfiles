@@ -132,7 +132,6 @@ cask "gotomeeting"
 cask "java"
 cask "macvim"
 cask "private-internet-access"
-cask "qlcolorcode"
 cask "qlimagesize"
 cask "qlmarkdown"
 cask "qlprettypatch"
@@ -142,6 +141,7 @@ cask "rectangle"
 cask "sketchup"
 cask "transmission"
 mas "1Password 7", id: 1333542190
+mas "Free Ruler", id: 1483172210
 mas "Ka-Block!", id: 1335413823
 mas "LimeChat", id: 414030210
 mas "Pixelmator", id: 407963104
