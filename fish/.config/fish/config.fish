@@ -52,7 +52,7 @@ set -x GPG_TTY (tty)
 gpgconf --launch gpg-agent
 
 # direnv
-eval (direnv hook fish)
+direnv hook fish | source
 
 # asdf
 source $HOMEBREW_PREFIX/opt/asdf/asdf.fish
