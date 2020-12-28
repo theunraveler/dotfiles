@@ -1,6 +1,7 @@
 # Overrides
 alias cat 'bat'
 abbr cp 'cp --recursive --verbose'
+abbr diff 'colordiff'
 alias gpg 'gpg --options ~/.gnupg/gpg.local.conf --options ~/.gnupg/gpg.conf'
 alias grep 'ack'
 alias ls 'exa'
@@ -14,7 +15,7 @@ alias vim 'mvim'
 # Shorties
 abbr b 'brew'
 abbr be 'bundle exec'
-abbr d 'drush'
+abbr d 'diff'
 abbr el 'elixir'
 abbr g 'git'
 abbr k 'kill -15'
