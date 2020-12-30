@@ -1,17 +1,5 @@
 .DS_Store
 
-!asdf/.tool-versions
-composer/.composer/.htaccess
-composer/.composer/bin/*
-composer/.composer/cache
-composer/.composer/composer.lock
-composer/.composer/config.json
-composer/.composer/vendor
-drush/.drush/cache
-hammerspoon/.hammerspoon/Spoons/
-hammerspoon/.hammerspoon/_local.lua
-vim/.vim/.netrwhist
-vim/.vim/pack/
-vim/.vim/plugin/settings/local.vim
-vim/.vim/spell
-vim/.vim/undo
+git/.config/git/config.local
+gnupg/.config/gnupg/gpg.local.conf
+vim/.config/vim/plugin/settings/local.vim

@@ -1,10 +1,8 @@
 --context=2
 
-# Ctags
 --ignore-file=is:tags
-
-# Python virtual environments
 --ignore-directory=is:.venv
+--ignore-directory=is:vendor
 
 # Drupal
 --type-add=php:ext:inc,install,module,profile

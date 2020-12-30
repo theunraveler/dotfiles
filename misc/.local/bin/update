@@ -33,7 +33,7 @@ done
 
 # Store the current directory and switch to the project root.
 dir=$(pwd)
-cd "$(dirname "$(greadlink -f "$0")")/../.." || exit 1
+cd "$(dirname "$(greadlink -f "$0")")/../../.." || exit 1
 
 STASH_COUNT=$(git stash list | wc -l)
 
@@ -72,7 +72,7 @@ if command -v brew > /dev/null; then
   brew update
   HOMEBREW_NO_AUTO_UPDATE=1 HOMEBREW_NO_INSTALL_CLEANUP=1 brew upgrade --ignore-pinned --greedy
   HOMEBREW_NO_AUTO_UPDATE=1 HOMEBREW_NO_INSTALL_CLEANUP=1 brew cleanup
-  HOMEBREW_NO_AUTO_UPDATE=1 HOMEBREW_NO_INSTALL_CLEANUP=1 brew bundle --global --force --no-restart dump
+  HOMEBREW_NO_AUTO_UPDATE=1 HOMEBREW_NO_INSTALL_CLEANUP=1 brew bundle --file=./Brewfile --force --no-restart dump
   "$HOMEBREW_PREFIX/opt/fzf/install" --no-bash --no-zsh --all
   commit_if_changed "brew: Updating brews"
 fi

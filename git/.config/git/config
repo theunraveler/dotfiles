@@ -3,7 +3,7 @@
 ##########
 
 [include]
-  path = ~/.gitconfig.local
+  path = ~/.config/git/config.local
 
 ##########
 # SETTINGS
@@ -12,11 +12,9 @@
 [core]
   editor = mvim -f
   whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
-  excludesfile = ~/.gitignore
-  attributesfile = ~/.gitattributes
 
 [init]
-  templatedir = ~/.gittemplate
+  templatedir = ~/.config/git/template
 
 [branch]
   autosetuprebase = always

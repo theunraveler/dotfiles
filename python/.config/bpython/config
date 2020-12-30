@@ -1,2 +1,2 @@
 [general]
-hist_file = ~/.python_history
+hist_file = ~/.cache/python/history

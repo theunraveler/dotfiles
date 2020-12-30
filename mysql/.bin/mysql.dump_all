@@ -1,8 +1,0 @@
-#!/usr/bin/env sh
-
-date="$(date +%m-%d-%y)"
-
-mysql --user=root --password=root -Bse 'show databases' | while read -r db; do
-  echo "${db}-${date}.sql is being saved in the current directory"
-  mysqldump --user=root --password=root --single-transaction --routines --result-file="${db}-${date}.sql" "$db"
-done
