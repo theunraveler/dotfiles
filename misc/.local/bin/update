@@ -72,14 +72,10 @@ if command -v brew > /dev/null; then
   brew update
   HOMEBREW_NO_AUTO_UPDATE=1 HOMEBREW_NO_INSTALL_CLEANUP=1 brew upgrade --ignore-pinned --greedy
   HOMEBREW_NO_AUTO_UPDATE=1 HOMEBREW_NO_INSTALL_CLEANUP=1 brew cleanup
-  HOMEBREW_NO_AUTO_UPDATE=1 HOMEBREW_NO_INSTALL_CLEANUP=1 brew bundle --file=./Brewfile --force --no-restart dump
+  HOMEBREW_NO_AUTO_UPDATE=1 HOMEBREW_NO_INSTALL_CLEANUP=1 brew bundle --file="$(pwd)/Brewfile" --force --no-restart dump
   "$HOMEBREW_PREFIX/opt/fzf/install" --no-bash --no-zsh --all
   commit_if_changed "brew: Updating brews"
 fi
-
-# git submodules.
-git submodule foreach git pull
-commit_if_changed "Updating git submodules"
 
 # vim plugins
 mvim -f -c "call PackagerInit() | call packager#update({'on_finish': ':w! >>/dev/tty | quitall'})"
