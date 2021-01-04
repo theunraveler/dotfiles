@@ -1,0 +1,6 @@
+_HiStOrY_V2_
+collect(PAYMENT_METHODS);
+collect(PAYMENT_METHODS)->filter(function($a)\040{\040print_r($a);\040return\040true;\040});
+collect(PAYMENT_METHODS)->filter(function($a)\040{\040print_r(func_get_args());\040return\040true;\040});
+collect(PAYMENT_METHODS)->filter(function($method,\040$key)\040{\040print_r($method);\040print_r($key);\040return\040true;\040});
+exit()\012;
