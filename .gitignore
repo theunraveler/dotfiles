@@ -2,4 +2,5 @@
 
 git/.config/git/config.local
 gnupg/.config/gnupg/gpg.local.conf
+php/.config/psysh/psysh_history
 vim/.config/vim/plugin/settings/local.vim
