@@ -111,6 +111,9 @@ set --export ANSIBLE_CONFIG "$XDG_CONFIG_HOME"/ansible/ansible.cfg
 set --export AWS_SHARED_CREDENTIALS_FILE "$XDG_CONFIG_HOME"/aws/credentials
 set --export AWS_CONFIG_FILE "$XDG_CONFIG_HOME"/aws/config
 
+# Android dev
+set --export ANDROID_SDK_ROOT "$HOME"/Library/Android/sdk
+
 # wget
 set --export WGETRC "$XDG_CONFIG_HOME/wgetrc"
 
