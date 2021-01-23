@@ -1,4 +1,5 @@
 tap "beeftornado/rmtree"
+tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
@@ -119,6 +120,7 @@ brew "wget"
 brew "wifi-password"
 brew "yarn"
 brew "zlib"
+brew "heroku/brew/heroku"
 brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
 cask "adoptopenjdk8"
 cask "android-studio"
