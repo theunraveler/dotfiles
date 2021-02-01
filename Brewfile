@@ -136,6 +136,7 @@ cask "qlswift"
 cask "rectangle"
 cask "sketchup"
 cask "transmission"
+cask "vlc"
 mas "1Password 7", id: 1333542190
 mas "Free Ruler", id: 1483172210
 mas "Ghostery Lite", id: 1436953057
