@@ -1,8 +1,35 @@
+[aws]
+disabled = true
+
 [character]
-use_symbol_for_status = true
+error_symbol = "[✖](bold red)"
 
 [directory]
 truncate_to_repo = false
 
+[golang]
+disabled = true
+
+[kotlin]
+disabled = true
+
+[java]
+disabled = true
+
+[nodejs]
+disabled = true
+
 [package]
+disabled = true
+
+[php]
+disabled = true
+
+[python]
+disabled = true
+
+[ruby]
+disabled = true
+
+[swift]
 disabled = true
