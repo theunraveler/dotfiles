@@ -142,7 +142,6 @@ mas "Free Ruler", id: 1483172210
 mas "Ghostery Lite", id: 1436953057
 mas "LimeChat", id: 414030210
 mas "Pixelmator", id: 407963104
-mas "Raindrop.io for Safari", id: 957810159
 mas "Reeder", id: 1529448980
 mas "Slack", id: 803453959
 mas "Things", id: 904280696
