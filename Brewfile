@@ -142,6 +142,7 @@ mas "Free Ruler", id: 1483172210
 mas "Ghostery Lite", id: 1436953057
 mas "Irvue", id: 1039633667
 mas "LimeChat", id: 414030210
+mas "Pins", id: 1547106997
 mas "Pixelmator", id: 407963104
 mas "Reeder", id: 1529448980
 mas "Slack", id: 803453959
