@@ -43,6 +43,7 @@ set --export RUBY_CONFIGURE_OPTS --with-openssl-dir="$HOMEBREW_PREFIX"/opt/opens
 
 # nodejs/npm
 set --export NPM_CONFIG_USERCONFIG "$XDG_CONFIG_HOME"/npm/npmrc
+set --export npm_config_devdir "$XDG_CACHE_HOME"/node/gyp
 
 # grep
 set --export GREP_COLOR '37;45'           # BSD.
