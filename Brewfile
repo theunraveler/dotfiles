@@ -137,8 +137,8 @@ cask "transmission"
 cask "vlc"
 mas "1Password 7", id: 1333542190
 mas "Free Ruler", id: 1483172210
-mas "Ghostery Lite", id: 1436953057
 mas "Irvue", id: 1039633667
+mas "Ka-Block!", id: 1335413823
 mas "LimeChat", id: 414030210
 mas "Pins", id: 1547106997
 mas "Pixelmator", id: 407963104
