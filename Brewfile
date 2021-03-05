@@ -136,6 +136,7 @@ cask "sketchup"
 cask "transmission"
 cask "vlc"
 mas "1Password 7", id: 1333542190
+mas "AdGuard for Safari", id: 1440147259
 mas "Free Ruler", id: 1483172210
 mas "Irvue", id: 1039633667
 mas "Ka-Block!", id: 1335413823
