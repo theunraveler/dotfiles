@@ -45,6 +45,7 @@ brew "exercism"
 brew "exiftool"
 brew "fish"
 brew "fzf"
+brew "gmp"
 brew "jpeg"
 brew "gd"
 brew "ghostscript"
@@ -54,7 +55,6 @@ brew "git-extras"
 brew "git-open"
 brew "git-quick-stats"
 brew "git-secrets"
-brew "gmp"
 brew "gnu-sed"
 brew "gnu-tar"
 brew "gnupg"
@@ -77,12 +77,14 @@ brew "libiconv"
 brew "libmagic"
 brew "memcached"
 brew "libmemcached"
+brew "libphonenumber"
 brew "libxmlsec1"
 brew "linklint"
 brew "mas"
 brew "mdbtools"
 brew "mysql"
 brew "nmap"
+brew "openblas"
 brew "optipng"
 brew "p7zip"
 brew "pandoc"
@@ -139,7 +141,6 @@ mas "1Password 7", id: 1333542190
 mas "AdGuard for Safari", id: 1440147259
 mas "Free Ruler", id: 1483172210
 mas "Irvue", id: 1039633667
-mas "Ka-Block!", id: 1335413823
 mas "LimeChat", id: 414030210
 mas "Pins", id: 1547106997
 mas "Pixelmator", id: 407963104
