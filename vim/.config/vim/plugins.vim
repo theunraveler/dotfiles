@@ -10,6 +10,7 @@ function! PackagerInit() abort
   call packager#add('ervandew/supertab')
   call packager#add('jeffkreeftmeijer/vim-numbertoggle')
   call packager#add('junegunn/fzf.vim')
+  call packager#add('junegunn/vim-peekaboo')
   call packager#add('kshenoy/vim-signature')
   call packager#add('lambdalisue/fern.vim')
   call packager#add('majutsushi/tagbar')
