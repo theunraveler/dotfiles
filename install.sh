@@ -2,7 +2,7 @@
 
 WD="$(pwd)"
 DIR="$( cd "$(dirname "$0")" > /dev/null && pwd )"
-BREW_CMD="/usr/local/bin/brew"
+BREW_CMD="/opt/homebrew/bin/brew"
 
 # Install homebrew if we need to.
 if [ ! -f $BREW_CMD ]; then
@@ -24,7 +24,7 @@ find "$DIR" -type d \( ! -regex '.*/\..*' \) -depth 1 | sed 's!.*/!!' | xargs st
 echo "done."
 
 # fzf
-/usr/local/opt/fzf/install --no-bash --no-zsh --all
+/opt/homebrew/opt/fzf/install --no-bash --no-zsh --all
 
 # Install vim plugins
 if [ ! -d ~/.vim/pack/packager ]; then

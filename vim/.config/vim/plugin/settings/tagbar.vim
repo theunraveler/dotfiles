@@ -1,4 +1,4 @@
-let g:tagbar_ctags_bin = '/usr/local/bin/ctags'
+let g:tagbar_ctags_bin = '/opt/homebrew/bin/ctags'
 
 let g:tagbar_type_markdown = {
     \ 'ctagstype' : 'markdown',

@@ -9,7 +9,7 @@ set --export CLICOLOR 1
 set fish_greeting
 
 # Initialize homebrew paths
-eval (brew shellenv)
+eval (/opt/homebrew/bin/brew shellenv)
 
 # Initialize run path
 set --export PATH $XDG_BIN_HOME $PATH
