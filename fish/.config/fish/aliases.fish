@@ -38,3 +38,6 @@ alias restart 'brew services restart'
 
 # lulz
 alias fucking 'sudo'
+
+# x86
+alias x86 'arch -x86_64'
