@@ -40,7 +40,6 @@ brew "dfu-programmer"
 brew "diff-so-fancy"
 brew "direnv"
 brew "dtach"
-brew "editorconfig"
 brew "exa"
 brew "exercism"
 brew "exiftool"
@@ -59,6 +58,7 @@ brew "git-quick-stats"
 brew "git-secrets"
 brew "gnu-sed"
 brew "gnu-tar"
+brew "pinentry"
 brew "gnupg"
 brew "gts"
 brew "graphviz"
@@ -77,18 +77,17 @@ brew "openjdk"
 brew "leiningen"
 brew "libiconv"
 brew "libmagic"
-brew "memcached"
 brew "libmemcached"
 brew "libphonenumber"
 brew "libxmlsec1"
 brew "linklint"
 brew "mas"
 brew "mdbtools"
+brew "memcached"
 brew "mysql"
 brew "nmap"
 brew "optipng"
 brew "p7zip"
-brew "pandoc"
 brew "pinentry-mac"
 brew "pipenv"
 brew "postgresql"
@@ -103,7 +102,6 @@ brew "ripgrep"
 brew "rlwrap"
 brew "rpl"
 brew "rsync"
-brew "shellcheck"
 brew "siege"
 brew "socat"
 brew "starship"
@@ -123,11 +121,9 @@ brew "zlib"
 brew "heroku/brew/heroku"
 brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
 cask "clipy"
-cask "firefox"
 cask "font-hack"
 cask "font-hack-nerd-font"
 cask "gotomeeting"
-cask "intel-haxm"
 cask "macvim"
 cask "private-internet-access"
 cask "qlimagesize"
@@ -138,12 +134,16 @@ cask "qlswift"
 cask "rectangle"
 cask "sketchup"
 cask "transmission"
-cask "vlc"
 mas "1Password 7", id: 1333542190
 mas "AdGuard for Safari", id: 1440147259
 mas "Free Ruler", id: 1483172210
+mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
 mas "Irvue", id: 1039633667
+mas "Keynote", id: 409183694
 mas "LimeChat", id: 414030210
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
 mas "Pins", id: 1547106997
 mas "Pixelmator", id: 407963104
 mas "Reeder", id: 1529448980
