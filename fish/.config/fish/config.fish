@@ -85,6 +85,7 @@ direnv hook fish | source
 # asdf
 set --export ASDF_CONFIG_FILE "$XDG_CONFIG_HOME"/asdf/asdfrc
 set --export ASDF_DATA_DIR "$XDG_DATA_HOME"/asdf
+set --export ASDF_PYTHON_PATCHES_DIRECTORY "$XDG_DATA_HOME"/asdf/patches/python
 source $HOMEBREW_PREFIX/opt/asdf/asdf.fish
 
 # vim
