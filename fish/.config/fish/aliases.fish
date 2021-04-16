@@ -41,3 +41,4 @@ alias fucking 'sudo'
 
 # x86
 alias x86 'arch -x86_64'
+alias ibrew 'arch -x86_64 /usr/local/bin/brew'
