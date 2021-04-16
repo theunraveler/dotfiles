@@ -139,6 +139,7 @@ cask "sketchup"
 cask "transmission"
 mas "1Password 7", id: 1333542190
 mas "AdGuard for Safari", id: 1440147259
+mas "Day One", id: 1055511498
 mas "Free Ruler", id: 1483172210
 mas "Irvue", id: 1039633667
 mas "LimeChat", id: 414030210
