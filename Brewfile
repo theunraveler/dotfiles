@@ -10,6 +10,7 @@ brew "ack"
 brew "libyaml"
 brew "openssl@1.1"
 brew "readline"
+brew "python@3.9"
 brew "ansible"
 brew "ansible-lint"
 brew "autoconf"
@@ -78,6 +79,7 @@ brew "leiningen"
 brew "libiconv"
 brew "libmagic"
 brew "libmemcached"
+brew "protobuf"
 brew "libphonenumber"
 brew "libxmlsec1"
 brew "linklint"
@@ -91,6 +93,7 @@ brew "p7zip"
 brew "pinentry-mac"
 brew "pipenv"
 brew "postgresql"
+brew "protobuf-c"
 brew "postgis"
 brew "proctools"
 brew "proselint"
@@ -137,13 +140,8 @@ cask "transmission"
 mas "1Password 7", id: 1333542190
 mas "AdGuard for Safari", id: 1440147259
 mas "Free Ruler", id: 1483172210
-mas "GarageBand", id: 682658836
-mas "iMovie", id: 408981434
 mas "Irvue", id: 1039633667
-mas "Keynote", id: 409183694
 mas "LimeChat", id: 414030210
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
 mas "Pins", id: 1547106997
 mas "Pixelmator", id: 407963104
 mas "Reeder", id: 1529448980
