@@ -41,6 +41,7 @@ brew "dfu-programmer"
 brew "diff-so-fancy"
 brew "direnv"
 brew "dtach"
+brew "editorconfig"
 brew "exa"
 brew "exercism"
 brew "exiftool"
@@ -125,6 +126,7 @@ brew "zlib"
 brew "heroku/brew/heroku"
 brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
 cask "clipy"
+cask "firefox"
 cask "font-hack"
 cask "font-hack-nerd-font"
 cask "gotomeeting"
@@ -138,6 +140,7 @@ cask "qlswift"
 cask "rectangle"
 cask "sketchup"
 cask "transmission"
+cask "vlc"
 mas "1Password 7", id: 1333542190
 mas "AdGuard for Safari", id: 1440147259
 mas "Day One", id: 1055511498
