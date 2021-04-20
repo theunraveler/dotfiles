@@ -2,20 +2,20 @@
 
 WD="$(pwd)"
 DIR="$( cd "$(dirname "$0")" > /dev/null && pwd )"
-BREW_CMD="/opt/homebrew/bin/brew"
+BREW_DIR="/opt/homebrew"
 
 # Install homebrew if we need to.
-if [ ! -f $BREW_CMD ]; then
-  echo "Installing homebrew..."
-  ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
-else
+if [ -f "$BREW_DIR/bin/homebrew" ]; then
   echo "Homebrew already installed"
+else
+  echo "Installing homebrew..."
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 # Install homebrew packages.
 printf "Installing homebrew packages..."
-"$BREW_CMD" tap homebrew/bundle > /dev/null
-"$BREW_CMD" bundle --file="$DIR/Brewfile" --no-lock > /dev/null
+"$BREW_DIR/bin/homebrew" tap homebrew/bundle > /dev/null
+"$BREW_DIR/bin/homebrew" bundle --file="$DIR/Brewfile" --no-lock > /dev/null
 echo "done."
 
 # Symlink everything.
@@ -24,14 +24,14 @@ find "$DIR" -type d \( ! -regex '.*/\..*' \) -depth 1 | sed 's!.*/!!' | xargs st
 echo "done."
 
 # fzf
-/opt/homebrew/opt/fzf/install --no-bash --no-zsh --all
+"$BREW_DIR"/opt/fzf/install --no-bash --no-zsh --all
 
 # Install vim plugins
-if [ ! -d ~/.vim/pack/packager ]; then
-  git clone https://github.com/kristijanhusak/vim-packager ~/.vim/pack/packager/opt/vim-packager
+if [ ! -d ~/.local/share/vim/pack/packager ]; then
+  git clone https://github.com/kristijanhusak/vim-packager ~/.local/share/vim/pack/packager/opt/vim-packager
 fi
 mvim -f -c "call PackagerInit() | call packager#install({'on_finish': ':w! >>/dev/tty | quitall'})"
 
-# Finally, go back to where the user started.
+# Finally, go back to where we started.
 cd "$WD" > /dev/null || exit 1
 exit 0
