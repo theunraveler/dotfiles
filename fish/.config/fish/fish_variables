@@ -5,7 +5,6 @@ SETUVAR _fish_abbr_b:brew
 SETUVAR _fish_abbr_be:bundle\x20exec
 SETUVAR _fish_abbr_cp:cp\x20\x2d\x2drecursive\x20\x2d\x2dverbose
 SETUVAR _fish_abbr_d:diff
-SETUVAR _fish_abbr_diff:colordiff
 SETUVAR _fish_abbr_dns_2E_clear:dscacheutil\x20\x2dflushcache
 SETUVAR _fish_abbr_el:elixir
 SETUVAR _fish_abbr_g:git

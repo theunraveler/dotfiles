@@ -44,6 +44,9 @@
 [pager]
   diff = diff-so-fancy | less --tabs=4 --RAW-CONTROL-CHARS --quit-if-one-screen --no-init --chop-long-lines
 
+[interactive]
+	diffFilter = diff-so-fancy --patch
+
 ########
 # COLORS
 ########
@@ -57,25 +60,24 @@
   remote = green
 
 [color "diff"]
-  meta = yellow bold
+  commit = yellow bold
   frag = magenta bold
-  old = red bold
+  func = 146 bold
+  meta = 11
   new = green bold
+  old = red bold
+  whitespace = red reverse
+
+[color "diff-highlight"]
+  newNormal = green bold
+  newHighlight = green bold 22
+  oldNormal = red bold
+  oldHighlight = red bold 52
 
 [color "status"]
   added = yellow
   changed = green
   untracked = cyan
-
-[color "diff"]
-  whitespace = red reverse
-
-######
-# HUB
-######
-
-[hub]
-  protocol = https
 
 #####
 # GPG
@@ -98,7 +100,6 @@
   cl = clone
   co = checkout
   ctags = !$(git cd-root).git/hooks/ctags
-  issues = "!hub issue"
   patch = !git --no-pager diff --no-color
   s = show
   spp = !git stash && git pull && git stash pop

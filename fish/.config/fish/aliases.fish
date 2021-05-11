@@ -1,7 +1,6 @@
 # Overrides
 alias cat 'bat'
 abbr cp 'cp --recursive --verbose'
-abbr diff 'colordiff'
 alias gpg 'gpg --options ~/.config/gnupg/gpg.local.conf --options ~/.config/gnupg/gpg.conf'
 alias grep 'ack'
 alias ls 'exa'
