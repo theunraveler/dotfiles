@@ -1,4 +1,9 @@
+# Removes `asdf` shims from homebrew path.
+# See https://github.com/pyenv/pyenv/issues/106#issuecomment-779325818.
+set path_without_asdf "(string replace $ASDF_DATA_DIR/shims '' (echo $PATH))"
+
 # Overrides
+alias brew="env PATH=(string replace /usr/local/bin '' (echo $path_without_asdf)) brew"
 alias cat 'bat'
 abbr cp 'cp --recursive --verbose'
 alias gpg 'gpg --options ~/.config/gnupg/gpg.local.conf --options ~/.config/gnupg/gpg.conf'
@@ -40,4 +45,4 @@ alias fucking 'sudo'
 
 # x86
 alias x86 'arch -x86_64'
-alias ibrew 'arch -x86_64 /usr/local/bin/brew'
+alias ibrew "arch -x86_64 env PATH=(string replace $HOMEBREW_PREFIX/bin '' (echo $path_without_asdf)) /usr/local/bin/brew"
