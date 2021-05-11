@@ -12,4 +12,4 @@ Installation
 Update
 ------
 
-* Run `dotfiles.up`. This will update brews, zsh, etc.
+* Run `update`. This will update brews, vim plugins, etc.
