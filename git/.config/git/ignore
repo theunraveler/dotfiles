@@ -22,6 +22,7 @@ Temporary Items
 .apdisk
 
 # Ctags files
+*.tags
 tags
 tags.lock
 tags.temp
