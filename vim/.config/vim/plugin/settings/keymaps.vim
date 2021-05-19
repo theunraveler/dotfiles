@@ -72,7 +72,7 @@ nmap <leader>f <Plug>(ale_fix)
 
 " fzf
 function! FZFOpen(command_str)
-  if (expand('%') =~# 'NERD_tree' && winnr('$') > 1)
+  if (expand('%') =~# 'fern://' && winnr('$') > 1)
     exe "normal! \<C-w>\<C-w>"
   endif
   exe 'normal! ' . a:command_str . "\<cr>"
