@@ -1,0 +1,3 @@
+[submodule "bat/.config/bat/themes/sublime-snazzy"]
+	path = bat/.config/bat/themes/sublime-snazzy
+	url = https://github.com/greggb/sublime-snazzy

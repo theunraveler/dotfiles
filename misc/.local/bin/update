@@ -81,6 +81,13 @@ fi
 mvim -f -c "call PackagerInit() | call packager#update({'on_finish': ':w! >>/dev/tty | quitall'})"
 commit_if_changed "vim: Updating plugins"
 
+# git submodules
+git submodule foreach git pull
+commit_if_changed "git: Updating submodules"
+
+# Update bat cache
+bat cache --build
+
 # asdf plugins
 asdf plugin update --all
 commit_if_changed "asdf: Updating plugins"

@@ -55,6 +55,9 @@ set --export ACKRC "$XDG_CONFIG_HOME/ack/ackrc"
 # man
 set --export MANPAGER "sh -c 'col -bx | bat -l man -p'"
 
+# bat
+set --export BAT_THEME 'Sublime Snazzy'
+
 # GNU utils.
 # Reference GNU utils instead of built-in ones.
 set _ignored '[' 'test'
