@@ -49,8 +49,8 @@ set --export npm_config_devdir "$XDG_CACHE_HOME"/node/gyp
 set --export GREP_COLOR '37;45'           # BSD.
 set --export GREP_COLORS "mt=$GREP_COLOR" # GNU.
 
-# ack
-set --export ACKRC "$XDG_CONFIG_HOME/ack/ackrc"
+# ripgrep
+set --export RIPGREP_CONFIG_PATH "$XDG_CONFIG_HOME/ripgrep/config"
 
 # man
 set --export MANPAGER "sh -c 'col -bx | bat -l man -p'"

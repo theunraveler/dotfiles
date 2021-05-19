@@ -5,5 +5,5 @@ set hlsearch      " Highlight matched regexp
 set ignorecase
 set smartcase     " Intelligent case-smart searching
 
-set grepprg=ack
-set grepformat=%f:%l:%m
+set grepprg=rg\ --vimgrep\ --no-heading
+set grepformat=%f:%l:%c:%m,%f:%l:%m
