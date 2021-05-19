@@ -71,7 +71,7 @@ for d in $HOMEBREW_PREFIX/opt/*/libexec/gnuman
 end
 
 # fzf
-set --export FZF_DEFAULT_COMMAND 'rg --files --follow --hidden'
+set --export FZF_DEFAULT_COMMAND 'rg --files --follow --hidden --glob=!.git'
 
 # Add SSH keys from keychain.
 # http://apple.stackexchange.com/questions/254468/macos-sierra-doesn-t-seem-to-remember-ssh-keys-between-reboots
