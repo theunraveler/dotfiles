@@ -39,7 +39,8 @@ set --export GEMRC "$XDG_CONFIG_HOME"/gem/gemrc
 set --export GEM_HOME "$XDG_DATA_HOME"/gem
 set --export GEM_SPEC_CACHE "$XDG_CACHE_HOME"/gem
 set --export IRBRC "$XDG_CONFIG_HOME"/irb/irbrc
-set --export RUBY_CONFIGURE_OPTS --with-openssl-dir="$HOMEBREW_PREFIX"/opt/openssl@1.1 # https://github.com/rbenv/ruby-build/wiki#suggested-build-environment
+# https://github.com/rbenv/ruby-build/wiki#suggested-build-environment
+set --export RUBY_CONFIGURE_OPTS --with-readline-dir="$HOMEBREW_PREFIX"/opt/readline --with-openssl-dir="$HOMEBREW_PREFIX"/opt/openssl@1.1
 
 # nodejs/npm
 set --export NPM_CONFIG_USERCONFIG "$XDG_CONFIG_HOME"/npm/npmrc
