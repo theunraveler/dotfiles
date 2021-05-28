@@ -29,9 +29,6 @@ set hidden                  " Avoid asking to save before hiding
 " Fixes funny things when we use non-POSIX-compliant shells, like fish.
 set shell=/bin/sh
 
-filetype on
-filetype off
-
 " Load fzf from homebrew
 " This needs to happen before we load plugins so that the `fzf.vim` plugin can
 " find it.
