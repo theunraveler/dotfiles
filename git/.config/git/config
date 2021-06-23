@@ -42,10 +42,13 @@
   compactionHeuristic = true
 
 [pager]
-  diff = diff-so-fancy | less --tabs=4 --RAW-CONTROL-CHARS --quit-if-one-screen --no-init --chop-long-lines
+  diff = delta
+  log = delta
+  reflog = delta
+  show = delta
 
 [interactive]
-	diffFilter = diff-so-fancy --patch
+  diffFilter = delta --color-only
 
 ########
 # COLORS
@@ -132,3 +135,12 @@
   patterns = (\"|')?(AWS|aws|Aws)?_?(ACCOUNT|account|Account)_?(ID|id|Id)?(\"|')?\\s*(:|=>|=)\\s*(\"|')?[0-9]{4}\\-?[0-9]{4}\\-?[0-9]{4}(\"|')?
   allowed = AKIAIOSFODNN7EXAMPLE
   allowed = wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+
+###########
+# git-delta
+###########
+
+[delta]
+  syntax-theme = Sublime Snazzy
+  navigate = true
+  line-numbers = true
