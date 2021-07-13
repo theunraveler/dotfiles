@@ -1,4 +1,5 @@
 let g:tagbar_ctags_bin = $HOMEBREW_PREFIX . '/bin/ctags'
+let g:tagbar_compact = 2
 
 let g:tagbar_type_markdown = {
     \ 'ctagstype' : 'markdown',
