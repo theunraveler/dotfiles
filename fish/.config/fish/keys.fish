@@ -1,0 +1,1 @@
+bind \cZ 'fg'
