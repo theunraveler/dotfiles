@@ -17,6 +17,7 @@ alias vi 'mvim'
 alias vim 'mvim'
 
 # Shorties
+abbr - 'cd -'
 abbr b 'brew'
 abbr be 'bundle exec'
 abbr d 'diff'
