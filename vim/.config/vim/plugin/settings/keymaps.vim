@@ -59,8 +59,8 @@ cnoremap w!! w !sudo tee % >/dev/null
 nmap <Leader>w :w<cr>
 
 " Commenting
-nmap <leader>/ :call NERDComment("n", "Toggle")<cr>
-vmap <leader>/ :call NERDComment("n", "Toggle")<cr>
+nmap <leader>/ :call nerdcommenter#Comment("n", "Toggle")<cr>
+vmap <leader>/ :call nerdcommenter#Comment("n", "Toggle")<cr>
 
 " fern
 nmap - :execute printf('Fern . -reveal=%% %s', g:fern#default_args) <cr>
