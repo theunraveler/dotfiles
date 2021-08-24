@@ -5,6 +5,9 @@
 [include]
   path = ~/.config/git/config.local
 
+[includeIf "gitdir:~/Code/umn/"]
+  path = ~/.config/git/config.umn.local
+
 ##########
 # SETTINGS
 ##########
