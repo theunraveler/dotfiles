@@ -74,6 +74,7 @@ brew "starship"
 brew "stow"
 brew "watchman"
 brew "wget"
+brew "zlib"
 brew "raggi/ale/openssl-osx-ca"
 brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
 cask "clipy"
