@@ -99,6 +99,9 @@ set --export PGSERVICEFILE "$XDG_CONFIG_HOME"/postgres/service.conf
 # MySQL
 set --export MYSQL_HISTFILE "$XDG_CACHE_HOME"/mysql/history
 
+# sqlite
+set --export SQLITE_HISTORY "$XDG_CACHE_HOME"/sqlite/history
+
 # aspell
 set --export ASPELL_CONF "per-conf $XDG_CONFIG_HOME/aspell/aspell.conf; personal $XDG_DATA_HOME/aspell/en.pws; repl $XDG_DATA_HOME/aspell/en.prepl"
 
