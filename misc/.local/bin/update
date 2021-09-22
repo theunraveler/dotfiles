@@ -53,7 +53,7 @@ commit_if_changed() {
   if [ $NO_COMMIT -eq 1 ]; then return; fi
   if [ "$(git status --porcelain | wc -l)" -eq 0 ]; then return; fi
   git add .
-  msg=${1:-"Updating submodules, vim plugins, and/or brew list."}
+  msg=${1:-"Updating submodules, plugins, and/or brew list."}
   git ci -m "$msg"
 }
 
@@ -76,10 +76,6 @@ if command -v brew > /dev/null; then
   "$HOMEBREW_PREFIX/opt/fzf/install" --no-bash --no-zsh --all
   commit_if_changed "brew: Updating brews"
 fi
-
-# vim plugins
-mvim -f -c "call PackagerInit() | call packager#update({'on_finish': ':w! >>/dev/tty | quitall'})"
-commit_if_changed "vim: Updating plugins"
 
 # git submodules
 git submodule foreach git pull
