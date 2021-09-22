@@ -4,6 +4,7 @@ function! PackagerInit() abort
   call packager#add('kristijanhusak/vim-packager', { 'type': 'opt' })
 
   call packager#add('airblade/vim-gitgutter')
+  call packager#add('bagrat/vim-buffet')
   call packager#add('bitc/vim-bad-whitespace')
   call packager#add('dbakker/vim-projectroot')
   call packager#add('editorconfig/editorconfig-vim')

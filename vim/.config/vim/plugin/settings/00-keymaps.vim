@@ -4,6 +4,9 @@
 " core or a plugin (keymappings are easier to read and debug if they're all in
 " the same place).
 
+" This file has to be loaded before all other config so that the leader key and
+" stuff get set right.
+
 let mapleader = "\<space>"
 
 " Fixing some vim defaults baddy
