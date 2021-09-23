@@ -70,9 +70,6 @@ for d in $HOMEBREW_PREFIX/opt/*/libexec/gnuman
   set --export MANPATH $d $MANPATH
 end
 
-# fzf
-set --export FZF_DEFAULT_COMMAND 'rg --files --follow --hidden --glob=!.git'
-
 # GPG
 set --export GNUPGHOME "$XDG_DATA_HOME"/gnupg
 set --export GPG_TTY (tty)

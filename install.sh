@@ -23,9 +23,6 @@ printf 'Linking items from %s to home directory...' "$DIR"
 find "$DIR" -type d \( ! -regex '.*/\..*' \) -depth 1 | sed 's!.*/!!' | xargs stow --dir="$DIR" --target="$HOME" --restow
 echo "done."
 
-# fzf
-"$BREW_DIR"/opt/fzf/install --no-bash --no-zsh --all
-
 # Finally, go back to where we started.
 cd "$WD" > /dev/null || exit 1
 exit 0
