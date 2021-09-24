@@ -1,0 +1,3 @@
+" Markdown
+
+setlocal spell lbr

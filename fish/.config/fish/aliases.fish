@@ -13,8 +13,8 @@ abbr mkdir 'mkdir --parents --verbose'
 abbr mv 'mv --verbose'
 abbr rsync 'rsync -arxvz --rsh=ssh --progress --exclude-from=$HOME/.config/rsync/exclude'
 abbr rm 'rm --recursive --verbose'
-alias vi 'code'
-alias vim 'code'
+alias vi 'mvim'
+alias vim 'mvim'
 
 # Shorties
 abbr - 'cd -'
@@ -29,7 +29,7 @@ alias ll 'exa --long --classify --git --all'
 abbr o 'open'
 abbr py 'python'
 abbr rb 'ruby'
-alias v 'code'
+alias v 'mvim'
 
 # DNS/Network
 abbr dns.clear 'dscacheutil -flushcache'
