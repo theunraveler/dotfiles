@@ -98,18 +98,15 @@
 
 [alias]
   br = branch
-  cd-root = rev-parse --show-cdup
   ci = commit
   cl = clone
   co = checkout
-  ctags = !$(git cd-root).git/hooks/ctags
+  ctags = !$(git root).git/hooks/ctags
   patch = !git --no-pager diff --no-color
   s = show
   spp = !git stash && git pull && git stash pop
   st = status -sb
   sync-branches = fetch -p
-  w = whatchanged
-  whoami = config user.email
 
   # Logging
   l  = log --oneline --decorate
@@ -120,9 +117,6 @@
 
   # A better git pull. See http://stackoverflow.com/a/15316602.
   up = "!git remote update -p; git merge --ff-only @{u}"
-
-  # Resetting
-  fresh = !git fetch --all && git reset --hard origin/master -
 
 #########
 # SECRETS
