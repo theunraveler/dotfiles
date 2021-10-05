@@ -77,6 +77,7 @@ brew "wget"
 brew "zlib"
 brew "raggi/ale/openssl-osx-ca"
 brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
+cask "1password-cli"
 cask "bespoke"
 cask "clipy"
 cask "firefox"
