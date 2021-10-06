@@ -45,6 +45,9 @@ set --export RUBY_CONFIGURE_OPTS --with-readline-dir="$HOMEBREW_PREFIX"/opt/read
 set --export NPM_CONFIG_USERCONFIG "$XDG_CONFIG_HOME"/npm/npmrc
 set --export npm_config_devdir "$XDG_CACHE_HOME"/node/gyp
 
+# Elixir
+set --export MIX_XDG 1
+
 # grep
 set --export GREP_COLOR '37;45'           # BSD.
 set --export GREP_COLORS "mt=$GREP_COLOR" # GNU.
