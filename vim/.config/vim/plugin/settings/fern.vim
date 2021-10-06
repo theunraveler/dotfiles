@@ -16,6 +16,8 @@ let g:fern#renderer#default#leaf_symbol      = ' '
 let g:fern#renderer#default#mark_symbol    = '●'
 let g:fern#renderer#default#root_symbol      = '~ '
 
+let g:fern#renderer = 'nerdfont'
+
 function! s:hijack_directory() abort
   let path = expand('%:p')
   if !isdirectory(path)
