@@ -1,6 +1,6 @@
-if has('gui_running')
+if has("gui_running")
   set cursorline
-  set gfn:Hack\ Nerd\ Font:h12
+  set gfn:Hack:h12
 
   " Don't show toolbar and scrollbars
   set guioptions-=T to
