@@ -14,7 +14,6 @@ nmap <leader>9 <Plug>BuffetSwitch(9)
 nmap <leader>0 <Plug>BuffetSwitch(10)
 
 function! g:BuffetSetCustomColors()
-  highlight! link BuffetTab Normal
   highlight! link BuffetCurrentBuffer CursorLine
   highlight! link BuffetActiveBuffer Comment
   highlight! link BuffetBuffer Comment
