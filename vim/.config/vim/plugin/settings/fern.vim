@@ -8,13 +8,7 @@ let g:fern#default_args = '-drawer -width=35'
 let g:fern#disable_default_mappings = 1
 let g:fern#default_hidden = 1
 let g:fern#disable_drawer_smart_quit = 1
-
-let g:fern#renderer#default#collapsed_symbol = '▷ '
-let g:fern#renderer#default#expanded_symbol  = '▼ '
-let g:fern#renderer#default#leading          = ' '
-let g:fern#renderer#default#leaf_symbol      = ' '
-let g:fern#renderer#default#mark_symbol    = '●'
-let g:fern#renderer#default#root_symbol      = '~ '
+let g:fern#renderer = 'nerdfont'
 
 function! s:hijack_directory() abort
   let path = expand('%:p')
@@ -47,6 +41,12 @@ function! FernInit() abort
   nmap <buffer> v <Plug>(fern-action-open:vsplit)
   nmap <buffer><nowait> < <Plug>(fern-action-leave)
   nmap <buffer><nowait> > <Plug>(fern-action-enter)
+
+  " The nerdfont renderer doesn't map things very well.
+  highlight! link FernLeafSymbol   None
+  highlight! link FernLeafText     None
+  highlight! link FernBranchSymbol Directory
+  highlight! link FernBranchText   Directory
 endfunction
 
 augroup FernGroup

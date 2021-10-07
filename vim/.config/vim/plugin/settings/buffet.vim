@@ -1,6 +1,4 @@
 let g:buffet_show_index = 1
-let g:buffet_tab_icon = '                                 '
-let g:buffet_separator = '|'
 let g:buffet_new_buffer_name = ' [*]'
 let g:buffet_modified_icon = ' [+]'
 
@@ -16,9 +14,20 @@ nmap <leader>9 <Plug>BuffetSwitch(9)
 nmap <leader>0 <Plug>BuffetSwitch(10)
 
 function! g:BuffetSetCustomColors()
-  highlight! link BuffetBuffer Normal
   highlight! link BuffetTab Normal
   highlight! link BuffetCurrentBuffer CursorLine
   highlight! link BuffetActiveBuffer Comment
   highlight! link BuffetBuffer Comment
+  highlight! link BuffetTab Comment
 endfunction
+
+" Moves the tabbar over when the fern sidebar is present.
+function! BuffetUpdatePaddingForSidebar()
+  let nr = get(filter(range(winnr()), 'getbufvar(winbufnr(v:val), "&filetype") ==# "fern"'), 0, -1)
+  let g:buffet_tab_icon = (nr < 0 ? '' : repeat(' ', winwidth(nr))) . "\uf00a "
+endfunction
+
+augroup BuffetPadding
+  autocmd!
+  autocmd VimEnter,BufAdd,BufCreate,BufDelete,BufWipeout * call BuffetUpdatePaddingForSidebar()
+augroup END
