@@ -73,7 +73,6 @@ brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
 cask "bespoke"
 cask "clipy"
 cask "firefox"
-cask "font-hack"
 cask "font-hack-nerd-font"
 cask "gotomeeting"
 cask "macvim"
