@@ -1,5 +1,3 @@
-" Statusline
-
 set statusline=%t\                        " tail of the filename
 set statusline+=%h                        " help file flag
 set statusline+=%m                        " modified flag

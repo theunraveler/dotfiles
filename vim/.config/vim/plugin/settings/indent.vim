@@ -1,5 +1,3 @@
-" Indentation
-
 set smartindent
 set expandtab
 set shiftround

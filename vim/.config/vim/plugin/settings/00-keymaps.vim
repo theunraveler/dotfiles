@@ -1,5 +1,3 @@
-" Keymaps
-"
 " This is where we set all key mappings, regardless of if they come from vim
 " core or a plugin (keymappings are easier to read and debug if they're all in
 " the same place).
