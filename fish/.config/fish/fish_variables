@@ -17,7 +17,7 @@ SETUVAR _fish_abbr_o:open
 SETUVAR _fish_abbr_py:python
 SETUVAR _fish_abbr_rb:ruby
 SETUVAR _fish_abbr_rm:rm\x20\x2d\x2drecursive\x20\x2d\x2dverbose
-SETUVAR _fish_abbr_rsync:rsync\x20\x2darxvz\x20\x2d\x2drsh\x3dssh\x20\x2d\x2dprogress\x20\x2d\x2dexclude\x2dfrom\x3d\x24HOME/\x2econfig/rsync/exclude
+SETUVAR _fish_abbr_rsync:rsync\x20\x2darxvz\x20\x2d\x2drsh\x3dssh\x20\x2d\x2dprogress\x20\x2d\x2dexclude\x2dfrom\x3d\x24HOME/\x2ersync_exclude
 SETUVAR fish_color_autosuggestion:969896
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:5af78e

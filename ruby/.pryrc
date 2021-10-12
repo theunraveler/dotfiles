@@ -2,7 +2,6 @@
 # Configurations
 # ==============================
 
-Pry.config.history_file = File.join(ENV['XDG_CACHE_HOME'], 'irb', 'history')
 Pry.config.editor = ENV['EDITOR']
 
 if defined?(PryByebug)

@@ -6,12 +6,11 @@ set path_without_asdf "(string replace $ASDF_DATA_DIR/shims '' (echo $PATH))"
 alias brew="env PATH=(string replace /usr/local/bin '' (echo $path_without_asdf)) brew"
 alias cat 'bat'
 abbr cp 'cp --recursive --verbose'
-alias gpg 'gpg --options ~/.config/gnupg/gpg.local.conf --options ~/.config/gnupg/gpg.conf'
 alias grep 'ack'
 alias ls 'exa'
 abbr mkdir 'mkdir --parents --verbose'
 abbr mv 'mv --verbose'
-abbr rsync 'rsync -arxvz --rsh=ssh --progress --exclude-from=$HOME/.config/rsync/exclude'
+abbr rsync 'rsync -arxvz --rsh=ssh --progress --exclude-from=$HOME/.rsync_exclude'
 abbr rm 'rm --recursive --verbose'
 alias vi 'mvim'
 alias vim 'mvim'

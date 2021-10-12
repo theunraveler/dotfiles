@@ -1,6 +1,6 @@
 .DS_Store
 
 git/.config/git/*.local
-gnupg/.config/gnupg/gpg.local.conf
-php/.config/psysh/psysh_history
-vim/.config/vim/plugin/settings/local.vim
+vim/.vim/pack/
+vim/.vim/undo/
+vim/.vim/plugin/settings/local.vim

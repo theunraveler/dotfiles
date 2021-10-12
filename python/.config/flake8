@@ -1,2 +1,0 @@
-[flake8]
-exclude = .git,.ropeproject,.venv,bower_components,node_modules

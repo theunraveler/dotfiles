@@ -33,7 +33,7 @@ done
 
 # Store the current directory and switch to the project root.
 dir=$(pwd)
-cd "$(dirname "$(greadlink -f "$0")")/../../.." || exit 1
+cd "$(dirname "$(greadlink -f "$0")")/../.." || exit 1
 
 STASH_COUNT=$(git stash list | wc -l)
 

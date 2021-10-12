@@ -1,7 +1,6 @@
 IRB.conf[:PROMPT_MODE] = :SIMPLE
 IRB.conf[:EVAL_HISTORY] = 1000
 IRB.conf[:SAVE_HISTORY] = 1000
-IRB.conf[:HISTORY_FILE] ||= File.join(ENV['XDG_CACHE_HOME'], 'irb', 'history')
 
 # Use Pry everywhere
 # source: https://github.com/lucapette/dotfiles/blob/master/irbrc
