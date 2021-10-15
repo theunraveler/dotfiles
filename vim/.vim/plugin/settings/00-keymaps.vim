@@ -10,7 +10,6 @@ let mapleader = "\<space>"
 " Fixing some vim defaults baddy
 nnoremap j gj
 nnoremap k gk
-inoremap <C-space> <esc>
 
 " Making Y behave like C and D
 nnoremap Y y$
@@ -19,23 +18,13 @@ nnoremap Y y$
 vnoremap < <gv
 vnoremap > >gv
 
-" New line when in insert mode
-inoremap <C-cr> <esc>A<cr>
-
 " Search only in the selected block (visual mode)
 vnoremap / <esc>/\%V
-
-" Play macro with Q
-nnoremap Q @q
-vnoremap Q :norm @q<cr>
 
 " Buffer management
 nmap <leader>n :bnext<cr>
 nmap <leader>p :bprev<cr>
 nmap <leader>c :Bclose<cr>
-nmap <leader>l :ls<cr>:b<space>
-nmap <C-tab> :bnext<cr>
-nmap <C-S-tab> :bprev<cr>
 
 " Easier buffer nav
 noremap <C-h> <C-w>h
@@ -52,12 +41,6 @@ nmap <leader>s<left>   :leftabove vnew<cr>
 nmap <leader>s<right>  :rightbelow vnew<cr>
 nmap <leader>s<up>     :leftabove new<cr>
 nmap <leader>s<down>   :rightbelow new<cr>
-
-" Sudo save
-cnoremap w!! w !sudo tee % >/dev/null
-
-" Save the file with <Leader>w
-nmap <Leader>w :w<cr>
 
 " Commenting
 nmap <leader>/ :call nerdcommenter#Comment("n", "Toggle")<cr>
@@ -80,11 +63,8 @@ function! FZFOpen(command_str)
 endfunction
 nmap <C-p> :call FZFOpen(':Files')<cr>
 nmap <leader>h :call FZFOpen(':History')<cr>
-nmap <leader>t :call FZFOpen(':BTags')<cr>
-nmap <leader>T :call FZFOpen(':Tags')<cr>
-
-" ctags
-nmap <leader>ct :call s:Ctags()<cr>
+nmap <leader>t :call FZFOpen(':Tags')<cr>
+nmap <leader>l :call FZFOpen(':Buffers')<cr>
 
 " Open docs in devdocs.io
 nmap K <Plug>(devdocs-under-cursor)
