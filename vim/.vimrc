@@ -47,7 +47,7 @@ set textwidth=79
 set formatoptions=qrn1
 
 " History and backup
-set viminfo='10,:20,\"100,%,n~/.viminfo
+set viminfo='10,:20,\"100,h
 set nobackup
 set nowritebackup
 set noswapfile
