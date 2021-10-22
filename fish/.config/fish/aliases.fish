@@ -7,7 +7,7 @@ alias brew="env PATH=(string replace /usr/local/bin '' (echo $path_without_asdf)
 alias cat 'bat'
 abbr cp 'cp --recursive --verbose'
 alias grep 'ack'
-alias ls 'exa'
+alias ls "exa $EXA_DEFAULT_OPTIONS"
 abbr mkdir 'mkdir --parents --verbose'
 abbr mv 'mv --verbose'
 abbr rsync 'rsync -arxvz --rsh=ssh --progress --exclude-from=$HOME/.rsync_exclude'
@@ -23,8 +23,8 @@ abbr d 'diff'
 abbr el 'elixir'
 abbr g 'git'
 abbr k 'kill -15'
-alias l 'exa --long --classify --git'
-alias ll 'exa --long --classify --git --all'
+alias l "exa $EXA_DEFAULT_OPTIONS --long --classify --git"
+alias ll "exa $EXA_DEFAULT_OPTIONS --long --classify --git --all"
 abbr o 'open'
 abbr py 'python'
 abbr rb 'ruby'

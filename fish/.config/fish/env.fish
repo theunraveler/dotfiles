@@ -56,3 +56,7 @@ set --export ASDF_PYTHON_PATCHES_DIRECTORY "$ASDF_DIR"/patches/python
 
 # Android dev
 set --export ANDROID_SDK_ROOT "$HOME"/Library/Android/sdk
+
+# exa
+set --export EXA_ICON_SPACING 2
+set --export EXA_DEFAULT_OPTIONS '--icons --header'
