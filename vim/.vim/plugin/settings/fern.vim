@@ -4,6 +4,7 @@ let g:loaded_netrwPlugin       = 1
 let g:loaded_netrwSettings     = 1
 let g:loaded_netrwFileHandlers = 1
 
+let g:fern#comparator = 'lexical'
 let g:fern#default_args = '-drawer -width=35'
 let g:fern#disable_default_mappings = 1
 let g:fern#default_hidden = 1
