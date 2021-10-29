@@ -69,6 +69,7 @@ brew "stow"
 brew "watchman"
 brew "wget"
 brew "zlib"
+brew "cooklang/tap/cook", args: ["HEAD"]
 brew "raggi/ale/openssl-osx-ca"
 brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
 cask "bespoke"
