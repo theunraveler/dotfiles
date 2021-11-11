@@ -11,6 +11,8 @@ let g:fern#default_hidden = 1
 let g:fern#disable_drawer_smart_quit = 1
 let g:fern#renderer = 'nerdfont'
 
+let g:fern#comparator#lexical#case_sensitive = 0
+
 function! s:hijack_directory() abort
   let path = expand('%:p')
   if !isdirectory(path)

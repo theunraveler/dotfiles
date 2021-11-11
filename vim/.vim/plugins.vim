@@ -13,7 +13,7 @@ function! PackagerInit() abort
   call packager#add('junegunn/fzf.vim')
   call packager#add('junegunn/vim-peekaboo')
   call packager#add('kshenoy/vim-signature')
-  call packager#add('lambdalisue/fern-comparator-lexical.vim')
+  call packager#add('theunraveler/fern-comparator-lexical.vim', {'branch': 'case_insensitive'})
   call packager#add('lambdalisue/fern-renderer-nerdfont.vim', {'requires': 'lambdalisue/nerdfont.vim'})
   call packager#add('lambdalisue/fern.vim')
   call packager#add('mg979/vim-visual-multi')
