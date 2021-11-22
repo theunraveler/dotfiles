@@ -73,7 +73,6 @@ brew "zlib"
 brew "cooklang/tap/cook"
 brew "raggi/ale/openssl-osx-ca"
 brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
-cask "bespoke"
 cask "clipy"
 cask "firefox"
 cask "font-hack-nerd-font"
