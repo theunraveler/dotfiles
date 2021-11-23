@@ -15,6 +15,7 @@ let s:plugins = [
   \ 'kshenoy/vim-signature',
   \ ['lambdalisue/fern-renderer-nerdfont.vim', {'requires': 'lambdalisue/nerdfont.vim'}],
   \ 'lambdalisue/fern.vim',
+  \ ['luizribeiro/vim-cooklang', { 'for': 'cook' }],
   \ 'mg979/vim-visual-multi',
   \ 'preservim/nerdcommenter',
   \ 'preservim/tagbar',
