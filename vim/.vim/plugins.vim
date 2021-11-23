@@ -1,6 +1,6 @@
 let s:plugins = [
   "\ Start with vim-packager.
-  \['kristijanhusak/vim-packager', { 'type': 'opt' }],
+  \['kristijanhusak/vim-packager', {'type': 'opt'}],
   \
   "\ Plugins.
   \ 'airblade/vim-gitgutter',
@@ -36,7 +36,10 @@ let s:plugins = [
   \ 'connorholyday/vim-snazzy'
 \]
 
-function! s:packager_init(packager) abort
+function! PackagerInit() abort
+  packadd vim-packager
+  call packager#init()
+
   for plugin in s:plugins
     if type(plugin) == v:t_list
       let [name, kwargs] = plugin
@@ -44,9 +47,11 @@ function! s:packager_init(packager) abort
       let name = plugin
       let kwargs = {}
     endif
-    call a:packager.add(name, kwargs)
+    call packager#add(name, kwargs)
   endfor
 endfunction
 
-packadd vim-packager
-call packager#setup(function('s:packager_init'))
+command! -nargs=* -bar PackagerInstall call PackagerInit() | call packager#install(<args>)
+command! -nargs=* -bar PackagerUpdate call PackagerInit() | call packager#update(<args>)
+command! -bar PackagerClean call PackagerInit() | call packager#clean()
+command! -bar PackagerStatus call PackagerInit() | call packager#status()
