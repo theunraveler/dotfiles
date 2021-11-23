@@ -1,38 +1,53 @@
+let s:plugins = [
+  "\ Start with vim-packager.
+  \['kristijanhusak/vim-packager', { 'type': 'opt' }],
+  \
+  "\ Plugins.
+  \ 'airblade/vim-gitgutter',
+  \ ['theunraveler/vim-buffet', {'branch': 'nerdfont'}],
+  \ 'bitc/vim-bad-whitespace',
+  \ 'dbakker/vim-projectroot',
+  \ 'editorconfig/editorconfig-vim',
+  \ 'ervandew/supertab',
+  \ 'jeffkreeftmeijer/vim-numbertoggle',
+  \ 'junegunn/fzf.vim',
+  \ 'junegunn/vim-peekaboo',
+  \ 'kshenoy/vim-signature',
+  \ ['lambdalisue/fern-renderer-nerdfont.vim', {'requires': 'lambdalisue/nerdfont.vim'}],
+  \ 'lambdalisue/fern.vim',
+  \ 'mg979/vim-visual-multi',
+  \ 'preservim/nerdcommenter',
+  \ 'preservim/tagbar',
+  \ 'python-mode/python-mode',
+  \ 'rbgrouleff/bclose.vim',
+  \ 'rhysd/devdocs.vim',
+  \ 'sheerun/vim-polyglot',
+  \ ['theunraveler/fern-comparator-lexical.vim', {'branch': 'case_insensitive'}],
+  \ 'tpope/vim-eunuch',
+  \ 'tpope/vim-rbenv',
+  \ 'tpope/vim-repeat',
+  \ 'tpope/vim-sensible',
+  \ 'tpope/vim-surround',
+  \ 'w0rp/ale',
+  \ 'Yggdroot/indentLine',
+  \
+  "\ Color schemes.
+  \ 'connorholyday/vim-snazzy'
+\]
+
 function! PackagerInit() abort
   packadd vim-packager
   call packager#init()
-  call packager#add('kristijanhusak/vim-packager', { 'type': 'opt' })
 
-  call packager#add('airblade/vim-gitgutter')
-  call packager#add('theunraveler/vim-buffet', {'branch': 'nerdfont'})
-  call packager#add('bitc/vim-bad-whitespace')
-  call packager#add('dbakker/vim-projectroot')
-  call packager#add('editorconfig/editorconfig-vim')
-  call packager#add('ervandew/supertab')
-  call packager#add('jeffkreeftmeijer/vim-numbertoggle')
-  call packager#add('junegunn/fzf.vim')
-  call packager#add('junegunn/vim-peekaboo')
-  call packager#add('kshenoy/vim-signature')
-  call packager#add('theunraveler/fern-comparator-lexical.vim', {'branch': 'case_insensitive'})
-  call packager#add('lambdalisue/fern-renderer-nerdfont.vim', {'requires': 'lambdalisue/nerdfont.vim'})
-  call packager#add('lambdalisue/fern.vim')
-  call packager#add('mg979/vim-visual-multi')
-  call packager#add('preservim/nerdcommenter')
-  call packager#add('preservim/tagbar')
-  call packager#add('python-mode/python-mode')
-  call packager#add('rbgrouleff/bclose.vim')
-  call packager#add('rhysd/devdocs.vim')
-  call packager#add('sheerun/vim-polyglot')
-  call packager#add('tpope/vim-eunuch')
-  call packager#add('tpope/vim-rbenv')
-  call packager#add('tpope/vim-repeat')
-  call packager#add('tpope/vim-sensible')
-  call packager#add('tpope/vim-surround')
-  call packager#add('w0rp/ale')
-  call packager#add('Yggdroot/indentLine')
-
-  " Color schemes
-  call packager#add('connorholyday/vim-snazzy')
+  for plugin in s:plugins
+    if type(plugin) == v:t_list
+      let [name, kwargs] = plugin
+    else
+      let name = plugin
+      let kwargs = {}
+    endif
+    call packager#add(name, kwargs)
+  endfor
 endfunction
 
 command! PackagerInstall call PackagerInit() | call packager#install()
