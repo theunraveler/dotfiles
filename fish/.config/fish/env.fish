@@ -17,6 +17,7 @@ set --export HOMEBREW_NO_ANALYTICS 1
 set --export PIP_REQUIRE_VIRTUALENV true
 set --export PYTHONDONTWRITEBYTECODE 1
 set --export PIPENV_VENV_IN_PROJECT 1
+set --export POETRY_VIRTUALENVS_IN_PROJECT true
 
 # ruby
 # https://github.com/rbenv/ruby-build/wiki#suggested-build-environment
