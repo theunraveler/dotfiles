@@ -53,7 +53,7 @@ direnv hook fish | source
 
 # asdf
 source $HOMEBREW_PREFIX/opt/asdf/asdf.fish
-set --export ASDF_PYTHON_PATCHES_DIRECTORY "$ASDF_DIR"/patches/python
+set --export ASDF_PYTHON_PATCHES_DIRECTORY "$HOME"/.asdf/patches/python
 
 # Android dev
 set --export ANDROID_SDK_ROOT "$HOME"/Library/Android/sdk
