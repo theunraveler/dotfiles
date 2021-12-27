@@ -86,6 +86,7 @@ cask "qlprettypatch"
 cask "qlstephen"
 cask "rectangle"
 cask "sketchup"
+cask "steam"
 cask "transmission"
 cask "vlc"
 mas "1Password 7", id: 1333542190
