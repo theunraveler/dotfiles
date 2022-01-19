@@ -89,7 +89,6 @@ cask "sketchup"
 cask "steam"
 cask "transmission"
 cask "vlc"
-mas "1Password 7", id: 1333542190
 mas "AdGuard for Safari", id: 1440147259
 mas "Day One", id: 1055511498
 mas "Free Ruler", id: 1483172210
