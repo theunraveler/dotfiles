@@ -30,6 +30,7 @@ Temporary Items
 .envrc
 .direnv
 .tool-versions
+.vscode
 
 # Ruby
 .ruby-version
