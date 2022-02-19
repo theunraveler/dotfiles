@@ -1,2 +1,0 @@
-set showmatch
-set matchpairs=(:),{:},[:],<:>,':',":",/:/,|:|

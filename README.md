@@ -12,4 +12,4 @@ Installation
 Update
 ------
 
-* Run `update`. This will update brews, vim plugins, etc.
+* Run `update`. This will update brews, etc.

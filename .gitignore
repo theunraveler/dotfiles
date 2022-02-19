@@ -1,6 +1,3 @@
 .DS_Store
 
 git/.config/git/*.local
-vim/.vim/pack/
-vim/.vim/undo/
-vim/.vim/plugin/settings/local.vim

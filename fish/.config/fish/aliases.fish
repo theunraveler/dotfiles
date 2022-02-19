@@ -12,13 +12,12 @@ abbr mkdir 'mkdir --parents --verbose'
 abbr mv 'mv --verbose'
 abbr rsync 'rsync -arxvz --rsh=ssh --progress --exclude-from=$HOME/.rsync_exclude'
 abbr rm 'rm --recursive --verbose'
-alias vi 'mvim'
-alias vim 'mvim'
 
 # Shorties
 abbr - 'cd -'
 abbr b 'brew'
 abbr be 'bundle exec'
+abbr c 'code'
 abbr d 'diff'
 abbr el 'elixir'
 abbr g 'git'
@@ -28,7 +27,6 @@ alias ll "exa $EXA_DEFAULT_OPTIONS --long --classify --git --all"
 abbr o 'open'
 abbr py 'python'
 abbr rb 'ruby'
-alias v 'mvim'
 
 # DNS/Network
 abbr dns.clear 'dscacheutil -flushcache'
