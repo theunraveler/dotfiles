@@ -7,7 +7,7 @@ set --export PATH ~/.bin $PATH
 
 # Default programs
 set --export BROWSER 'open'
-set --export EDITOR 'code --wait'
+set --export EDITOR 'vi'
 set --export MARKDOWN 'cmark'
 
 # Homebrew
