@@ -2,6 +2,8 @@
 # See https://github.com/pyenv/pyenv/issues/106#issuecomment-779325818.
 set path_without_asdf "(string replace $ASDF_DATA_DIR/shims '' (echo $PATH))"
 
+alias code 'open -b com.microsoft.VSCode'
+
 # Overrides
 alias brew="env PATH=(string replace /usr/local/bin '' (echo $path_without_asdf)) brew"
 alias cat 'bat'
