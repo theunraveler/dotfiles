@@ -30,9 +30,6 @@ set --export GREP_COLORS "mt=$GREP_COLOR" # GNU.
 # man
 set --export MANPAGER "sh -c 'col -bx | bat -l man -p'"
 
-# bat
-set --export BAT_THEME 'Sublime Snazzy'
-
 # GNU utils.
 # Reference GNU utils instead of built-in ones.
 set _ignored '[' 'test'
