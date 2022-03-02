@@ -42,9 +42,6 @@ for d in $HOMEBREW_PREFIX/opt/*/libexec/gnuman
   set --export MANPATH $d $MANPATH
 end
 
-# fzf
-set --export FZF_DEFAULT_COMMAND 'rg --files --follow --hidden --glob=!.git'
-
 # direnv
 direnv hook fish | source
 
