@@ -86,7 +86,6 @@ cask "transmission"
 cask "visual-studio-code"
 cask "vlc"
 mas "AdGuard for Safari", id: 1440147259
-mas "Day One", id: 1055511498
 mas "Free Ruler", id: 1483172210
 mas "Pins", id: 1547106997
 mas "Pixelmator", id: 407963104
