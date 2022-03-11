@@ -49,8 +49,8 @@ direnv hook fish | source
 source $HOMEBREW_PREFIX/opt/asdf/asdf.fish
 set --export ASDF_PYTHON_PATCHES_DIRECTORY "$HOME"/.asdf/patches/python
 
-# Android dev
-set --export ANDROID_SDK_ROOT "$HOME"/Library/Android/sdk
+# watchman
+set --export WATCHMAN_CONFIG_FILE "$HOME"/.watchman.json
 
 # exa
 set --export EXA_ICON_SPACING 2
