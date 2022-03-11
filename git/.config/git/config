@@ -15,6 +15,7 @@
 
 [init]
   templatedir = ~/.config/git/template
+  defaultBranch = main
 
 [branch]
   autosetuprebase = always
