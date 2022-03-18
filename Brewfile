@@ -84,6 +84,7 @@ cask "steam"
 cask "transmission"
 cask "visual-studio-code"
 cask "vlc"
+mas "1Password 7", id: 1333542190
 mas "AdGuard for Safari", id: 1440147259
 mas "Free Ruler", id: 1483172210
 mas "Pins", id: 1547106997
