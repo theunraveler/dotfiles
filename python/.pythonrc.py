@@ -1,2 +1,2 @@
 # Preload some common modules for convenience.
-from pprint import pprint as print
+from pprint import pprint
