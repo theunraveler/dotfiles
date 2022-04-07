@@ -43,9 +43,6 @@ for d in $HOMEBREW_PREFIX/opt/*/libexec/gnuman
   set --export MANPATH $d $MANPATH
 end
 
-# direnv
-direnv hook fish | source
-
 # asdf
 source $HOMEBREW_PREFIX/opt/asdf/asdf.fish
 set --export ASDF_PYTHON_PATCHES_DIRECTORY "$HOME"/.asdf/patches/python
