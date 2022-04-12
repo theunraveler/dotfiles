@@ -16,6 +16,11 @@ function __activate_venv --on-variable PWD --description "Automatically activate
   end
 
   source $venv_path/bin/activate.fish
+  if test -f $PWD/Pipfile
+    set -x PIPENV_ACTIVE 1
+  else if test -f $PWD/pyproject.toml
+    set -x POETRY_ACTIVE 1
+  end
   echo -n "Activated virtualenv at "
   set_color --bold green
   echo $venv_path
