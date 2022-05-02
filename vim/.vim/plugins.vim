@@ -1,6 +1,6 @@
 let s:plugins = [
   "\ Start with vim-packager.
-  \['kristijanhusak/vim-packager', {'type': 'opt'}],
+  \ ['kristijanhusak/vim-packager', {'type': 'opt'}],
   \
   "\ Plugins.
   \ 'airblade/vim-gitgutter',
@@ -33,7 +33,7 @@ let s:plugins = [
   \ 'Yggdroot/indentLine',
   \
   "\ Color schemes.
-  \ 'connorholyday/vim-snazzy'
+  \ 'connorholyday/vim-snazzy',
 \]
 
 function! PackagerInit() abort

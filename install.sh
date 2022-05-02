@@ -28,7 +28,7 @@ echo "done."
 
 # Install vim plugins
 if [ ! -d ~/.local/share/vim/pack/packager ]; then
-  git clone https://github.com/kristijanhusak/vim-packager ~/.local/share/vim/pack/packager/opt/vim-packager
+  git clone https://github.com/kristijanhusak/vim-packager ~/.vim/pack/packager/opt/vim-packager
 fi
 mvim -f -c "call PackagerInit() | call packager#install({'on_finish': ':w! >>/dev/tty | quitall'})"
 
