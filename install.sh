@@ -23,6 +23,15 @@ printf 'Linking items from %s to home directory...' "$DIR"
 find "$DIR" -type d \( ! -regex '.*/\..*' \) -depth 1 | sed 's!.*/!!' | xargs stow --dir="$DIR" --target="$HOME" --restow
 echo "done."
 
+# fzf
+"$BREW_DIR"/opt/fzf/install --no-bash --no-zsh --all
+
+# Install vim plugins
+if [ ! -d ~/.local/share/vim/pack/packager ]; then
+  git clone https://github.com/kristijanhusak/vim-packager ~/.local/share/vim/pack/packager/opt/vim-packager
+fi
+mvim -f -c "call PackagerInit() | call packager#install({'on_finish': ':w! >>/dev/tty | quitall'})"
+
 # Finally, go back to where we started.
 cd "$WD" > /dev/null || exit 1
 exit 0

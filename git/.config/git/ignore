@@ -9,7 +9,7 @@
 .Trashes
 
 # Icon must end with two \r
-Icon
+Icon
 
 # Thumbnails
 ._*
@@ -21,6 +21,13 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+# Ctags files
+*.tags
+tags
+tags.lock
+tags.temp
+tags.temp.tmp
+
 # Misc
 .project
 .svn
@@ -30,7 +37,6 @@ Temporary Items
 .envrc
 .direnv
 .tool-versions
-.vscode
 
 # Ruby
 .ruby-version
@@ -42,3 +48,12 @@ Temporary Items
 .pyre_configuration
 .ropeproject
 .venv
+
+# vim
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+!_src
+*.un~
+Session.vim
+.netrwhist
+*~

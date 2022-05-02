@@ -7,7 +7,7 @@ set --export PATH ~/.bin $PATH
 
 # Default programs
 set --export BROWSER 'open'
-set --export EDITOR 'vi'
+set --export EDITOR 'mvim -f'
 set --export MARKDOWN 'cmark'
 
 # Homebrew
@@ -42,6 +42,9 @@ end
 for d in $HOMEBREW_PREFIX/opt/*/libexec/gnuman
   set --export MANPATH $d $MANPATH
 end
+
+# fzf
+set --export FZF_DEFAULT_COMMAND 'rg --files --follow --hidden --glob=!.git'
 
 # asdf
 source $HOMEBREW_PREFIX/opt/asdf/asdf.fish

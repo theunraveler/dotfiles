@@ -10,7 +10,7 @@
 ##########
 
 [core]
-  editor = vi
+  editor = mvim -f
   whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
 
 [init]
@@ -102,6 +102,7 @@
   ci = commit
   cl = clone
   co = checkout
+  ctags = !$(git root).git/hooks/ctags
   patch = !git --no-pager diff --no-color
   s = show
   spp = !git stash && git pull && git stash pop

@@ -2,3 +2,6 @@
 
 git/.config/git/*.local
 fish/.config/fish/conf.d/local.fish
+vim/.vim/pack/
+vim/.vim/undo/
+vim/.vim/plugin/settings/local.vim
