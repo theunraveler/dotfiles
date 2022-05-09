@@ -66,9 +66,6 @@ nmap <leader>h :call FZFOpen(':History')<cr>
 nmap <leader>t :call FZFOpen(':Tags')<cr>
 nmap <leader>l :call FZFOpen(':Buffers')<cr>
 
-" Open docs in devdocs.io
-nmap K <Plug>(devdocs-under-cursor)
-
 " Show which git commit last changed the current line.
 " https://www.reddit.com/r/vim/comments/i50pce/how_to_show_commit_that_introduced_current_line/
 map <silent><leader>g :call setbufvar(winbufnr(popup_atcursor(systemlist("cd " . shellescape(fnamemodify(resolve(expand('%:p')), ":h")) . " && git log --no-merges --no-patch -n 1 -L " . shellescape(line("v") . "," . line(".") . ":" . resolve(expand("%:p")))), { "padding": [1,1,1,1], "wrap": 0 })), "&filetype", "git")<CR>
