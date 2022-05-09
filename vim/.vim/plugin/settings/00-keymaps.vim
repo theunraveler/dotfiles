@@ -33,10 +33,6 @@ noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 
 " Splits
-nmap <leader>sw<left>  :topleft vnew<cr>
-nmap <leader>sw<right> :botright vnew<cr>
-nmap <leader>sw<up>    :topleft new<cr>
-nmap <leader>sw<down>  :botright new<cr>
 nmap <leader>s<left>   :leftabove vnew<cr>
 nmap <leader>s<right>  :rightbelow vnew<cr>
 nmap <leader>s<up>     :leftabove new<cr>
