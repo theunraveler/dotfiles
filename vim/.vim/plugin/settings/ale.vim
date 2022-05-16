@@ -1,7 +1,5 @@
 let g:ale_open_list = 1
 
-let g:ale_echo_msg_format = '[%linter%] %s'
-
 let g:ale_linters = {
 \  'elixir': ['credo'],
 \}
