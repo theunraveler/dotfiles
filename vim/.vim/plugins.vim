@@ -3,6 +3,7 @@ let s:plugins = [
   \ ['kristijanhusak/vim-packager', {'type': 'opt'}],
   \
   "\ Plugins.
+  \ 'aaronjensen/vim-command-w',
   \ 'airblade/vim-gitgutter',
   \ ['theunraveler/vim-buffet', {'branch': 'nerdfont'}],
   \ 'bitc/vim-bad-whitespace',
@@ -14,10 +15,10 @@ let s:plugins = [
   \ 'lambdalisue/fern.vim',
   \ ['lambdalisue/fern-renderer-nerdfont.vim', {'requires': 'lambdalisue/nerdfont.vim'}],
   \ 'luizribeiro/vim-cooklang',
+  \ 'moll/vim-bbye',
   \ 'preservim/nerdcommenter',
   \ 'preservim/tagbar',
   \ 'python-mode/python-mode',
-  \ 'rbgrouleff/bclose.vim',
   \ 'sheerun/vim-polyglot',
   \ ['theunraveler/fern-comparator-lexical.vim', {'branch': 'case_insensitive'}],
   \ 'tpope/vim-eunuch',

@@ -24,7 +24,7 @@ vnoremap / <esc>/\%V
 " Buffer management
 nmap <leader>n :bnext<cr>
 nmap <leader>p :bprev<cr>
-nmap <leader>c :Bclose<cr>
+nmap <leader>c :Bdelete<cr>
 
 " Easier buffer nav
 noremap <C-h> <C-w>h
