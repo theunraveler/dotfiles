@@ -1,4 +1,4 @@
-function read_confirm --description 'Ask the user for confirmation' --argument prompt
+function confirm --description 'Ask the user for confirmation' --argument prompt
     if test -z "$prompt"
         set prompt "Confirm?"
     end

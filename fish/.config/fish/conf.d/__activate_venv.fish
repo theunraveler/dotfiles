@@ -8,7 +8,7 @@ function __activate_venv --on-variable PWD --description "Automatically activate
 
   if test -f $trust_path
     # Already trusted
-  else if read_confirm "Trust the virtualenv at $venv_path?"
+  else if confirm "Trust the virtualenv at $venv_path?"
     mkdir -p (dirname $trust_path)
     touch $trust_path
   else
