@@ -78,12 +78,14 @@ brew "zlib"
 brew "cooklang/tap/cook"
 brew "raggi/ale/openssl-osx-ca"
 brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
+cask "1password"
 cask "1password-cli"
 cask "chromedriver"
 cask "chromium"
 cask "clipy"
 cask "firefox"
 cask "font-hack-nerd-font"
+cask "freecad"
 cask "google-chrome"
 cask "gotomeeting"
 cask "macvim"
@@ -93,10 +95,9 @@ cask "qlimagesize"
 cask "qlprettypatch"
 cask "qlstephen"
 cask "rectangle"
-cask "sketchup"
 cask "transmission"
 cask "vlc"
-mas "1Password 7", id: 1333542190
+mas "1Password for Safari", id: 1569813296
 mas "AdGuard for Safari", id: 1440147259
 mas "Free Ruler", id: 1483172210
 mas "Pins", id: 1547106997
