@@ -1,0 +1,16 @@
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+
+rsync \
+  --archive \
+  --checksum \
+  --delete \
+  --exclude-from="$HOME"/.rsync_exclude \
+  --iconv=utf8-mac,utf8 \
+  --no-p \
+  --one-file-system \
+  --progress \
+  --verbose \
+  "$HOME"/Music/Music/ \
+  /Volumes/IPOD/Music/
