@@ -2,15 +2,27 @@
 set -euo pipefail
 IFS=$'\n\t'
 
+ipod_path="${IPOD_PATH:-/Volumes/IPOD}"
+
+if [ -z "$ipod_path" ]; then
+  echo 'You must specify an IPOD_PATH' >&2
+  exit 1
+fi
+
+if [ ! -d "$ipod_path" ]; then
+  echo "Directory $ipod_path does not exist. Is your iPod plugged in?" >&2
+  exit 1
+fi
+
 rsync \
-  --archive \
-  --checksum \
   --delete \
   --exclude-from="$HOME"/.rsync_exclude \
-  --iconv=utf8-mac,utf8 \
-  --no-p \
-  --one-file-system \
+  --iconv=utf-8-mac,utf-8 \
+  --modify-window=1 \
   --progress \
+  --recursive \
+  --times \
+  --update \
   --verbose \
   "$HOME"/Music/Music/ \
-  /Volumes/IPOD/Music/
+  "$ipod_path"/Music/
