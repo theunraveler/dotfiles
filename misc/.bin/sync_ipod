@@ -15,7 +15,6 @@ if [ ! -d "$ipod_path" ]; then
 fi
 
 rsync \
-  --delete \
   --exclude-from="$HOME"/.rsync_exclude \
   --iconv=utf-8-mac,utf-8 \
   --modify-window=1 \
@@ -24,5 +23,6 @@ rsync \
   --times \
   --update \
   --verbose \
+  "$@" \
   "$HOME"/Music/Music/ \
   "$ipod_path"/Music/
