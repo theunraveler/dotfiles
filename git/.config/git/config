@@ -103,9 +103,7 @@
   cl = clone
   co = checkout
   ctags = !$(git root).git/hooks/ctags
-  patch = !git --no-pager diff --no-color
   s = show
-  spp = !git stash && git pull && git stash pop
   st = status -sb
   sync-branches = fetch -p
 
@@ -115,6 +113,15 @@
   tree = log --graph --decorate --pretty=oneline --abbrev-commit
   latest = for-each-ref --sort=-committerdate refs/heads/
   lm = "!sh -c \"if [[ $# -ne 2 ]]; then echo \\\"Usage: git lm <method> <file>\\\"; exit 1; fi; git log -L :$1:$2\""
+
+  # Easily create "checkin" commits.
+  checkin = commit -m 'checkin'
+
+  # Generate patch files suitable for sharing and applying with `patch -p1`.
+  patch = !git --no-pager diff --no-color
+
+  # Stash, pull, then unstash.
+  spp = !git stash && git pull && git stash pop
 
   # A better git pull. See http://stackoverflow.com/a/15316602.
   up = "!git remote update -p; git merge --ff-only @{u}"
