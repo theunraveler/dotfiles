@@ -24,7 +24,7 @@
   sort = version:refname
 
 [help]
-  autocorrect = 10
+  autocorrect = prompt
 
 [pull]
   rebase = true
