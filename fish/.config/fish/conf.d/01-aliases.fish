@@ -3,7 +3,7 @@
 set path_without_asdf "(string replace $ASDF_DATA_DIR/shims '' (echo $PATH))"
 
 # Overrides
-alias brew="env PATH=(string replace /usr/local/bin '' (echo $path_without_asdf)) brew"
+alias brew="env PATH=$path_without_asdf brew"
 alias cat 'bat'
 abbr cp 'cp --recursive --verbose'
 alias grep 'ack'
@@ -46,4 +46,4 @@ alias fucking 'sudo'
 
 # x86
 alias x86 'arch -x86_64'
-alias ibrew "arch -x86_64 env PATH=(string replace $HOMEBREW_PREFIX/bin '' (echo $path_without_asdf)) /usr/local/bin/brew"
+alias ibrew "arch -x86_64 env PATH=$path_without_asdf /usr/local/bin/brew"
