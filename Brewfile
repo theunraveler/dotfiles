@@ -15,7 +15,7 @@ brew "sqlite"
 brew "ansible"
 brew "ansible-lint"
 brew "imath"
-brew "jpeg"
+brew "jpeg", link: true
 brew "libpng"
 brew "libtiff"
 brew "openexr"
