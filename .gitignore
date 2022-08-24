@@ -1,6 +1,7 @@
 .DS_Store
 
 git/.config/git/*.local
+git/.config/git/allowed_signers
 fish/.config/fish/conf.d/local.fish
 vim/.vim/pack/
 vim/.vim/undo/

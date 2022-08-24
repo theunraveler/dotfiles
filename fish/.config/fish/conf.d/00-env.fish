@@ -56,3 +56,6 @@ set --export WATCHMAN_CONFIG_FILE "$HOME"/.watchman.json
 # exa
 set --export EXA_ICON_SPACING 2
 set --export EXA_DEFAULT_OPTIONS '--icons --header'
+
+# ssh
+set --export SSH_AUTH_SOCK "$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"

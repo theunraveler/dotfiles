@@ -78,7 +78,10 @@
   smudge = git-media-smudge %f
 
 [gpg]
-  program = /opt/homebrew/bin/gpg
+  format = ssh
+
+[gpg "ssh"]
+	allowedSignersFile = ~/.config/git/allowed_signers
 
 [help]
   autocorrect = prompt
@@ -117,4 +120,5 @@
   allowed = wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 
 [tag]
+  gpgsign = true
   sort = version:refname
