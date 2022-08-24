@@ -1,102 +1,3 @@
-##########
-# INCLUDES
-##########
-
-[include]
-  path = ~/.config/git/config.local
-
-##########
-# SETTINGS
-##########
-
-[core]
-  editor = mvim -f
-  whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
-
-[init]
-  templatedir = ~/.config/git/template
-  defaultBranch = main
-
-[branch]
-  autosetuprebase = always
-
-[tag]
-  sort = version:refname
-
-[help]
-  autocorrect = prompt
-
-[pull]
-  rebase = true
-
-[push]
-  default = matching
-
-[log]
-  date = local
-
-[filter "media"]
-  clean = git-media-clean %f
-  smudge = git-media-smudge %f
-
-[diff]
-  compactionHeuristic = true
-
-[pager]
-  diff = delta
-  log = delta
-  reflog = delta
-  show = delta
-
-[interactive]
-  diffFilter = delta --color-only
-
-########
-# COLORS
-########
-
-[color]
-  ui = auto
-
-[color "branch"]
-  current = yellow reverse
-  local = yellow
-  remote = green
-
-[color "diff"]
-  commit = yellow bold
-  frag = magenta bold
-  func = 146 bold
-  meta = 11
-  new = green bold
-  old = red bold
-  whitespace = red reverse
-
-[color "diff-highlight"]
-  newNormal = green bold
-  newHighlight = green bold 22
-  oldNormal = red bold
-  oldHighlight = red bold 52
-
-[color "status"]
-  added = yellow
-  changed = green
-  untracked = cyan
-
-#####
-# GPG
-#####
-
-[commit]
-  gpgsign = true
-
-[gpg]
-  program = /opt/homebrew/bin/gpg
-
-#########
-# ALIASES
-#########
-
 [alias]
   br = branch
   ci = commit
@@ -126,9 +27,86 @@
   # A better git pull. See http://stackoverflow.com/a/15316602.
   up = "!git remote update -p; git merge --ff-only @{u}"
 
-#########
-# SECRETS
-#########
+[branch]
+  autosetuprebase = always
+
+[color]
+  ui = auto
+
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+
+[color "diff"]
+  commit = yellow bold
+  frag = magenta bold
+  func = 146 bold
+  meta = 11
+  new = green bold
+  old = red bold
+  whitespace = red reverse
+
+[color "diff-highlight"]
+  newNormal = green bold
+  newHighlight = green bold 22
+  oldNormal = red bold
+  oldHighlight = red bold 52
+
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+
+[commit]
+  gpgsign = true
+
+[core]
+  editor = mvim -f
+  whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+
+[delta]
+  syntax-theme = Sublime Snazzy
+  navigate = true
+  line-numbers = true
+
+[diff]
+  compactionHeuristic = true
+
+[filter "media"]
+  clean = git-media-clean %f
+  smudge = git-media-smudge %f
+
+[gpg]
+  program = /opt/homebrew/bin/gpg
+
+[help]
+  autocorrect = prompt
+
+[include]
+  path = ~/.config/git/config.local
+
+[init]
+  templatedir = ~/.config/git/template
+  defaultBranch = main
+
+[interactive]
+  diffFilter = delta --color-only
+
+[log]
+  date = local
+
+[pager]
+  diff = delta
+  log = delta
+  reflog = delta
+  show = delta
+
+[pull]
+  rebase = true
+
+[push]
+  default = matching
 
 [secrets]
   providers = git secrets --aws-provider
@@ -138,11 +116,5 @@
   allowed = AKIAIOSFODNN7EXAMPLE
   allowed = wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 
-###########
-# git-delta
-###########
-
-[delta]
-  syntax-theme = Sublime Snazzy
-  navigate = true
-  line-numbers = true
+[tag]
+  sort = version:refname
