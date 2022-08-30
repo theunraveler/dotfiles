@@ -60,7 +60,7 @@ commit_if_changed() {
 # If there are changes, stash them.
 git stash --quiet
 
-git pull origin master
+git pull origin main
 
 # Apps from the App Store.
 if command -v mas > /dev/null; then
@@ -96,7 +96,7 @@ commit_if_changed "asdf: Updating plugins"
 if [ $NO_PUSH -eq 1 ]; then
   echo "Skipping git push"
 elif [ "$(git rev-parse '@{u}')" != "$(git rev-parse @)" ]; then
-  git push origin master
+  git push origin main
 else
   echo "Nothing updated, no push needed."
 fi
