@@ -24,9 +24,6 @@
   # Stash, pull, then unstash.
   spp = !git stash && git pull && git stash pop
 
-  # A better git pull. See http://stackoverflow.com/a/15316602.
-  up = "!git remote update -p; git merge --ff-only @{u}"
-
 [branch]
   autosetuprebase = always
 
@@ -106,6 +103,7 @@
   show = delta
 
 [pull]
+  ff = only
   rebase = true
 
 [push]
