@@ -3,7 +3,7 @@
   ci = commit
   cl = clone
   co = checkout
-  ctags = !$(git root).git/hooks/ctags
+  ctags = !$(git root)/.git/hooks/ctags
   s = show
   st = status -sb
   sync-branches = fetch -p
