@@ -1,6 +1,6 @@
 function confirm --description 'Ask the user for confirmation' --argument prompt
     if test -z "$prompt"
-        set prompt "Confirm?"
+        set prompt 'Confirm?'
     end
 
     while true
