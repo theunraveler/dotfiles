@@ -6,7 +6,7 @@ set path_without_asdf "(string replace $ASDF_DATA_DIR/shims '' (echo $PATH))"
 alias brew "env PATH=$path_without_asdf brew"
 alias cat bat
 abbr cp 'cp --recursive --verbose'
-alias grep ack
+alias grep rg
 alias less 'less --ignore-case --incsearch --no-histdups'
 alias ls "exa $EXA_DEFAULT_OPTIONS"
 abbr mkdir 'mkdir --parents --verbose'
