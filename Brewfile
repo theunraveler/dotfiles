@@ -1,5 +1,4 @@
 tap "beeftornado/rmtree"
-tap "cooklang/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
@@ -69,7 +68,6 @@ brew "watchman"
 brew "wget"
 brew "yq"
 brew "zlib"
-brew "cooklang/tap/cook"
 cask "1password"
 cask "1password-cli"
 cask "chromium"
@@ -92,6 +90,7 @@ cask "vlc"
 mas "1Password for Safari", id: 1569813296
 mas "AdGuard for Safari", id: 1440147259
 mas "Free Ruler", id: 1483172210
+mas "Mela", id: 1568924476
 mas "Pins", id: 1547106997
 mas "Pixelmator", id: 407963104
 mas "Reeder", id: 1529448980
