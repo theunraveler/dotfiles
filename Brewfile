@@ -94,6 +94,7 @@ mas "Mela", id: 1568924476
 mas "Pins", id: 1547106997
 mas "Pixelmator", id: 407963104
 mas "Reeder", id: 1529448980
+mas "Slack", id: 803453959
 mas "Things", id: 904280696
 mas "Tomito", id: 1526042938
 mas "Xcode", id: 497799835
