@@ -3,8 +3,9 @@ function __activate_venv --on-variable PWD --description "Automatically activate
 
   if not test -d $venv_path; return; end
 
-  set -l venv_hash (echo $venv_path | md5sum | awk '{print $1}')
-  set -l trust_path $HOME/.cache/trusted_venvs/$venv_hash
+  set -l path_hash (echo $venv_path | md5sum | awk '{print $1}')
+  set -l venv_hash (md5sum "$venv_path/pyvenv.cfg" | awk '{print $1}')
+  set -l trust_path "$HOME/.cache/trusted_venvs/$path_hash-$venv_hash"
 
   if test -f $trust_path
     # Already trusted
