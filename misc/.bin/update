@@ -3,8 +3,13 @@ set -euo pipefail
 IFS=$'\n\t'
 
 # Process options.
-NO_COMMIT=0
-NO_PUSH=0
+ASDF=1
+BREW=1
+COMMIT=1
+GIT_MODULES=1
+MAS=1
+PUSH=1
+VIM=1
 while test $# -gt 0; do
   case "$1" in
     -h|--help)
@@ -17,12 +22,32 @@ while test $# -gt 0; do
       exit 0
       ;;
     -c|--no-commit)
-      export NO_COMMIT=1
-      export NO_PUSH=1
+      export COMMIT=0
+      export PUSH=0
       shift
       ;;
     -p|--no-push)
-      export NO_PUSH=1
+      export PUSH=0
+      shift
+      ;;
+    --no-asdf)
+      export ASDF=0
+      shift
+      ;;
+    --no-brew)
+      export BREW=0
+      shift
+      ;;
+    --no-git-submodules)
+      export GIT_MODULES=0
+      shift
+      ;;
+    --no-mas)
+      export MAS=0
+      shift
+      ;;
+    --no-vim)
+      export VIM=0
       shift
       ;;
     *)
@@ -50,7 +75,7 @@ cleanup() {
 }
 
 commit_if_changed() {
-  if [ $NO_COMMIT -eq 1 ]; then return; fi
+  if [ $COMMIT -eq 0 ]; then return; fi
   if [ "$(git status --porcelain | wc -l)" -eq 0 ]; then return; fi
   git add .
   msg=${1:-"Updating submodules, vim plugins, and/or brew list."}
@@ -63,12 +88,12 @@ git stash --quiet
 git pull origin main
 
 # Apps from the App Store.
-if command -v mas > /dev/null; then
+if [ $MAS -eq 1 ] && command -v mas > /dev/null; then
   mas upgrade
 fi
 
 # homebrew and casks.
-if command -v brew > /dev/null; then
+if [ $BREW -eq 1 ] && command -v brew > /dev/null; then
   brew update
   HOMEBREW_NO_AUTO_UPDATE=1 HOMEBREW_NO_INSTALL_CLEANUP=1 brew upgrade --ignore-pinned --greedy
   HOMEBREW_NO_AUTO_UPDATE=1 HOMEBREW_NO_INSTALL_CLEANUP=1 brew cleanup
@@ -78,22 +103,28 @@ if command -v brew > /dev/null; then
 fi
 
 # vim plugins
-mvim -f -c "call PackagerInit() | call packager#update({'on_finish': ':w! >>/dev/tty | quitall'})"
-commit_if_changed "vim: Updating plugins"
+if [ $VIM -eq 1 ]; then
+  mvim -f -c "call PackagerInit() | call packager#update({'on_finish': ':w! >>/dev/tty | quitall'})"
+  commit_if_changed "vim: Updating plugins"
+fi
 
 # git submodules
-git submodule foreach git pull
-commit_if_changed "git: Updating submodules"
+if [ $GIT_MODULES -eq 1 ]; then
+  git submodule foreach git pull
+  commit_if_changed "git: Updating submodules"
+fi
 
 # Update bat cache
 bat cache --build
 
 # asdf plugins
-asdf plugin update --all
-commit_if_changed "asdf: Updating plugins"
+if [ $ASDF -eq 1 ]; then
+  asdf plugin update --all
+  commit_if_changed "asdf: Updating plugins"
+fi
 
 # Finally, push to remote if we need to.
-if [ $NO_PUSH -eq 1 ]; then
+if [ $PUSH -eq 0 ]; then
   echo "Skipping git push"
 elif [ "$(git rev-parse '@{u}')" != "$(git rev-parse @)" ]; then
   git push origin main
