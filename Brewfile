@@ -20,21 +20,21 @@ brew "gmp"
 brew "libtool"
 brew "asdf"
 brew "aws-elasticbeanstalk"
-brew "freetype"
-brew "fontconfig"
-brew "little-cms2"
-brew "jpeg", link: true
-brew "openjpeg"
-brew "ghostscript"
 brew "awscli"
 brew "bash"
 brew "bat"
 brew "icu4c"
+brew "freetype"
+brew "fontconfig"
 brew "gettext"
 brew "cmark"
 brew "exa"
 brew "fish"
 brew "fzf"
+brew "little-cms2"
+brew "jpeg", link: true
+brew "openjpeg"
+brew "ghostscript"
 brew "git"
 brew "git-delta"
 brew "git-extras"
@@ -93,7 +93,6 @@ mas "Paper", id: 1143513744
 mas "Pins", id: 1547106997
 mas "Pixelmator", id: 407963104
 mas "Reeder", id: 1529448980
-mas "Slack", id: 803453959
 mas "Things", id: 904280696
 mas "Tomito", id: 1526042938
 mas "Xcode", id: 497799835
