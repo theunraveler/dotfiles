@@ -47,7 +47,7 @@ end
 set --export FZF_DEFAULT_COMMAND rg --files --follow --hidden --glob=!.git
 
 # asdf
-source $HOMEBREW_PREFIX/opt/asdf/asdf.fish
+source $HOMEBREW_PREFIX/opt/asdf/libexec/asdf.fish
 set --export ASDF_PYTHON_PATCHES_DIRECTORY $HOME/.asdf/patches/python
 
 # watchman
