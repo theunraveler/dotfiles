@@ -31,6 +31,10 @@ abbr py python
 abbr rb ruby
 alias v mvim
 
+# Fun shell tricks
+abbr !! --position anywhere --function last_history_item
+abbr dotdot --regex '^\.\.+$' --function multicd
+
 # DNS/Network
 abbr dns.clear 'dscacheutil -flushcache'
 abbr ip 'curl icanhazip.com'
