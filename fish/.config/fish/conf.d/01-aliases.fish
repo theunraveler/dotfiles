@@ -44,6 +44,7 @@ alias service 'brew services'
 alias start 'brew services start'
 alias stop 'brew services stop'
 alias restart 'brew services restart'
+alias run 'brew services run'
 
 # lulz
 alias fucking sudo
