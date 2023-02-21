@@ -12,6 +12,7 @@ set --export MARKDOWN cmark
 
 # Homebrew
 set --export HOMEBREW_NO_ANALYTICS 1
+set --export HOMEBREW_NO_AUTO_UPDATE 1
 
 # Python.
 set --export PIP_REQUIRE_VIRTUALENV true
