@@ -20,5 +20,5 @@ function venv -d 'Create/activate a virtualenv'
     __green "done"
   end
 
-  __activate_venv --auto-confirm
+  __activate_venv --trust
 end
