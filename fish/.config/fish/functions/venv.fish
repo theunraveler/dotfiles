@@ -1,9 +1,24 @@
-function venv -d '(Create and) activate a virtualenv' -a name
-  if not test -d ./.venv
-    python -m venv .venv
+function venv -d 'Create/activate a virtualenv'
+  argparse u/upgrade -- $argv
+  or return
+
+  set -l venv_path $PWD/$VIRTUALENV_DIR_NAME
+
+  set -f venv_args
+  set -l venv_help (python -m venv --help)
+  if python -m venv --help | grep --quiet -- --upgrade-deps
+    set --append -- venv_args --upgrade-deps
   end
-  source ./.venv/bin/activate.fish
-  set_color --bold green
-  echo "Activated virtualenv"
-  set_color normal
+
+  if not test -d $venv_path
+    echo -n "Creating virtualenv..."
+    python -m venv $venv_args $venv_path
+    __green "done"
+  else if set -ql _flag_upgrade
+    echo -n "Virtualenv already exists, updating to current python..."
+    python -m venv --upgrade $venv_args $venv_path
+    __green "done"
+  end
+
+  __activate_venv --auto-confirm
 end
