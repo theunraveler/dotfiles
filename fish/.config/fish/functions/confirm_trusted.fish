@@ -14,14 +14,11 @@ function confirm_trusted --description "Confirm whether the given file is truste
     set -f file_ref $file
   end
 
-  if set -ql _flag_item
-    set -f item $_flag_item
-  else
-    set -g item file
-  end
+  set -ql _flag_item
+  or set -f _flag_item file
 
   if not set -ql _flag_trust
-    and not confirm "Trust the $item at $file_ref?"
+    and not confirm "Trust the $_flag_item at $file_ref?"
     return 1
   end
 
