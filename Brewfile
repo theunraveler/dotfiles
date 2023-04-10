@@ -81,6 +81,7 @@ cask "qlprettypatch"
 cask "qlstephen"
 cask "rectangle"
 cask "transmission"
+cask "typora"
 cask "vlc"
 mas "1Password for Safari", id: 1569813296
 mas "AdGuard for Safari", id: 1440147259
