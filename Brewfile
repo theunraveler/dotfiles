@@ -72,6 +72,7 @@ cask "font-hack-nerd-font"
 cask "freecad"
 cask "google-chrome"
 cask "gotomeeting"
+cask "macdown"
 cask "macvim"
 cask "microsoft-teams"
 cask "qlcommonmark"
@@ -85,7 +86,6 @@ mas "1Password for Safari", id: 1569813296
 mas "AdGuard for Safari", id: 1440147259
 mas "Free Ruler", id: 1483172210
 mas "Mela", id: 1568924476
-mas "Paper", id: 1143513744
 mas "Pins", id: 1547106997
 mas "Pixelmator", id: 407963104
 mas "Reeder", id: 1529448980
