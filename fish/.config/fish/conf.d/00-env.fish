@@ -35,6 +35,9 @@ set --export GREP_COLORS mt=$GREP_COLOR   # GNU.
 # man
 set --export MANPAGER sh -c col -bx | bat -l man -p
 
+# less
+set --export LESSHISTFILE $HOME/.less_history
+
 # GNU utils.
 # Reference GNU utils instead of built-in ones.
 set _ignored [ test
