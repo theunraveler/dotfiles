@@ -18,6 +18,7 @@ set --export HOMEBREW_NO_AUTO_UPDATE 1
 set --export PIP_REQUIRE_VIRTUALENV true
 set --export PYTHONDONTWRITEBYTECODE 1
 set --export PIPENV_VENV_IN_PROJECT 1
+set --export PIPENV_VERBOSITY -1
 set --export POETRY_VIRTUALENVS_IN_PROJECT true
 set --export PYTHONSTARTUP $HOME/.pythonrc.py
 set --export VIRTUALENV_DIR_NAME .venv
