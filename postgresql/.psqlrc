@@ -1,8 +1,9 @@
 \set QUIET 1
 
-\pset null NULL
+\pset null '[NULL]'
 \set COMP_KEYWORD_CASE upper
 \set HISTCONTROL ignoredups
+\set HISTFILE ~/.psql_history/:DBNAME
 \set VERBOSITY verbose
 \timing
 \x auto
