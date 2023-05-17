@@ -51,7 +51,7 @@ brew "optipng"
 brew "parallel"
 brew "pipenv"
 brew "poetry"
-brew "postgresql@15"
+brew "postgresql@15", link: true
 brew "proselint"
 brew "ripgrep"
 brew "rsync"
