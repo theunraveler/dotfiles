@@ -81,6 +81,7 @@ cask "vlc"
 mas "AdGuard for Safari", id: 1440147259
 mas "Free Ruler", id: 1483172210
 mas "Mela", id: 1568924476
+mas "Omnivore", id: 1564031042
 mas "Pins", id: 1547106997
 mas "Pixelmator", id: 407963104
 mas "Reeder", id: 1529448980
