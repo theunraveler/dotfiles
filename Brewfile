@@ -50,7 +50,6 @@ brew "parallel"
 brew "pipenv"
 brew "poetry"
 brew "postgresql@15", link: true
-brew "proselint"
 brew "ripgrep"
 brew "rsync"
 brew "shellcheck"
