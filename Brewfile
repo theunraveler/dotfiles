@@ -42,7 +42,7 @@ brew "shared-mime-info"
 brew "libffi"
 brew "python@3.9"
 brew "imagemagick"
-brew "jpeg", link: true
+brew "jpeg"
 brew "jpegoptim"
 brew "jq"
 brew "mas"
