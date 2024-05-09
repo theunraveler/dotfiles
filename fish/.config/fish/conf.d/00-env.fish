@@ -57,6 +57,6 @@ set --export ASDF_PYTHON_PATCHES_DIRECTORY $HOME/.asdf/patches/python
 # watchman
 set --export WATCHMAN_CONFIG_FILE $HOME/.watchman.json
 
-# exa
-set --export EXA_ICON_SPACING 2
-set --export EXA_DEFAULT_OPTIONS --icons --header
+# eza
+set --export EZA_ICON_SPACING 2
+set --export EZA_DEFAULT_OPTIONS --icons --header
