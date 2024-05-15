@@ -126,7 +126,7 @@ brew "pcre"
 brew "pipenv"
 brew "poetry"
 brew "popt"
-brew "postgresql@15", link: true
+brew "postgresql@16", link: true
 brew "ripgrep"
 brew "xxhash"
 brew "rsync"
