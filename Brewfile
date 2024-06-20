@@ -124,7 +124,6 @@ brew "optipng"
 brew "parallel"
 brew "pcre"
 brew "pipenv"
-brew "poetry"
 brew "popt"
 brew "postgresql@16", link: true
 brew "ripgrep"
