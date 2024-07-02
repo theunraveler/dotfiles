@@ -3,11 +3,11 @@ set -euo pipefail
 IFS=$'\n\t'
 
 # Process options.
-ASDF=1
 BREW=1
 COMMIT=1
 GIT_MODULES=1
 MAS=1
+MISE=1
 PUSH=1
 VIM=1
 while test $# -gt 0; do
@@ -30,10 +30,6 @@ while test $# -gt 0; do
       export PUSH=0
       shift
       ;;
-    --no-asdf)
-      export ASDF=0
-      shift
-      ;;
     --no-brew)
       export BREW=0
       shift
@@ -44,6 +40,10 @@ while test $# -gt 0; do
       ;;
     --no-mas)
       export MAS=0
+      shift
+      ;;
+    --no-mise)
+      export MISE=0
       shift
       ;;
     --no-vim)
@@ -117,10 +117,10 @@ fi
 # Update bat cache
 bat cache --build
 
-# asdf plugins
-if [ $ASDF -eq 1 ]; then
-  asdf plugin update --all
-  commit_if_changed "asdf: Updating plugins"
+# mise plugins
+if [ $MISE -eq 1 ]; then
+  mise upgrade
+  commit_if_changed "mise: Updating plugins"
 fi
 
 # Finally, push to remote if we need to.
