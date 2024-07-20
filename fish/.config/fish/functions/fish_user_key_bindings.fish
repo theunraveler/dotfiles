@@ -1,5 +1,5 @@
 function fish_user_key_bindings
-  fzf_key_bindings
+  fzf --fish | source
 
   # https://github.com/theunraveler/zsh-fancy_ctrl_z
   bind \cZ 'fg'
