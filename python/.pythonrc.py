@@ -16,6 +16,9 @@ except ImportError:
 
 print('Imported the following items for your convenience: %s' % green('datetime, os, re, sys, pprint.pprint as pprint, timeit.timeit as timeit'))
 
+q = quit
+print('Aliased quit as %s' % green('q'))
+
 # Automatically load Django stuff.
 try:
     import django
