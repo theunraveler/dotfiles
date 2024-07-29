@@ -6,6 +6,7 @@ import os
 import re
 import sys
 from pprint import pprint
+from timeit import timeit
 
 try:
     from colors import green
@@ -13,7 +14,7 @@ except ImportError:
     green = str
 
 
-print('Imported the following items for your convenience: %s' % green('datetime, os, re, sys, pprint.pprint as pprint'))
+print('Imported the following items for your convenience: %s' % green('datetime, os, re, sys, pprint.pprint as pprint, timeit.timeit as timeit'))
 
 # Automatically load Django stuff.
 try:
