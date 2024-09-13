@@ -3,7 +3,7 @@
 fish/.config/fish/conf.d/local.fish
 git/.config/git/*.local
 git/.config/git/allowed_signers
-vim/.vim/pack/
-vim/.vim/plugin/settings/local.vim
-vim/.vim/spell/
-vim/.vim/undo/
+vim/.config/vim/pack/
+vim/.config/vim/plugin/settings/local.vim
+vim/.config/vim/spell/
+vim/.config/vim/undo/
