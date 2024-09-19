@@ -33,7 +33,6 @@ brew "readline"
 brew "sqlite"
 brew "python@3.12"
 brew "aws-elasticbeanstalk"
-brew "python@3.11"
 brew "awscli"
 brew "bash"
 brew "libssh2"
@@ -126,6 +125,7 @@ brew "pcre"
 brew "pipenv"
 brew "popt"
 brew "postgresql@16", link: true
+brew "python@3.11"
 brew "ripgrep"
 brew "xxhash"
 brew "rsync"
@@ -157,7 +157,6 @@ mas "Free Ruler", id: 1483172210
 mas "Mela", id: 1568924476
 mas "Numbers", id: 409203825
 mas "Omnivore", id: 1564031042
-mas "Pages", id: 409201541
 mas "Pixelmator", id: 407963104
 mas "Reeder", id: 1529448980
 mas "Things", id: 904280696
