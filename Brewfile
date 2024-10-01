@@ -123,7 +123,7 @@ brew "parallel"
 brew "pcre"
 brew "pipenv"
 brew "popt"
-brew "postgresql@16", link: true
+brew "postgresql@17", link: true
 brew "python@3.11"
 brew "ripgrep"
 brew "xxhash"
