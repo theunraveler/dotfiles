@@ -1,3 +1,5 @@
+set packpath=$HOME/.local/share/vim
+
 let s:plugins = [
   "\ Start with vim-packager.
   \ ['kristijanhusak/vim-packager', {'type': 'opt'}],

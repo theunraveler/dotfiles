@@ -47,16 +47,10 @@ set textwidth=79
 set formatoptions=qrn1
 
 " History and backup
-set viminfo='10,:20,\"100,h
+set viminfo='10,:20,\"100,h,n~/.local/share/vim/info
 set nobackup
 set nowritebackup
 set noswapfile
-
-" Undo
-if (v:version > 703)
-  set undofile
-  set undoreload=10000
-endif
 
 " Format
 set formatprg=par
