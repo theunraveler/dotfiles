@@ -37,14 +37,17 @@ set --export MANPAGER sh -c col -bx | bat -l man -p
 
 # GNU utils.
 # Reference GNU utils instead of built-in ones.
-set _ignored [ test
+set _ignored [ man test
 for d in $HOMEBREW_PREFIX/opt/*/libexec/gnubin/*
   set p (basename $d)
   contains $p $_ignored || alias $p g$p
 end
 # Add misc GNU utils man pages.
+# But first, we need to make the manpath a string so that we don't break
+# built-in man pages. See https://github.com/fish-shell/fish-shell/issues/2090#issuecomment-421833616.
+set -q MANPATH || set MANPATH ''
 for d in $HOMEBREW_PREFIX/opt/*/libexec/gnuman
-  set --export MANPATH $d $MANPATH
+  set --export MANPATH $MANPATH $d
 end
 
 # fzf
