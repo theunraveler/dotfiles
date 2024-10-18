@@ -33,7 +33,11 @@ set --export GREP_COLOR '37;45'           # BSD.
 set --export GREP_COLORS mt=$GREP_COLOR   # GNU.
 
 # man
-set --export MANPAGER sh -c col -bx | bat -l man -p
+set --export MANPAGER "sh -c 'col -bx | bat --language=man --plain'"
+# Fish shell does weird stuff with $MANPATH. This allows us to add to it in a
+# normal way that won't break `man` defaults.
+# See https://github.com/fish-shell/fish-shell/issues/2090#issuecomment-421833616.
+set --query MANPATH || set MANPATH ''
 
 # GNU utils.
 # Reference GNU utils instead of built-in ones.
@@ -43,9 +47,6 @@ for d in $HOMEBREW_PREFIX/opt/*/libexec/gnubin/*
   contains $p $_ignored || alias $p g$p
 end
 # Add misc GNU utils man pages.
-# But first, we need to make the manpath a string so that we don't break
-# built-in man pages. See https://github.com/fish-shell/fish-shell/issues/2090#issuecomment-421833616.
-set -q MANPATH || set MANPATH ''
 for d in $HOMEBREW_PREFIX/opt/*/libexec/gnuman
   set --export MANPATH $MANPATH $d
 end
