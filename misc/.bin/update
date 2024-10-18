@@ -119,7 +119,7 @@ bat cache --build
 
 # mise plugins
 if [ $MISE -eq 1 ]; then
-  mise upgrade
+  mise upgrade --bump
   commit_if_changed "mise: Updating plugins"
 fi
 

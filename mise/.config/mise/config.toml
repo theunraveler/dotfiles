@@ -4,3 +4,4 @@ ruby = "latest"
 
 [settings]
 experimental = true
+disable_hints = ["outdated_bump", "python_multi", "python_precompiled"]
