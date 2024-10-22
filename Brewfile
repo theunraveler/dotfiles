@@ -151,16 +151,13 @@ cask "qlcommonmark"
 cask "qlimagesize"
 cask "qlprettypatch"
 cask "qlstephen"
-cask "tor-browser"
 cask "transmission"
 cask "vlc"
 mas "AdGuard for Safari", id: 1440147259
-mas "Free Ruler", id: 1483172210
 mas "Mela", id: 1568924476
 mas "Numbers", id: 409203825
 mas "Pixelmator", id: 407963104
 mas "Reeder", id: 1529448980
 mas "Save to Pocket", id: 1477385213
 mas "Things", id: 904280696
-mas "Tomito", id: 1526042938
 mas "Xcode", id: 497799835
