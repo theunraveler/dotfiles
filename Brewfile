@@ -152,8 +152,7 @@ cask "qlstephen"
 cask "transmission"
 cask "vlc"
 mas "AdGuard for Safari", id: 1440147259
-mas "Flyleaf", id: 6475200381
-mas "Instapaper", id: 288545208
+mas "Couch", id: 963584693
 mas "Mela", id: 1568924476
 mas "Numbers", id: 409203825
 mas "Pixelmator", id: 407963104
