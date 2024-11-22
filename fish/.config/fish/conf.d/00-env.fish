@@ -61,5 +61,12 @@ set --export WATCHMAN_CONFIG_FILE $HOME/.watchman.json
 set --export EZA_ICON_SPACING 2
 set --export EZA_DEFAULT_OPTIONS --icons --header
 
+# mise
+if status is-interactive
+  mise activate fish | source
+else
+  mise activate fish --shims | source
+end
+
 # ssh
 set --export SSH_AUTH_SOCK $HOME/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
