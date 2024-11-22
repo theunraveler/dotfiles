@@ -70,3 +70,10 @@ end
 
 # ssh
 set --export SSH_AUTH_SOCK $HOME/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
+
+# Enable TouchID for sudoing. This gets erased whenever there is an OS update,
+# so we'll add it back if it's missing.
+if ! /usr/bin/grep -q pam_tid.so /etc/pam.d/sudo
+  echo 'TouchID for sudo missing, adding it to /etc/pam.d/sudo'
+  awk '/sudo_local/ { print; print "auth       sufficient     pam_tid.so             # enables TouchID auth for sudo"; next }1' /etc/pam.d/sudo | sudo tee /etc/pam.d/sudo >/dev/null
+end
