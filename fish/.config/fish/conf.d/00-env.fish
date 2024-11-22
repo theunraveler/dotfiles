@@ -60,3 +60,6 @@ set --export WATCHMAN_CONFIG_FILE $HOME/.watchman.json
 # eza
 set --export EZA_ICON_SPACING 2
 set --export EZA_DEFAULT_OPTIONS --icons --header
+
+# ssh
+set --export SSH_AUTH_SOCK $HOME/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
