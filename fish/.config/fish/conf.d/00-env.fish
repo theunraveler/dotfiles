@@ -68,9 +68,6 @@ else
   mise activate fish --shims | source
 end
 
-# ssh
-set --export SSH_AUTH_SOCK $HOME/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
-
 # Enable TouchID for sudoing. This gets erased whenever there is an OS update,
 # so we'll add it back if it's missing.
 if ! /usr/bin/grep -q pam_tid.so /etc/pam.d/sudo

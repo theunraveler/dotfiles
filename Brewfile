@@ -140,7 +140,6 @@ cask "macvim"
 cask "qlcommonmark"
 cask "qlprettypatch"
 cask "qlstephen"
-cask "secretive"
 cask "transmission"
 cask "vlc"
 mas "AdGuard for Safari", id: 1440147259
