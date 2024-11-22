@@ -1,4 +1,5 @@
 [tools]
+php = "latest"
 python = "latest"
 ruby = "latest"
 
