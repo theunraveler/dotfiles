@@ -117,7 +117,6 @@ brew "pipenv"
 brew "pkgconf"
 brew "popt"
 brew "postgresql@17", link: true
-brew "python@3.11"
 brew "ripgrep"
 brew "rsync"
 brew "shellcheck"
