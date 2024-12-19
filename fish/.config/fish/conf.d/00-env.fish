@@ -24,10 +24,6 @@ set --export PYTHONSTARTUP $HOME/.pythonrc.py
 set --export VIRTUALENV_DIR_NAME .venv
 __activate_venv
 
-# ruby
-# https://github.com/rbenv/ruby-build/wiki#suggested-build-environment
-set --export RUBY_CONFIGURE_OPTS --with-readline-dir=$HOMEBREW_PREFIX/opt/readline --with-openssl-dir=$HOMEBREW_PREFIX/opt/openssl@1.1
-
 # grep
 set --export GREP_COLOR '37;45'           # BSD.
 set --export GREP_COLORS mt=$GREP_COLOR   # GNU.
