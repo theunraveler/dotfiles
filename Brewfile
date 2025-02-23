@@ -142,6 +142,7 @@ cask "transmission"
 cask "vlc"
 mas "AdGuard for Safari", id: 1440147259
 mas "Couch", id: 963584693
+mas "Keynote", id: 409183694
 mas "Mela", id: 1568924476
 mas "Numbers", id: 409203825
 mas "Pixelmator", id: 407963104
