@@ -48,7 +48,6 @@ brew "cmark"
 brew "libtool"
 brew "gd"
 brew "gmp"
-brew "icu4c@76"
 brew "krb5"
 brew "libsodium"
 brew "libzip"
@@ -59,6 +58,7 @@ brew "double-conversion"
 brew "fmt"
 brew "gflags"
 brew "glog"
+brew "icu4c@76"
 brew "libevent"
 brew "snappy"
 brew "folly"
@@ -139,12 +139,3 @@ cask "qlprettypatch"
 cask "qlstephen"
 cask "transmission"
 cask "vlc"
-mas "AdGuard for Safari", id: 1440147259
-mas "Couch", id: 963584693
-mas "Keynote", id: 409183694
-mas "Mela", id: 1568924476
-mas "Numbers", id: 409203825
-mas "Pixelmator", id: 407963104
-mas "Reeder", id: 1529448980
-mas "Things", id: 904280696
-mas "Xcode", id: 497799835
