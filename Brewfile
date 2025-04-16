@@ -139,3 +139,14 @@ cask "qlprettypatch"
 cask "qlstephen"
 cask "transmission"
 cask "vlc"
+mas "AdGuard for Safari", id: 1440147259
+mas "Couch", id: 963584693
+mas "Keynote", id: 409183694
+mas "Mela", id: 1568924476
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Pixelmator", id: 407963104
+mas "Reeder", id: 1529448980
+mas "Slack", id: 803453959
+mas "Things", id: 904280696
+mas "Xcode", id: 497799835
