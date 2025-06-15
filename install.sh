@@ -33,7 +33,7 @@ printf 'Installing vim plugins...'
 if [ ! -d ~/.local/share/vim/pack/packager/opt/vim-packager ]; then
   git clone https://github.com/kristijanhusak/vim-packager ~/.local/share/vim/pack/packager/opt/vim-packager
 fi
-mvim -f -c "call packager#install({'on_finish': 'quitall'})"
+mvim -f -c "call PackagerInit() | call packager#install({'on_finish': 'quitall'})"
 echo 'done.'
 
 # Finally, go back to where we started.

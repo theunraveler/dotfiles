@@ -104,7 +104,7 @@ fi
 
 # vim plugins
 if [ $VIM -eq 1 ]; then
-  mvim -f -c "call packager#update({'on_finish': ':w! >>/dev/tty | quitall'})"
+  mvim -f -c "call PackagerInit() | call packager#update({'on_finish': ':w! >>/dev/tty | quitall'})"
   commit_if_changed "vim: Updating plugins"
 fi
 
