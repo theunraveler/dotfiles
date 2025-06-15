@@ -1,5 +1,4 @@
 tap "beeftornado/rmtree"
-tap "homebrew/bundle"
 tap "homebrew/command-not-found"
 tap "homebrew/services"
 tap "homebrew/test-bot"
