@@ -1,6 +1,5 @@
 tap "beeftornado/rmtree"
 tap "homebrew/command-not-found"
-tap "homebrew/services"
 tap "homebrew/test-bot"
 brew "brotli"
 brew "giflib"
