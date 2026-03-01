@@ -1,13 +1,19 @@
 set --export CLICOLOR 1
 
 # Initialize homebrew paths
-eval (/opt/homebrew/bin/brew shellenv)
+if type -q /opt/homebrew/bin/brew
+  eval (/opt/homebrew/bin/brew shellenv)
+end
 
 set --export PATH ~/.bin $PATH
 
 # Default programs
 set --export BROWSER open
-set --export EDITOR mvim -f
+if type -q mvim
+  set --export EDITOR mvim -f
+else if type -q vim
+  set --export EDITOR vim -f
+end
 set --export MARKDOWN cmark
 
 # Homebrew
@@ -57,10 +63,12 @@ set --export EZA_ICON_SPACING 2
 set --export EZA_DEFAULT_OPTIONS --icons --header
 
 # mise
-if status is-interactive
-  mise activate fish | source
-else
-  mise activate fish --shims | source
+if type -q mise
+  if status is-interactive
+    mise activate fish | source
+  else
+    mise activate fish --shims | source
+  end
 end
 
 # Enable TouchID for sudoing. This gets erased whenever there is an OS update,

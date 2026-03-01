@@ -4,7 +4,11 @@ set path_without_asdf "(string replace $ASDF_DATA_DIR/shims '' (echo $PATH))"
 
 # Overrides
 alias brew "env PATH=$path_without_asdf brew"
-alias cat bat
+if type -q bat
+  alias cat bat
+else if type -q batcat
+  alias cat batcat
+end
 abbr cp 'cp --recursive --verbose'
 alias grep rg
 alias less 'less --ignore-case --incsearch --no-histdups'
@@ -13,8 +17,6 @@ abbr mkdir 'mkdir --parents --verbose'
 abbr mv 'mv --verbose'
 abbr rsync 'rsync -arxvz --rsh=ssh --progress --exclude-from=$HOME/.rsync_exclude'
 abbr rm 'rm --recursive --verbose'
-alias vi mvim
-alias vim mvim
 
 # Shorties
 abbr - 'cd -'
@@ -29,7 +31,14 @@ alias ll "eza $EZA_DEFAULT_OPTIONS --long --classify --git --all"
 abbr o open
 abbr py python
 abbr rb ruby
-alias v mvim
+if type -q mvim
+  alias v mvim
+  alias vi mvim
+  alias vim mvim
+else if type -q vim
+  alias v vim
+  alias vi vim
+end
 
 # Fun shell tricks
 abbr !! --position anywhere --function last_history_item

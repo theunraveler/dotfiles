@@ -2,4 +2,6 @@
 set fish_greeting
 
 # Starship
-eval (starship init fish)
+if type -q starship
+  eval (starship init fish)
+end
