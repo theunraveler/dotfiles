@@ -6,6 +6,7 @@ if type -q /opt/homebrew/bin/brew
 end
 
 set --export PATH ~/.bin $PATH
+set --export PATH ~/.local/bin $PATH
 
 # Default programs
 set --export BROWSER open
